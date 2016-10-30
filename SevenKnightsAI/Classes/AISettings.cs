@@ -99,6 +99,9 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "AD_WorldSequence")]
         public int[] AD_WorldSequence;
 
+        [XmlElement(ElementName = "AD_UseFriend")]
+        public bool AD_UseFriend;
+
         [XmlElement(ElementName = "AR_Enable")]
         public bool AR_Enable;
 
@@ -152,6 +155,9 @@ namespace SevenKnightsAI.Classes
 
         [XmlElement(ElementName = "GC_Wave2Skills")]
         public int[] GC_Wave2Skills;
+
+        [XmlElement(ElementName = "GC_UseFriend")]
+        public bool GC_UseFriend;
 
         [XmlElement(ElementName = "RD_DragonLimit")]
         public int RD_DragonLimit;
@@ -303,6 +309,7 @@ namespace SevenKnightsAI.Classes
             this.AD_Wave1Loop = false;
             this.AD_Wave2Loop = false;
             this.AD_Wave3Loop = false;
+            this.AD_UseFriend = false;
             this.GB_WaitForKeys = false;
             this.GC_Enable = true;
             this.GC_EnableLimit = false;
@@ -310,6 +317,7 @@ namespace SevenKnightsAI.Classes
             this.GC_SkillType = SkillType.Both;
             this.GC_Wave1Loop = false;
             this.GC_Wave2Loop = false;
+            this.GC_UseFriend = false;
             this.AR_Enable = true;
             this.AR_EnableLimit = false;
             this.AR_Limit = 0;
@@ -489,6 +497,12 @@ namespace SevenKnightsAI.Classes
                 { }
                 try
                 {
+                    aISettings.AD_UseFriend = (bool)dictionary["AD_UseFriend"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
                     aISettings.RD_StopOnDragonFound = (bool)dictionary["RD_StopOnDragonFound"];
                 }
                 catch (Exception)
@@ -610,6 +624,12 @@ namespace SevenKnightsAI.Classes
                 try
                 {
                     aISettings.GC_Wave2Loop = (bool)dictionary["GC_Wave2Loop"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.GC_UseFriend = (bool)dictionary["GC_UseFriend"];
                 }
                 catch (Exception)
                 { }

@@ -2311,6 +2311,27 @@ namespace SevenKnightsAI.Classes
                                                     {
                                                         this.MasteryChecked = false;
                                                         this.SelectTeam(SceneType.ADVENTURE_START);
+                                                        if (this.AISettings.AD_UseFriend)
+                                                        {
+                                                            if(this.MatchMapping(AdventureStartPM.UseFriendOff,2))
+                                                            {
+                                                                this.WeightedClick(SharedPM.UseFriendButton, 1.0, 1.0, 1, 0, "left");
+                                                                SevenKnightsCore.Sleep(800);
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            if (this.MatchMapping(AdventureStartPM.UseFriendOn, 2))
+                                                            {
+                                                                this.WeightedClick(SharedPM.UseFriendButton, 1.0, 1.0, 1, 0, "left");
+                                                                SevenKnightsCore.Sleep(800);
+                                                            }
+                                                        }
+                                                        if(this.MatchMapping(AdventureStartPM.AutoRepeatOn, 2))
+                                                        {
+                                                            this.WeightedClick(AdventureStartPM.AutoRepeatOff, 1.0, 1.0, 1, 0, "left");
+                                                            SevenKnightsCore.Sleep(800);
+                                                        }
                                                         this.WeightedClick(SharedPM.PrepareFight_StartButton, 1.0, 1.0, 1, 0, "left");
                                                         SevenKnightsCore.Sleep(300);
                                                     }
@@ -2435,6 +2456,23 @@ namespace SevenKnightsAI.Classes
                                                     {
                                                         this.MasteryChecked = false;
                                                         this.SelectTeam(SceneType.TOWER_START);
+                                                        SevenKnightsCore.Sleep(800);
+                                                        if (this.AISettings.GC_UseFriend)
+                                                        {
+                                                            if (this.MatchMapping(TowerStartPM.UseFriendOff, 2))
+                                                            {
+                                                                this.WeightedClick(SharedPM.UseFriendButton, 1.0, 1.0, 1, 0, "left");
+                                                                SevenKnightsCore.Sleep(800);
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            if (this.MatchMapping(TowerStartPM.UseFriendOn, 2))
+                                                            {
+                                                                this.WeightedClick(SharedPM.UseFriendButton, 1.0, 1.0, 1, 0, "left");
+                                                                SevenKnightsCore.Sleep(800);
+                                                            }
+                                                        }
                                                         this.WeightedClick(TowerStartPM.StartButton, 1.0, 1.0, 1, 0, "left");
                                                         SevenKnightsCore.Sleep(300);
                                                     }
@@ -4072,6 +4110,7 @@ namespace SevenKnightsAI.Classes
                                 this.ChangeCurrentWave(num);
                                 this.CancelAllSkills(false);
                                 this.AssignSkillSet(shouldAssign, this.AISettings.GC_Wave1Skills);
+                                this.WeightedClick(SharedPM.FriendClick, 1.0, 1.0, 1, 0, "left");
                             }
                         }
                         else if (this.MatchMapping(TowerFightPM.AtTurn2Of2, 3) && this.MatchMapping(TowerFightPM.Turn1Of2, 3))
@@ -4102,6 +4141,7 @@ namespace SevenKnightsAI.Classes
                             this.ChangeCurrentWave(num3);
                             this.CancelAllSkills(false);
                             this.AssignSkillSet(shouldAssign, this.AISettings.AD_Wave1Skills);
+                            this.WeightedClick(SharedPM.FriendClick, 1.0, 1.0, 1, 0, "left");
                         }
                     }
                     else if ((this.MatchMapping(AdventureFightPM.AtTurn2Of2, 5) && this.MatchMapping(AdventureFightPM.Turn1Of2, 5)) || (this.MatchMapping(AdventureFightPM.AtTurn2Of3_1, 5) && this.MatchMapping(AdventureFightPM.AtTurn2Of3_2, 5) && this.MatchMapping(AdventureFightPM.Turn1Of3, 5)))

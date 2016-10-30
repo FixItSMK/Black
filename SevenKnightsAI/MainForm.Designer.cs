@@ -20,6 +20,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.adventureTab = new System.Windows.Forms.TabPage();
+            this.AD_UseFriendCheckBox = new System.Windows.Forms.CheckBox();
             this.AD_EnHottime_Checkbox = new System.Windows.Forms.CheckBox();
             this.AD_limitLabel = new System.Windows.Forms.Label();
             this.AD_StopOnLV30_Checkbox = new System.Windows.Forms.CheckBox();
@@ -322,6 +323,7 @@
             this.goldLabel = new System.Windows.Forms.Label();
             this.resourcesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.aiPause = new System.Windows.Forms.Button();
+            this.GC_UseFriendCheckBox = new System.Windows.Forms.CheckBox();
             this.tabControl.SuspendLayout();
             this.adventureTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AD_limitNumericBox)).BeginInit();
@@ -408,6 +410,7 @@
             // 
             // adventureTab
             // 
+            this.adventureTab.Controls.Add(this.AD_UseFriendCheckBox);
             this.adventureTab.Controls.Add(this.AD_EnHottime_Checkbox);
             this.adventureTab.Controls.Add(this.AD_limitLabel);
             this.adventureTab.Controls.Add(this.AD_StopOnLV30_Checkbox);
@@ -428,10 +431,21 @@
             this.adventureTab.Text = "Adventure";
             this.adventureTab.UseVisualStyleBackColor = true;
             // 
+            // AD_UseFriendCheckBox
+            // 
+            this.AD_UseFriendCheckBox.AutoSize = true;
+            this.AD_UseFriendCheckBox.Location = new System.Drawing.Point(362, 31);
+            this.AD_UseFriendCheckBox.Name = "AD_UseFriendCheckBox";
+            this.AD_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.AD_UseFriendCheckBox.TabIndex = 28;
+            this.AD_UseFriendCheckBox.Text = "Use Friends";
+            this.AD_UseFriendCheckBox.UseVisualStyleBackColor = true;
+            this.AD_UseFriendCheckBox.CheckedChanged += new System.EventHandler(this.AD_UseFriendCheckBox_CheckedChanged);
+            // 
             // AD_EnHottime_Checkbox
             // 
             this.AD_EnHottime_Checkbox.AutoSize = true;
-            this.AD_EnHottime_Checkbox.Location = new System.Drawing.Point(24, 54);
+            this.AD_EnHottime_Checkbox.Location = new System.Drawing.Point(14, 54);
             this.AD_EnHottime_Checkbox.Name = "AD_EnHottime_Checkbox";
             this.AD_EnHottime_Checkbox.Size = new System.Drawing.Size(95, 17);
             this.AD_EnHottime_Checkbox.TabIndex = 27;
@@ -451,7 +465,7 @@
             // AD_StopOnLV30_Checkbox
             // 
             this.AD_StopOnLV30_Checkbox.AutoSize = true;
-            this.AD_StopOnLV30_Checkbox.Location = new System.Drawing.Point(125, 31);
+            this.AD_StopOnLV30_Checkbox.Location = new System.Drawing.Point(115, 31);
             this.AD_StopOnLV30_Checkbox.Name = "AD_StopOnLV30_Checkbox";
             this.AD_StopOnLV30_Checkbox.Size = new System.Drawing.Size(101, 17);
             this.AD_StopOnLV30_Checkbox.TabIndex = 25;
@@ -462,7 +476,7 @@
             // AD_continuousCheckBox
             // 
             this.AD_continuousCheckBox.AutoSize = true;
-            this.AD_continuousCheckBox.Location = new System.Drawing.Point(360, 52);
+            this.AD_continuousCheckBox.Location = new System.Drawing.Point(362, 52);
             this.AD_continuousCheckBox.Name = "AD_continuousCheckBox";
             this.AD_continuousCheckBox.Size = new System.Drawing.Size(128, 17);
             this.AD_continuousCheckBox.TabIndex = 5;
@@ -473,18 +487,18 @@
             // AD_CheckingHeroes_Checkbox
             // 
             this.AD_CheckingHeroes_Checkbox.AutoSize = true;
-            this.AD_CheckingHeroes_Checkbox.Location = new System.Drawing.Point(239, 31);
+            this.AD_CheckingHeroes_Checkbox.Location = new System.Drawing.Point(229, 31);
             this.AD_CheckingHeroes_Checkbox.Name = "AD_CheckingHeroes_Checkbox";
-            this.AD_CheckingHeroes_Checkbox.Size = new System.Drawing.Size(146, 17);
+            this.AD_CheckingHeroes_Checkbox.Size = new System.Drawing.Size(134, 17);
             this.AD_CheckingHeroes_Checkbox.TabIndex = 26;
-            this.AD_CheckingHeroes_Checkbox.Text = "Check Max Heroes Level";
+            this.AD_CheckingHeroes_Checkbox.Text = "Check Max Heroes Lvl";
             this.AD_CheckingHeroes_Checkbox.UseVisualStyleBackColor = true;
             this.AD_CheckingHeroes_Checkbox.CheckedChanged += new System.EventHandler(this.AD_CheckingHeroes_Checkbox_CheckedChanged);
             // 
             // AD_StopOnFullItems_Checkbox
             // 
             this.AD_StopOnFullItems_Checkbox.AutoSize = true;
-            this.AD_StopOnFullItems_Checkbox.Location = new System.Drawing.Point(239, 52);
+            this.AD_StopOnFullItems_Checkbox.Location = new System.Drawing.Point(229, 52);
             this.AD_StopOnFullItems_Checkbox.Name = "AD_StopOnFullItems_Checkbox";
             this.AD_StopOnFullItems_Checkbox.Size = new System.Drawing.Size(120, 17);
             this.AD_StopOnFullItems_Checkbox.TabIndex = 25;
@@ -504,7 +518,7 @@
             // AD_StopOnFullHeroes_Checkbox
             // 
             this.AD_StopOnFullHeroes_Checkbox.AutoSize = true;
-            this.AD_StopOnFullHeroes_Checkbox.Location = new System.Drawing.Point(125, 53);
+            this.AD_StopOnFullHeroes_Checkbox.Location = new System.Drawing.Point(115, 53);
             this.AD_StopOnFullHeroes_Checkbox.Name = "AD_StopOnFullHeroes_Checkbox";
             this.AD_StopOnFullHeroes_Checkbox.Size = new System.Drawing.Size(112, 17);
             this.AD_StopOnFullHeroes_Checkbox.TabIndex = 25;
@@ -1334,7 +1348,7 @@
             // AD_elementHeroesCheckBox
             // 
             this.AD_elementHeroesCheckBox.AutoSize = true;
-            this.AD_elementHeroesCheckBox.Location = new System.Drawing.Point(24, 31);
+            this.AD_elementHeroesCheckBox.Location = new System.Drawing.Point(14, 31);
             this.AD_elementHeroesCheckBox.Name = "AD_elementHeroesCheckBox";
             this.AD_elementHeroesCheckBox.Size = new System.Drawing.Size(86, 17);
             this.AD_elementHeroesCheckBox.TabIndex = 13;
@@ -1358,6 +1372,7 @@
             // 
             // goldChamberTab
             // 
+            this.goldChamberTab.Controls.Add(this.GC_UseFriendCheckBox);
             this.goldChamberTab.Controls.Add(this.GC_limitLabel);
             this.goldChamberTab.Controls.Add(this.GC_limitNumericBox);
             this.goldChamberTab.Controls.Add(this.GC_limitCheckBox);
@@ -1407,9 +1422,9 @@
             this.GC_mainPanel.Controls.Add(this.GC_formationPanel);
             this.GC_mainPanel.Controls.Add(this.GC_formationLabel);
             this.GC_mainPanel.Controls.Add(this.GC_teamLabel);
-            this.GC_mainPanel.Location = new System.Drawing.Point(0, 30);
+            this.GC_mainPanel.Location = new System.Drawing.Point(0, 53);
             this.GC_mainPanel.Name = "GC_mainPanel";
-            this.GC_mainPanel.Size = new System.Drawing.Size(487, 278);
+            this.GC_mainPanel.Size = new System.Drawing.Size(487, 255);
             this.GC_mainPanel.TabIndex = 14;
             // 
             // GC_skillGroupBox
@@ -3969,6 +3984,17 @@
             this.aiPause.UseVisualStyleBackColor = true;
             this.aiPause.Click += new System.EventHandler(this.aiPause_Click);
             // 
+            // GC_UseFriendCheckBox
+            // 
+            this.GC_UseFriendCheckBox.AutoSize = true;
+            this.GC_UseFriendCheckBox.Location = new System.Drawing.Point(14, 31);
+            this.GC_UseFriendCheckBox.Name = "GC_UseFriendCheckBox";
+            this.GC_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.GC_UseFriendCheckBox.TabIndex = 20;
+            this.GC_UseFriendCheckBox.Text = "Use Friends";
+            this.GC_UseFriendCheckBox.UseVisualStyleBackColor = true;
+            this.GC_UseFriendCheckBox.CheckedChanged += new System.EventHandler(this.GC_UseFriendCheckBox_CheckedChanged);
+            // 
             // MainForm
             // 
             this.AcceptButton = this.aiButton;
@@ -4963,5 +4989,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox ARD_enableCheckBox;
         private System.Windows.Forms.CheckBox AD_EnHottime_Checkbox;
+        private System.Windows.Forms.CheckBox AD_UseFriendCheckBox;
+        private System.Windows.Forms.CheckBox GC_UseFriendCheckBox;
     }
 }

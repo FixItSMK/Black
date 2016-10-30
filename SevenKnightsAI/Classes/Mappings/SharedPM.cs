@@ -696,6 +696,23 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping UseFriendButton = new PixelMapping
+        {
+            X = 797,
+            Y = 151,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping FriendClick = new PixelMapping
+        {
+            X = 470,
+            Y = 470,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+
         #endregion Public Fields
     }
 }

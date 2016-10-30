@@ -79,6 +79,22 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping UseFriendOn = new PixelMapping
+        {
+            X = 837,
+            Y = 171,
+            Color = 16565011,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping UseFriendOff = new PixelMapping
+        {
+            X = 837,
+            Y = 171,
+            Color = 2826006,
+            Type = MappingType.ANCHOR
+        };
+
         #endregion Public Fields
     }
 }
