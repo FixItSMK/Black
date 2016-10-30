@@ -99,6 +99,7 @@
             this.AD_elementHeroesCheckBox = new System.Windows.Forms.CheckBox();
             this.AD_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.goldChamberTab = new System.Windows.Forms.TabPage();
+            this.GC_UseFriendCheckBox = new System.Windows.Forms.CheckBox();
             this.GC_limitLabel = new System.Windows.Forms.Label();
             this.GC_limitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.GC_limitCheckBox = new System.Windows.Forms.CheckBox();
@@ -323,7 +324,6 @@
             this.goldLabel = new System.Windows.Forms.Label();
             this.resourcesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.aiPause = new System.Windows.Forms.Button();
-            this.GC_UseFriendCheckBox = new System.Windows.Forms.CheckBox();
             this.tabControl.SuspendLayout();
             this.adventureTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AD_limitNumericBox)).BeginInit();
@@ -1384,6 +1384,17 @@
             this.goldChamberTab.TabIndex = 2;
             this.goldChamberTab.Text = "Gold Chamber";
             this.goldChamberTab.UseVisualStyleBackColor = true;
+            // 
+            // GC_UseFriendCheckBox
+            // 
+            this.GC_UseFriendCheckBox.AutoSize = true;
+            this.GC_UseFriendCheckBox.Location = new System.Drawing.Point(14, 31);
+            this.GC_UseFriendCheckBox.Name = "GC_UseFriendCheckBox";
+            this.GC_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.GC_UseFriendCheckBox.TabIndex = 20;
+            this.GC_UseFriendCheckBox.Text = "Use Friends";
+            this.GC_UseFriendCheckBox.UseVisualStyleBackColor = true;
+            this.GC_UseFriendCheckBox.CheckedChanged += new System.EventHandler(this.GC_UseFriendCheckBox_CheckedChanged);
             // 
             // GC_limitLabel
             // 
@@ -3983,17 +3994,6 @@
             this.aiPause.Text = "&Pause";
             this.aiPause.UseVisualStyleBackColor = true;
             this.aiPause.Click += new System.EventHandler(this.aiPause_Click);
-            // 
-            // GC_UseFriendCheckBox
-            // 
-            this.GC_UseFriendCheckBox.AutoSize = true;
-            this.GC_UseFriendCheckBox.Location = new System.Drawing.Point(14, 31);
-            this.GC_UseFriendCheckBox.Name = "GC_UseFriendCheckBox";
-            this.GC_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
-            this.GC_UseFriendCheckBox.TabIndex = 20;
-            this.GC_UseFriendCheckBox.Text = "Use Friends";
-            this.GC_UseFriendCheckBox.UseVisualStyleBackColor = true;
-            this.GC_UseFriendCheckBox.CheckedChanged += new System.EventHandler(this.GC_UseFriendCheckBox_CheckedChanged);
             // 
             // MainForm
             // 

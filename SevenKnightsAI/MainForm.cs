@@ -1900,8 +1900,7 @@ namespace SevenKnightsAI
             CheckBox checkBox = sender as CheckBox;
             this.AISettings.GC_UseFriend = checkBox.Checked;
         }
+
         #endregion Private Methods
-
-
     }
 }

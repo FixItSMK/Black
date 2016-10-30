@@ -117,6 +117,7 @@ namespace SevenKnightsAI.Classes
         DAILY_QUEST_COMPLETE,
         SELL_HERO_LOBBY,
         EXCLUSIVE_POPUP,
-        ELEMENT_POPUP
+        ELEMENT_POPUP,
+        SELL_HERO_FINISH
     }
 }

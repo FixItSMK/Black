@@ -275,5 +275,29 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 0,
             Type = MappingType.BUTTON
         };
+
+        public static readonly PixelMapping SellButtonbg = new PixelMapping
+        {
+            X = 260,
+            Y = 504,
+            Color = 1706756,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping GoldSellIconbg = new PixelMapping
+        {
+            X = 64,
+            Y = 444,
+            Color = 4864543,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping SoldOKYellowTik = new PixelMapping
+        {
+            X = 449,
+            Y = 399,
+            Color = 16759324,
+            Type = MappingType.BOTH
+        };
     }
 }

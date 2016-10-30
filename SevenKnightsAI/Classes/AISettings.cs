@@ -1281,6 +1281,18 @@ namespace SevenKnightsAI.Classes
                 {
                     "RS_BuyKeyRubiesAmount",
                     this.RS_BuyKeyRubiesAmount
+                },
+                {
+                    "AD_HottimeEnable",
+                    this.AD_HottimeEnable
+                },
+                {
+                    "AD_UseFriend",
+                    this.AD_UseFriend
+                },
+                {
+                    "GC_UseFriend",
+                    this.GC_UseFriend
                 }
             };
             string data = JsonConvert.SerializeObject(value);
