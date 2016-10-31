@@ -285,10 +285,10 @@
     <None Include="Resources\Delone.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\7k-title.jpg" />
+    <Folder Include="icons\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="icons\" />
+    <None Include="Resources\Title.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

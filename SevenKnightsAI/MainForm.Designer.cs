@@ -280,6 +280,17 @@
             this.ST_delayValueLabel = new System.Windows.Forms.Label();
             this.ST_delayLabel = new System.Windows.Forms.Label();
             this.ST_delayTrackBar = new System.Windows.Forms.TrackBar();
+            this.Info = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.linkLabel10 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel5 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel4 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel3 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel7 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel6 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.statusStrip = new System.Windows.Forms.StatusStrip();
             this.adminToolStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.profileToolStripLabel = new System.Windows.Forms.ToolStripStatusLabel();
@@ -375,6 +386,7 @@
             this.ST_pushbulletGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ST_pushbulletPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ST_delayTrackBar)).BeginInit();
+            this.Info.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.summaryGroupBox.SuspendLayout();
             this.keysTableLayoutPanel.SuspendLayout();
@@ -402,6 +414,7 @@
             this.tabControl.Controls.Add(this.resourcesTab);
             this.tabControl.Controls.Add(this.logTab);
             this.tabControl.Controls.Add(this.settingsTab);
+            this.tabControl.Controls.Add(this.Info);
             this.tabControl.Location = new System.Drawing.Point(4, 86);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
@@ -2764,6 +2777,7 @@
             this.RS_sendHonorsInGame.TabIndex = 1;
             this.RS_sendHonorsInGame.Tag = "1";
             this.RS_sendHonorsInGame.Text = "To In-Game Friends";
+            this.toolTip.SetToolTip(this.RS_sendHonorsInGame, "BETA Function");
             this.RS_sendHonorsInGame.UseVisualStyleBackColor = true;
             this.RS_sendHonorsInGame.CheckedChanged += new System.EventHandler(this.RS_sendHonorsCheckBox_CheckedChanged);
             // 
@@ -2776,6 +2790,7 @@
             this.RS_sendHonorsFacebook.TabIndex = 0;
             this.RS_sendHonorsFacebook.Tag = "0";
             this.RS_sendHonorsFacebook.Text = "To Facebook Friends";
+            this.toolTip.SetToolTip(this.RS_sendHonorsFacebook, "BETA Function");
             this.RS_sendHonorsFacebook.UseVisualStyleBackColor = true;
             this.RS_sendHonorsFacebook.CheckedChanged += new System.EventHandler(this.RS_sendHonorsCheckBox_CheckedChanged);
             // 
@@ -3108,6 +3123,7 @@
             this.RS_sellHeroesCheckBox.TabIndex = 2;
             this.RS_sellHeroesCheckBox.Tag = "0";
             this.RS_sellHeroesCheckBox.Text = "Lv.30 heroes with ★ less than or equal to";
+            this.toolTip.SetToolTip(this.RS_sellHeroesCheckBox, "BETA Function");
             this.RS_sellHeroesCheckBox.UseVisualStyleBackColor = true;
             this.RS_sellHeroesCheckBox.CheckedChanged += new System.EventHandler(this.RS_sellCheckBox_CheckedChanged);
             // 
@@ -3537,6 +3553,139 @@
             this.ST_delayTrackBar.Value = 1500;
             this.ST_delayTrackBar.ValueChanged += new System.EventHandler(this.ST_delayTrackBar_ValueChanged);
             // 
+            // Info
+            // 
+            this.Info.Controls.Add(this.label3);
+            this.Info.Controls.Add(this.linkLabel10);
+            this.Info.Controls.Add(this.linkLabel9);
+            this.Info.Controls.Add(this.linkLabel8);
+            this.Info.Controls.Add(this.linkLabel5);
+            this.Info.Controls.Add(this.linkLabel4);
+            this.Info.Controls.Add(this.linkLabel3);
+            this.Info.Controls.Add(this.linkLabel7);
+            this.Info.Controls.Add(this.linkLabel6);
+            this.Info.Controls.Add(this.linkLabel1);
+            this.Info.Location = new System.Drawing.Point(4, 22);
+            this.Info.Name = "Info";
+            this.Info.Size = new System.Drawing.Size(488, 309);
+            this.Info.TabIndex = 8;
+            this.Info.Text = "Info";
+            this.Info.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(31, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 17);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Special Thanks.";
+            // 
+            // linkLabel10
+            // 
+            this.linkLabel10.AutoSize = true;
+            this.linkLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.linkLabel10.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel10.Location = new System.Drawing.Point(86, 267);
+            this.linkLabel10.Name = "linkLabel10";
+            this.linkLabel10.Size = new System.Drawing.Size(289, 24);
+            this.linkLabel10.TabIndex = 5;
+            this.linkLabel10.TabStop = true;
+            this.linkLabel10.Text = "Seven Knight AI Black Facebook.";
+            this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel10_LinkClicked);
+            // 
+            // linkLabel9
+            // 
+            this.linkLabel9.AutoSize = true;
+            this.linkLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.linkLabel9.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel9.Location = new System.Drawing.Point(96, 232);
+            this.linkLabel9.Name = "linkLabel9";
+            this.linkLabel9.Size = new System.Drawing.Size(275, 24);
+            this.linkLabel9.TabIndex = 4;
+            this.linkLabel9.TabStop = true;
+            this.linkLabel9.Text = "Seven Knight AI Black Youtube.";
+            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
+            // 
+            // linkLabel8
+            // 
+            this.linkLabel8.AutoSize = true;
+            this.linkLabel8.Location = new System.Drawing.Point(31, 38);
+            this.linkLabel8.Name = "linkLabel8";
+            this.linkLabel8.Size = new System.Drawing.Size(224, 13);
+            this.linkLabel8.TabIndex = 3;
+            this.linkLabel8.TabStop = true;
+            this.linkLabel8.Text = "https://www.facebook.com/groups/heartcold";
+            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
+            // 
+            // linkLabel5
+            // 
+            this.linkLabel5.AutoSize = true;
+            this.linkLabel5.Location = new System.Drawing.Point(31, 110);
+            this.linkLabel5.Name = "linkLabel5";
+            this.linkLabel5.Size = new System.Drawing.Size(110, 13);
+            this.linkLabel5.TabIndex = 2;
+            this.linkLabel5.TabStop = true;
+            this.linkLabel5.Text = "https://www.nulled.to";
+            this.linkLabel5.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel5_MouseClick);
+            // 
+            // linkLabel4
+            // 
+            this.linkLabel4.AutoSize = true;
+            this.linkLabel4.Location = new System.Drawing.Point(31, 158);
+            this.linkLabel4.Name = "linkLabel4";
+            this.linkLabel4.Size = new System.Drawing.Size(170, 13);
+            this.linkLabel4.TabIndex = 2;
+            this.linkLabel4.TabStop = true;
+            this.linkLabel4.Text = "https://www.nulled.to/user/4-lostit";
+            this.linkLabel4.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel4_MouseClick);
+            // 
+            // linkLabel3
+            // 
+            this.linkLabel3.AutoSize = true;
+            this.linkLabel3.Location = new System.Drawing.Point(31, 135);
+            this.linkLabel3.Name = "linkLabel3";
+            this.linkLabel3.Size = new System.Drawing.Size(210, 13);
+            this.linkLabel3.TabIndex = 2;
+            this.linkLabel3.TabStop = true;
+            this.linkLabel3.Text = "https://www.nulled.to/user/513548-daelus";
+            this.linkLabel3.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel3_LinkClicked);
+            // 
+            // linkLabel7
+            // 
+            this.linkLabel7.AutoSize = true;
+            this.linkLabel7.Location = new System.Drawing.Point(31, 61);
+            this.linkLabel7.Name = "linkLabel7";
+            this.linkLabel7.Size = new System.Drawing.Size(230, 13);
+            this.linkLabel7.TabIndex = 1;
+            this.linkLabel7.TabStop = true;
+            this.linkLabel7.Text = "https://github.com/dreammed/SevenKnightsAI";
+            this.linkLabel7.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel7_LinkClicked);
+            // 
+            // linkLabel6
+            // 
+            this.linkLabel6.AutoSize = true;
+            this.linkLabel6.Location = new System.Drawing.Point(31, 184);
+            this.linkLabel6.Name = "linkLabel6";
+            this.linkLabel6.Size = new System.Drawing.Size(204, 13);
+            this.linkLabel6.TabIndex = 1;
+            this.linkLabel6.TabStop = true;
+            this.linkLabel6.Text = "https://www.nulled.to/user/600594-xhum";
+            this.linkLabel6.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel6_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(31, 86);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(247, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "https://github.com/Nulled-Daelus/SevenKnightsAI";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
             // statusStrip
             // 
             this.statusStrip.BackColor = System.Drawing.Color.Silver;
@@ -3576,7 +3725,7 @@
             // splitterStatusLabel
             // 
             this.splitterStatusLabel.Name = "splitterStatusLabel";
-            this.splitterStatusLabel.Size = new System.Drawing.Size(223, 17);
+            this.splitterStatusLabel.Size = new System.Drawing.Size(294, 17);
             this.splitterStatusLabel.Spring = true;
             // 
             // tsslCursorPosition
@@ -3587,8 +3736,8 @@
             // tsPixel
             // 
             this.tsPixel.Name = "tsPixel";
-            this.tsPixel.Size = new System.Drawing.Size(126, 17);
-            this.tsPixel.Text = "Seven Knights AI Black";
+            this.tsPixel.Size = new System.Drawing.Size(55, 17);
+            this.tsPixel.Text = "Nulled.io";
             // 
             // tsslBuildInfo
             // 
@@ -3835,13 +3984,14 @@
             // contactUsLinkLabel
             // 
             this.contactUsLinkLabel.AutoSize = true;
-            this.contactUsLinkLabel.LinkColor = System.Drawing.Color.Blue;
-            this.contactUsLinkLabel.Location = new System.Drawing.Point(257, 67);
+            this.contactUsLinkLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.contactUsLinkLabel.LinkColor = System.Drawing.Color.White;
+            this.contactUsLinkLabel.Location = new System.Drawing.Point(385, 67);
             this.contactUsLinkLabel.Name = "contactUsLinkLabel";
-            this.contactUsLinkLabel.Size = new System.Drawing.Size(246, 13);
+            this.contactUsLinkLabel.Size = new System.Drawing.Size(119, 13);
             this.contactUsLinkLabel.TabIndex = 6;
             this.contactUsLinkLabel.TabStop = true;
-            this.contactUsLinkLabel.Text = "https://www.facebook.com/SevenKnightsAIBlack";
+            this.contactUsLinkLabel.Text = "Seven Knights AI Black";
             this.contactUsLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.contactUsLinkLabel_LinkClicked);
             this.contactUsLinkLabel.TextChanged += new System.EventHandler(this.contactUsLinkLabel_TextChanged);
             // 
@@ -3860,7 +4010,7 @@
             // topheaderPictureBox
             // 
             this.topheaderPictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.topheaderPictureBox.Image = global::SevenKnightsAI.Properties.Resources._7k_title;
+            this.topheaderPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("topheaderPictureBox.Image")));
             this.topheaderPictureBox.Location = new System.Drawing.Point(0, 0);
             this.topheaderPictureBox.Name = "topheaderPictureBox";
             this.topheaderPictureBox.Size = new System.Drawing.Size(504, 80);
@@ -4096,6 +4246,8 @@
             this.ST_pushbulletGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ST_pushbulletPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ST_delayTrackBar)).EndInit();
+            this.Info.ResumeLayout(false);
+            this.Info.PerformLayout();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.summaryGroupBox.ResumeLayout(false);
@@ -4991,5 +5143,16 @@
         private System.Windows.Forms.CheckBox AD_EnHottime_Checkbox;
         private System.Windows.Forms.CheckBox AD_UseFriendCheckBox;
         private System.Windows.Forms.CheckBox GC_UseFriendCheckBox;
+        private System.Windows.Forms.TabPage Info;
+        private System.Windows.Forms.LinkLabel linkLabel5;
+        private System.Windows.Forms.LinkLabel linkLabel4;
+        private System.Windows.Forms.LinkLabel linkLabel3;
+        private System.Windows.Forms.LinkLabel linkLabel7;
+        private System.Windows.Forms.LinkLabel linkLabel6;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel linkLabel8;
+        private System.Windows.Forms.LinkLabel linkLabel10;
+        private System.Windows.Forms.LinkLabel linkLabel9;
+        private System.Windows.Forms.Label label3;
     }
 }

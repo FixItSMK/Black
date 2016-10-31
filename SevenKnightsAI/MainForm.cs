@@ -1901,6 +1901,57 @@ namespace SevenKnightsAI
             this.AISettings.GC_UseFriend = checkBox.Checked;
         }
 
+        // Link Thank.
+
+        private void linkLabel5_MouseClick(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.nulled.to");
+        }
+
+        private void linkLabel4_MouseClick(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.nulled.to/topic/143659-heartcold-seven-knights-ai-v23");
+        }
+
+        private void linkLabel3_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.nulled.to/topic/155474-seven-knights-ai");
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/Nulled-Daelus/SevenKnightsAI");
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/dreammed/SevenKnightsAI");
+        }
+
+        private void linkLabel6_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.nulled.to/user/600594-xhum");
+        }
+
+        private void linkLabel7_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://github.com/dreammed/SevenKnightsAI");
+        }
+
+        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.facebook.com/groups/heartcold");
+        }
+
+        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.youtube.com/channel/UCdVDcUYSMnfGY57ECqeGOkA");
+        }
+
+        private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start("https://www.facebook.com/SevenKnightsAIBlack");
+        }
         #endregion Private Methods
     }
 }
