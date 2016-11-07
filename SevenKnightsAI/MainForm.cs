@@ -897,6 +897,7 @@ namespace SevenKnightsAI
             this.RD_masteryComboBox.SelectedIndex = (int)this.AISettings.RD_Mastery;
             this.RD_team1LoopCheckBox.Checked = this.AISettings.RD_Team1Loop;
             this.RD_team2LoopCheckBox.Checked = this.AISettings.RD_Team2Loop;
+            this.RD_Hp50Up_CheckBox.Checked = this.AISettings.RD_Hp50Up;
             switch (this.AISettings.RD_SkillType)
             {
                 case SkillType.Auto:
@@ -1899,6 +1900,11 @@ namespace SevenKnightsAI
         {
             CheckBox checkBox = sender as CheckBox;
             this.AISettings.GC_UseFriend = checkBox.Checked;
+        }
+        private void RD_Hp50Up_CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.RD_Hp50Up = checkBox.Checked;
         }
 
         // Link Thank.

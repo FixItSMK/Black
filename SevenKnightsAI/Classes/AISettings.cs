@@ -189,6 +189,9 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "RD_Team2Loop")]
         public bool RD_Team2Loop;
 
+        [XmlElement(ElementName = "RD_Hp50Up")]
+        public bool RD_Hp50Up;
+
         [XmlElement(ElementName = "ARD_Enable")]
         public bool ARD_Enable;
 
@@ -331,6 +334,7 @@ namespace SevenKnightsAI.Classes
             this.RD_SkillType = SkillType.Both;
             this.RD_Team1Loop = false;
             this.RD_Team2Loop = false;
+            this.RD_Hp50Up = true;
             this.ARD_Enable = true;
             this.RS_SellHeroes = false;
             this.RS_SellHeroStars = 1;
@@ -732,6 +736,12 @@ namespace SevenKnightsAI.Classes
                 try
                 {
                     aISettings.RD_Team2Loop = (bool)dictionary["RD_Team2Loop"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.RD_Hp50Up = (bool)dictionary["RD_Hp50Up"];
                 }
                 catch (Exception)
                 { }
@@ -1157,6 +1167,10 @@ namespace SevenKnightsAI.Classes
                 {
                     "RD_Team2Loop",
                     this.RD_Team2Loop
+                },
+                {
+                    "RD_Hp50up",
+                    this.RD_Hp50Up
                 },
                 {
                     "ARD_Enable",

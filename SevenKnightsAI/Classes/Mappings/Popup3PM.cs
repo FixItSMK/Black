@@ -9,17 +9,17 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly PixelMapping SPrachelNo = new PixelMapping
         {
-            X = 283,
-            Y = 455,
-            Color = 13581322,
+            X = 282,
+            Y = 456,
+            Color = 13253386,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping SPrachelBuy = new PixelMapping
         {
-            X = 555,
-            Y = 456,
-            Color = 16761637,
+            X = 578,
+            Y = 454,
+            Color = 14788355,
             Type = MappingType.ANCHOR
         };
 
@@ -33,9 +33,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping SPrachel = new PixelMapping
         {
-            X = 256,
-            Y = 169,
-            Color = 16768454,
+            X = 243,
+            Y = 160,
+            Color = 16767426,
             Type = MappingType.ANCHOR
         };
 
@@ -237,12 +237,45 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 400440,
             Type = MappingType.ANCHOR
         };
+
         public static readonly PixelMapping ElementTick = new PixelMapping
         {
             X = 529,
             Y = 420,
             Color = 16761637,
             Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping EventPackPic = new PixelMapping
+        {
+            X = 195,
+            Y = 53,
+            Color = 6932315,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping EventPackColor = new PixelMapping
+        {
+            X = 220,
+            Y = 448,
+            Color = 12524315,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping EventPackColorbg = new PixelMapping
+        {
+            X = 220,
+            Y = 448,
+            Color = 3672072,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping EventPackOKBtn = new PixelMapping
+        {
+            X = 570,
+            Y = 420,
+            Color = 5382926,
+            Type = MappingType.BOTH
         };
     }
 }

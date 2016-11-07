@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace SevenKnightsAI.Classes.Mappings
 {
@@ -116,5 +117,94 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly Rectangle RaidLvl = new Rectangle
+        {
+            X = 191,
+            Y = 175,
+            Width = 70,
+            Height = 25
+        };
+
+        public static readonly PixelMapping Raid50upLocation1 = new PixelMapping
+        {
+            X = 673,
+            Y = 204,
+            Color = 3549214,   // เลือดน้อยกว่า 50%
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Raid50upLocation2 = new PixelMapping
+        {
+            X = 673,
+            Y = 278,
+            Color = 3615263,  // เลือดน้อยกว่า 50%
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Raid50upLocation3 = new PixelMapping
+        {
+            X = 673,
+            Y = 352,
+            Color = 3417885,   // เลือดน้อยกว่า 50%
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Raid50upLocation4 = new PixelMapping
+        {
+            X = 673,
+            Y = 426,
+            Color = 3417885,  // เลือดน้อยกว่า 50%
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Raid50upLocation1Bt = new PixelMapping
+        {
+            X = 868,
+            Y = 202,
+            Color = 13939542,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping Raid50upLocation2Bt = new PixelMapping
+        {
+            X = 868,
+            Y = 276,
+            Color = 13939542,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping Raid50upLocation3Bt = new PixelMapping
+        {
+            X = 868,
+            Y = 350,
+            Color = 13939542,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping Raid50upLocation4Bt = new PixelMapping
+        {
+            X = 868,
+            Y = 424,
+            Color = 13939542,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly int SCROLL_DELTA = 197;   // หาค่าตรงนี้้
+
+        public static readonly PixelMapping ScrollAreaDown = new PixelMapping
+        {
+            X = 140,
+            Y = 282,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping ScrollAreaUp = new PixelMapping
+        {
+            X = 140,
+            Y = 204,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
     }
 }

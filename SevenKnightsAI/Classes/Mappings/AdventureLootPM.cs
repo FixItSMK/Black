@@ -35,5 +35,53 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 5317647,
             Type = MappingType.BOTH
         };
+
+        public static readonly PixelMapping RewardGold = new PixelMapping
+        {
+            X = 786,
+            Y = 480,
+            Color = 5317647,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping RewardItem = new PixelMapping
+        {
+            X = 786,
+            Y = 480,
+            Color = 5317647,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping RewardCard1Star = new PixelMapping
+        {
+            X = 786,
+            Y = 480,
+            Color = 5317647,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping RewardCard2Star = new PixelMapping
+        {
+            X = 786,
+            Y = 480,
+            Color = 5317647,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping RewardCard3Star = new PixelMapping
+        {
+            X = 786,
+            Y = 480,
+            Color = 5317647,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping RewardCard4Star = new PixelMapping
+        {
+            X = 786,
+            Y = 480,
+            Color = 5317647,
+            Type = MappingType.ANCHOR
+        };
     }
 }

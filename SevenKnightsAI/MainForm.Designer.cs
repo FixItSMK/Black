@@ -163,6 +163,7 @@
             this.RD_DragonLimit_lbl = new System.Windows.Forms.Label();
             this.RD_DragonLimitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.RD_mainPanel = new System.Windows.Forms.Panel();
+            this.RD_Hp50Up_CheckBox = new System.Windows.Forms.CheckBox();
             this.ARD_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.RD_limitLabel = new System.Windows.Forms.Label();
             this.RD_limitNumericBox = new System.Windows.Forms.NumericUpDown();
@@ -2147,6 +2148,7 @@
             // 
             // RD_mainPanel
             // 
+            this.RD_mainPanel.Controls.Add(this.RD_Hp50Up_CheckBox);
             this.RD_mainPanel.Controls.Add(this.ARD_enableCheckBox);
             this.RD_mainPanel.Controls.Add(this.RD_limitLabel);
             this.RD_mainPanel.Controls.Add(this.RD_limitNumericBox);
@@ -2157,6 +2159,18 @@
             this.RD_mainPanel.Name = "RD_mainPanel";
             this.RD_mainPanel.Size = new System.Drawing.Size(487, 255);
             this.RD_mainPanel.TabIndex = 15;
+            // 
+            // RD_Hp50Up_CheckBox
+            // 
+            this.RD_Hp50Up_CheckBox.AutoSize = true;
+            this.RD_Hp50Up_CheckBox.Location = new System.Drawing.Point(23, 49);
+            this.RD_Hp50Up_CheckBox.Name = "RD_Hp50Up_CheckBox";
+            this.RD_Hp50Up_CheckBox.Size = new System.Drawing.Size(130, 17);
+            this.RD_Hp50Up_CheckBox.TabIndex = 32;
+            this.RD_Hp50Up_CheckBox.Text = "Only Raid HP 50% Up";
+            this.toolTip.SetToolTip(this.RD_Hp50Up_CheckBox, "BETA Function");
+            this.RD_Hp50Up_CheckBox.UseVisualStyleBackColor = true;
+            this.RD_Hp50Up_CheckBox.CheckedChanged += new System.EventHandler(this.RD_Hp50Up_CheckBox_CheckedChanged);
             // 
             // ARD_enableCheckBox
             // 
@@ -5154,5 +5168,6 @@
         private System.Windows.Forms.LinkLabel linkLabel10;
         private System.Windows.Forms.LinkLabel linkLabel9;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox RD_Hp50Up_CheckBox;
     }
 }
