@@ -222,11 +222,28 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 400183,
             Type = MappingType.ANCHOR
         };
+
         public static readonly PixelMapping ExclusiveTick = new PixelMapping
         {
             X = 530,
             Y = 422,
             Color = 16759324,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ViewMoreCol = new PixelMapping
+        {
+            X = 143,
+            Y = 473,
+            Color = 1400252,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ExclusivePic = new PixelMapping
+        {
+            X = 181,
+            Y = 197,
+            Color = 15720432,
             Type = MappingType.ANCHOR
         };
 

@@ -3242,6 +3242,10 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.EXCLUSIVE_POPUP:
+                                            this.Escape();
+                                            break;
+
+                                        case SceneType.EXCLUSIVE_CLOSE_POPUP:
                                             this.WeightedClick(Popup3PM.MayCloseOKButton, 1.0, 1.0, 1, 0, "left");
                                             break;
 
@@ -5124,9 +5128,14 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.DAILY_QUEST_COMPLETE);
                     return result;
                 }
-                if (this.MatchMapping(Popup3PM.ViewMoreBG, 2) && this.MatchMapping(Popup3PM.ExclusiveTick, 2))
+                if (this.MatchMapping(Popup3PM.ViewMoreCol, 2) && this.MatchMapping(Popup3PM.ExclusivePic, 2))
                 {
                     Scene result = new Scene(SceneType.EXCLUSIVE_POPUP);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.ViewMoreBG, 2) && this.MatchMapping(Popup3PM.ExclusiveTick, 2))
+                {
+                    Scene result = new Scene(SceneType.EXCLUSIVE_CLOSE_POPUP);
                     return result;
                 }
                 if (this.MatchMapping(Popup3PM.ElementBG, 2) && this.MatchMapping(Popup3PM.ElementTick, 2))
