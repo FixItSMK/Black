@@ -35,5 +35,14 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 16774744,
             Type = MappingType.ANCHOR
         };
+
+        public static readonly PixelMapping GoldPlusBG = new PixelMapping
+        {
+            X = 710,
+            Y = 28,
+            Color = 3748123,
+            Type = MappingType.ANCHOR
+        };
+
     }
 }

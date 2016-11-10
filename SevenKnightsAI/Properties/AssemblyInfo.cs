@@ -8,15 +8,15 @@ using System.Runtime.Versioning;
 using System.Security;
 using System.Security.Permissions;
 
-[assembly: AssemblyVersion("1.0")]
+[assembly: AssemblyVersion("1.0.1")]
 [assembly: Debuggable(DebuggableAttribute.DebuggingModes.IgnoreSymbolStoreSequencePoints)]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCopyright("")]
-[assembly: AssemblyDescription("Seven Knights AI")]
-[assembly: AssemblyFileVersion("1.0")]
-[assembly: AssemblyProduct("Seven Knights AI")]
-[assembly: AssemblyTitle("Seven Knights AI")]
+[assembly: AssemblyDescription("Seven Knights AI Black")]
+[assembly: AssemblyFileVersion("1.0.1")]
+[assembly: AssemblyProduct("Seven Knights AI Black")]
+[assembly: AssemblyTitle("Seven Knights AI Black")]
 [assembly: AssemblyTrademark("")]
 [assembly: CompilationRelaxations(8)]
 [assembly: RuntimeCompatibility(WrapNonExceptionThrows = true)]

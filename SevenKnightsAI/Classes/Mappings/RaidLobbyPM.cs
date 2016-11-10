@@ -21,6 +21,14 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.BUTTON
         };
 
+        public static readonly PixelMapping DefeatedTabSelect = new PixelMapping
+        {
+            X = 800,
+            Y = 70,
+            Color = 14126341,
+            Type = MappingType.ANCHOR
+        };
+
         public static readonly PixelMapping EnterButton = new PixelMapping
         {
             X = 868,

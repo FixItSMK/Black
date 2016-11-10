@@ -1169,7 +1169,7 @@ namespace SevenKnightsAI.Classes
                     this.RD_Team2Loop
                 },
                 {
-                    "RD_Hp50up",
+                    "RD_Hp50Up",
                     this.RD_Hp50Up
                 },
                 {

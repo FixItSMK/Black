@@ -19,5 +19,13 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 16774744,
             Type = MappingType.ANCHOR
         };
+
+        public static readonly PixelMapping NoFriendYellowTick = new PixelMapping
+        {
+            X = 420,
+            Y = 400,
+            Color = 16757782,
+            Type = MappingType.ANCHOR
+        };
     }
 }

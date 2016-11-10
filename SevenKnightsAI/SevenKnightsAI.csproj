@@ -284,11 +284,26 @@
   <ItemGroup>
     <None Include="Resources\Delone.ico" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="icons\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Title.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icons\icon_adventure.png" />
+    <Content Include="icons\icon_arena.png" />
+    <Content Include="icons\icon_gold.png" />
+    <Content Include="icons\icon_gold_chamber.png" />
+    <Content Include="icons\icon_help.png" />
+    <Content Include="icons\icon_honor.png" />
+    <Content Include="icons\icon_key_adventure.png" />
+    <Content Include="icons\icon_key_arena.png" />
+    <Content Include="icons\icon_key_tower.png" />
+    <Content Include="icons\icon_pushbullet.png" />
+    <Content Include="icons\icon_raid.png" />
+    <Content Include="icons\icon_ruby.png" />
+    <Content Include="icons\icon_topaz.png" />
+    <Content Include="icons\icon_uac.png" />
+    <Content Include="icons\SevenKnights.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

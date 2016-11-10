@@ -83,7 +83,15 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 745,
             Y = 126,
-            Color = 16107613,
+            Color = 16107360,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping AliceProColor = new PixelMapping
+        {
+            X = 180,
+            Y = 454,
+            Color = 12829635,
             Type = MappingType.ANCHOR
         };
 
@@ -161,17 +169,33 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping EvenBoderRight = new PixelMapping
         {
-            X = 861,
-            Y = 46,
-            Color = 8534579,
+            X = 760,
+            Y = 487,
+            Color = 16753314,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping DragonFace = new PixelMapping
+        public static readonly PixelMapping Exclucsive = new PixelMapping
         {
-            X = 98,
-            Y = 234,
-            Color = 15461622,
+            X = 134,
+            Y = 12,
+            Color = 16738665,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping EvenBoderRightBG = new PixelMapping
+        {
+            X = 760,
+            Y = 487,
+            Color = 4927536,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ExclucsiveBG = new PixelMapping
+        {
+            X = 134,
+            Y = 12,
+            Color = 4923167,
             Type = MappingType.ANCHOR
         };
 

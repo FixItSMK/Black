@@ -1056,10 +1056,10 @@ namespace SevenKnightsAI.Classes
             this.Log("Done buying keys", this.COLOR_BUY_KEYS);
             this.PushNote("Done buying keys", "AI has finished buying keys.");
             this.NextPossibleObjective();
-            if (this.CurrentObjective == Objective.ADVENTURE)
-            {
-                this.NextPossibleObjective();
-            }
+            //if (this.CurrentObjective == Objective.ADVENTURE)
+            //{
+            //    this.NextPossibleObjective();
+            //}
             SevenKnightsCore.Sleep(300);
             this.Escape();
             SevenKnightsCore.Sleep(1000);
@@ -2027,6 +2027,7 @@ namespace SevenKnightsAI.Classes
                                             {
                                                 this.WeightedClick(LobbyPM.StatusBoard, 1.0, 1.0, 1, 0, "left");
                                                 hottimeloop = false;
+                                                SevenKnightsCore.Sleep(800);
                                             }
                                             else if (this.AISettings.RS_CollectLuckyChest && this.MatchMapping(LobbyPM.MaysLuckyChestAvailable_1, 4) && this.MatchMapping(LobbyPM.MaysLuckyChestAvailable_2, 4))
                                             {
@@ -2347,7 +2348,7 @@ namespace SevenKnightsAI.Classes
                                                             if(this.MatchMapping(AdventureStartPM.UseFriendOff,2))
                                                             {
                                                                 this.WeightedClick(SharedPM.UseFriendButton, 1.0, 1.0, 1, 0, "left");
-                                                                SevenKnightsCore.Sleep(800);
+                                                                SevenKnightsCore.Sleep(600);
                                                             }
                                                         }
                                                         else
@@ -2355,16 +2356,16 @@ namespace SevenKnightsAI.Classes
                                                             if (this.MatchMapping(AdventureStartPM.UseFriendOn, 2))
                                                             {
                                                                 this.WeightedClick(SharedPM.UseFriendButton, 1.0, 1.0, 1, 0, "left");
-                                                                SevenKnightsCore.Sleep(800);
+                                                                SevenKnightsCore.Sleep(600);
                                                             }
                                                         }
                                                         if(this.MatchMapping(AdventureStartPM.AutoRepeatOn, 2))
                                                         {
                                                             this.WeightedClick(AdventureStartPM.AutoRepeatOff, 1.0, 1.0, 1, 0, "left");
-                                                            SevenKnightsCore.Sleep(800);
+                                                            SevenKnightsCore.Sleep(900);
                                                         }
-                                                        this.WeightedClick(SharedPM.PrepareFight_StartButton, 1.0, 1.0, 1, 0, "left");
-                                                        SevenKnightsCore.Sleep(300);
+                                                        SevenKnightsCore.Sleep(400);
+                                                        this.WeightedClick(SharedPM.PrepareFight_StartButton, 1.0, 1.0, 1, 0, "left");                                                       
                                                     }
                                                 }
                                                 else
@@ -2442,11 +2443,16 @@ namespace SevenKnightsAI.Classes
                                                 this.PushNote("Out of Keys [Adventure]", "AI will buy more keys or play other modes while waiting.");
                                                 flag3 = true;
                                             }
-                                            if (this.CurrentObjective != Objective.BUY_KEYS)
+                                            if (this.CurrentObjective != Objective.BUY_KEYS && this.AISettings.RS_BuyKeyHonors && this.KeysBoughtHonors < this.AISettings.RS_BuyKeyHonorsAmount)
                                             {
                                                 this.ChangeObjective(Objective.BUY_KEYS);
+                                                this.Escape();
                                             }
-                                            this.Escape();
+                                            else
+                                            {
+                                                this.Escape();
+                                                this.NextPossibleObjective();
+                                            }
                                             break;
 
                                         case SceneType.OUT_OF_KEYS_POPUP:
@@ -2636,7 +2642,19 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.ARENA_FULL_HONOR_POPUP:
-                                            this.WeightedClick(ArenaFullHonorPopupPM.YesButton, 1.0, 1.0, 1, 0, "left");
+                                            if (this.AISettings.RS_BuyKeyHonors)
+                                            {
+                                                if (this.CurrentObjective != Objective.BUY_KEYS)
+                                                {
+                                                    this.ChangeObjective(Objective.BUY_KEYS);
+                                                    this.Escape();
+                                                }
+                                                this.Escape();
+                                            }
+                                            else
+                                            {
+                                                this.WeightedClick(ArenaFullHonorPopupPM.YesButton, 1.0, 1.0, 1, 0, "left");
+                                            }
                                             break;
 
                                         case SceneType.OUT_OF_SWORDS_POPUP:
@@ -2785,6 +2803,12 @@ namespace SevenKnightsAI.Classes
                                                     {
                                                         this.DoneRaid();
                                                     }
+                                                }
+                                                scene = this.SceneSearch();
+                                                if (this.MatchMapping(RaidLobbyPM.DefeatedTabSelect, 2))
+                                                {
+                                                    this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
+                                                    SevenKnightsCore.Sleep(500);
                                                 }
                                                 else
                                                 {
@@ -4962,7 +4986,12 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.FRIENDS);
                     return result;
                 }
-                if (this.MatchMapping(SharedPM.Friends_DimmedBG_1, 2) && this.MatchMapping(SharedPM.Friends_DimmedBG_2, 2) && this.MatchMapping(SharedPM.Friends_PopupBorder, 2) && this.MatchMapping(SendHonorSendingPopupPM.RedCross, 2))
+                //if (this.MatchMapping(SharedPM.Friends_DimmedBG_1, 2) && this.MatchMapping(SharedPM.Friends_DimmedBG_2, 2) && this.MatchMapping(SharedPM.Friends_PopupBorder, 2) && this.MatchMapping(SendHonorSendingPopupPM.RedCross, 2))
+                //{
+                //    Scene result = new Scene(SceneType.SEND_HONOR_SENDING_POPUP);
+                //    return result;
+                //}
+                if (this.MatchMapping(SharedPM.Friends_PopupBorder, 2) && this.MatchMapping(SendHonorSendingPopupPM.RedCross, 2) && this.MatchMapping(SendHonorSendingPopupPM.GoldIconPlusBG, 2))
                 {
                     Scene result = new Scene(SceneType.SEND_HONOR_SENDING_POPUP);
                     return result;
@@ -4977,16 +5006,16 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.SEND_HONOR_FULL_POPUP);
                     return result;
                 }
-                if (this.MatchMapping(SharedPM.Friends_DimmedBG_1, 2) && this.MatchMapping(SharedPM.Friends_DimmedBG_2, 2) && this.MatchMapping(SharedPM.Friends_PopupBorder, 2) && this.MatchMapping(SendHonorFullPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2))
-                {
-                    Scene result = new Scene(SceneType.SEND_HONOR_CONFIRM_POPUP);
-                    return result;
-                }
-                //if (this.MatchMapping(SendHonorFullPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2))
+                //if (this.MatchMapping(SharedPM.Friends_DimmedBG_1, 2) && this.MatchMapping(SharedPM.Friends_DimmedBG_2, 2) && this.MatchMapping(SharedPM.Friends_PopupBorder, 2) && this.MatchMapping(SendHonorFullPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2))
                 //{
                 //    Scene result = new Scene(SceneType.SEND_HONOR_CONFIRM_POPUP);
                 //    return result;
                 //}
+                if (this.MatchMapping(SendHonorConfirmPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2) && this.MatchMapping(SendHonorConfirmPopupPM.GoldPlusBG, 2))
+                {
+                    Scene result = new Scene(SceneType.SEND_HONOR_CONFIRM_POPUP);
+                    return result;
+                }
                 if (this.MatchMapping(TowerStartPM.KeyBoxBorder, 2) && this.MatchMapping(TowerStartPM.StartKey, 5))
                 {
                     Scene result = new Scene(SceneType.TOWER_START);
@@ -5087,7 +5116,7 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.RACHEL_SPECIAL_PACK_CLOSE_POPUP);
                     return result;
                 }
-                if (this.MatchMapping(Popup3PM.AliceProColse, 2) && this.MatchMapping(Popup3PM.AliceProPurchase, 2))
+                if (this.MatchMapping(Popup3PM.AliceProColor, 2) && this.MatchMapping(Popup3PM.AliceProPurchase, 2))
                 {
                     Scene result = new Scene(SceneType.ALICE_PRO_PACK_POPUP);
                     return result;
@@ -5102,12 +5131,12 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.WIFI_WARNING_POPUP);
                     return result;
                 }
-                if (this.MatchMapping(Popup3PM.EvenBoderRight, 2) && this.MatchMapping(Popup3PM.DragonFace, 2))
+                if (this.MatchMapping(Popup3PM.EvenBoderRight, 2) && this.MatchMapping(Popup3PM.Exclucsive, 2))
                 {
                     Scene result = new Scene(SceneType.MAY_LUCKY_BOX_POPUP);
                     return result;
                 }
-                if (this.MatchMapping(Popup3PM.DragonFaceBG, 2) && this.MatchMapping(Popup3PM.EvenCloseCancle, 2))
+                if (this.MatchMapping(Popup3PM.EvenBoderRightBG, 2) && this.MatchMapping(Popup3PM.ExclucsiveBG, 2) && this.MatchMapping(Popup3PM.EvenCloseCancle, 2))
                 {
                     Scene result = new Scene(SceneType.MAY_LUCKY_BOX_CLOSE_POPUP);
                     return result;
@@ -5158,7 +5187,11 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.EVENT_PACKAGE_CLOSE_POPUP);
                     return result;
                 }
-
+                if (this.MatchMapping(SendHonorConfirmPopupPM.GoldPlusBG, 2) && this.MatchMapping(SendHonorFailedPopupPM.NoFriendYellowTick, 2))
+                {
+                    Scene result = new Scene(SceneType.SEND_HONOR_NO_FRIEND_TO_SEND);
+                    return result;
+                }
             }
             catch
             {
@@ -6198,21 +6231,18 @@ namespace SevenKnightsAI.Classes
                 }
                 else
                 {
-                    this.WeightedClick(FriendsPM.SendAllButton, 1.0, 1.0, 1, 0, "left");
+                    this.WeightedClick(FriendsPM.SendAllButton, 1.0, 1.0, 1, 0, "left");  // กดปุ่ม ส่งทั้งหมด
                     SevenKnightsCore.Sleep(1000);
                     this.CaptureFrame();
-                    scene = this.SceneSearch();
-                    if (scene == null || scene.SceneType != SceneType.SEND_HONOR_CONFIRM_POPUP)
-                    {
-                        SevenKnightsCore.Sleep(300);
-                        this.Escape();
-                    }
-                    else
+                    //scene = this.SceneSearch();
+                    if (this.MatchMapping(SendHonorConfirmPopupPM.RedCross, 2)
+                        && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2)
+                        && this.MatchMapping(SendHonorConfirmPopupPM.GoldPlusBG, 2))
                     {
                         this.WeightedClick(SendHonorConfirmPopupPM.HonorsGiftButton, 1.0, 1.0, 1, 0, "left");
                         SevenKnightsCore.Sleep(1000);
                         this.CaptureFrame();
-                        while (!this.Worker.CancellationPending && this.MatchMapping(SendHonorSendingPopupPM.RedCross, 3))
+                        while (!this.Worker.CancellationPending && this.MatchMapping(SendHonorSendingPopupPM.RedCross, 2))
                         {
                             this.CaptureFrame();
                             SevenKnightsCore.Sleep(500);
@@ -6237,8 +6267,53 @@ namespace SevenKnightsAI.Classes
                                 SevenKnightsCore.Sleep(300);
                                 this.Escape();
                             }
+
                         }
                     }
+                    else
+                    {
+                        SevenKnightsCore.Sleep(300);
+                        this.Escape();
+                    }
+
+                    //if (scene == null || scene.SceneType != SceneType.SEND_HONOR_CONFIRM_POPUP)  // ถ้าเป็นหน้าว่าง หรือไม่เท่ากับ SEND_HONOR_CONFIRM_POPUP
+                    //{
+                    //    SevenKnightsCore.Sleep(300);
+                    //    this.Log("มาถึงตรงนี้แปลว่าหาหน้า Send Confirm ไม่เจอ", this.COLOR_HONOR);
+                    //    this.Escape();
+                    //}
+                    //else
+                    //{                                                                           // ถ้าเป็นหน้า SEND_HONOR_CONFIRM_POPUP
+                    //    this.WeightedClick(SendHonorConfirmPopupPM.HonorsGiftButton, 1.0, 1.0, 1, 0, "left");
+                    //    SevenKnightsCore.Sleep(1000);
+                    //    this.CaptureFrame();
+                    //    while (!this.Worker.CancellationPending && this.MatchMapping(SendHonorSendingPopupPM.RedCross, 2))
+                    //    {
+                    //        this.CaptureFrame();
+                    //        SevenKnightsCore.Sleep(500);
+                    //    }
+                    //    SevenKnightsCore.Sleep(500);
+                    //    this.CaptureFrame();
+                    //    scene = this.SceneSearch();
+                    //    if (scene == null || scene.SceneType != SceneType.SEND_HONOR_FAILED_POPUP || scene.SceneType != SceneType.SEND_HONOR_FULL_POPUP || scene.SceneType != SceneType.SEND_HONOR_CONFIRM_POPUP)
+                    //    {
+                    //        SevenKnightsCore.Sleep(1000);
+                    //        this.Escape();
+                    //    }
+                    //    else
+                    //    {
+                    //        if (scene.SceneType == SceneType.SEND_HONOR_FULL_POPUP || scene.SceneType == SceneType.SEND_HONOR_CONFIRM_POPUP)
+                    //        {
+                    //            this.DoneSendHonors();
+                    //            return;
+                    //        }
+                    //        if (scene.SceneType == SceneType.SEND_HONOR_FAILED_POPUP)
+                    //        {
+                    //            SevenKnightsCore.Sleep(300);
+                    //            this.Escape();
+                    //        }
+                    //    }
+                    //}
                 }
             }
             this.DoneSendHonors();

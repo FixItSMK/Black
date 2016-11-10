@@ -99,6 +99,7 @@ namespace SevenKnightsAI.Classes
         SEND_HONOR_FAILED_POPUP,
         SEND_HONOR_CONFIRM_POPUP,
         SEND_HONOR_FULL_POPUP,
+        SEND_HONOR_NO_FRIEND_TO_SEND,
         ADS_CLOSE,
         BLUESTACK_HOME,
         RAID_AWAKENED_LOBBY,
