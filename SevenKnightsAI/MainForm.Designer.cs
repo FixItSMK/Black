@@ -51,8 +51,8 @@
             this.AD_difficultyComboBox = new System.Windows.Forms.ComboBox();
             this.AD_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.AD_masteryComboBox = new System.Windows.Forms.ComboBox();
-            this.AD_masteryLabel = new System.Windows.Forms.Label();
             this.AD_bothSkillRadio = new System.Windows.Forms.RadioButton();
+            this.AD_masteryLabel = new System.Windows.Forms.Label();
             this.AD_wave3Panel = new System.Windows.Forms.Panel();
             this.AD_wave3LoopCheckBox = new System.Windows.Forms.CheckBox();
             this.AD_w3Skill10Button = new System.Windows.Forms.Button();
@@ -99,14 +99,13 @@
             this.AD_elementHeroesCheckBox = new System.Windows.Forms.CheckBox();
             this.AD_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.goldChamberTab = new System.Windows.Forms.TabPage();
-            this.GC_UseFriendCheckBox = new System.Windows.Forms.CheckBox();
             this.GC_limitLabel = new System.Windows.Forms.Label();
             this.GC_limitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.GC_limitCheckBox = new System.Windows.Forms.CheckBox();
             this.GC_mainPanel = new System.Windows.Forms.Panel();
-            this.GC_skillGroupBox = new System.Windows.Forms.GroupBox();
+            this.GC_UseFriendCheckBox = new System.Windows.Forms.CheckBox();
             this.GC_masteryComboBox = new System.Windows.Forms.ComboBox();
-            this.GC_masteryLabel = new System.Windows.Forms.Label();
+            this.GC_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.GC_bothSkillRadio = new System.Windows.Forms.RadioButton();
             this.GC_wave2Panel = new System.Windows.Forms.Panel();
             this.GC_wave2LoopCheckBox = new System.Windows.Forms.CheckBox();
@@ -136,6 +135,7 @@
             this.GC_w1Skill02Button = new System.Windows.Forms.Button();
             this.GC_wave1Label = new System.Windows.Forms.Label();
             this.GC_w1Skill01Button = new System.Windows.Forms.Button();
+            this.GC_masteryLabel = new System.Windows.Forms.Label();
             this.GC_formationComboBox = new System.Windows.Forms.ComboBox();
             this.GC_teamComboBox = new System.Windows.Forms.ComboBox();
             this.GC_formationPanel = new System.Windows.Forms.Panel();
@@ -149,29 +149,30 @@
             this.GC_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.arenaTab = new System.Windows.Forms.TabPage();
             this.AR_limitLabel = new System.Windows.Forms.Label();
+            this.AR_useRubyLabel = new System.Windows.Forms.Label();
             this.AR_limitNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.AR_useRubyNumericBox = new System.Windows.Forms.NumericUpDown();
             this.AR_limitCheckBox = new System.Windows.Forms.CheckBox();
+            this.AR_useRubyCheckBox = new System.Windows.Forms.CheckBox();
             this.AR_mainPanel = new System.Windows.Forms.Panel();
             this.AR_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.AR_masteryComboBox = new System.Windows.Forms.ComboBox();
             this.AR_masteryLabel = new System.Windows.Forms.Label();
-            this.AR_useRubyLabel = new System.Windows.Forms.Label();
-            this.AR_useRubyNumericBox = new System.Windows.Forms.NumericUpDown();
-            this.AR_useRubyCheckBox = new System.Windows.Forms.CheckBox();
             this.AR_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.raidTab = new System.Windows.Forms.TabPage();
             this.RD_DragonLimit_lbl = new System.Windows.Forms.Label();
             this.RD_DragonLimitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.RD_mainPanel = new System.Windows.Forms.Panel();
+            this.RD_OwnerDragon = new System.Windows.Forms.CheckBox();
+            this.RD_masteryComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.RD_Hp50Up_CheckBox = new System.Windows.Forms.CheckBox();
+            this.RD_limitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.ARD_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.RD_limitLabel = new System.Windows.Forms.Label();
-            this.RD_limitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.RD_limitCheckBox = new System.Windows.Forms.CheckBox();
             this.RD_StopOnDragonFound_Checkbox = new System.Windows.Forms.CheckBox();
             this.RD_skillGroupBox = new System.Windows.Forms.GroupBox();
-            this.RD_masteryComboBox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.RD_bothSkillRadio = new System.Windows.Forms.RadioButton();
             this.RD_team2Panel = new System.Windows.Forms.Panel();
             this.RD_team2LoopCheckBox = new System.Windows.Forms.CheckBox();
@@ -354,9 +355,9 @@
             this.GC_formationPanel.SuspendLayout();
             this.arenaTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AR_limitNumericBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AR_useRubyNumericBox)).BeginInit();
             this.AR_mainPanel.SuspendLayout();
             this.AR_skillGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AR_useRubyNumericBox)).BeginInit();
             this.raidTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLimitNumericBox)).BeginInit();
             this.RD_mainPanel.SuspendLayout();
@@ -845,17 +846,6 @@
             this.AD_masteryComboBox.Visible = false;
             this.AD_masteryComboBox.SelectedIndexChanged += new System.EventHandler(this.masteryComboBox_SelectedIndexChanged);
             // 
-            // AD_masteryLabel
-            // 
-            this.AD_masteryLabel.AutoSize = true;
-            this.AD_masteryLabel.Enabled = false;
-            this.AD_masteryLabel.Location = new System.Drawing.Point(137, 219);
-            this.AD_masteryLabel.Name = "AD_masteryLabel";
-            this.AD_masteryLabel.Size = new System.Drawing.Size(44, 13);
-            this.AD_masteryLabel.TabIndex = 13;
-            this.AD_masteryLabel.Text = "Mastery";
-            this.AD_masteryLabel.Visible = false;
-            // 
             // AD_bothSkillRadio
             // 
             this.AD_bothSkillRadio.AutoSize = true;
@@ -867,6 +857,17 @@
             this.AD_bothSkillRadio.Text = "Both";
             this.AD_bothSkillRadio.UseVisualStyleBackColor = true;
             this.AD_bothSkillRadio.CheckedChanged += new System.EventHandler(this.skillTypeRadio_CheckedChanged);
+            // 
+            // AD_masteryLabel
+            // 
+            this.AD_masteryLabel.AutoSize = true;
+            this.AD_masteryLabel.Enabled = false;
+            this.AD_masteryLabel.Location = new System.Drawing.Point(137, 219);
+            this.AD_masteryLabel.Name = "AD_masteryLabel";
+            this.AD_masteryLabel.Size = new System.Drawing.Size(44, 13);
+            this.AD_masteryLabel.TabIndex = 13;
+            this.AD_masteryLabel.Text = "Mastery";
+            this.AD_masteryLabel.Visible = false;
             // 
             // AD_wave3Panel
             // 
@@ -1402,17 +1403,6 @@
             this.goldChamberTab.TabIndex = 2;
             this.goldChamberTab.Text = "Gold Chamber";
             // 
-            // GC_UseFriendCheckBox
-            // 
-            this.GC_UseFriendCheckBox.AutoSize = true;
-            this.GC_UseFriendCheckBox.Location = new System.Drawing.Point(14, 0);
-            this.GC_UseFriendCheckBox.Name = "GC_UseFriendCheckBox";
-            this.GC_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
-            this.GC_UseFriendCheckBox.TabIndex = 20;
-            this.GC_UseFriendCheckBox.Text = "Use Friends";
-            this.GC_UseFriendCheckBox.UseVisualStyleBackColor = true;
-            this.GC_UseFriendCheckBox.CheckedChanged += new System.EventHandler(this.GC_UseFriendCheckBox_CheckedChanged);
-            // 
             // GC_limitLabel
             // 
             this.GC_limitLabel.AutoSize = true;
@@ -1458,20 +1448,16 @@
             this.GC_mainPanel.Size = new System.Drawing.Size(487, 277);
             this.GC_mainPanel.TabIndex = 14;
             // 
-            // GC_skillGroupBox
+            // GC_UseFriendCheckBox
             // 
-            this.GC_skillGroupBox.Controls.Add(this.GC_bothSkillRadio);
-            this.GC_skillGroupBox.Controls.Add(this.GC_wave2Panel);
-            this.GC_skillGroupBox.Controls.Add(this.GC_manualSkillRadio);
-            this.GC_skillGroupBox.Controls.Add(this.GC_autoSkillRadio);
-            this.GC_skillGroupBox.Controls.Add(this.GC_wave1Panel);
-            this.GC_skillGroupBox.Location = new System.Drawing.Point(228, 5);
-            this.GC_skillGroupBox.Name = "GC_skillGroupBox";
-            this.GC_skillGroupBox.Size = new System.Drawing.Size(254, 184);
-            this.GC_skillGroupBox.TabIndex = 24;
-            this.GC_skillGroupBox.TabStop = false;
-            this.GC_skillGroupBox.Tag = "1";
-            this.GC_skillGroupBox.Text = "Skill Management";
+            this.GC_UseFriendCheckBox.AutoSize = true;
+            this.GC_UseFriendCheckBox.Location = new System.Drawing.Point(14, 0);
+            this.GC_UseFriendCheckBox.Name = "GC_UseFriendCheckBox";
+            this.GC_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
+            this.GC_UseFriendCheckBox.TabIndex = 20;
+            this.GC_UseFriendCheckBox.Text = "Use Friends";
+            this.GC_UseFriendCheckBox.UseVisualStyleBackColor = true;
+            this.GC_UseFriendCheckBox.CheckedChanged += new System.EventHandler(this.GC_UseFriendCheckBox_CheckedChanged);
             // 
             // GC_masteryComboBox
             // 
@@ -1491,16 +1477,20 @@
             this.GC_masteryComboBox.Visible = false;
             this.GC_masteryComboBox.SelectedIndexChanged += new System.EventHandler(this.masteryComboBox_SelectedIndexChanged);
             // 
-            // GC_masteryLabel
+            // GC_skillGroupBox
             // 
-            this.GC_masteryLabel.AutoSize = true;
-            this.GC_masteryLabel.Enabled = false;
-            this.GC_masteryLabel.Location = new System.Drawing.Point(302, 219);
-            this.GC_masteryLabel.Name = "GC_masteryLabel";
-            this.GC_masteryLabel.Size = new System.Drawing.Size(44, 13);
-            this.GC_masteryLabel.TabIndex = 15;
-            this.GC_masteryLabel.Text = "Mastery";
-            this.GC_masteryLabel.Visible = false;
+            this.GC_skillGroupBox.Controls.Add(this.GC_bothSkillRadio);
+            this.GC_skillGroupBox.Controls.Add(this.GC_wave2Panel);
+            this.GC_skillGroupBox.Controls.Add(this.GC_manualSkillRadio);
+            this.GC_skillGroupBox.Controls.Add(this.GC_autoSkillRadio);
+            this.GC_skillGroupBox.Controls.Add(this.GC_wave1Panel);
+            this.GC_skillGroupBox.Location = new System.Drawing.Point(228, 5);
+            this.GC_skillGroupBox.Name = "GC_skillGroupBox";
+            this.GC_skillGroupBox.Size = new System.Drawing.Size(254, 184);
+            this.GC_skillGroupBox.TabIndex = 24;
+            this.GC_skillGroupBox.TabStop = false;
+            this.GC_skillGroupBox.Tag = "1";
+            this.GC_skillGroupBox.Text = "Skill Management";
             // 
             // GC_bothSkillRadio
             // 
@@ -1842,6 +1832,17 @@
             this.GC_w1Skill01Button.UseVisualStyleBackColor = true;
             this.GC_w1Skill01Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
+            // GC_masteryLabel
+            // 
+            this.GC_masteryLabel.AutoSize = true;
+            this.GC_masteryLabel.Enabled = false;
+            this.GC_masteryLabel.Location = new System.Drawing.Point(302, 219);
+            this.GC_masteryLabel.Name = "GC_masteryLabel";
+            this.GC_masteryLabel.Size = new System.Drawing.Size(44, 13);
+            this.GC_masteryLabel.TabIndex = 15;
+            this.GC_masteryLabel.Text = "Mastery";
+            this.GC_masteryLabel.Visible = false;
+            // 
             // GC_formationComboBox
             // 
             this.GC_formationComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -2013,6 +2014,16 @@
             this.AR_limitLabel.TabIndex = 22;
             this.AR_limitLabel.Text = "times per visit";
             // 
+            // AR_useRubyLabel
+            // 
+            this.AR_useRubyLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.AR_useRubyLabel.AutoSize = true;
+            this.AR_useRubyLabel.Location = new System.Drawing.Point(165, 32);
+            this.AR_useRubyLabel.Name = "AR_useRubyLabel";
+            this.AR_useRubyLabel.Size = new System.Drawing.Size(31, 13);
+            this.AR_useRubyLabel.TabIndex = 12;
+            this.AR_useRubyLabel.Text = "times";
+            // 
             // AR_limitNumericBox
             // 
             this.AR_limitNumericBox.Location = new System.Drawing.Point(365, 5);
@@ -2021,6 +2032,14 @@
             this.AR_limitNumericBox.TabIndex = 21;
             this.AR_limitNumericBox.Tag = "2";
             this.AR_limitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
+            // 
+            // AR_useRubyNumericBox
+            // 
+            this.AR_useRubyNumericBox.Location = new System.Drawing.Point(124, 29);
+            this.AR_useRubyNumericBox.Name = "AR_useRubyNumericBox";
+            this.AR_useRubyNumericBox.Size = new System.Drawing.Size(37, 20);
+            this.AR_useRubyNumericBox.TabIndex = 11;
+            this.AR_useRubyNumericBox.ValueChanged += new System.EventHandler(this.AR_useRubyNumericBox_ValueChanged);
             // 
             // AR_limitCheckBox
             // 
@@ -2032,6 +2051,17 @@
             this.AR_limitCheckBox.Text = "Limit";
             this.AR_limitCheckBox.UseVisualStyleBackColor = true;
             this.AR_limitCheckBox.CheckedChanged += new System.EventHandler(this.limitCheckBox_CheckedChanged);
+            // 
+            // AR_useRubyCheckBox
+            // 
+            this.AR_useRubyCheckBox.AutoSize = true;
+            this.AR_useRubyCheckBox.Location = new System.Drawing.Point(14, 31);
+            this.AR_useRubyCheckBox.Name = "AR_useRubyCheckBox";
+            this.AR_useRubyCheckBox.Size = new System.Drawing.Size(107, 17);
+            this.AR_useRubyCheckBox.TabIndex = 0;
+            this.AR_useRubyCheckBox.Text = "Enter using Ruby";
+            this.AR_useRubyCheckBox.UseVisualStyleBackColor = true;
+            this.AR_useRubyCheckBox.CheckedChanged += new System.EventHandler(this.AR_useRubyCheckBox_CheckedChanged);
             // 
             // AR_mainPanel
             // 
@@ -2081,35 +2111,6 @@
             this.AR_masteryLabel.TabIndex = 17;
             this.AR_masteryLabel.Text = "Mastery";
             // 
-            // AR_useRubyLabel
-            // 
-            this.AR_useRubyLabel.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.AR_useRubyLabel.AutoSize = true;
-            this.AR_useRubyLabel.Location = new System.Drawing.Point(165, 32);
-            this.AR_useRubyLabel.Name = "AR_useRubyLabel";
-            this.AR_useRubyLabel.Size = new System.Drawing.Size(31, 13);
-            this.AR_useRubyLabel.TabIndex = 12;
-            this.AR_useRubyLabel.Text = "times";
-            // 
-            // AR_useRubyNumericBox
-            // 
-            this.AR_useRubyNumericBox.Location = new System.Drawing.Point(124, 29);
-            this.AR_useRubyNumericBox.Name = "AR_useRubyNumericBox";
-            this.AR_useRubyNumericBox.Size = new System.Drawing.Size(37, 20);
-            this.AR_useRubyNumericBox.TabIndex = 11;
-            this.AR_useRubyNumericBox.ValueChanged += new System.EventHandler(this.AR_useRubyNumericBox_ValueChanged);
-            // 
-            // AR_useRubyCheckBox
-            // 
-            this.AR_useRubyCheckBox.AutoSize = true;
-            this.AR_useRubyCheckBox.Location = new System.Drawing.Point(14, 31);
-            this.AR_useRubyCheckBox.Name = "AR_useRubyCheckBox";
-            this.AR_useRubyCheckBox.Size = new System.Drawing.Size(107, 17);
-            this.AR_useRubyCheckBox.TabIndex = 0;
-            this.AR_useRubyCheckBox.Text = "Enter using Ruby";
-            this.AR_useRubyCheckBox.UseVisualStyleBackColor = true;
-            this.AR_useRubyCheckBox.CheckedChanged += new System.EventHandler(this.AR_useRubyCheckBox_CheckedChanged);
-            // 
             // AR_enableCheckBox
             // 
             this.AR_enableCheckBox.AutoSize = true;
@@ -2149,7 +2150,7 @@
             // 
             // RD_DragonLimitNumericBox
             // 
-            this.RD_DragonLimitNumericBox.Location = new System.Drawing.Point(357, 5);
+            this.RD_DragonLimitNumericBox.Location = new System.Drawing.Point(361, 5);
             this.RD_DragonLimitNumericBox.Name = "RD_DragonLimitNumericBox";
             this.RD_DragonLimitNumericBox.Size = new System.Drawing.Size(37, 20);
             this.RD_DragonLimitNumericBox.TabIndex = 27;
@@ -2163,12 +2164,13 @@
             // 
             // RD_mainPanel
             // 
+            this.RD_mainPanel.Controls.Add(this.RD_OwnerDragon);
             this.RD_mainPanel.Controls.Add(this.RD_masteryComboBox);
             this.RD_mainPanel.Controls.Add(this.label2);
             this.RD_mainPanel.Controls.Add(this.RD_Hp50Up_CheckBox);
+            this.RD_mainPanel.Controls.Add(this.RD_limitNumericBox);
             this.RD_mainPanel.Controls.Add(this.ARD_enableCheckBox);
             this.RD_mainPanel.Controls.Add(this.RD_limitLabel);
-            this.RD_mainPanel.Controls.Add(this.RD_limitNumericBox);
             this.RD_mainPanel.Controls.Add(this.RD_limitCheckBox);
             this.RD_mainPanel.Controls.Add(this.RD_StopOnDragonFound_Checkbox);
             this.RD_mainPanel.Controls.Add(this.RD_skillGroupBox);
@@ -2177,89 +2179,16 @@
             this.RD_mainPanel.Size = new System.Drawing.Size(487, 255);
             this.RD_mainPanel.TabIndex = 15;
             // 
-            // RD_Hp50Up_CheckBox
+            // RD_OwnerDragon
             // 
-            this.RD_Hp50Up_CheckBox.AutoSize = true;
-            this.RD_Hp50Up_CheckBox.Location = new System.Drawing.Point(23, 50);
-            this.RD_Hp50Up_CheckBox.Name = "RD_Hp50Up_CheckBox";
-            this.RD_Hp50Up_CheckBox.Size = new System.Drawing.Size(130, 17);
-            this.RD_Hp50Up_CheckBox.TabIndex = 32;
-            this.RD_Hp50Up_CheckBox.Text = "Only Raid HP 50% Up";
-            this.toolTip.SetToolTip(this.RD_Hp50Up_CheckBox, "BETA Function");
-            this.RD_Hp50Up_CheckBox.UseVisualStyleBackColor = true;
-            this.RD_Hp50Up_CheckBox.CheckedChanged += new System.EventHandler(this.RD_Hp50Up_CheckBox_CheckedChanged);
-            // 
-            // ARD_enableCheckBox
-            // 
-            this.ARD_enableCheckBox.AutoSize = true;
-            this.ARD_enableCheckBox.Location = new System.Drawing.Point(23, 4);
-            this.ARD_enableCheckBox.Name = "ARD_enableCheckBox";
-            this.ARD_enableCheckBox.Size = new System.Drawing.Size(120, 17);
-            this.ARD_enableCheckBox.TabIndex = 31;
-            this.ARD_enableCheckBox.Text = "Enable Raid Awake";
-            this.ARD_enableCheckBox.UseVisualStyleBackColor = true;
-            this.ARD_enableCheckBox.CheckedChanged += new System.EventHandler(this.ARD_enableCheckBox_CheckedChanged);
-            // 
-            // RD_limitLabel
-            // 
-            this.RD_limitLabel.AutoSize = true;
-            this.RD_limitLabel.Enabled = false;
-            this.RD_limitLabel.Location = new System.Drawing.Point(125, 211);
-            this.RD_limitLabel.Name = "RD_limitLabel";
-            this.RD_limitLabel.Size = new System.Drawing.Size(70, 13);
-            this.RD_limitLabel.TabIndex = 25;
-            this.RD_limitLabel.Text = "times per visit";
-            this.RD_limitLabel.Visible = false;
-            // 
-            // RD_limitNumericBox
-            // 
-            this.RD_limitNumericBox.Enabled = false;
-            this.RD_limitNumericBox.Location = new System.Drawing.Point(83, 208);
-            this.RD_limitNumericBox.Name = "RD_limitNumericBox";
-            this.RD_limitNumericBox.Size = new System.Drawing.Size(37, 20);
-            this.RD_limitNumericBox.TabIndex = 24;
-            this.RD_limitNumericBox.Tag = "2";
-            this.RD_limitNumericBox.Visible = false;
-            this.RD_limitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
-            // 
-            // RD_limitCheckBox
-            // 
-            this.RD_limitCheckBox.Enabled = false;
-            this.RD_limitCheckBox.Location = new System.Drawing.Point(33, 210);
-            this.RD_limitCheckBox.Name = "RD_limitCheckBox";
-            this.RD_limitCheckBox.Size = new System.Drawing.Size(47, 17);
-            this.RD_limitCheckBox.TabIndex = 23;
-            this.RD_limitCheckBox.Tag = "2";
-            this.RD_limitCheckBox.Text = "Limit";
-            this.RD_limitCheckBox.UseVisualStyleBackColor = true;
-            this.RD_limitCheckBox.Visible = false;
-            this.RD_limitCheckBox.CheckedChanged += new System.EventHandler(this.limitCheckBox_CheckedChanged);
-            // 
-            // RD_StopOnDragonFound_Checkbox
-            // 
-            this.RD_StopOnDragonFound_Checkbox.AutoSize = true;
-            this.RD_StopOnDragonFound_Checkbox.Location = new System.Drawing.Point(23, 27);
-            this.RD_StopOnDragonFound_Checkbox.Name = "RD_StopOnDragonFound_Checkbox";
-            this.RD_StopOnDragonFound_Checkbox.Size = new System.Drawing.Size(144, 17);
-            this.RD_StopOnDragonFound_Checkbox.TabIndex = 29;
-            this.RD_StopOnDragonFound_Checkbox.Text = "Pause On Dragon Found";
-            this.RD_StopOnDragonFound_Checkbox.UseVisualStyleBackColor = true;
-            this.RD_StopOnDragonFound_Checkbox.CheckedChanged += new System.EventHandler(this.RD_StopOnDragonFound_Checkbox_CheckedChanged);
-            // 
-            // RD_skillGroupBox
-            // 
-            this.RD_skillGroupBox.Controls.Add(this.RD_bothSkillRadio);
-            this.RD_skillGroupBox.Controls.Add(this.RD_team2Panel);
-            this.RD_skillGroupBox.Controls.Add(this.RD_manualSkillRadio);
-            this.RD_skillGroupBox.Controls.Add(this.RD_autoSkillRadio);
-            this.RD_skillGroupBox.Controls.Add(this.RD_team1Panel);
-            this.RD_skillGroupBox.Location = new System.Drawing.Point(225, 3);
-            this.RD_skillGroupBox.Name = "RD_skillGroupBox";
-            this.RD_skillGroupBox.Size = new System.Drawing.Size(254, 189);
-            this.RD_skillGroupBox.TabIndex = 25;
-            this.RD_skillGroupBox.TabStop = false;
-            this.RD_skillGroupBox.Tag = "2";
-            this.RD_skillGroupBox.Text = "Skill Management";
+            this.RD_OwnerDragon.AutoSize = true;
+            this.RD_OwnerDragon.Location = new System.Drawing.Point(23, 50);
+            this.RD_OwnerDragon.Name = "RD_OwnerDragon";
+            this.RD_OwnerDragon.Size = new System.Drawing.Size(95, 17);
+            this.RD_OwnerDragon.TabIndex = 33;
+            this.RD_OwnerDragon.Text = "Owner Dragon";
+            this.RD_OwnerDragon.UseVisualStyleBackColor = true;
+            this.RD_OwnerDragon.CheckedChanged += new System.EventHandler(this.RD_OwnerDragon_CheckedChanged);
             // 
             // RD_masteryComboBox
             // 
@@ -2289,6 +2218,91 @@
             this.label2.TabIndex = 15;
             this.label2.Text = "Mastery";
             this.label2.Visible = false;
+            // 
+            // RD_Hp50Up_CheckBox
+            // 
+            this.RD_Hp50Up_CheckBox.AutoSize = true;
+            this.RD_Hp50Up_CheckBox.Location = new System.Drawing.Point(23, 73);
+            this.RD_Hp50Up_CheckBox.Name = "RD_Hp50Up_CheckBox";
+            this.RD_Hp50Up_CheckBox.Size = new System.Drawing.Size(130, 17);
+            this.RD_Hp50Up_CheckBox.TabIndex = 32;
+            this.RD_Hp50Up_CheckBox.Text = "Only Raid HP 50% Up";
+            this.toolTip.SetToolTip(this.RD_Hp50Up_CheckBox, "BETA Function");
+            this.RD_Hp50Up_CheckBox.UseVisualStyleBackColor = true;
+            this.RD_Hp50Up_CheckBox.CheckedChanged += new System.EventHandler(this.RD_Hp50Up_CheckBox_CheckedChanged);
+            // 
+            // RD_limitNumericBox
+            // 
+            this.RD_limitNumericBox.Enabled = false;
+            this.RD_limitNumericBox.Location = new System.Drawing.Point(86, 209);
+            this.RD_limitNumericBox.Name = "RD_limitNumericBox";
+            this.RD_limitNumericBox.Size = new System.Drawing.Size(37, 20);
+            this.RD_limitNumericBox.TabIndex = 24;
+            this.RD_limitNumericBox.Tag = "2";
+            this.RD_limitNumericBox.Visible = false;
+            this.RD_limitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
+            // 
+            // ARD_enableCheckBox
+            // 
+            this.ARD_enableCheckBox.AutoSize = true;
+            this.ARD_enableCheckBox.Location = new System.Drawing.Point(23, 4);
+            this.ARD_enableCheckBox.Name = "ARD_enableCheckBox";
+            this.ARD_enableCheckBox.Size = new System.Drawing.Size(120, 17);
+            this.ARD_enableCheckBox.TabIndex = 31;
+            this.ARD_enableCheckBox.Text = "Enable Raid Awake";
+            this.ARD_enableCheckBox.UseVisualStyleBackColor = true;
+            this.ARD_enableCheckBox.CheckedChanged += new System.EventHandler(this.ARD_enableCheckBox_CheckedChanged);
+            // 
+            // RD_limitLabel
+            // 
+            this.RD_limitLabel.AutoSize = true;
+            this.RD_limitLabel.Enabled = false;
+            this.RD_limitLabel.Location = new System.Drawing.Point(125, 211);
+            this.RD_limitLabel.Name = "RD_limitLabel";
+            this.RD_limitLabel.Size = new System.Drawing.Size(70, 13);
+            this.RD_limitLabel.TabIndex = 25;
+            this.RD_limitLabel.Text = "times per visit";
+            this.RD_limitLabel.Visible = false;
+            // 
+            // RD_limitCheckBox
+            // 
+            this.RD_limitCheckBox.Enabled = false;
+            this.RD_limitCheckBox.Location = new System.Drawing.Point(33, 210);
+            this.RD_limitCheckBox.Name = "RD_limitCheckBox";
+            this.RD_limitCheckBox.Size = new System.Drawing.Size(47, 17);
+            this.RD_limitCheckBox.TabIndex = 23;
+            this.RD_limitCheckBox.Tag = "2";
+            this.RD_limitCheckBox.Text = "Limit";
+            this.RD_limitCheckBox.UseVisualStyleBackColor = true;
+            this.RD_limitCheckBox.Visible = false;
+            this.RD_limitCheckBox.CheckedChanged += new System.EventHandler(this.limitCheckBox_CheckedChanged);
+            // 
+            // RD_StopOnDragonFound_Checkbox
+            // 
+            this.RD_StopOnDragonFound_Checkbox.AutoSize = true;
+            this.RD_StopOnDragonFound_Checkbox.Enabled = false;
+            this.RD_StopOnDragonFound_Checkbox.Location = new System.Drawing.Point(23, 27);
+            this.RD_StopOnDragonFound_Checkbox.Name = "RD_StopOnDragonFound_Checkbox";
+            this.RD_StopOnDragonFound_Checkbox.Size = new System.Drawing.Size(144, 17);
+            this.RD_StopOnDragonFound_Checkbox.TabIndex = 29;
+            this.RD_StopOnDragonFound_Checkbox.Text = "Pause On Dragon Found";
+            this.RD_StopOnDragonFound_Checkbox.UseVisualStyleBackColor = true;
+            this.RD_StopOnDragonFound_Checkbox.CheckedChanged += new System.EventHandler(this.RD_StopOnDragonFound_Checkbox_CheckedChanged);
+            // 
+            // RD_skillGroupBox
+            // 
+            this.RD_skillGroupBox.Controls.Add(this.RD_bothSkillRadio);
+            this.RD_skillGroupBox.Controls.Add(this.RD_team2Panel);
+            this.RD_skillGroupBox.Controls.Add(this.RD_manualSkillRadio);
+            this.RD_skillGroupBox.Controls.Add(this.RD_autoSkillRadio);
+            this.RD_skillGroupBox.Controls.Add(this.RD_team1Panel);
+            this.RD_skillGroupBox.Location = new System.Drawing.Point(225, 3);
+            this.RD_skillGroupBox.Name = "RD_skillGroupBox";
+            this.RD_skillGroupBox.Size = new System.Drawing.Size(254, 189);
+            this.RD_skillGroupBox.TabIndex = 25;
+            this.RD_skillGroupBox.TabStop = false;
+            this.RD_skillGroupBox.Tag = "2";
+            this.RD_skillGroupBox.Text = "Skill Management";
             // 
             // RD_bothSkillRadio
             // 
@@ -2646,6 +2660,8 @@
             // 
             // RD_DragonLimitCheckBox
             // 
+            this.RD_DragonLimitCheckBox.Checked = true;
+            this.RD_DragonLimitCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.RD_DragonLimitCheckBox.Location = new System.Drawing.Point(315, 7);
             this.RD_DragonLimitCheckBox.Name = "RD_DragonLimitCheckBox";
             this.RD_DragonLimitCheckBox.Size = new System.Drawing.Size(47, 17);
@@ -3811,7 +3827,7 @@
             // 
             this.HeroCountLabel.AutoSize = true;
             this.HeroCountLabel.ForeColor = System.Drawing.Color.Blue;
-            this.HeroCountLabel.Location = new System.Drawing.Point(300, 45);
+            this.HeroCountLabel.Location = new System.Drawing.Point(264, 47);
             this.HeroCountLabel.Name = "HeroCountLabel";
             this.HeroCountLabel.Size = new System.Drawing.Size(24, 13);
             this.HeroCountLabel.TabIndex = 14;
@@ -4229,10 +4245,10 @@
             this.arenaTab.ResumeLayout(false);
             this.arenaTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AR_limitNumericBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AR_useRubyNumericBox)).EndInit();
             this.AR_mainPanel.ResumeLayout(false);
             this.AR_skillGroupBox.ResumeLayout(false);
             this.AR_skillGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AR_useRubyNumericBox)).EndInit();
             this.raidTab.ResumeLayout(false);
             this.raidTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLimitNumericBox)).EndInit();
@@ -5188,5 +5204,6 @@
         private System.Windows.Forms.LinkLabel linkLabel9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox RD_Hp50Up_CheckBox;
+        private System.Windows.Forms.CheckBox RD_OwnerDragon;
     }
 }

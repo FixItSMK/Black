@@ -121,6 +121,11 @@ namespace SevenKnightsAI.Classes
         private TimeSpan TowerKeyTime;
         private BackgroundWorker Worker;
         private string MapZone;
+        private bool Hottimeloop;
+        private string PlayerName = "";
+        private bool CheckPlayaName = true;
+        private bool DragonFound;
+
 
         #endregion Private Fields
 
@@ -1043,7 +1048,130 @@ namespace SevenKnightsAI.Classes
                 SharedPM.Fight_Skill10
             };
         }
+//********************************ส่วนเพิ่ม**************************
+        private string CheckOwnername()
+        {
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, LobbyPM.OwnerLocation))
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText();
+#if DEBUG
+                    Console.WriteLine("Name = " + text.Trim());
+                    bitmap.Save("Name.png");
+#endif
+                    Utility.FilterAscii(text);
+                    if (text != "")
+                    {
+                        PlayerName = text.Trim();
+                        this.Log("Owner Name = " + PlayerName, Color.BlueViolet);
+                        CheckPlayaName = false;
+                    }
+                    else
+                    {
+                        PlayerName = "NULL";
+                        CheckPlayaName = false;
+                    }
+                }
+#if DEBUG
+                Console.WriteLine("Owner Name = " + PlayerName);
+#endif
+                return PlayerName;
+            }
 
+        }
+
+        private string CheckDragonNameUpToDown(int location) //หามังกรหลายตำแหน่งจาก บน ลง ล่าง
+        {
+            string DragonN = "";
+            Rectangle[] array = new Rectangle[]
+            {
+                RaidLobbyPM.RaidNameUpToDownL0,
+                RaidLobbyPM.RaidNameUpToDownL1,
+                RaidLobbyPM.RaidNameUpToDownL2,
+                RaidLobbyPM.RaidNameUpToDownL3
+            };
+            Rectangle rect = array[location];
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect))
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText();
+#if DEBUG
+                    Console.WriteLine("DName = " + text.Trim().Replace(" ", ""));
+                    bitmap.Save("DName.png");
+#endif
+                    Utility.FilterAscii(text);
+                    DragonN = text.Trim();
+                }
+#if DEBUG
+                Console.WriteLine("DName = " + DragonN);
+#endif
+                return DragonN;
+            }
+
+        }
+
+        private string CheckDragonNameDownToUp(int location) //หามังกรหลายตำแหน่งจาก ล่าง ขึ้น บน
+        {
+            string DragonN = "";
+            Rectangle[] array = new Rectangle[]
+            {
+                RaidLobbyPM.RaidNameDownToUpL0,
+                RaidLobbyPM.RaidNameDownToUpL1,
+                RaidLobbyPM.RaidNameDownToUpL2,
+                RaidLobbyPM.RaidNameDownToUpL3
+            };
+            Rectangle rect = array[location];
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect))
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText();
+#if DEBUG
+                            Console.WriteLine("DName = " + text.Trim().Replace(" ", ""));
+                            bitmap.Save("DName.png");
+#endif
+                    Utility.FilterAscii(text);
+                    DragonN = text.Trim();
+                }
+#if DEBUG
+                        Console.WriteLine("DName = " + DragonN);
+#endif
+                return DragonN;
+            }
+
+        }
+
+        private string OwnerDragonName()  // หาชื่อมังกรตำแหน่งแรกตำแหน่งเดียว
+        {
+            string DragonN = "";
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, RaidLobbyPM.RaidNameUpToDownL0))
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText();
+
+#if DEBUG
+                    Console.WriteLine("DName = " + text.Trim().Replace(" ", ""));
+                    bitmap.Save("DName.png");
+#endif
+                    Utility.FilterAscii(text);
+                    DragonN = text.Trim();
+                }
+                return DragonN;
+            }
+        }
+
+        private void ScrollRaidDragonPage(bool down = true)
+        {
+            int num = 198;
+            PixelMapping pixelMapping = down ? RaidLobbyPM.ScrollAreaDown : RaidLobbyPM.ScrollAreaUp;
+            int num2 = down ? (-num) : num;
+            this.ClickDrag(pixelMapping.X, pixelMapping.Y, pixelMapping.X, pixelMapping.Y + num2);
+        }
+
+        //********************************* จบส่วน ********************
         private Bitmap CropFrame(Bitmap frame, Rectangle rect)
         {
             rect.X += BlueStacks.OFFSET_X;
@@ -1153,6 +1281,14 @@ namespace SevenKnightsAI.Classes
             SevenKnightsCore.Sleep(1000);
         }
 
+        private void DoneSellHeroesMini()
+        {
+            SevenKnightsCore.Sleep(1000);
+            //this.Log("เรียกใช้ฟังชั่น Mini");
+            this.Escape();
+            SevenKnightsCore.Sleep(1000);
+        }
+
         private void DoneSellItems(int sellCount)
         {
             this.Log("Done selling items", this.COLOR_SELL_ITEMS);
@@ -1176,6 +1312,13 @@ namespace SevenKnightsAI.Classes
             SevenKnightsCore.Sleep(300);
             this.Escape();
             SevenKnightsCore.Sleep(500);
+        }
+
+        private void DoneHottime()
+        {
+            SevenKnightsCore.Sleep(800);
+            this.Escape();
+            SevenKnightsCore.Sleep(1000);
         }
 
         private void Escape()
@@ -1543,6 +1686,7 @@ namespace SevenKnightsAI.Classes
             this.TopazCount = -1;
             this.ReportAllResources();
             this.OneSecTimer.Enabled = true;
+            this.DragonFound = false;
         }
 
         private bool IsAnyQuestsEnabled()
@@ -1570,36 +1714,6 @@ namespace SevenKnightsAI.Classes
             IList text = this.BlueStacks.MainWindowAS.GetText();
             Console.Write(text.Contains("Seven Knights") || text.Contains("Android"));
             return text.Contains("Seven Knights") || text.Contains("Android");
-        }
-
-        private bool CheckRAIDLvl()
-        {
-            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, RaidLobbyPM.RaidLvl).ScaleByPercent(200))
-            {
-                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
-                {
-                    string text = page.GetText();
-                    Utility.FilterAscii(text);
-                    int lvl = -1;
-                    int maxLvl = 30;
-                    string[] array = text.Split(new char[]
-                        {
-                                '/'
-                        });
-                    if (array.Length >= 1)
-                        int.TryParse(array[0], out lvl);
-                    if (array.Length >= 2)
-                    {
-                        int.TryParse(array[1].Substring(0, 2), out maxLvl);
-                        if (maxLvl < 30)
-                            maxLvl = 30;
-                    }
-                    this.Log("Text =" + "'" + text + "'");
-                    bitmap.Save(string.Format("Level Is {0}.png", text));
-                    bitmap.Save(string.Format("{0} of {1}.png", lvl, maxLvl));
-                }
-            }
-            return true;
         }
 
         private bool IsHeroLevel30(bool retrying = false)
@@ -1786,7 +1900,7 @@ namespace SevenKnightsAI.Classes
             bool flag = false;
             bool flag2 = false;
             bool flag3 = false;
-            bool hottimeloop = true;
+            this.Hottimeloop = true;
             this.Log("Initializing AI...");
             this.BlueStacks = new BlueStacks();
             string errorMessage;
@@ -2023,10 +2137,20 @@ namespace SevenKnightsAI.Classes
                                             this.UpdateRuby(scene.SceneType);
                                             this.UpdateHonor(scene.SceneType);
                                             this.UpdateTopaz(scene.SceneType);
-                                            if(this.AISettings.AD_HottimeEnable && hottimeloop == true)
+                                            if (CheckPlayaName == true)
+                                            {
+                                                this.WeightedClick(LobbyPM.MasteryButton, 1.0, 1.0, 1, 0, "left");
+                                                SevenKnightsCore.Sleep(800);
+                                                this.CaptureFrame();
+                                                this.CheckOwnername();
+                                                SevenKnightsCore.Sleep(800);
+                                                this.Escape();
+                                            }
+                                            SevenKnightsCore.Sleep(800);
+                                            if (this.AISettings.AD_HottimeEnable && this.Hottimeloop == true)
                                             {
                                                 this.WeightedClick(LobbyPM.StatusBoard, 1.0, 1.0, 1, 0, "left");
-                                                hottimeloop = false;
+                                                this.Hottimeloop = false;
                                                 SevenKnightsCore.Sleep(800);
                                             }
                                             else if (this.AISettings.RS_CollectLuckyChest && this.MatchMapping(LobbyPM.MaysLuckyChestAvailable_1, 4) && this.MatchMapping(LobbyPM.MaysLuckyChestAvailable_2, 4))
@@ -2320,7 +2444,7 @@ namespace SevenKnightsAI.Classes
                                         case SceneType.ADVENTURE_START:
                                             this.UpdateAdventureKeys(scene.SceneType);
                                             this.UpdateGold(scene.SceneType);
-                                            SevenKnightsCore.Sleep(800);
+                                            SevenKnightsCore.Sleep(400);
                                             if (this.CurrentObjective == Objective.ADVENTURE)
                                             {
                                                 World world2 = this.AISettings.AD_World;
@@ -2694,6 +2818,7 @@ namespace SevenKnightsAI.Classes
                                             }
                                             this.Log("Hero Level 30", this.COLOR_LEVEL_30);
                                             this.HeroLVUPCount();
+                                            SevenKnightsCore.Sleep(500);
                                             if (this.AISettings.AD_Formation != Formation.None && this.AISettings.AD_HeroManagePositions != null && this.AISettings.AD_HeroManagePositions.Length > 0)
                                             {
                                                 this.ChangeObjective(Objective.HERO_MANAGEMENT);
@@ -2761,8 +2886,11 @@ namespace SevenKnightsAI.Classes
                                             this.Escape();
                                             break;
 
+                                        
                                         case SceneType.RAID_DRAGON:
-                                            this.Log("The dragon appears!", this.COLOR_RAID);
+                                            this.Log("The dragon Appears!", this.COLOR_RAID);
+                                            SevenKnightsCore.Sleep(1500);
+                                            this.WeightedClick(RaidDragonPM.TapArea, 1.0, 1.0, 1, 0, "left");
                                             if (this.AISettings.RD_StopOnDragonFound)
                                             {
                                                 this.Alert("Dragon Found");
@@ -2770,34 +2898,34 @@ namespace SevenKnightsAI.Classes
                                                 this.AIProfiles.TMP_Paused = true;
                                                 break;
                                             }
-                                            this.WeightedClick(RaidDragonPM.TapArea, 1.0, 1.0, 1, 0, "left");
-                                            SevenKnightsCore.Sleep(500);
+                                            if (this.AISettings.RD_OwnerDragon)
+                                            {
+                                                this.DragonFound = true;
+                                                this.ChangeObjective(Objective.RAID);
+                                            }
+                                            else
+                                            {
+                                                this.Escape();
+                                            }
                                             break;
-                                        /*
-                                        this.PushNote("The dragon appears!", "AI will fight the dragon or ignore it depending on your settings.");
-                                        if (this.AISettings.RD_Enable)
-                                        {
-                                            this.ChangeObjective(Objective.RAID);
-                                        }
-                                        this.WeightedClick(RaidDragonPM.TapArea, 1.0, 1.0, 1, 0, "left");
-                                        SevenKnightsCore.Sleep(500);
-                                        */
 
                                         case SceneType.RAID_LOBBY:
                                             if (this.CurrentObjective == Objective.RAID)
                                             {
-                                                if (!this.MasteryChecked && AISettings.RD_Mastery != 0)
-                                                {
-                                                    this.Escape();
-                                                }
-                                                if (this.EnableRaidRewards)
+                                                //if (!this.MasteryChecked && AISettings.RD_Mastery != 0)
+                                                //{
+                                                //    this.Escape();
+                                                //}
+                                                if ((this.EnableRaidRewards && this.DragonFound == false )|| this.MatchMapping (RaidLobbyPM.RedIconOnDefeatedTab, 2))
                                                 {
                                                     this.WeightedClick(RaidLobbyPM.DefeatedTab, 1.0, 1.0, 1, 0, "left");
-                                                    SevenKnightsCore.Sleep(500);
+                                                    SevenKnightsCore.Sleep(1500);
                                                     this.CaptureFrame();
                                                     if (this.MatchMapping(RaidLobbyPM.EnterButton, 2))
                                                     {
+                                                        SevenKnightsCore.Sleep(1500);
                                                         this.WeightedClick(RaidLobbyPM.EnterButton, 1.0, 1.0, 1, 0, "left");
+                                                        this.Log("Collect Raid Reward", Color.DarkOrchid);
                                                     }
                                                     else
                                                     {
@@ -2812,37 +2940,183 @@ namespace SevenKnightsAI.Classes
                                                 }
                                                 else
                                                 {
+                                                    /*****************จุดกำหนดทดลองตีมังกร**************************/
+                                                    //this.DragonFound = true;
+                                                    //this.Log("Old Player Name =" + PlayerName, Color.BlueViolet);
+                                                    //this.PlayerName = "xzibiut";
+                                                    //this.Log("New Player Name =" + PlayerName, Color.BlueViolet);
+                                                    /****************สิ้นสุดจุดทดสอบตีมังกร***************************/
                                                     this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
-                                                    SevenKnightsCore.Sleep(500);
-                                                    this.WeightedClick(RaidLobbyPM.RefreshButton, 1.0, 1.0, 1, 0, "left");
                                                     SevenKnightsCore.Sleep(1000);
                                                     this.CaptureFrame();
-                                                    //CheckRAIDLvl();
-                                                    //ScrollRAID(true);
-                                                   // SevenKnightsCore.Sleep(5000);
-                                                    if (AISettings.RD_Hp50Up)
+                                                    /**************************************เริ่มตรวจหามังกรตัวเอง***********************************************/
+                                                    if (this.DragonFound)
                                                     {
-                                                        if (this.MatchMapping(RaidLobbyPM.Raid50upLocation4Bt, 2) && !this.MatchMapping(RaidLobbyPM.Raid50upLocation4, 2))
+                                                        this.DragonFound = false;
+                                                        SevenKnightsCore.Sleep(1000);
+                                                        this.WeightedClick(RaidLobbyPM.RefreshButton, 1.0, 1.0, 1, 0, "left");  // กดปุ่ม Refresh
+                                                        this.Log("Click Refresh Button", Color.Blue);
+                                                        SevenKnightsCore.Sleep(2000);
+                                                        this.ScrollRaidDragonPage(false);
+                                                        SevenKnightsCore.Sleep(2000);
+                                                        this.Log("Owner Name = " + PlayerName, Color.BlueViolet);
+                                                        int i = 1;    // ตัวสำหรับตรวจสอบว่าเจอมังกรรึยัง
+                                                        while (i != 0 && !this.Worker.CancellationPending)
                                                         {
-                                                            this.WeightedClick(RaidLobbyPM.Raid50upLocation4Bt, 1.0, 1.0, 1, 0, "left");
+                                                            SevenKnightsCore.Sleep(1000);
+                                                            //this.Log("ตำแหน่งแรก", Color.Blue);
+                                                            this.CaptureFrame();
+                                                            if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 2))  //ตรวจสอบ ถ้า ยึดบน ทำอันนี้ ตรวจสอบหน้าที่ 1 หรือหน้าที่ 2
+                                                            {
+                                                                //this.Log("ตำแหน่ง 2", Color.Blue);
+                                                                int NameLocation = 0;
+                                                                string Name0 = CheckDragonNameUpToDown(NameLocation);
+                                                                this.Log("Dragon Location 1 Name = " + Name0, Color.Blue);
+                                                                if (Name0 == PlayerName)
+                                                                {
+                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    SevenKnightsCore.Sleep(1000);
+                                                                    this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn0, 1.0, 1.0, 1, 0, "left");
+                                                                    SevenKnightsCore.Sleep(3000);
+                                                                    i = 0;
+                                                                    break;
+                                                                }
+                                                                SevenKnightsCore.Sleep(800);
+                                                                string Name1 = CheckDragonNameUpToDown(NameLocation + 1);
+                                                                this.Log("Dragon Location 2 Name = " + Name1, Color.Blue);
+                                                                if (Name1 == PlayerName)
+                                                                {
+                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    SevenKnightsCore.Sleep(1000);
+                                                                    this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn1, 1.0, 1.0, 1, 0, "left");
+                                                                    SevenKnightsCore.Sleep(3000);
+                                                                    i = 0;
+                                                                    break;
+                                                                }
+                                                                SevenKnightsCore.Sleep(800);
+                                                                string Name2 = CheckDragonNameUpToDown(NameLocation + 2);
+                                                                this.Log("Dragon Location 3 Name = " + Name2, Color.Blue);
+                                                                if (Name2 == PlayerName)
+                                                                {
+                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    SevenKnightsCore.Sleep(1000);
+                                                                    this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn2, 1.0, 1.0, 1, 0, "left");
+                                                                    SevenKnightsCore.Sleep(3000);
+                                                                    i = 0;
+                                                                    break;
+                                                                }
+                                                                SevenKnightsCore.Sleep(800);
+                                                                string Name3 = CheckDragonNameUpToDown(NameLocation + 3);
+                                                                this.Log("Dragon Location 4 Name = " + Name3, Color.Blue);
+                                                                if (Name3 == PlayerName)
+                                                                {
+                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    SevenKnightsCore.Sleep(1000);
+                                                                    this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn3, 1.0, 1.0, 1, 0, "left");
+                                                                    SevenKnightsCore.Sleep(3000);
+                                                                    i = 0;
+                                                                    break;
+                                                                }
+                                                                // ถ้าตรวจสอบแล้ว มังกรหมด ให้จบ
+                                                                SevenKnightsCore.Sleep(800);
+                                                                this.CaptureFrame();
+                                                                if (!this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn1, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn2, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn3, 2))
+                                                                {
+                                                                    this.Log("Not Found Owner Dragon.", Color.PaleVioletRed);
+                                                                    this.DoneRaid();
+                                                                    break;
+                                                                }
+                                                                // เลื่อนหน้าจอ
+                                                                this.ScrollRaidPage(true);
+                                                                SevenKnightsCore.Sleep(800);
+                                                            }
+                                                            else if (this.MatchMapping(RaidLobbyPM.RaidDownToUpBtn0, 2)) // ถ้า ยึดล่าง ทำอันนี้   ตรวจสอบหน้ามุดท้าย
+                                                            {
+                                                                //this.Log("ตำแหน่ง 3", Color.Blue);
+                                                                int NameLocation = 0;
+                                                                string Name0 = CheckDragonNameDownToUp(NameLocation);
+                                                                this.Log("Dragon Location 1 Name = " + Name0, Color.Blue);
+                                                                if (Name0 == PlayerName)
+                                                                {
+                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    SevenKnightsCore.Sleep(1000);
+                                                                    this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn0, 1.0, 1.0, 1, 0, "left");
+                                                                    SevenKnightsCore.Sleep(3000);
+                                                                    i = 0;
+                                                                    break;
+                                                                }
+                                                                SevenKnightsCore.Sleep(800);
+                                                                string Name1 = CheckDragonNameDownToUp(NameLocation + 1);
+                                                                this.Log("Dragon Location 2 Name = " + Name1, Color.Blue);
+                                                                if (Name1 == PlayerName)
+                                                                {
+                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    SevenKnightsCore.Sleep(1000);
+                                                                    this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn1, 1.0, 1.0, 1, 0, "left");
+                                                                    SevenKnightsCore.Sleep(3000);
+                                                                    i = 0;
+                                                                    break;
+                                                                }
+                                                                SevenKnightsCore.Sleep(800);
+                                                                string Name2 = CheckDragonNameDownToUp(NameLocation + 2);
+                                                                this.Log("Dragon Location 3 Name = " + Name2, Color.Blue);
+                                                                if (Name2 == PlayerName)
+                                                                {
+                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    SevenKnightsCore.Sleep(1000);
+                                                                    this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn2, 1.0, 1.0, 1, 0, "left");
+                                                                    SevenKnightsCore.Sleep(3000);
+                                                                    i = 0;
+                                                                    break;
+                                                                }
+                                                                SevenKnightsCore.Sleep(800);
+                                                                string Name3 = CheckDragonNameDownToUp(NameLocation + 3);
+                                                                this.Log("Dragon Location 4 Name = " + Name3, Color.Blue);
+                                                                if (Name3 == PlayerName)
+                                                                {
+                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    SevenKnightsCore.Sleep(1000);
+                                                                    this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn3, 1.0, 1.0, 1, 0, "left");
+                                                                    SevenKnightsCore.Sleep(3000);
+                                                                    i = 0;
+                                                                    break;
+                                                                }
+                                                                i = 0;
+                                                                this.Log("Not Found Owner Dragon", Color.PaleVioletRed);
+                                                                this.DoneRaid();
+                                                            }
+                                                            /**************************************จบตีมังกรตัวเอง***********************************************/
+
+                                                        }
+                                                        this.CaptureFrame();
+                                                        scene = this.SceneSearch();
+                                                        SevenKnightsCore.Sleep(2000);
+                                                        break;
+                                                    }
+                                                    // ฟังชั่นตรวจสอบเลือด มากกว่า 50
+                                                    if (this.AISettings.RD_Hp50Up)
+                                                    {
+                                                        if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn3, 2) && !this.MatchMapping(RaidLobbyPM.Raid50UpToDownL3, 2))
+                                                        {
+                                                            this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn3, 1.0, 1.0, 1, 0, "left");
                                                             this.EnableRaidRewards = true;
                                                             this.Log("Found Dragon On Row 4, HP > 50 %", this.COLOR_RAID);
                                                         }
-                                                        else if (this.MatchMapping(RaidLobbyPM.Raid50upLocation3Bt, 2) && !this.MatchMapping(RaidLobbyPM.Raid50upLocation3, 2))
+                                                        else if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn2, 2) && !this.MatchMapping(RaidLobbyPM.Raid50UpToDownL2, 2))
                                                         {
-                                                            this.WeightedClick(RaidLobbyPM.Raid50upLocation3Bt, 1.0, 1.0, 1, 0, "left");
+                                                            this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn2, 1.0, 1.0, 1, 0, "left");
                                                             this.EnableRaidRewards = true;
                                                             this.Log("Found Dragon On Row 3, HP > 50 %", this.COLOR_RAID);
                                                         }
-                                                        else if (this.MatchMapping(RaidLobbyPM.Raid50upLocation2Bt, 2) && !this.MatchMapping(RaidLobbyPM.Raid50upLocation2, 2))
+                                                        else if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn1, 2) && !this.MatchMapping(RaidLobbyPM.Raid50UpToDownL1, 2))
                                                         {
-                                                            this.WeightedClick(RaidLobbyPM.Raid50upLocation2Bt, 1.0, 1.0, 1, 0, "left");
+                                                            this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn1, 1.0, 1.0, 1, 0, "left");
                                                             this.EnableRaidRewards = true;
                                                             this.Log("Found Dragon On Row 2, HP > 50 %", this.COLOR_RAID);
                                                         }
-                                                        else if (this.MatchMapping(RaidLobbyPM.Raid50upLocation1Bt, 2) && !this.MatchMapping(RaidLobbyPM.Raid50upLocation1, 2))
+                                                        else if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 2) && !this.MatchMapping(RaidLobbyPM.Raid50UpToDownL0, 2))
                                                         {
-                                                            this.WeightedClick(RaidLobbyPM.Raid50upLocation1Bt, 1.0, 1.0, 1, 0, "left");
+                                                            this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn0, 1.0, 1.0, 1, 0, "left");
                                                             this.EnableRaidRewards = true;
                                                             this.Log("Found Dragon On Row 1, HP > 50 %", this.COLOR_RAID);
                                                         }
@@ -2856,8 +3130,7 @@ namespace SevenKnightsAI.Classes
                                                     {
                                                         this.WeightedClick(RaidLobbyPM.EnterButton, 1.0, 1.0, 1, 0, "left");
                                                         this.EnableRaidRewards = true;
-                                                    }
-                                                    
+                                                    } 
                                                 }
                                                 this.MasteryChecked = !this.MasteryChecked;
                                             }
@@ -2868,9 +3141,7 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.RAID_READY:
-                                            if (this.CurrentObjective == Objective.RAID 
-                                                && (!this.AISettings.RD_EnableDragonLimit 
-                                                || this.ParseEntred() < this.AISettings.RD_DragonLimit))
+                                            if (this.CurrentObjective == Objective.RAID && (!this.AISettings.RD_EnableDragonLimit || this.ParseEntred() < this.AISettings.RD_DragonLimit))
                                             {
                                                 this.WeightedClick(RaidReadyPM.ReadyButton, 1.0, 1.0, 1, 0, "left");
                                             }
@@ -2943,13 +3214,13 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.RAID_AWAKENED_LOBBY:
-                                            if (this.AISettings.ARD_Enable && this.AISettings.RD_Enable)
+                                            if (this.AISettings.ARD_Enable && this.AISettings.RD_Enable && this.DragonFound == false)
                                             {
                                                 this.WeightedClick(RaidLobbyPM.AwakenedRaidEnter, 1.0, 1.0, 1, 0, "left");
                                             }
                                             else
                                             {
-                                                this.Escape();
+                                                this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
                                             }
                                             break;
 
@@ -3249,19 +3520,21 @@ namespace SevenKnightsAI.Classes
                                             if (this.MatchMapping(StatusBoardPM.ContentsTabSelect, 2) && this.MatchMapping(StatusBoardPM.HottimeRedIcon, 2))
                                             {
                                                 this.WeightedClick(StatusBoardPM.HottimeTab, 1.0, 1.0, 1, 0, "left");
-                                                
+                                                SevenKnightsCore.Sleep(500);
+                                                this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
                                             }
-                                            SevenKnightsCore.Sleep(500);
-                                            this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
-                                            SevenKnightsCore.Sleep(1000);
-                                            this.WeightedClick(StatusBoardPM.ClosButton, 1.0, 1.0, 1, 0, "left");
+                                            else
+                                            {
+                                                this.DoneHottime();
+                                            }
                                             break;
 
                                         case SceneType.HOTTIME_CONFIRM_POPUP:
                                             if (this.MatchMapping(StatusBoardPM.ConfirmOKtick, 2) && this.MatchMapping(StatusBoardPM.NoRedCloss, 2) && this.MatchMapping(StatusBoardPM.ActiveBG, 2))
                                             {
                                                 this.WeightedClick(StatusBoardPM.OKButton, 1.0, 1.0, 1, 0, "left");
-                                                this.Log("Active Hottime", this.COLOR_INBOX);
+                                                this.Log("Hottime Active", Color.Brown);
+                                                this.DoneHottime();
                                             }
                                             break;
 
@@ -3280,6 +3553,15 @@ namespace SevenKnightsAI.Classes
                                         case SceneType.SELL_HERO_FINISH:
                                             this.WeightedClick(SellHeroConfirmPopupPM.SoldOKButton, 1.0, 1.0, 1, 0, "left");
                                             break;
+
+                                        case SceneType.RANK_UP:
+                                            this.WeightedClick(ArenaEndPM.RankUpTik, 1.0, 1.0, 1, 0, "left");
+                                            break;
+
+                                        case SceneType.SELL_HERO_LOBBY:
+                                            this.Escape();
+                                            break;
+
                                     }
                                 }
                             }
@@ -4370,9 +4652,11 @@ namespace SevenKnightsAI.Classes
         private void RaidCheckLimits()
         {
             if (this.AISettings.RD_EnableLimit || this.AISettings.RD_EnableDragonLimit)
+            //if (this.AISettings.RD_EnableLimit)
             {
                 this.RaidLimitCount++;
                 if (this.RaidLimitCount >= this.AISettings.RD_Limit || this.RaidLimitCount >= this.AISettings.RD_DragonLimit)
+                //if (this.RaidLimitCount >= this.AISettings.RD_Limit)
                 {
                     this.Log("Limit reached [Raid]", this.COLOR_LIMIT);
                     this.RaidLimitCount = 0;
@@ -4582,11 +4866,29 @@ namespace SevenKnightsAI.Classes
             this.ClickDrag(pixelMapping.X, pixelMapping.Y, pixelMapping.X + num2, pixelMapping.Y + num2);
         }
 
-        private void ScrollRAID(bool down = true)
+        private void ScrollRaidDown90(bool down = true)
         {
+            int num = 400;
             PixelMapping pixelMapping = down ? RaidLobbyPM.ScrollAreaDown : RaidLobbyPM.ScrollAreaUp;
-            int num = down ? (-RaidLobbyPM.SCROLL_DELTA) : RaidLobbyPM.SCROLL_DELTA;
+            int num2 = down ? (-num) : num;
+            this.ClickDrag(pixelMapping.X, pixelMapping.Y, pixelMapping.X, pixelMapping.Y + num2);
+        }
+
+        private void ScrollRaidPage(bool down = true)
+        {
+            int num2 = 198;  //197  ,195 เลื่นขึ้นสูงเกิน 190 สูงเกินกว่าเดิม
+            // 200 ต่ำเกิน
+            PixelMapping pixelMapping = down ? RaidLobbyPM.ScrollAreaDown : RaidLobbyPM.ScrollAreaUp;
+            int num = down ? (-num2) : num2;
             this.ClickDrag(pixelMapping.X, pixelMapping.Y, pixelMapping.X, pixelMapping.Y + num);
+        }
+
+        private void ScrollRaidOneDragon(bool down = true)
+        {
+            int num = 48;
+            PixelMapping pixelMapping = down ? RaidLobbyPM.ScrollAreaDown : RaidLobbyPM.ScrollAreaUp;
+            int num2 = down ? (-num) : num;
+            this.ClickDrag(pixelMapping.X, pixelMapping.Y, pixelMapping.X, pixelMapping.Y + num2);
         }
 
         private Scene SearchScenes()
@@ -4897,10 +5199,7 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.FULL_HERO_POPUP);
                     return result;
                 }
-                if ((this.MatchMapping(BattleModesPM.BorderTopLeft, 2)) &&
-                    (this.MatchMapping(BattleModesPM.BorderBottomRight, 3)) &&
-                    this.MatchMapping(BattleModesPM.GoldPlusButton, 2)
-                    )
+                if (this.MatchMapping(BattleModesPM.BorderTopLeft, 2) && this.MatchMapping(BattleModesPM.BorderBottomRight, 2) && this.MatchMapping(BattleModesPM.GoldPlusButton, 2))
                 {
                     Scene result = new Scene(SceneType.BATTLE_MODES);
                     return result;
@@ -5146,8 +5445,7 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.ARENA_WEEK_REWARD);
                     return result;
                 }
-                // เช็คตรงนี้ด้วย
-                if (this.MatchMapping(SellHeroConfirmPopupPM.GoldSellIcon, 2, false) && this.MatchMapping(SellHeroConfirmPopupPM.SellText, 2, false))
+                if (this.MatchMapping(SellHeroConfirmPopupPM.GoldSellIcon, 2) && this.MatchMapping(SellHeroConfirmPopupPM.SellText, 2))
                 {
                     Scene result = new Scene(SceneType.SELL_HERO_LOBBY);
                     return result;
@@ -5190,6 +5488,11 @@ namespace SevenKnightsAI.Classes
                 if (this.MatchMapping(SendHonorConfirmPopupPM.GoldPlusBG, 2) && this.MatchMapping(SendHonorFailedPopupPM.NoFriendYellowTick, 2))
                 {
                     Scene result = new Scene(SceneType.SEND_HONOR_NO_FRIEND_TO_SEND);
+                    return result;
+                }
+                if (this.MatchMapping(ArenaEndPM.QuickStartButtonBG, 2) && this.MatchMapping(ArenaEndPM.LobbyButtonBG, 2) && this.MatchMapping(ArenaEndPM.RankUpTik, 2))
+                {
+                    Scene result = new Scene(SceneType.RANK_UP);
                     return result;
                 }
             }
@@ -5999,15 +6302,25 @@ namespace SevenKnightsAI.Classes
                                 this.Escape();
                                 SevenKnightsCore.Sleep(500);
                             }
-                        }                    
+                        }
                         num2++;
-                        this.WeightedClick(SellHeroConfirmPopupPM.SellButton, 1.0, 1.0, 1, 0, "left");
+                        this.WeightedClick(SellHeroConfirmPopupPM.SellButton, 1.0, 1.0, 1, 0, "left");     // ยืนยันคำสั่งกดขาย
+                        //this.Log("ตำแหน่ง 1");
                         SevenKnightsCore.Sleep(2000);
-                        this.WeightedClick(SellHeroConfirmPopupPM.SoldOKButton, 1.0, 1.0, 1, 0, "left");
-                        this.Log(string.Format("-- Hero sold ({0})", num2), this.COLOR_SELL_HEROES);
-                        SevenKnightsCore.Sleep(1000);
-                        this.WeightedClick(SellHeroConfirmPopupPM.BackSellLobby, 1.0, 1.0, 1, 0, "left");
-                        this.LongSleep(2000, 1000);
+                        this.CaptureFrame();
+                        if (this.MatchMapping(SellHeroConfirmPopupPM.SoldOKYellowTik, 2) && this.MatchMapping(SellHeroConfirmPopupPM.SellButtonbg, 2) && this.MatchMapping(SellHeroConfirmPopupPM.GoldSellIconbg, 2))
+                        {
+                            SevenKnightsCore.Sleep(2000);
+                            //this.Log("ตำแหน่ง 2");
+                            this.WeightedClick(SellHeroConfirmPopupPM.SoldOKButton, 1.0, 1.0, 1, 0, "left");
+                            this.Log(string.Format("-- Hero sold ({0})", num2), this.COLOR_SELL_HEROES);
+                            SevenKnightsCore.Sleep(2000);
+                            this.DoneSellHeroesMini();
+                        }
+                        else
+                        {
+                            this.Escape();
+                        }
                     }
                     else
                     {
@@ -6423,7 +6736,7 @@ namespace SevenKnightsAI.Classes
                             int.TryParse(array[0], out curCount);
                             if (curCount <= 100)
                             {
-                                this.Log(string.Format("Max Heroes  level up per day : {0}/100", curCount));
+                                this.Log(string.Format("Max Heroes  level up per day : {0}/100", curCount),Color.BlueViolet);
                             }
                             if (curCount == 100 && array[1].Equals("100"))
                             {
@@ -6865,6 +7178,6 @@ namespace SevenKnightsAI.Classes
             this.BlueStacks.MainWindowAS.Click(mapping.X, mapping.Y, numClicks, delay, button);
         }
 
-        #endregion Private Methods
+#endregion Private Methods
     }
 }

@@ -89,7 +89,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 718,
             Y = 57,
-            Color = 13183490,
+            Color = 12986369,
             Type = MappingType.ANCHOR
         };
 
@@ -132,40 +132,42 @@ namespace SevenKnightsAI.Classes.Mappings
             Width = 70,
             Height = 25
         };
-
-        public static readonly PixelMapping Raid50upLocation1 = new PixelMapping
+        // จุดตรวจสอบจากบนลงล่าง ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        // ตรวจชื่อ   (เช็คเสร็จแล้ว)
+        public static readonly Rectangle RaidNameUpToDownL0 = new Rectangle
         {
-            X = 673,
+            X = 295,
             Y = 204,
-            Color = 3549214,   // เลือดน้อยกว่า 50%
-            Type = MappingType.ANCHOR
+            Width = 145,
+            Height = 26
         };
 
-        public static readonly PixelMapping Raid50upLocation2 = new PixelMapping
+        public static readonly Rectangle RaidNameUpToDownL1 = new Rectangle
         {
-            X = 673,
+            X = 295,
             Y = 278,
-            Color = 3615263,  // เลือดน้อยกว่า 50%
-            Type = MappingType.ANCHOR
+            Width = 145,
+            Height = 26
         };
 
-        public static readonly PixelMapping Raid50upLocation3 = new PixelMapping
+        public static readonly Rectangle RaidNameUpToDownL2 = new Rectangle
         {
-            X = 673,
-            Y = 352,
-            Color = 3417885,   // เลือดน้อยกว่า 50%
-            Type = MappingType.ANCHOR
+            X = 295,
+            Y = 353,
+            Width = 145,
+            Height = 26
         };
 
-        public static readonly PixelMapping Raid50upLocation4 = new PixelMapping
+        public static readonly Rectangle RaidNameUpToDownL3 = new Rectangle
         {
-            X = 673,
-            Y = 426,
-            Color = 3417885,  // เลือดน้อยกว่า 50%
-            Type = MappingType.ANCHOR
+            X = 295,
+            Y = 428,
+            Width = 215,
+            Height = 26
         };
 
-        public static readonly PixelMapping Raid50upLocation1Bt = new PixelMapping
+        // ปุ่มหัวมังกร (เช็คเสร็จแล้ว)
+        public static readonly PixelMapping RaidUpToDownBtn0 = new PixelMapping
         {
             X = 868,
             Y = 202,
@@ -173,7 +175,7 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.BOTH
         };
 
-        public static readonly PixelMapping Raid50upLocation2Bt = new PixelMapping
+        public static readonly PixelMapping RaidUpToDownBtn1 = new PixelMapping
         {
             X = 868,
             Y = 276,
@@ -181,7 +183,7 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.BOTH
         };
 
-        public static readonly PixelMapping Raid50upLocation3Bt = new PixelMapping
+        public static readonly PixelMapping RaidUpToDownBtn2 = new PixelMapping
         {
             X = 868,
             Y = 350,
@@ -189,7 +191,7 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.BOTH
         };
 
-        public static readonly PixelMapping Raid50upLocation4Bt = new PixelMapping
+        public static readonly PixelMapping RaidUpToDownBtn3 = new PixelMapping
         {
             X = 868,
             Y = 424,
@@ -197,22 +199,218 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.BOTH
         };
 
-        public static readonly int SCROLL_DELTA = 197;   // หาค่าตรงนี้้
 
+        // เช็คล่างสุดว่าถึงรึยัง (ตรวจเสร็จแล้ว)
+        public static readonly PixelMapping FixedUpCheck = new PixelMapping
+        {
+            X = 906,
+            Y = 167,
+            Color = 5983284,
+            Type = MappingType.ANCHOR
+        };
+
+        /*หน้าที่ 2*/
+        // ตำแหน่งเช็คชื่อ             -------------------------- ยังไม่มีค่า
+        public static readonly Rectangle RaidNameUpToDownL0P2 = new Rectangle
+        {
+            X = 295,
+            Y = 204,
+            Width = 145,
+            Height = 26
+        };
+
+        public static readonly Rectangle RaidNameUpToDownL1P2 = new Rectangle
+        {
+            X = 295,
+            Y = 278,
+            Width = 145,
+            Height = 26
+        };
+
+        public static readonly Rectangle RaidNameUpToDownL2P2 = new Rectangle
+        {
+            X = 295,
+            Y = 353,
+            Width = 145,
+            Height = 26
+        };
+
+        public static readonly Rectangle RaidNameUpToDownL3P2 = new Rectangle
+        {
+            X = 295,
+            Y = 428,
+            Width = 215,
+            Height = 26
+        };
+
+        // ปุ่มหัวมังกร         (ตรวจเสร็จแล้ว)
+        public static readonly PixelMapping RaidUpToDownBtn0P2 = new PixelMapping
+        {
+            X = 868,
+            Y = 202,
+            Color = 13939542,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping RaidUpToDownBtn1P2 = new PixelMapping
+        {
+            X = 868,
+            Y = 276,
+            Color = 13939542,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping RaidUpToDownBtn2P2 = new PixelMapping
+        {
+            X = 868,
+            Y = 350,
+            Color = 13939542,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping RaidUpToDownBtn3P2 = new PixelMapping
+        {
+            X = 868,
+            Y = 424,
+            Color = 13939542,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping FixedUpCheckP2 = new PixelMapping
+        {
+            X = 906,
+            Y = 167,
+            Color = 9665623,
+            Type = MappingType.ANCHOR
+        };
+
+
+        // เลื่อนจากล่างขึ้นบน**********************************************************************************************
+        // จุดที่ใช้ตรวจสอบชื่อ (ตรวจเสร็จแล้ว)
+        public static readonly Rectangle RaidNameDownToUpL0 = new Rectangle
+        {
+            X = 295,
+            Y = 208,
+            Width = 145,
+            Height = 26
+        };
+
+        public static readonly Rectangle RaidNameDownToUpL1 = new Rectangle
+        {
+            X = 295,
+            Y = 281,
+            Width = 145,
+            Height = 26
+        };
+
+        public static readonly Rectangle RaidNameDownToUpL2 = new Rectangle
+        {
+            X = 295,
+            Y = 356,
+            Width = 145,
+            Height = 26
+        };
+
+        public static readonly Rectangle RaidNameDownToUpL3 = new Rectangle
+        {
+            X = 295,
+            Y = 428,
+            Width = 215,
+            Height = 26
+        };
+
+        // จุดที่ใช้ตรวจสอบปุ่ม(หัวมังกร)
+        // (ตรวจเสร็จแล้ว)
+        public static readonly PixelMapping RaidDownToUpBtn0 = new PixelMapping
+        {
+            X = 868,
+            Y = 202,
+            Color = 13807956,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping RaidDownToUpBtn1 = new PixelMapping
+        {
+            X = 868,
+            Y = 276,
+            Color = 13807956,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping RaidDownToUpBtn2 = new PixelMapping
+        {
+            X = 868,
+            Y = 350,
+            Color = 13807956,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping RaidDownToUpBtn3 = new PixelMapping
+        {
+            X = 868,
+            Y = 424,
+            Color = 13807956,
+            Type = MappingType.BOTH
+        };
+
+        // เช็คล่างสุดว่าถึงรึยัง
+        public static readonly PixelMapping FixedDownCheck = new PixelMapping
+        {
+            X = 906,
+            Y = 170,
+            Color = 10586722,
+            Type = MappingType.ANCHOR
+        };
+
+        //--------------------------------------- จุดสำหรับ Scoll หน้าจอ-----------------
         public static readonly PixelMapping ScrollAreaDown = new PixelMapping
         {
-            X = 140,
-            Y = 282,
+            X = 450,
+            Y = 430,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping ScrollAreaUp = new PixelMapping
         {
-            X = 140,
-            Y = 204,
+            X = 450,
+            Y = 200,
             Color = 0,
             Type = MappingType.BUTTON
         };
+
+        //------------------------------------ จุดที่ใช้ตรวจสอบ เลือด (ตรวจเสร็จแล้ว)-----------------
+        public static readonly PixelMapping Raid50UpToDownL0 = new PixelMapping
+        {
+            X = 673,
+            Y = 204,
+            Color = 3549214,   // เลือดน้อยกว่า 50%
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Raid50UpToDownL1 = new PixelMapping
+        {
+            X = 673,
+            Y = 278,
+            Color = 3615263,  // เลือดน้อยกว่า 50%
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Raid50UpToDownL2 = new PixelMapping
+        {
+            X = 673,
+            Y = 352,
+            Color = 3417885,   // เลือดน้อยกว่า 50%
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Raid50UpToDownL3 = new PixelMapping
+        {
+            X = 673,
+            Y = 426,
+            Color = 3417885,  // เลือดน้อยกว่า 50%
+            Type = MappingType.ANCHOR
+        };
+
     }
 }

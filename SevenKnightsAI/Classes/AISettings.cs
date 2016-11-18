@@ -198,6 +198,9 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "RD_Team2Skills")]
         public int[] RD_Team2Skills;
 
+        [XmlElement(ElementName = "RD_OwnerDragon")]
+        public bool RD_OwnerDragon;
+
         [XmlElement(ElementName = "RS_BuyKeyHonors")]
         public bool RS_BuyKeyHonors;
 
@@ -328,13 +331,14 @@ namespace SevenKnightsAI.Classes
             this.AR_UseRubyAmount = 0;
             this.RD_Enable = true;
             this.RD_EnableLimit = false;
-            this.RD_EnableDragonLimit = true;
+            this.RD_EnableDragonLimit = false;
             this.RD_DragonLimit = 1;
             this.RD_Limit = 0;
             this.RD_SkillType = SkillType.Both;
             this.RD_Team1Loop = false;
             this.RD_Team2Loop = false;
             this.RD_Hp50Up = true;
+            this.RD_OwnerDragon = true;
             this.ARD_Enable = true;
             this.RS_SellHeroes = false;
             this.RS_SellHeroStars = 1;
@@ -747,6 +751,12 @@ namespace SevenKnightsAI.Classes
                 { }
                 try
                 {
+                    aISettings.RD_OwnerDragon = (bool)dictionary["RD_OwnerDragon"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
                     aISettings.ARD_Enable = (bool)dictionary["ARD_Enable"];
                 }
                 catch (Exception)
@@ -1017,10 +1027,6 @@ namespace SevenKnightsAI.Classes
                     this.AD_StopOnFullItems
                 },
                 {
-                    "RD_StopOnDragonFound",
-                    this.RD_StopOnDragonFound
-                },
-                {
                     "AD_StopOnLV30",
                     this.AD_StopOnLV30
                 },
@@ -1125,6 +1131,10 @@ namespace SevenKnightsAI.Classes
                     this.AR_Mastery
                 },
                 {
+                    "RD_StopOnDragonFound",
+                    this.RD_StopOnDragonFound
+                },
+                {
                     "RD_Enable",
                     this.RD_Enable
                 },
@@ -1171,6 +1181,10 @@ namespace SevenKnightsAI.Classes
                 {
                     "RD_Hp50Up",
                     this.RD_Hp50Up
+                },
+                {
+                    "RD_OwnerDragon",
+                    this.RD_OwnerDragon
                 },
                 {
                     "ARD_Enable",

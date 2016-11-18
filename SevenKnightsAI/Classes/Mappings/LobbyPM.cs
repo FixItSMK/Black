@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace SevenKnightsAI.Classes.Mappings
 {
@@ -8,8 +9,8 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping StatusBoard = new PixelMapping
         {
-            X = 902,
-            Y = 93,
+            X = 905,
+            Y = 104,
             Color = 0,
             Type = MappingType.BUTTON
         };
@@ -249,6 +250,14 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly int TOPAZ_OFFSET_X = 0;
 
         public static readonly int TOPAZ_OFFSET_Y = 0;
+
+        public static readonly Rectangle OwnerLocation = new Rectangle
+        {
+            X = 208,
+            Y = 166,
+            Width = 112,
+            Height = 27
+        };
 
         #endregion Public Fields
     }

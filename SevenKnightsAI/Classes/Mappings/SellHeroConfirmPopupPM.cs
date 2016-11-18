@@ -248,7 +248,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 64,
             Y = 449,
-            Color = 16767868,
+            Color = 16700531,
             Type = MappingType.ANCHOR
         };
 
@@ -262,9 +262,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping SellText = new PixelMapping
         {
-            X = 113,
-            Y = 26,
-            Color = 5189641,
+            X = 437,
+            Y = 401,
+            Color = 10653025,
             Type = MappingType.ANCHOR
         };
 

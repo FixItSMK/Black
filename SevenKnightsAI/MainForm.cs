@@ -898,6 +898,7 @@ namespace SevenKnightsAI
             this.RD_team1LoopCheckBox.Checked = this.AISettings.RD_Team1Loop;
             this.RD_team2LoopCheckBox.Checked = this.AISettings.RD_Team2Loop;
             this.RD_Hp50Up_CheckBox.Checked = this.AISettings.RD_Hp50Up;
+            this.RD_OwnerDragon.Checked = this.AISettings.RD_OwnerDragon;
             switch (this.AISettings.RD_SkillType)
             {
                 case SkillType.Auto:
@@ -1907,6 +1908,12 @@ namespace SevenKnightsAI
             this.AISettings.RD_Hp50Up = checkBox.Checked;
         }
 
+        private void RD_OwnerDragon_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.RD_OwnerDragon = checkBox.Checked;
+        }
+
         // Link Thank.
 
         private void linkLabel5_MouseClick(object sender, LinkLabelLinkClickedEventArgs e)
@@ -1958,6 +1965,9 @@ namespace SevenKnightsAI
         {
             Process.Start("https://www.facebook.com/SevenKnightsAIBlack");
         }
+
         #endregion Private Methods
+
+        
     }
 }
