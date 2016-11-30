@@ -899,6 +899,10 @@ namespace SevenKnightsAI
             this.RD_team2LoopCheckBox.Checked = this.AISettings.RD_Team2Loop;
             this.RD_Hp50Up_CheckBox.Checked = this.AISettings.RD_Hp50Up;
             this.RD_OwnerDragon.Checked = this.AISettings.RD_OwnerDragon;
+            this.RD_LevelCheckBox.Checked = this.AISettings.RD_LevelCheckBox;
+            this.RD_DragonLV.Value = this.AISettings.RD_DragonLV;
+            this.RD_RoundNumericUpDown.Value = this.AISettings.RD_DragonRound;
+            this.RD_DragonHP.Value = this.AISettings.RD_DragonHP;
             switch (this.AISettings.RD_SkillType)
             {
                 case SkillType.Auto:
@@ -1907,11 +1911,33 @@ namespace SevenKnightsAI
             CheckBox checkBox = sender as CheckBox;
             this.AISettings.RD_Hp50Up = checkBox.Checked;
         }
-
         private void RD_OwnerDragon_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkBox = sender as CheckBox;
             this.AISettings.RD_OwnerDragon = checkBox.Checked;
+        }
+        private void RD_LevelCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.RD_LevelCheckBox = checkBox.Checked;
+        }
+        private void RD_DragonLV_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            int num2 = Convert.ToInt32(numericUpDown.Value);
+            this.AISettings.RD_DragonLV = num2;
+        }
+        private void RD_DragonHP_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            int num2 = Convert.ToInt32(numericUpDown.Value);
+            this.AISettings.RD_DragonHP = num2;
+        }
+        private void RD_RoundNumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            int num = Convert.ToInt32(numericUpDown.Value);
+            this.AISettings.RD_DragonRound = num;
         }
 
         // Link Thank.
@@ -1966,8 +1992,7 @@ namespace SevenKnightsAI
             Process.Start("https://www.facebook.com/SevenKnightsAIBlack");
         }
 
-        #endregion Private Methods
+        #endregion Private Methods 
 
-        
     }
 }

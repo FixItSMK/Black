@@ -1163,6 +1163,251 @@ namespace SevenKnightsAI.Classes
             }
         }
 
+        private int CheckDragonLvlUpToDown(int location) //หา Level มังกรหลายตำแหน่งจาก บน ลงล่าง
+        {
+            int Dragonlvl;
+            Rectangle[] array = new Rectangle[]
+            {
+                RaidLobbyPM.RaidLvlUpToDownL0,
+                RaidLobbyPM.RaidLvlUpToDownL1,
+                RaidLobbyPM.RaidLvlUpToDownL2,
+                RaidLobbyPM.RaidLvlUpToDownL3
+            };
+            Rectangle rect = array[location];
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect))
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText().ToLower().Replace(".", "").Replace(" ", "").Replace("s", "5").Replace("o", "0").Replace("i", "1").Replace("z", "2").Replace(")", "");
+                    //string text = page.GetText().ToLower().Replace("l", "").Replace(".", "").Replace("v", "").Replace(" ", "").Replace("s", "5").Replace("o", "0").Replace("i", "1").Replace("z", "2").Replace(")", "");
+#if DEBUG
+                    Console.WriteLine("LV text = " + text.Trim());
+                    bitmap.Save("Dragon.png");
+#endif
+                    string test1 = Regex.Replace(text, @"\D", ""); // เอา String ออกจาก Number
+                    Utility.FilterAscii(test1);
+                    int.TryParse(test1, out Dragonlvl);
+                    if (Dragonlvl != 0)
+                    {
+                        return Dragonlvl;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+
+        }
+
+        private int CheckDragonLvlDownToUp(int location) //หา Level มังกรหลายตำแหน่งจากล่าง ขึ้นบน
+        {
+            int Dragonlvl;
+            Rectangle[] array = new Rectangle[]
+            {
+                RaidLobbyPM.RaidLvlDownToUpL0,
+                RaidLobbyPM.RaidLvlDownToUpL1,
+                RaidLobbyPM.RaidLvlDownToUpL2,
+                RaidLobbyPM.RaidLvlDownToUpL3
+            };
+            Rectangle rect = array[location];
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect))
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText().ToLower().Replace(".", "").Replace(" ", "").Replace("s", "5").Replace("o", "0").Replace("i", "1").Replace("z", "2").Replace(")", "");
+                    //string text = page.GetText().ToLower().Replace("l", "").Replace(".", "").Replace("v", "").Replace(" ", "").Replace("s", "5").Replace("o", "0").Replace("i", "1").Replace("z", "2").Replace(")", "");
+#if DEBUG
+                    Console.WriteLine("LV text = " + text.Trim());
+                    bitmap.Save("Dragon.png");
+#endif
+                    string test1 = Regex.Replace(text, @"\D", ""); // เอา String ออกจาก Number
+                    Utility.FilterAscii(test1);
+                    int.TryParse(test1, out Dragonlvl);
+                    if (Dragonlvl != 0)
+                    {
+                        return Dragonlvl;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+
+        }
+
+        private int CheckHPUpToDownF(int location) //หา Level มังกรหลายตำแหน่งจากล่าง ขึ้นบน
+        {
+            int RaidHP;
+            Rectangle[] array = new Rectangle[]
+            {
+                RaidLobbyPM.RaidHPUpToDownL0F,
+                RaidLobbyPM.RaidHPUpToDownL1F,
+                RaidLobbyPM.RaidHPUpToDownL2F,
+                RaidLobbyPM.RaidHPUpToDownL3F
+            };
+            Rectangle rect = array[location];
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect).ScaleByPercent(300))
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText().ToLower().Replace("l", "1").Replace(".", "").Replace(" ", "").Replace("s", "5")
+                        .Replace("o", "0").Replace("i", "1").Replace("z", "2").Replace(")", "").Replace("j", "").Replace("_", "")
+                        .Replace("‘", "").Replace("'", "").Replace(":", "").Replace("f", "").Replace("[", "").Replace("]", "")
+                        .Replace("#", "").Replace("$", "5").Replace("e", "").Replace("q", "2").Replace("§", "3");
+#if DEBUG
+                    this.Log("HPFUp2Down text = " + text.Trim());
+                    Console.WriteLine("HPFUP2Down text = " + text.Trim());
+                    bitmap.Save("HPFUP2Down.png");
+#endif
+                    string test1 = Regex.Replace(text, @"\D", ""); // เอา String ออกจาก Number
+                    Utility.FilterAscii(test1);
+                    int.TryParse(test1, out RaidHP);
+                    if (RaidHP != 0)
+                    {
+                        return RaidHP;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+
+        }
+
+        private int CheckHPUpToDownB(int location) //หา Level มังกรหลายตำแหน่งจากล่าง ขึ้นบน
+        {
+            int RaidHP;
+            Rectangle[] array = new Rectangle[]
+            {
+                RaidLobbyPM.RaidHPUpToDownL0B,
+                RaidLobbyPM.RaidHPUpToDownL1B,
+                RaidLobbyPM.RaidHPUpToDownL2B,
+                RaidLobbyPM.RaidHPUpToDownL3B
+            };
+            Rectangle rect = array[location];
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect).ScaleByPercent(300))
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText().ToLower().Replace("l", "1").Replace(".", "").Replace(" ", "").Replace("s", "5")
+                        .Replace("o", "0").Replace("i", "1").Replace("z", "2").Replace(")", "").Replace("j", "").Replace("_", "")
+                        .Replace("‘", "").Replace("'", "").Replace(":", "").Replace("f", "").Replace("[", "").Replace("]", "")
+                        .Replace("#", "").Replace("$", "5").Replace("e", "").Replace("q", "2").Replace("§", "3");
+#if DEBUG
+                    this.Log("HPFUp2Down text = " + text.Trim());
+                    Console.WriteLine("HPBUp2Down text = " + text.Trim());
+                    bitmap.Save("HPBUp2Down.png");
+#endif
+                    string test1 = Regex.Replace(text, @"\D", ""); // เอา String ออกจาก Number
+                    Utility.FilterAscii(test1);
+                    //if (test1.Length >= 2)
+                    int.TryParse(test1, out RaidHP);
+                    if (RaidHP != 0)
+                    {
+                        return RaidHP;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+
+        }
+
+        private int CheckHPDownToUpF(int location) //หา Level มังกรหลายตำแหน่งจากล่าง ขึ้นบน
+        {
+            int RaidHP;
+            Rectangle[] array = new Rectangle[]
+            {
+                RaidLobbyPM.RaidHPDownToUpL0F,
+                RaidLobbyPM.RaidHPDownToUpL1F,
+                RaidLobbyPM.RaidHPDownToUpL2F,
+                RaidLobbyPM.RaidHPDownToUpL3F
+            };
+            Rectangle rect = array[location];
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect).ScaleByPercent(300))
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText().ToLower().Replace("l", "1").Replace(".", "").Replace(" ", "").Replace("s", "5")
+                        .Replace("o", "0").Replace("i", "1").Replace("z", "2").Replace(")", "").Replace("j", "").Replace("_", "")
+                        .Replace("‘", "").Replace("'", "").Replace(":", "").Replace("f", "").Replace("[", "").Replace("]", "")
+                        .Replace("#", "").Replace("$", "5").Replace("e", "").Replace("q", "2").Replace("§", "3");
+#if DEBUG
+                    this.Log("HPFDown2Up text = " + text.Trim());
+                    Console.WriteLine("HPFDown2Up text = " + text.Trim());
+                    bitmap.Save("HPFDown2Up.png");
+#endif
+                    string test1 = Regex.Replace(text, @"\D", ""); // เอา String ออกจาก Number
+                    Utility.FilterAscii(test1);
+                    //if (test1.Length >= 2)
+                    //{
+                    //    int.TryParse(test1, out RaidHP);
+                    //    return RaidHP;
+                    //}
+                    //else
+                    //{
+                    //    return 0;
+                    //}
+                    int.TryParse(test1, out RaidHP);
+                    if (RaidHP != 0)
+                    {
+                        return RaidHP;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+
+        }
+
+        private int CheckHPDownToUpB(int location) //หา Level มังกรหลายตำแหน่งจากล่าง ขึ้นบน
+        {
+            int RaidHP;
+            Rectangle[] array = new Rectangle[]
+            {
+                RaidLobbyPM.RaidHPDownToUpL0B,
+                RaidLobbyPM.RaidHPDownToUpL1B,
+                RaidLobbyPM.RaidHPDownToUpL2B,
+                RaidLobbyPM.RaidHPDownToUpL3B
+            };
+            Rectangle rect = array[location];
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect).ScaleByPercent(300))
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText().ToLower().Replace("l", "1").Replace(".", "").Replace(" ", "").Replace("s", "5")
+                        .Replace("o", "0").Replace("i", "1").Replace("z", "2").Replace(")", "").Replace("j", "").Replace("_", "")
+                        .Replace("‘", "").Replace("'", "").Replace(":", "").Replace("f", "").Replace("[", "").Replace("]", "")
+                        .Replace("#", "").Replace("$", "5").Replace("e", "").Replace("q", "2").Replace("§", "3");
+#if DEBUG
+                    this.Log("HPFDown2Up text = " + text.Trim());
+                    Console.WriteLine("HPBDown2Up text = " + text.Trim());
+                    bitmap.Save("HPBDown2Up.png");
+#endif
+                    string test1 = Regex.Replace(text, @"\D", ""); // เอา String ออกจาก Number
+                    Utility.FilterAscii(test1);
+                    if (test1.Length >= 2)
+                    //if (test1 != 0)
+                    {
+                        int.TryParse(test1, out RaidHP);
+                        return RaidHP;
+                    }
+                    else
+                    {
+                        return 0;
+                    }
+                }
+            }
+
+        }
+
         private void ScrollRaidDragonPage(bool down = true)
         {
             int num = 198;
@@ -1248,6 +1493,7 @@ namespace SevenKnightsAI.Classes
             this.PushNote("Done managing heroes", "AI has finished managing your team.");
             this.HeroManageAttemps = 0;
             this.NextPossibleObjective();
+            SevenKnightsCore.Sleep(500);
             this.Escape();
             SevenKnightsCore.Sleep(500);
         }
@@ -2916,7 +3162,8 @@ namespace SevenKnightsAI.Classes
                                                 //{
                                                 //    this.Escape();
                                                 //}
-                                                if ((this.EnableRaidRewards && this.DragonFound == false )|| this.MatchMapping (RaidLobbyPM.RedIconOnDefeatedTab, 2))
+                                                //if ((this.EnableRaidRewards && this.DragonFound == false )|| this.MatchMapping (RaidLobbyPM.RedIconOnDefeatedTab, 2))
+                                                if (this.EnableRaidRewards && this.DragonFound == false)
                                                 {
                                                     this.WeightedClick(RaidLobbyPM.DefeatedTab, 1.0, 1.0, 1, 0, "left");
                                                     SevenKnightsCore.Sleep(1500);
@@ -2925,11 +3172,40 @@ namespace SevenKnightsAI.Classes
                                                     {
                                                         SevenKnightsCore.Sleep(1500);
                                                         this.WeightedClick(RaidLobbyPM.EnterButton, 1.0, 1.0, 1, 0, "left");
-                                                        this.Log("Collect Raid Reward", Color.DarkOrchid);
+                                                        SevenKnightsCore.Sleep(1500);
+#if DEBUG
+                                                        this.Log("ตำแหน่ง 1", Color.DarkOrchid);
+#endif
                                                     }
                                                     else
                                                     {
-                                                        this.DoneRaid();
+                                                        this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
+                                                        //this.DoneRaid();
+                                                        this.EnableRaidRewards = false;
+                                                    }
+                                                    this.CaptureFrame();
+                                                    scene = this.SceneSearch();
+                                                    break;
+                                                }
+                                                this.CaptureFrame();
+                                                if (this.MatchMapping(RaidLobbyPM.RedIconOnDefeatedTab, 2) && this.DragonFound == false)
+                                                {
+                                                    this.WeightedClick(RaidLobbyPM.DefeatedTab, 1.0, 1.0, 1, 0, "left");
+                                                    SevenKnightsCore.Sleep(1500);
+                                                    this.CaptureFrame();
+                                                    if (this.MatchMapping(RaidLobbyPM.EnterButton, 2))
+                                                    {
+                                                        SevenKnightsCore.Sleep(1500);
+                                                        this.WeightedClick(RaidLobbyPM.EnterButton, 1.0, 1.0, 1, 0, "left");
+                                                        SevenKnightsCore.Sleep(1500);
+#if DEBUG
+                                                        this.Log("ตำแหน่ง 2", Color.DarkOrchid);
+#endif
+                                                    }
+                                                    else
+                                                    {
+                                                        this.WeightedClick(RaidLobbyPM.NewTab, 1.0, 1.0, 1, 0, "left");
+                                                        this.EnableRaidRewards = false;
                                                     }
                                                 }
                                                 scene = this.SceneSearch();
@@ -2955,7 +3231,7 @@ namespace SevenKnightsAI.Classes
                                                         this.DragonFound = false;
                                                         SevenKnightsCore.Sleep(1000);
                                                         this.WeightedClick(RaidLobbyPM.RefreshButton, 1.0, 1.0, 1, 0, "left");  // กดปุ่ม Refresh
-                                                        this.Log("Click Refresh Button", Color.Blue);
+                                                        //this.Log("Click Refresh Button", Color.Blue);
                                                         SevenKnightsCore.Sleep(2000);
                                                         this.ScrollRaidDragonPage(false);
                                                         SevenKnightsCore.Sleep(2000);
@@ -2971,46 +3247,44 @@ namespace SevenKnightsAI.Classes
                                                                 //this.Log("ตำแหน่ง 2", Color.Blue);
                                                                 int NameLocation = 0;
                                                                 string Name0 = CheckDragonNameUpToDown(NameLocation);
-                                                                this.Log("Dragon Location 1 Name = " + Name0, Color.Blue);
+                                                                string Name1 = CheckDragonNameUpToDown(NameLocation + 1);
+                                                                string Name2 = CheckDragonNameUpToDown(NameLocation + 2);
+                                                                string Name3 = CheckDragonNameUpToDown(NameLocation + 3);
+
+                                                                this.Log(string.Format("Dragon1 Name :{0}", Name0), Color.BlueViolet);
+                                                                this.Log(string.Format("Dragon2 Name :{0}", Name1), Color.BlueViolet);
+                                                                this.Log(string.Format("Dragon3 Name :{0}", Name2), Color.BlueViolet);
+                                                                this.Log(string.Format("Dragon4 Name :{0}", Name3), Color.BlueViolet);
                                                                 if (Name0 == PlayerName)
                                                                 {
-                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    this.Log(string.Format("Match Dragon1 Name :{0}", Name0), this.COLOR_RAID);
                                                                     SevenKnightsCore.Sleep(1000);
                                                                     this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn0, 1.0, 1.0, 1, 0, "left");
                                                                     SevenKnightsCore.Sleep(3000);
                                                                     i = 0;
                                                                     break;
                                                                 }
-                                                                SevenKnightsCore.Sleep(800);
-                                                                string Name1 = CheckDragonNameUpToDown(NameLocation + 1);
-                                                                this.Log("Dragon Location 2 Name = " + Name1, Color.Blue);
-                                                                if (Name1 == PlayerName)
+                                                                else if (Name1 == PlayerName)
                                                                 {
-                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    this.Log(string.Format("Match Dragon2 Name :{0}", Name1), this.COLOR_RAID);
                                                                     SevenKnightsCore.Sleep(1000);
                                                                     this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn1, 1.0, 1.0, 1, 0, "left");
                                                                     SevenKnightsCore.Sleep(3000);
                                                                     i = 0;
                                                                     break;
                                                                 }
-                                                                SevenKnightsCore.Sleep(800);
-                                                                string Name2 = CheckDragonNameUpToDown(NameLocation + 2);
-                                                                this.Log("Dragon Location 3 Name = " + Name2, Color.Blue);
-                                                                if (Name2 == PlayerName)
+                                                                else if (Name2 == PlayerName)
                                                                 {
-                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    this.Log(string.Format("Match Dragon3 Name :{0}", Name2), this.COLOR_RAID);
                                                                     SevenKnightsCore.Sleep(1000);
                                                                     this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn2, 1.0, 1.0, 1, 0, "left");
                                                                     SevenKnightsCore.Sleep(3000);
                                                                     i = 0;
                                                                     break;
                                                                 }
-                                                                SevenKnightsCore.Sleep(800);
-                                                                string Name3 = CheckDragonNameUpToDown(NameLocation + 3);
-                                                                this.Log("Dragon Location 4 Name = " + Name3, Color.Blue);
-                                                                if (Name3 == PlayerName)
+                                                                else if (Name3 == PlayerName)
                                                                 {
-                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    this.Log(string.Format("Match Dragon4 Name :{0}", Name3), this.COLOR_RAID);
                                                                     SevenKnightsCore.Sleep(1000);
                                                                     this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn3, 1.0, 1.0, 1, 0, "left");
                                                                     SevenKnightsCore.Sleep(3000);
@@ -3018,119 +3292,363 @@ namespace SevenKnightsAI.Classes
                                                                     break;
                                                                 }
                                                                 // ถ้าตรวจสอบแล้ว มังกรหมด ให้จบ
-                                                                SevenKnightsCore.Sleep(800);
-                                                                this.CaptureFrame();
-                                                                if (!this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn1, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn2, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn3, 2))
+                                                                else if (!this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn1, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn2, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn3, 2))
                                                                 {
-                                                                    this.Log("Not Found Owner Dragon.", Color.PaleVioletRed);
+                                                                    this.Log("Not Found Owner Dragon", Color.PaleVioletRed);
+                                                                    i = 0;
                                                                     this.DoneRaid();
                                                                     break;
                                                                 }
-                                                                // เลื่อนหน้าจอ
-                                                                this.ScrollRaidPage(true);
-                                                                SevenKnightsCore.Sleep(800);
+                                                                else // เลื่อนหน้าจอ
+                                                                {
+                                                                    this.ScrollRaidPage(true);
+                                                                    this.Log("Scoll Page", this.COLOR_RAID);
+                                                                    SevenKnightsCore.Sleep(1000);
+                                                                } 
                                                             }
-                                                            else if (this.MatchMapping(RaidLobbyPM.RaidDownToUpBtn0, 2)) // ถ้า ยึดล่าง ทำอันนี้   ตรวจสอบหน้ามุดท้าย
+                                                            else if (this.MatchMapping(RaidLobbyPM.RaidDownToUpBtn0, 2)) // ถ้า ยึดล่าง ทำอันนี้   ตรวจสอบหน้าสุดท้าย
                                                             {
-                                                                //this.Log("ตำแหน่ง 3", Color.Blue);
                                                                 int NameLocation = 0;
                                                                 string Name0 = CheckDragonNameDownToUp(NameLocation);
-                                                                this.Log("Dragon Location 1 Name = " + Name0, Color.Blue);
+                                                                string Name1 = CheckDragonNameDownToUp(NameLocation + 1);
+                                                                string Name2 = CheckDragonNameDownToUp(NameLocation + 2);
+                                                                string Name3 = CheckDragonNameDownToUp(NameLocation + 3);
+
+                                                                this.Log(string.Format("Dragon1 Name :{0}", Name0), Color.BlueViolet);
+                                                                this.Log(string.Format("Dragon2 Name :{0}", Name1), Color.BlueViolet);
+                                                                this.Log(string.Format("Dragon3 Name :{0}", Name2), Color.BlueViolet);
+                                                                this.Log(string.Format("Dragon4 Name :{0}", Name3), Color.BlueViolet);
+
                                                                 if (Name0 == PlayerName)
                                                                 {
-                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    this.Log(string.Format("Match Dragon1 Name :{0}", Name0), this.COLOR_RAID);
                                                                     SevenKnightsCore.Sleep(1000);
                                                                     this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn0, 1.0, 1.0, 1, 0, "left");
                                                                     SevenKnightsCore.Sleep(3000);
                                                                     i = 0;
                                                                     break;
                                                                 }
-                                                                SevenKnightsCore.Sleep(800);
-                                                                string Name1 = CheckDragonNameDownToUp(NameLocation + 1);
-                                                                this.Log("Dragon Location 2 Name = " + Name1, Color.Blue);
-                                                                if (Name1 == PlayerName)
+                                                                else if (Name1 == PlayerName)
                                                                 {
-                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    this.Log(string.Format("Match Dragon2 Name :{0}", Name1), this.COLOR_RAID);
                                                                     SevenKnightsCore.Sleep(1000);
                                                                     this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn1, 1.0, 1.0, 1, 0, "left");
                                                                     SevenKnightsCore.Sleep(3000);
                                                                     i = 0;
                                                                     break;
                                                                 }
-                                                                SevenKnightsCore.Sleep(800);
-                                                                string Name2 = CheckDragonNameDownToUp(NameLocation + 2);
-                                                                this.Log("Dragon Location 3 Name = " + Name2, Color.Blue);
-                                                                if (Name2 == PlayerName)
+                                                                else if (Name2 == PlayerName)
                                                                 {
-                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    this.Log(string.Format("Match Dragon3 Name :{0}", Name2), this.COLOR_RAID);
                                                                     SevenKnightsCore.Sleep(1000);
                                                                     this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn2, 1.0, 1.0, 1, 0, "left");
                                                                     SevenKnightsCore.Sleep(3000);
                                                                     i = 0;
                                                                     break;
                                                                 }
-                                                                SevenKnightsCore.Sleep(800);
-                                                                string Name3 = CheckDragonNameDownToUp(NameLocation + 3);
-                                                                this.Log("Dragon Location 4 Name = " + Name3, Color.Blue);
-                                                                if (Name3 == PlayerName)
+                                                                else if (Name3 == PlayerName)
                                                                 {
-                                                                    this.Log("Found Owner Dragon!", Color.BlueViolet);
+                                                                    this.Log(string.Format("Match Dragon4 Name :{0}", Name3), this.COLOR_RAID);
                                                                     SevenKnightsCore.Sleep(1000);
                                                                     this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn3, 1.0, 1.0, 1, 0, "left");
                                                                     SevenKnightsCore.Sleep(3000);
                                                                     i = 0;
                                                                     break;
                                                                 }
-                                                                i = 0;
-                                                                this.Log("Not Found Owner Dragon", Color.PaleVioletRed);
-                                                                this.DoneRaid();
+                                                                else
+                                                                {
+                                                                    i = 0;
+                                                                    this.Log("Not Found Owner Dragon", Color.PaleVioletRed);
+                                                                    this.DoneRaid();
+                                                                }
                                                             }
-                                                            /**************************************จบตีมังกรตัวเอง***********************************************/
-
                                                         }
+                                                        //this.EnableRaidRewards = true;
                                                         this.CaptureFrame();
                                                         scene = this.SceneSearch();
                                                         SevenKnightsCore.Sleep(2000);
                                                         break;
+                                                        /**************************************จบตีมังกรตัวเอง***********************************************/
                                                     }
-                                                    // ฟังชั่นตรวจสอบเลือด มากกว่า 50
-                                                    if (this.AISettings.RD_Hp50Up)
+                                                    /************************************** จุดตรวจสอบ Level ของมังกร **********************************/
+                                                    if (AISettings.RD_LevelCheckBox) 
                                                     {
-                                                        if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn3, 2) && !this.MatchMapping(RaidLobbyPM.Raid50UpToDownL3, 2))
+                                                        this.WeightedClick(RaidLobbyPM.RefreshButton, 1.0, 1.0, 1, 0, "left");  // กดปุ่ม Refresh
+                                                        //this.Log("Click Refresh Button", Color.Blue);
+                                                        SevenKnightsCore.Sleep(2000);
+                                                        this.ScrollRaidDragonPage(false);
+                                                        SevenKnightsCore.Sleep(1000);
+                                                        int i = 1;
+                                                        int chkhp = 0;
+                                                        while (i != 0 && !this.Worker.CancellationPending)
                                                         {
-                                                            this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn3, 1.0, 1.0, 1, 0, "left");
-                                                            this.EnableRaidRewards = true;
-                                                            this.Log("Found Dragon On Row 4, HP > 50 %", this.COLOR_RAID);
+                                                            SevenKnightsCore.Sleep(2000);
+                                                            //this.Log("ตำแหน่งแรก", Color.Blue);
+                                                            this.CaptureFrame();
+                                                            if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 2))    // ถ้ายึดจากด้านบน
+                                                            {
+                                                                //this.Log("ตรวจสอบตำแหน่ง 00 ");
+                                                                //this.Log("ตำแหน่ง 2", Color.Blue);
+                                                                int LvlLocation = 0;
+                                                                int PercentHP0, PercentHP1, PercentHP2, PercentHP3;
+                                                                int LvlLoca0 = CheckDragonLvlUpToDown(LvlLocation);
+                                                                int LvlLoca1 = CheckDragonLvlUpToDown(LvlLocation + 1);
+                                                                int LvlLoca2 = CheckDragonLvlUpToDown(LvlLocation + 2);
+                                                                int LvlLoca3 = CheckDragonLvlUpToDown(LvlLocation + 3);
+
+                                                                int hp0f = CheckHPDownToUpF(LvlLocation);
+                                                                int hp0b = CheckHPDownToUpB(LvlLocation);
+                                                                int hp1f = CheckHPDownToUpF(LvlLocation + 1);
+                                                                int hp1b = CheckHPDownToUpB(LvlLocation + 1);
+                                                                int hp2f = CheckHPDownToUpF(LvlLocation + 2);
+                                                                int hp2b = CheckHPDownToUpB(LvlLocation + 2);
+                                                                int hp3f = CheckHPDownToUpF(LvlLocation + 3);
+                                                                int hp3b = CheckHPDownToUpB(LvlLocation + 3);
+
+                                                                if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 2))
+                                                                {
+                                                                    if (hp0b >= hp0f)       // ฟังชั่นตรวจสอบตัวหน้ามากกว่า HP ทั้งหมด
+                                                                    {
+                                                                        PercentHP0 = (hp0f * 100) / hp0b;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        this.Log("Can't Calculated !", this.COLOR_RAID);
+                                                                        PercentHP0 = 0;
+                                                                    }
+                                                                    this.Log(string.Format("Dragon1 Lv.{0}, HP: {1}%", LvlLoca0, PercentHP0), Color.BlueViolet);
+                                                                    if (LvlLoca0 >= AISettings.RD_DragonLV && PercentHP0 >= AISettings.RD_DragonHP && PercentHP0 <= 100)
+                                                                    {
+                                                                        this.Log(string.Format("Match Dragon1 Lv.{0}, HP: {1}%", LvlLoca0, PercentHP0), this.COLOR_RAID);
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn0, 1.0, 1.0, 1, 0, "left");
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        i = 0;
+                                                                        break;
+                                                                    }
+                                                                }
+                                                                if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn1, 2))
+                                                                {
+                                                                    if(hp1b >= hp1f)
+                                                                    {
+                                                                        PercentHP1 = (hp1f * 100) / hp1b;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        this.Log("Can't Calculated !", this.COLOR_RAID);
+                                                                        PercentHP1 = 0;
+                                                                    }
+                                                                    this.Log(string.Format("Dragon2 Lv.{0}, HP: {1}%", LvlLoca1, PercentHP1), Color.BlueViolet);
+                                                                    if (LvlLoca1 >= AISettings.RD_DragonLV && PercentHP1 >= AISettings.RD_DragonHP && PercentHP1 <= 100)
+                                                                    {
+                                                                        this.Log(string.Format("Match Dragon2 Lv.{0}, HP: {1}%", LvlLoca1, PercentHP1), this.COLOR_RAID);
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn1, 1.0, 1.0, 1, 0, "left");
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        i = 0;
+                                                                        break;
+                                                                    }
+                                                                }
+                                                                if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn2, 2))
+                                                                {
+                                                                    //this.Log("ตรวจสอบตำแหน่ง 3 ");
+                                                                    if (hp2b >= hp2f)
+                                                                    {
+                                                                        PercentHP2 = (hp2f * 100) / hp2b;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        this.Log("Can't Calculated !", this.COLOR_RAID);
+                                                                        PercentHP2 = 0;
+                                                                    }
+                                                                    this.Log(string.Format("Dragon3 Lv.{0}, HP: {1}%", LvlLoca2, PercentHP2), Color.BlueViolet);
+                                                                    if (LvlLoca2 >= AISettings.RD_DragonLV && PercentHP2 >= AISettings.RD_DragonHP && PercentHP2 <= 100)
+                                                                    {
+                                                                        this.Log(string.Format("Match Dragon3 Lv.{0}, HP: {1}%", LvlLoca2, PercentHP2), this.COLOR_RAID);
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn2, 1.0, 1.0, 1, 0, "left");
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        i = 0;
+                                                                        break;
+                                                                    } 
+                                                                }
+                                                                if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn3, 2))
+                                                                {
+                                                                    //this.Log("ตรวจสอบตำแหน่ง 4 ");
+                                                                    if (hp3b >= hp3f)
+                                                                    {
+                                                                        PercentHP3 = (hp3f * 100) / hp3b;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        this.Log("Can't Calculated !", this.COLOR_RAID);
+                                                                        PercentHP3 = 0;
+                                                                    }
+                                                                    this.Log(string.Format("Dragon4 Lv.{0}, HP: {1}%", LvlLoca3, PercentHP3), Color.BlueViolet);
+                                                                    if (LvlLoca3 >= AISettings.RD_DragonLV && PercentHP3 >= AISettings.RD_DragonHP && PercentHP3 <= 100)
+                                                                    {
+                                                                        this.Log(string.Format("Match Dragon4 Lv.{0}, HP: {1}%", LvlLoca3, PercentHP3), this.COLOR_RAID);
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn3, 1.0, 1.0, 1, 0, "left");
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        i = 0;
+                                                                        break;
+                                                                    }   
+                                                                }
+                                                                if (chkhp == hp0f)
+                                                                {
+                                                                    //this.Log("ตรวจสอบตำแหน่ง 5 ");
+                                                                    this.Log("Does not meet the conditions", Color.PaleVioletRed);
+                                                                    i = 0;
+                                                                    this.DoneRaid();
+                                                                }
+                                                                // ถ้าตรวจสอบแล้ว มังกรหมด ให้จบ
+                                                                if (!this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn1, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn2, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn3, 2))
+                                                                {
+                                                                    //this.Log("ตรวจสอบตำแหน่ง 6 ");
+                                                                    this.Log("Does not meet the conditions", Color.PaleVioletRed);
+                                                                    i = 0;
+                                                                    this.DoneRaid();
+                                                                    break;
+                                                                }
+                                                                // เลื่อนหน้าจอ
+                                                                chkhp = hp0f;
+                                                                //this.Log("ตรวจสอบตำแหน่ง 7 ");
+                                                                this.ScrollRaidPage(true);
+                                                                this.Log("Scoll Page", this.COLOR_RAID);
+                                                                SevenKnightsCore.Sleep(1500);
+                                                            }
+                                                            else if (this.MatchMapping(RaidLobbyPM.RaidDownToUpBtn0, 2)) // ถ้า ยึดล่าง ทำอันนี้   ตรวจสอบหน้าสุดท้าย
+                                                            {
+                                                                //this.Log("ตรวจสอบตำแหน่ง 01 ");
+                                                                int LvlLocation = 0;
+                                                                int PercentHP0, PercentHP1, PercentHP2, PercentHP3;
+                                                                int LvlLoca0 = CheckDragonLvlDownToUp(LvlLocation);
+                                                                int LvlLoca1 = CheckDragonLvlDownToUp(LvlLocation + 1);
+                                                                int LvlLoca2 = CheckDragonLvlDownToUp(LvlLocation + 2);
+                                                                int LvlLoca3 = CheckDragonLvlDownToUp(LvlLocation + 3);
+
+                                                                int hp0f = CheckHPUpToDownF(LvlLocation);
+                                                                int hp0b = CheckHPUpToDownB(LvlLocation);
+                                                                int hp1f = CheckHPUpToDownF(LvlLocation + 1);
+                                                                int hp1b = CheckHPUpToDownB(LvlLocation + 1);
+                                                                int hp2f = CheckHPUpToDownF(LvlLocation + 2);
+                                                                int hp2b = CheckHPUpToDownB(LvlLocation + 2);
+                                                                int hp3f = CheckHPUpToDownF(LvlLocation + 3);
+                                                                int hp3b = CheckHPUpToDownB(LvlLocation + 3);
+
+                                                                if (this.MatchMapping(RaidLobbyPM.RaidDownToUpBtn0, 2))
+                                                                {
+                                                                    if (hp0b >= hp0f)
+                                                                    {
+                                                                        PercentHP0 = (hp0f * 100) / hp0b;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        this.Log("Can't Calculated !", this.COLOR_RAID);
+                                                                        PercentHP0 = 0;
+                                                                    }
+                                                                    this.Log(string.Format("Dragon1 Lv.{0}, HP: {1}%", LvlLoca0, PercentHP0), Color.BlueViolet);
+                                                                    if (LvlLoca0 >= AISettings.RD_DragonLV && PercentHP0 >= AISettings.RD_DragonHP && PercentHP0 <= 100)
+                                                                    {
+                                                                        this.Log(string.Format("Match Dragon1 Lv.{0}, HP: {1}%", LvlLoca0, PercentHP0), this.COLOR_RAID);
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn0, 1.0, 1.0, 1, 0, "left");
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        i = 0;
+                                                                        break;
+                                                                    }
+                                                                }
+                                                                if (this.MatchMapping(RaidLobbyPM.RaidDownToUpBtn1, 2))
+                                                                {
+                                                                    if (hp1b >= hp1f)
+                                                                    {
+                                                                        PercentHP1 = (hp1f * 100) / hp1b;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        this.Log("Can't Calculated !", this.COLOR_RAID);
+                                                                        PercentHP1 = 0;
+                                                                    }
+                                                                    this.Log(string.Format("Dragon2 Lv.{0}, HP: {1}%", LvlLoca1, PercentHP1), Color.BlueViolet);
+                                                                    if (LvlLoca1 >= AISettings.RD_DragonLV && PercentHP1 >= AISettings.RD_DragonHP && PercentHP1 <= 100)
+                                                                    {
+                                                                        this.Log(string.Format("Match Dragon2 Lv.{0}, HP: {1}%", LvlLoca1, PercentHP1), this.COLOR_RAID);
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn1, 1.0, 1.0, 1, 0, "left");
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        i = 0;
+                                                                        break;
+                                                                    }
+                                                                }
+                                                                if (this.MatchMapping(RaidLobbyPM.RaidDownToUpBtn2, 2))
+                                                                {
+                                                                    if (hp2b >= hp2f)
+                                                                    {
+                                                                        PercentHP2 = (hp2f * 100) / hp2b;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        this.Log("Can't Calculated !", this.COLOR_RAID);
+                                                                        PercentHP2 = 0;
+                                                                    }
+                                                                    this.Log(string.Format("Dragon3 Lv.{0}, HP: {1}%", LvlLoca2, PercentHP2), Color.BlueViolet);
+                                                                    if (LvlLoca2 >= AISettings.RD_DragonLV && PercentHP2 >= AISettings.RD_DragonHP && PercentHP2 <= 100)
+                                                                    {
+                                                                        this.Log(string.Format("Match Dragon3 Lv.{0}, HP: {1}%", LvlLoca2, PercentHP2), this.COLOR_RAID);
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn2, 1.0, 1.0, 1, 0, "left");
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        i = 0;
+                                                                        break;
+                                                                    }  
+                                                                }
+                                                                if (this.MatchMapping(RaidLobbyPM.RaidDownToUpBtn3, 2))
+                                                                {
+                                                                    if (hp3b >= hp3f)
+                                                                    {
+                                                                        PercentHP3 = (hp3f * 100) / hp3b;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        this.Log("Can't Calculated !", this.COLOR_RAID);
+                                                                        PercentHP3 = 0;
+                                                                    }
+                                                                    this.Log(string.Format("Dragon4 Lv.{0}, HP: {1}%", LvlLoca3, PercentHP3), Color.BlueViolet);
+                                                                    if (LvlLoca3 >= AISettings.RD_DragonLV && PercentHP3 >= AISettings.RD_DragonHP && PercentHP3 <= 100)
+                                                                    {
+                                                                        this.Log(string.Format("Match Dragon4 Lv.{0}, HP: {1}%", LvlLoca3, PercentHP3), this.COLOR_RAID);
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        this.WeightedClick(RaidLobbyPM.RaidDownToUpBtn3, 1.0, 1.0, 1, 0, "left");
+                                                                        SevenKnightsCore.Sleep(1000);
+                                                                        i = 0;
+                                                                        break;
+                                                                    }    
+                                                                }
+                                                                //this.Log("ตรวจสอบตำแหน่ง 9 ");
+                                                                i = 0;
+                                                                this.Log("Does not meet the conditions", Color.PaleVioletRed);
+                                                                this.DoneRaid();
+                                                            }
+                                                            else
+                                                            {
+                                                                i = 0;
+                                                                this.DoneRaid();
+                                                            }
                                                         }
-                                                        else if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn2, 2) && !this.MatchMapping(RaidLobbyPM.Raid50UpToDownL2, 2))
-                                                        {
-                                                            this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn2, 1.0, 1.0, 1, 0, "left");
-                                                            this.EnableRaidRewards = true;
-                                                            this.Log("Found Dragon On Row 3, HP > 50 %", this.COLOR_RAID);
-                                                        }
-                                                        else if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn1, 2) && !this.MatchMapping(RaidLobbyPM.Raid50UpToDownL1, 2))
-                                                        {
-                                                            this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn1, 1.0, 1.0, 1, 0, "left");
-                                                            this.EnableRaidRewards = true;
-                                                            this.Log("Found Dragon On Row 2, HP > 50 %", this.COLOR_RAID);
-                                                        }
-                                                        else if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 2) && !this.MatchMapping(RaidLobbyPM.Raid50UpToDownL0, 2))
-                                                        {
-                                                            this.WeightedClick(RaidLobbyPM.RaidUpToDownBtn0, 1.0, 1.0, 1, 0, "left");
-                                                            this.EnableRaidRewards = true;
-                                                            this.Log("Found Dragon On Row 1, HP > 50 %", this.COLOR_RAID);
-                                                        }
-                                                        else
-                                                        {
-                                                            this.Log("Not Found Dragon HP > 50 %", this.COLOR_RAID);
-                                                            this.DoneRaid();
-                                                        }
+                                                        //this.EnableRaidRewards = true;
+                                                        //this.Log("ตรวจสอบตำแหน่ง 10 ");
+                                                        this.CaptureFrame();
+                                                        scene = this.SceneSearch();
+                                                        SevenKnightsCore.Sleep(1000);
+                                                        break;
                                                     }
                                                     else
                                                     {
+                                                        //this.Log("ตรวจสอบตำแหน่ง 11 ");
                                                         this.WeightedClick(RaidLobbyPM.EnterButton, 1.0, 1.0, 1, 0, "left");
-                                                        this.EnableRaidRewards = true;
-                                                    } 
+                                                        //this.EnableRaidRewards = true;
+                                                    }
                                                 }
                                                 this.MasteryChecked = !this.MasteryChecked;
                                             }
@@ -3168,6 +3686,7 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.RAID_END:
+                                            this.EnableRaidRewards = true;
                                             this.RaidAfterFight();
                                             this.PushNote("Raid has ended!", "AI will collect the reward and if there is any.");
                                             this.WeightedClick(RaidEndPM.AgainButton, 1.0, 1.0, 1, 0, "left");
@@ -3177,14 +3696,16 @@ namespace SevenKnightsAI.Classes
                                         case SceneType.RAID_REWARD:
                                             if (this.CurrentObjective == Objective.RAID)
                                             {
-                                                if (this.MatchMapping(RaidRewardPM.RewardButtonRedIcon, 2))
-                                                {
-                                                    this.WeightedClick(RaidRewardPM.RewardButton, 1.0, 1.0, 1, 0, "left");
-                                                }
-                                                else
-                                                {
-                                                    this.DoneRaid();
-                                                }
+                                                //if (this.MatchMapping(RaidRewardPM.RewardButtonRedIcon, 2))
+                                                //{
+                                                //    this.WeightedClick(RaidRewardPM.RewardButton, 1.0, 1.0, 1, 0, "left");
+                                                //}
+                                                //else
+                                                //{
+                                                //    this.DoneRaid();
+                                                //}
+                                                this.WeightedClick(RaidRewardPM.RewardButton, 1.0, 1.0, 1, 0, "left");
+                                                SevenKnightsCore.Sleep(300);
                                             }
                                             else
                                             {
@@ -3201,12 +3722,27 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.RAID_OUT_OF_KEYS_POPUP:
+                                            //if (!flag3)
+                                            //{
+                                            //    this.PushNote("Out of Keys [Raid]", "AI will buy more keys or play other modes while waiting.");
+                                            //    flag3 = true;
+                                            //}
+                                            //this.HandleOutOfKey(scene.SceneType);
+                                            //break;
                                             if (!flag3)
                                             {
                                                 this.PushNote("Out of Keys [Raid]", "AI will buy more keys or play other modes while waiting.");
                                                 flag3 = true;
                                             }
-                                            this.HandleOutOfKey(scene.SceneType);
+                                            this.Escape();
+                                            SevenKnightsCore.Sleep(800);
+                                            this.CaptureFrame();
+                                            if (this.MatchMapping(RaidReadyPM.AwakenBlueIcon, 2) && this.MatchMapping(RaidReadyPM.AwakenDragonImg, 2))
+                                            {
+                                                this.Escape();
+                                            }
+                                            this.DoneRaid();
+                                            //this.HandleOutOfKey(scene.SceneType);
                                             break;
 
                                         case SceneType.RAID_ALREADY_ENDED_POPUP:
@@ -3232,6 +3768,7 @@ namespace SevenKnightsAI.Classes
                                             else
                                             {
                                                 this.Escape();
+                                                this.DoneRaid();
                                             }
                                             break;
 
@@ -3520,7 +4057,7 @@ namespace SevenKnightsAI.Classes
                                             if (this.MatchMapping(StatusBoardPM.ContentsTabSelect, 2) && this.MatchMapping(StatusBoardPM.HottimeRedIcon, 2))
                                             {
                                                 this.WeightedClick(StatusBoardPM.HottimeTab, 1.0, 1.0, 1, 0, "left");
-                                                SevenKnightsCore.Sleep(500);
+                                                SevenKnightsCore.Sleep(800);
                                                 this.WeightedClick(StatusBoardPM.ActiveHottimeButton, 1.0, 1.0, 1, 0, "left");
                                             }
                                             else
@@ -4651,11 +5188,11 @@ namespace SevenKnightsAI.Classes
 
         private void RaidCheckLimits()
         {
-            if (this.AISettings.RD_EnableLimit || this.AISettings.RD_EnableDragonLimit)
+            if (this.AISettings.RD_EnableDragonLimit)
             //if (this.AISettings.RD_EnableLimit)
             {
                 this.RaidLimitCount++;
-                if (this.RaidLimitCount >= this.AISettings.RD_Limit || this.RaidLimitCount >= this.AISettings.RD_DragonLimit)
+                if (this.RaidLimitCount >= this.AISettings.RD_DragonRound)
                 //if (this.RaidLimitCount >= this.AISettings.RD_Limit)
                 {
                     this.Log("Limit reached [Raid]", this.COLOR_LIMIT);
@@ -5006,7 +5543,7 @@ namespace SevenKnightsAI.Classes
                     return result;
                 }
 
-                if (this.ExpectedFightScene(SceneType.RAID_FIGHT) && this.MatchMapping(TowerFightPM.PauseButton, 2) && this.MatchMapping(TowerFightPM.ChatButton, 2) && (this.MatchMapping(RaidFightPM.DragonIcon, 2) || (this.MatchMapping(RaidFightPM.DragonAwakeye, 2))))
+                if (this.ExpectedFightScene(SceneType.RAID_FIGHT) && this.MatchMapping(TowerFightPM.PauseButton, 2) && this.MatchMapping(TowerFightPM.ChatButton, 2) && (this.MatchMapping(RaidFightPM.DragonIcon, 2)))
                 {
                     Scene result = new Scene(SceneType.RAID_FIGHT);
                     return result;
@@ -5102,7 +5639,8 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.RAID_AWAKENED_LOBBY);
                     return result;
                 }
-                if (this.MatchMapping(RaidReadyPM.AwakenBlueIcon, 2, false) && this.MatchMapping(RaidReadyPM.AwakenDragonImg, 2, false))
+                //if (this.MatchMapping(RaidReadyPM.AwakenBlueIcon, 2, false) && this.MatchMapping(RaidReadyPM.AwakenDragonImg, 2, false))
+                if (this.MatchMapping(RaidReadyPM.AwakenBlueIcon, 2) && this.MatchMapping(RaidReadyPM.AwakenDragonImg, 2))
                 {
                     Scene result = new Scene(SceneType.RAID_AWAKENED_READY);
                     return result;
@@ -6839,6 +7377,7 @@ namespace SevenKnightsAI.Classes
                     {
                         string text = page.GetText();
                         Utility.FilterAscii(text);
+
                         if (text.Length >= 2)
                         {
                             string s = text.Substring(0, 2);

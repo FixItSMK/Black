@@ -6,17 +6,17 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly PixelMapping Borderleft = new PixelMapping
         {
-            X = 214,
-            Y = 71,
-            Color = 1839628,
+            X = 227,
+            Y = 65,
+            Color = 15315143,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping BoderRight = new PixelMapping
         {
-            X = 925,
-            Y = 218,
-            Color = 2758669,
+            X = 923,
+            Y = 227,
+            Color = 2824206,
             Type = MappingType.ANCHOR
         };
 

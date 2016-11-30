@@ -201,6 +201,18 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "RD_OwnerDragon")]
         public bool RD_OwnerDragon;
 
+        [XmlElement(ElementName = "RD_LevelCheckBox")]
+        public bool RD_LevelCheckBox;
+
+        [XmlElement(ElementName = "RD_DragonLV")]
+        public int RD_DragonLV;
+
+        [XmlElement(ElementName = "RD_DragonHP")]
+        public int RD_DragonHP;
+
+        [XmlElement(ElementName = "RD_DragonRound")]
+        public int RD_DragonRound;
+
         [XmlElement(ElementName = "RS_BuyKeyHonors")]
         public bool RS_BuyKeyHonors;
 
@@ -331,14 +343,18 @@ namespace SevenKnightsAI.Classes
             this.AR_UseRubyAmount = 0;
             this.RD_Enable = true;
             this.RD_EnableLimit = false;
-            this.RD_EnableDragonLimit = false;
+            this.RD_EnableDragonLimit = true;
             this.RD_DragonLimit = 1;
             this.RD_Limit = 0;
             this.RD_SkillType = SkillType.Both;
             this.RD_Team1Loop = false;
             this.RD_Team2Loop = false;
-            this.RD_Hp50Up = true;
+            this.RD_Hp50Up = false;
             this.RD_OwnerDragon = true;
+            this.RD_LevelCheckBox = true;
+            this.RD_DragonLV = 1;
+            this.RD_DragonHP = 50;
+            this.RD_DragonRound = 1;
             this.ARD_Enable = true;
             this.RS_SellHeroes = false;
             this.RS_SellHeroStars = 1;
@@ -752,6 +768,30 @@ namespace SevenKnightsAI.Classes
                 try
                 {
                     aISettings.RD_OwnerDragon = (bool)dictionary["RD_OwnerDragon"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.RD_LevelCheckBox = (bool)dictionary["RD_LevelCheckBox"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.RD_DragonLV = Convert.ToInt32(dictionary["RD_DragonLV"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.RD_DragonHP = Convert.ToInt32(dictionary["RD_DragonHP"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.RD_DragonRound = Convert.ToInt32(dictionary["RD_DragonRound"]);
                 }
                 catch (Exception)
                 { }
@@ -1185,6 +1225,22 @@ namespace SevenKnightsAI.Classes
                 {
                     "RD_OwnerDragon",
                     this.RD_OwnerDragon
+                },
+                {
+                    "RD_LevelCheckBox",
+                    this.RD_LevelCheckBox
+                },
+                {
+                    "RD_DragonLV",
+                    this.RD_DragonLV
+                },
+                {
+                    "RD_DragonHP",
+                    this.RD_DragonHP
+                },
+                {
+                    "RD_DragonRound",
+                    this.RD_DragonRound
                 },
                 {
                     "ARD_Enable",
