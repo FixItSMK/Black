@@ -213,6 +213,12 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "RD_DragonRound")]
         public int RD_DragonRound;
 
+        [XmlElement(ElementName = "RD_DragonLVLimit")]
+        public int RD_DragonLVLimit;
+
+        [XmlElement(ElementName = "RD_DragonHPLimit")]
+        public int RD_DragonHPLimit;
+
         [XmlElement(ElementName = "RS_BuyKeyHonors")]
         public bool RS_BuyKeyHonors;
 
@@ -355,6 +361,8 @@ namespace SevenKnightsAI.Classes
             this.RD_DragonLV = 1;
             this.RD_DragonHP = 50;
             this.RD_DragonRound = 1;
+            this.RD_DragonLVLimit = 70;
+            this.RD_DragonHPLimit = 100;
             this.ARD_Enable = true;
             this.RS_SellHeroes = false;
             this.RS_SellHeroStars = 1;
@@ -780,6 +788,18 @@ namespace SevenKnightsAI.Classes
                 try
                 {
                     aISettings.RD_DragonLV = Convert.ToInt32(dictionary["RD_DragonLV"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.RD_DragonLVLimit = Convert.ToInt32(dictionary["RD_DragonLVLimit"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.RD_DragonHPLimit = Convert.ToInt32(dictionary["RD_DragonHPLimit"]);
                 }
                 catch (Exception)
                 { }
@@ -1241,6 +1261,14 @@ namespace SevenKnightsAI.Classes
                 {
                     "RD_DragonRound",
                     this.RD_DragonRound
+                },
+                {
+                    "RD_DragonLVLimit",
+                    this.RD_DragonLVLimit
+                },
+                {
+                    "RD_DragonHPLimit",
+                    this.RD_DragonHPLimit
                 },
                 {
                     "ARD_Enable",

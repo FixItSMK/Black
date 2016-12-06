@@ -164,7 +164,6 @@
             this.RD_DragonLimit_lbl = new System.Windows.Forms.Label();
             this.RD_mainPanel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.RD_LevelCheckBox = new System.Windows.Forms.CheckBox();
             this.label4 = new System.Windows.Forms.Label();
             this.RD_DragonLV = new System.Windows.Forms.NumericUpDown();
@@ -344,6 +343,10 @@
             this.goldLabel = new System.Windows.Forms.Label();
             this.resourcesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.aiPause = new System.Windows.Forms.Button();
+            this.RD_DragonHPLimit = new System.Windows.Forms.NumericUpDown();
+            this.RD_DragonLVLimit = new System.Windows.Forms.NumericUpDown();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.adventureTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AD_limitNumericBox)).BeginInit();
@@ -416,6 +419,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.rubyPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goldPictureBox)).BeginInit();
             this.resourcesTableLayoutPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonHPLimit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLVLimit)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -2193,7 +2198,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.RD_DragonLVLimit);
+            this.groupBox1.Controls.Add(this.RD_DragonHPLimit);
             this.groupBox1.Controls.Add(this.RD_LevelCheckBox);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.RD_DragonLV);
@@ -2205,39 +2213,29 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Dragon Option";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.label5.Location = new System.Drawing.Point(157, 50);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(20, 16);
-            this.label5.TabIndex = 38;
-            this.label5.Text = "%";
-            // 
             // RD_LevelCheckBox
             // 
             this.RD_LevelCheckBox.AutoSize = true;
             this.RD_LevelCheckBox.Location = new System.Drawing.Point(6, 23);
             this.RD_LevelCheckBox.Name = "RD_LevelCheckBox";
-            this.RD_LevelCheckBox.Size = new System.Drawing.Size(105, 17);
+            this.RD_LevelCheckBox.Size = new System.Drawing.Size(67, 17);
             this.RD_LevelCheckBox.TabIndex = 34;
-            this.RD_LevelCheckBox.Text = "Dragon Level >=";
+            this.RD_LevelCheckBox.Text = "Level >=";
             this.RD_LevelCheckBox.UseVisualStyleBackColor = true;
             this.RD_LevelCheckBox.CheckedChanged += new System.EventHandler(this.RD_LevelCheckBox_CheckedChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(23, 51);
+            this.label4.Location = new System.Drawing.Point(22, 51);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 13);
+            this.label4.Size = new System.Drawing.Size(48, 13);
             this.label4.TabIndex = 37;
-            this.label4.Text = "Dragon HP    >=";
+            this.label4.Text = "% HP >=";
             // 
             // RD_DragonLV
             // 
-            this.RD_DragonLV.Location = new System.Drawing.Point(116, 22);
+            this.RD_DragonLV.Location = new System.Drawing.Point(75, 24);
             this.RD_DragonLV.Maximum = new decimal(new int[] {
             99,
             0,
@@ -2260,7 +2258,7 @@
             // 
             // RD_DragonHP
             // 
-            this.RD_DragonHP.Location = new System.Drawing.Point(116, 49);
+            this.RD_DragonHP.Location = new System.Drawing.Point(75, 51);
             this.RD_DragonHP.Minimum = new decimal(new int[] {
             1,
             0,
@@ -3956,7 +3954,7 @@
             this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
             this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 92F));
+            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
             this.keysTableLayoutPanel.Controls.Add(this.arenaKeysLabel, 5, 0);
             this.keysTableLayoutPanel.Controls.Add(this.adventureKeyPictureBox, 0, 0);
             this.keysTableLayoutPanel.Controls.Add(this.arenaKeyPictureBox, 4, 0);
@@ -4308,6 +4306,67 @@
             this.aiPause.UseVisualStyleBackColor = true;
             this.aiPause.Click += new System.EventHandler(this.aiPause_Click);
             // 
+            // RD_DragonHPLimit
+            // 
+            this.RD_DragonHPLimit.Location = new System.Drawing.Point(141, 51);
+            this.RD_DragonHPLimit.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RD_DragonHPLimit.Name = "RD_DragonHPLimit";
+            this.RD_DragonHPLimit.Size = new System.Drawing.Size(38, 20);
+            this.RD_DragonHPLimit.TabIndex = 38;
+            this.RD_DragonHPLimit.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RD_DragonHPLimit.ValueChanged += new System.EventHandler(this.RD_DragonHPLimit_ValueChanged);
+            // 
+            // RD_DragonLVLimit
+            // 
+            this.RD_DragonLVLimit.Location = new System.Drawing.Point(141, 24);
+            this.RD_DragonLVLimit.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.RD_DragonLVLimit.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RD_DragonLVLimit.Name = "RD_DragonLVLimit";
+            this.RD_DragonLVLimit.Size = new System.Drawing.Size(38, 20);
+            this.RD_DragonLVLimit.TabIndex = 39;
+            this.RD_DragonLVLimit.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.RD_DragonLVLimit.ValueChanged += new System.EventHandler(this.RD_DragonLVLimit_ValueChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label5.Location = new System.Drawing.Point(120, 49);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(14, 20);
+            this.label5.TabIndex = 40;
+            this.label5.Text = "-";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.label6.Location = new System.Drawing.Point(119, 24);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(14, 20);
+            this.label6.TabIndex = 41;
+            this.label6.Text = "-";
+            // 
             // MainForm
             // 
             this.AcceptButton = this.aiButton;
@@ -4436,6 +4495,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.goldPictureBox)).EndInit();
             this.resourcesTableLayoutPanel.ResumeLayout(false);
             this.resourcesTableLayoutPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonHPLimit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLVLimit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -5330,6 +5391,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown RD_DragonHP;
+        private System.Windows.Forms.NumericUpDown RD_DragonLVLimit;
+        private System.Windows.Forms.NumericUpDown RD_DragonHPLimit;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
     }
 }

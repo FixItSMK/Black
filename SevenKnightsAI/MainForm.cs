@@ -343,7 +343,7 @@ namespace SevenKnightsAI
             }
             else if (this.AISettings.AD_World == World.DarkSanctuary)
             {
-                this.AD_PopulateStage(5);
+                this.AD_PopulateStage(10);
             }
             else
             {
@@ -903,6 +903,9 @@ namespace SevenKnightsAI
             this.RD_DragonLV.Value = this.AISettings.RD_DragonLV;
             this.RD_RoundNumericUpDown.Value = this.AISettings.RD_DragonRound;
             this.RD_DragonHP.Value = this.AISettings.RD_DragonHP;
+            this.RD_DragonHPLimit.Value = this.AISettings.RD_DragonHPLimit;
+            this.RD_DragonLVLimit.Value = this.AISettings.RD_DragonLVLimit;
+
             switch (this.AISettings.RD_SkillType)
             {
                 case SkillType.Auto:
@@ -1939,6 +1942,18 @@ namespace SevenKnightsAI
             int num = Convert.ToInt32(numericUpDown.Value);
             this.AISettings.RD_DragonRound = num;
         }
+        private void RD_DragonLVLimit_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            int num = Convert.ToInt32(numericUpDown.Value);
+            this.AISettings.RD_DragonLVLimit = num;
+        }
+        private void RD_DragonHPLimit_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            int num = Convert.ToInt32(numericUpDown.Value);
+            this.AISettings.RD_DragonHPLimit = num;
+        }
 
         // Link Thank.
 
@@ -1993,6 +2008,5 @@ namespace SevenKnightsAI
         }
 
         #endregion Private Methods 
-
     }
 }

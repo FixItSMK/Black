@@ -3417,7 +3417,8 @@ namespace SevenKnightsAI.Classes
                                                                         PercentHP0 = 0;
                                                                     }
                                                                     this.Log(string.Format("Dragon1 Lv.{0}, HP: {1}%", LvlLoca0, PercentHP0), Color.BlueViolet);
-                                                                    if (LvlLoca0 >= AISettings.RD_DragonLV && PercentHP0 >= AISettings.RD_DragonHP && PercentHP0 <= 100)
+                                                                    if (LvlLoca0 >= AISettings.RD_DragonLV && LvlLoca0  <= this.AISettings.RD_DragonLVLimit 
+                                                                        && PercentHP0 >= AISettings.RD_DragonHP && PercentHP0 <= this.AISettings.RD_DragonHPLimit)
                                                                     {
                                                                         this.Log(string.Format("Match Dragon1 Lv.{0}, HP: {1}%", LvlLoca0, PercentHP0), this.COLOR_RAID);
                                                                         SevenKnightsCore.Sleep(1000);
@@ -3439,7 +3440,8 @@ namespace SevenKnightsAI.Classes
                                                                         PercentHP1 = 0;
                                                                     }
                                                                     this.Log(string.Format("Dragon2 Lv.{0}, HP: {1}%", LvlLoca1, PercentHP1), Color.BlueViolet);
-                                                                    if (LvlLoca1 >= AISettings.RD_DragonLV && PercentHP1 >= AISettings.RD_DragonHP && PercentHP1 <= 100)
+                                                                    if (LvlLoca1 >= AISettings.RD_DragonLV && LvlLoca1 <= this.AISettings.RD_DragonLVLimit 
+                                                                        && PercentHP1 >= AISettings.RD_DragonHP && PercentHP1 <= this.AISettings.RD_DragonHPLimit)
                                                                     {
                                                                         this.Log(string.Format("Match Dragon2 Lv.{0}, HP: {1}%", LvlLoca1, PercentHP1), this.COLOR_RAID);
                                                                         SevenKnightsCore.Sleep(1000);
@@ -3462,7 +3464,8 @@ namespace SevenKnightsAI.Classes
                                                                         PercentHP2 = 0;
                                                                     }
                                                                     this.Log(string.Format("Dragon3 Lv.{0}, HP: {1}%", LvlLoca2, PercentHP2), Color.BlueViolet);
-                                                                    if (LvlLoca2 >= AISettings.RD_DragonLV && PercentHP2 >= AISettings.RD_DragonHP && PercentHP2 <= 100)
+                                                                    if (LvlLoca2 >= AISettings.RD_DragonLV && LvlLoca2 <= this.AISettings.RD_DragonLVLimit 
+                                                                        && PercentHP2 >= AISettings.RD_DragonHP && PercentHP2 <= this.AISettings.RD_DragonHPLimit)
                                                                     {
                                                                         this.Log(string.Format("Match Dragon3 Lv.{0}, HP: {1}%", LvlLoca2, PercentHP2), this.COLOR_RAID);
                                                                         SevenKnightsCore.Sleep(1000);
@@ -3485,7 +3488,8 @@ namespace SevenKnightsAI.Classes
                                                                         PercentHP3 = 0;
                                                                     }
                                                                     this.Log(string.Format("Dragon4 Lv.{0}, HP: {1}%", LvlLoca3, PercentHP3), Color.BlueViolet);
-                                                                    if (LvlLoca3 >= AISettings.RD_DragonLV && PercentHP3 >= AISettings.RD_DragonHP && PercentHP3 <= 100)
+                                                                    if (LvlLoca3 >= AISettings.RD_DragonLV && LvlLoca3 <= this.AISettings.RD_DragonLVLimit
+                                                                        && PercentHP3 >= AISettings.RD_DragonHP && PercentHP3 <= this.AISettings.RD_DragonHPLimit)
                                                                     {
                                                                         this.Log(string.Format("Match Dragon4 Lv.{0}, HP: {1}%", LvlLoca3, PercentHP3), this.COLOR_RAID);
                                                                         SevenKnightsCore.Sleep(1000);
@@ -3549,7 +3553,8 @@ namespace SevenKnightsAI.Classes
                                                                         PercentHP0 = 0;
                                                                     }
                                                                     this.Log(string.Format("Dragon1 Lv.{0}, HP: {1}%", LvlLoca0, PercentHP0), Color.BlueViolet);
-                                                                    if (LvlLoca0 >= AISettings.RD_DragonLV && PercentHP0 >= AISettings.RD_DragonHP && PercentHP0 <= 100)
+                                                                    if (LvlLoca0 >= AISettings.RD_DragonLV && LvlLoca0 <= this.AISettings.RD_DragonLVLimit
+                                                                        && PercentHP0 >= AISettings.RD_DragonHP && PercentHP0 <= this.AISettings.RD_DragonHPLimit)
                                                                     {
                                                                         this.Log(string.Format("Match Dragon1 Lv.{0}, HP: {1}%", LvlLoca0, PercentHP0), this.COLOR_RAID);
                                                                         SevenKnightsCore.Sleep(1000);
@@ -3571,7 +3576,8 @@ namespace SevenKnightsAI.Classes
                                                                         PercentHP1 = 0;
                                                                     }
                                                                     this.Log(string.Format("Dragon2 Lv.{0}, HP: {1}%", LvlLoca1, PercentHP1), Color.BlueViolet);
-                                                                    if (LvlLoca1 >= AISettings.RD_DragonLV && PercentHP1 >= AISettings.RD_DragonHP && PercentHP1 <= 100)
+                                                                    if (LvlLoca1 >= AISettings.RD_DragonLV && LvlLoca1 <= this.AISettings.RD_DragonLVLimit
+                                                                        && PercentHP1 >= AISettings.RD_DragonHP && PercentHP1 <= this.AISettings.RD_DragonHPLimit)
                                                                     {
                                                                         this.Log(string.Format("Match Dragon2 Lv.{0}, HP: {1}%", LvlLoca1, PercentHP1), this.COLOR_RAID);
                                                                         SevenKnightsCore.Sleep(1000);
@@ -3593,7 +3599,8 @@ namespace SevenKnightsAI.Classes
                                                                         PercentHP2 = 0;
                                                                     }
                                                                     this.Log(string.Format("Dragon3 Lv.{0}, HP: {1}%", LvlLoca2, PercentHP2), Color.BlueViolet);
-                                                                    if (LvlLoca2 >= AISettings.RD_DragonLV && PercentHP2 >= AISettings.RD_DragonHP && PercentHP2 <= 100)
+                                                                    if (LvlLoca2 >= AISettings.RD_DragonLV && LvlLoca2 <= this.AISettings.RD_DragonLVLimit
+                                                                        && PercentHP2 >= AISettings.RD_DragonHP && PercentHP2 <= this.AISettings.RD_DragonHPLimit)
                                                                     {
                                                                         this.Log(string.Format("Match Dragon3 Lv.{0}, HP: {1}%", LvlLoca2, PercentHP2), this.COLOR_RAID);
                                                                         SevenKnightsCore.Sleep(1000);
@@ -3615,7 +3622,8 @@ namespace SevenKnightsAI.Classes
                                                                         PercentHP3 = 0;
                                                                     }
                                                                     this.Log(string.Format("Dragon4 Lv.{0}, HP: {1}%", LvlLoca3, PercentHP3), Color.BlueViolet);
-                                                                    if (LvlLoca3 >= AISettings.RD_DragonLV && PercentHP3 >= AISettings.RD_DragonHP && PercentHP3 <= 100)
+                                                                    if (LvlLoca3 >= AISettings.RD_DragonLV && LvlLoca3 <= this.AISettings.RD_DragonLVLimit
+                                                                        && PercentHP3 >= AISettings.RD_DragonHP && PercentHP3 <= this.AISettings.RD_DragonHPLimit)
                                                                     {
                                                                         this.Log(string.Format("Match Dragon4 Lv.{0}, HP: {1}%", LvlLoca3, PercentHP3), this.COLOR_RAID);
                                                                         SevenKnightsCore.Sleep(1000);
@@ -5564,7 +5572,8 @@ namespace SevenKnightsAI.Classes
                     return result;
                 }
                 // ตรวจสอบหน้า Shop ที่ตำแหน่งใหม่
-                if (this.MatchMapping(ShopPM.BoderRight, 2) && this.MatchMapping(ShopPM.Borderleft, 2))
+                if (this.MatchMapping(ShopPM.BoderRight, 2) && this.MatchMapping(ShopPM.Borderleft, 2)
+                    && (this.MatchMapping(ShopPM.BoderCompair1, 2) || this.MatchMapping(ShopPM.BoderCompair2, 2)))
                 {
                     Scene result = new Scene(SceneType.SHOP);
                     return result;
@@ -6315,6 +6324,11 @@ namespace SevenKnightsAI.Classes
                 {
                     MapSelectPM.World11_1Anchor_1,
                     MapSelectPM.World11_1Anchor_2
+                },
+                new PixelMapping[]
+                {
+                    MapSelectPM.World11_2Anchor_1,
+                    MapSelectPM.World11_2Anchor_2
                 }
             };
             PixelMapping[][] stages = new PixelMapping[][]
@@ -6380,6 +6394,11 @@ namespace SevenKnightsAI.Classes
                     MapSelectPM.World11_1Stage3,
                     MapSelectPM.World11_1Stage4,
                     MapSelectPM.World11_1Stage5,
+                    MapSelectPM.World11_2Stage6,
+                    MapSelectPM.World11_2Stage7,
+                    MapSelectPM.World11_2Stage8,
+                    MapSelectPM.World11_2Stage9,
+                    MapSelectPM.World11_2Stage10
                 }
             };
             int pageDestIndex = array.Length + 1;
@@ -6445,6 +6464,10 @@ namespace SevenKnightsAI.Classes
                 if (stage < 5)
                 {
                     pageDestIndex = 9;
+                }
+                else if (stage < 10)
+                {
+                    pageDestIndex = 10;
                 }
             }
             else
