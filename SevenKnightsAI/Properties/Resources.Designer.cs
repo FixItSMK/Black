@@ -220,22 +220,22 @@ namespace SevenKnightsAI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Ntitle {
+            get {
+                object obj = ResourceManager.GetObject("Ntitle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] tessdata {
             get {
                 object obj = ResourceManager.GetObject("tessdata", resourceCulture);
                 return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Title {
-            get {
-                object obj = ResourceManager.GetObject("Title", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

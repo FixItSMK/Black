@@ -478,6 +478,10 @@ namespace SevenKnightsAI.Classes.Mappings
             Y = 60,
             Width = 145,
             Height = 42
+            //X = 636,
+            //Y = 63,
+            //Width = 134,
+            //Height = 39
         };
 
         public static readonly PixelMapping Loot_HeroButton = new PixelMapping

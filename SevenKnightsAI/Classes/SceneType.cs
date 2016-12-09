@@ -121,6 +121,8 @@ namespace SevenKnightsAI.Classes
         EXCLUSIVE_CLOSE_POPUP,
         ELEMENT_POPUP,
         RANK_UP,
-        SELL_HERO_FINISH
+        SELL_HERO_FINISH,
+        YEAR_END_AWAKE,
+        YEAR_END_AWAKE_POPUP
     }
 }

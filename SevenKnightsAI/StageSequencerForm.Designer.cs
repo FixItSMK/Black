@@ -26,6 +26,7 @@
             this.Stage = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Delete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Difficulty = new System.Windows.Forms.DataGridViewComboBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,13 +41,14 @@
             this.World,
             this.Stage,
             this.Amount,
-            this.Delete});
+            this.Delete,
+            this.Difficulty});
             this.dataGridView.Location = new System.Drawing.Point(15, 12);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowHeadersVisible = false;
             this.dataGridView.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView.Size = new System.Drawing.Size(341, 148);
+            this.dataGridView.Size = new System.Drawing.Size(461, 148);
             this.dataGridView.TabIndex = 4;
             this.dataGridView.CellBeginEdit += new System.Windows.Forms.DataGridViewCellCancelEventHandler(this.dataGridView_CellBeginEdit);
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_CellContentClick);
@@ -60,7 +62,7 @@
             // 
             // doneButton
             // 
-            this.doneButton.Location = new System.Drawing.Point(233, 166);
+            this.doneButton.Location = new System.Drawing.Point(353, 166);
             this.doneButton.Name = "doneButton";
             this.doneButton.Size = new System.Drawing.Size(123, 31);
             this.doneButton.TabIndex = 6;
@@ -70,7 +72,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(158, 166);
+            this.clearButton.Location = new System.Drawing.Point(278, 166);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(69, 31);
             this.clearButton.TabIndex = 5;
@@ -82,7 +84,7 @@
             // 
             this.runningWarningLabel.AutoSize = true;
             this.runningWarningLabel.Enabled = false;
-            this.runningWarningLabel.Location = new System.Drawing.Point(14, 179);
+            this.runningWarningLabel.Location = new System.Drawing.Point(134, 179);
             this.runningWarningLabel.Name = "runningWarningLabel";
             this.runningWarningLabel.Size = new System.Drawing.Size(127, 13);
             this.runningWarningLabel.TabIndex = 7;
@@ -153,6 +155,7 @@
             // 
             this.Amount.DataPropertyName = "Amount";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.Amount.DefaultCellStyle = dataGridViewCellStyle1;
             this.Amount.FillWeight = 50F;
             this.Amount.HeaderText = "Amount";
@@ -173,11 +176,21 @@
             this.Delete.ToolTipText = "Delete";
             this.Delete.UseColumnTextForButtonValue = true;
             // 
+            // Difficulty
+            // 
+            this.Difficulty.FillWeight = 60F;
+            this.Difficulty.HeaderText = "Difficulty";
+            this.Difficulty.MinimumWidth = 60;
+            this.Difficulty.Name = "Difficulty";
+            this.Difficulty.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Difficulty.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Difficulty.Width = 60;
+            // 
             // StageSequencerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 204);
+            this.ClientSize = new System.Drawing.Size(488, 204);
             this.Controls.Add(this.runningWarningLabel);
             this.Controls.Add(this.clearButton);
             this.Controls.Add(this.doneButton);
@@ -217,5 +230,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Stage;
         private System.Windows.Forms.DataGridViewTextBoxColumn Amount;
         private System.Windows.Forms.DataGridViewButtonColumn Delete;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Difficulty;
     }
 }

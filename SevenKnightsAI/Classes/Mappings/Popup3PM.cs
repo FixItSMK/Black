@@ -318,5 +318,29 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 5448462,
             Type = MappingType.BOTH
         };
+
+        public static readonly PixelMapping AWAKENPackPic = new PixelMapping
+        {
+            X = 239,
+            Y = 194,
+            Color = 16180186,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping AWAKENPackColor = new PixelMapping
+        {
+            X = 162,
+            Y = 435,
+            Color = 8785634,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping AWAKENPackColorBG = new PixelMapping
+        {
+            X = 175,
+            Y = 435,
+            Color = 2556995,
+            Type = MappingType.ANCHOR
+        };
     }
 }

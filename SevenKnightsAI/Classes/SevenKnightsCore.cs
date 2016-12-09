@@ -3054,7 +3054,6 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.LEVEL_30_DIALOG:
-                                        case SceneType.LEVEL_30_MAX_DIALOG:
                                             if (this.AISettings.AD_StopOnLV30)
                                             {
                                                 this.Alert("Hero Level 30");
@@ -3063,6 +3062,25 @@ namespace SevenKnightsAI.Classes
                                                 break;
                                             }
                                             this.Log("Hero Level 30", this.COLOR_LEVEL_30);
+                                            this.HeroLVUPCount();
+                                            SevenKnightsCore.Sleep(500);
+                                            if (this.AISettings.AD_Formation != Formation.None && this.AISettings.AD_HeroManagePositions != null && this.AISettings.AD_HeroManagePositions.Length > 0)
+                                            {
+                                                this.ChangeObjective(Objective.HERO_MANAGEMENT);
+                                            }
+                                            this.WeightedClick(Level30DialogPM.OkButton, 1.0, 1.0, 1, 0, "left");
+                                            SevenKnightsCore.Sleep(300);
+                                            break;
+
+                                        case SceneType.LEVEL_30_MAX_DIALOG:
+                                            if (this.AISettings.AD_StopOnLV30)
+                                            {
+                                                this.Alert("Hero Level 30");
+                                                this.Escape();
+                                                this.AIProfiles.TMP_Paused = true;
+                                                break;
+                                            }
+                                            //this.Log("Hero Level 30 - location 2", this.COLOR_LEVEL_30);
                                             this.HeroLVUPCount();
                                             SevenKnightsCore.Sleep(500);
                                             if (this.AISettings.AD_Formation != Formation.None && this.AISettings.AD_HeroManagePositions != null && this.AISettings.AD_HeroManagePositions.Length > 0)
@@ -4107,6 +4125,13 @@ namespace SevenKnightsAI.Classes
                                             this.Escape();
                                             break;
 
+                                        case SceneType.YEAR_END_AWAKE:
+                                            this.Escape();
+                                            break;
+
+                                        case SceneType.YEAR_END_AWAKE_POPUP:
+                                            this.WeightedClick(Popup3PM.MayCloseOKButton, 1.0, 1.0, 1, 0, "left");
+                                            break;
                                     }
                                 }
                             }
@@ -4295,6 +4320,7 @@ namespace SevenKnightsAI.Classes
                 {
                     return;
                 }
+                
                 if (this.IsHeroLevel30())
                 {
                     this.Log(string.Format("- Got position: {0}", current + 1), this.COLOR_HEROES_MANAGEMENT);
@@ -6042,6 +6068,16 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.RANK_UP);
                     return result;
                 }
+                if (this.MatchMapping(Popup3PM.AWAKENPackPic, 2) && this.MatchMapping(Popup3PM.AWAKENPackColor, 2))
+                {
+                    Scene result = new Scene(SceneType.YEAR_END_AWAKE);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.AWAKENPackColorBG, 2) && this.MatchMapping(Popup3PM.ElementTick, 2))
+                {
+                    Scene result = new Scene(SceneType.YEAR_END_AWAKE_POPUP);
+                    return result;
+                }
             }
             catch
             {
@@ -6506,185 +6542,6 @@ namespace SevenKnightsAI.Classes
             SevenKnightsCore.Sleep(500);
         }
 
-        //private void SellHeroes()
-        //{
-        //    PixelMapping[] array = new PixelMapping[]
-        //    {
-        //        SellHeroConfirmPopupPM.Star1,
-        //        SellHeroConfirmPopupPM.Star2,
-        //        SellHeroConfirmPopupPM.Star3,
-        //        SellHeroConfirmPopupPM.Star4,
-        //        SellHeroConfirmPopupPM.Star5,
-        //        SellHeroConfirmPopupPM.Star6
-        //    };
-        //    PixelMapping[] array2 = new PixelMapping[]
-        //    {
-        //        HeroesPM.HeroCard1,
-        //        HeroesPM.HeroCard2,
-        //        HeroesPM.HeroCard3,
-        //        HeroesPM.HeroCard4,
-        //        HeroesPM.HeroCard5,
-        //        HeroesPM.HeroCard6,
-        //        HeroesPM.HeroCard7,
-        //        HeroesPM.HeroCard8
-        //    };
-        //    PixelMapping[][] array3 = new PixelMapping[][]
-        //    {
-        //        new PixelMapping[]
-        //        {
-        //            SellHeroConfirmPopupPM.ElementWater_1,
-        //            SellHeroConfirmPopupPM.ElementWater_2,
-        //            SellHeroConfirmPopupPM.ElementWater_3
-        //        },
-        //        new PixelMapping[]
-        //        {
-        //            SellHeroConfirmPopupPM.ElementFire_1,
-        //            SellHeroConfirmPopupPM.ElementFire_2,
-        //            SellHeroConfirmPopupPM.ElementFire_3
-        //        },
-        //        new PixelMapping[]
-        //        {
-        //            SellHeroConfirmPopupPM.ElementLight_1,
-        //            SellHeroConfirmPopupPM.ElementLight_2,
-        //            SellHeroConfirmPopupPM.ElementLight_3
-        //        },
-        //        new PixelMapping[]
-        //        {
-        //            SellHeroConfirmPopupPM.ElementDark_1,
-        //            SellHeroConfirmPopupPM.ElementDark_2,
-        //            SellHeroConfirmPopupPM.ElementDark_3
-        //        },
-        //        new PixelMapping[]
-        //        {
-        //            SellHeroConfirmPopupPM.ElementRock_1,
-        //            SellHeroConfirmPopupPM.ElementRock_2,
-        //            SellHeroConfirmPopupPM.ElementRock_3
-        //        }
-        //    };
-        //    this.Log("Start selling heroes", this.COLOR_SELL_HEROES);
-        //    this.PushNote("Selling heroes", "AI will only sell the hero if the given condition is met.");
-        //    if (!this.MatchMapping(HeroesPM.SortByBoxExpanded, 2))                                          // ถ้าปุ่ม Sort ยังไม่แสดงออกมา
-        //    {
-        //        this.WeightedClick(HeroesPM.SortByBox, 1.0, 1.0, 1, 0, "left");                             // คลิกที่ปุ่ม Sort
-        //        SevenKnightsCore.Sleep(300);
-        //    }
-        //    this.WeightedClick(HeroesPM.SortByRank, 1.0, 1.0, 1, 0, "left");                                // คลิกที่ปุ่ม Sort by Rank
-        //    SevenKnightsCore.Sleep(300);
-        //    if (!this.MatchMapping(HeroesPM.SortButtonAscending, 2))                                         // ถ้าไม่ใช่ปุ่มลูกศรขึ้น
-        //    {
-        //        this.WeightedClick(HeroesPM.SortButton, 1.0, 1.0, 1, 0, "left");                            // คลิกปุ่มให้เป็นปุ่มลูกศรขึ้น
-        //        SevenKnightsCore.Sleep(500);
-        //    }
-        //    this.ScrollHeroCards(false);                                                                    // ไม่ Score ฮีโร่
-        //    SevenKnightsCore.Sleep(500);
-        //    bool flag = false;
-        //    int num = 0;
-        //    int num2 = 0;
-        //    int num3 = 0;
-        //    while (num3 < 100 && !this.Worker.CancellationPending)                                  // num 3 น้อยกว่า 100 และไม่ใช่ Cancle
-        //    {
-        //        this.CaptureFrame();
-        //        Scene scene = this.SceneSearch();
-        //        if (scene != null && scene.SceneType != SceneType.HEROES)                           // ถ้าไม่ใช่หน้า Heros 
-        //        {
-        //            this.DoneSellHeroes(-1);                                                                // ส่งค่า -1 ไปให้ DontSellHeros
-        //            return;
-        //        }
-        //        if (this.MatchMapping(HeroesPM.LastRow_1, 3) && this.MatchMapping(HeroesPM.LastRow_2, 3))   //มุมบนซ้าย และมุมบนขวาตัวที่ 1 เป็นตามค่า
-        //        {
-        //            flag = true;                                                                                // ให้ค่า flag เป็นจริง
-        //        }
-        //        if (!this.AISettings.RS_SellHeroAll && num2 >= this.AISettings.RS_SellHeroAmount)           // ถ้าไม่ใช่ขายทั้งหมด และ Num2 มากกว่าหรือเท่ากับจำนวนที่ตั้งไว้
-        //        {
-        //            this.DoneSellHeroes(-1);                                                                // ส่งค่า -1 ไปให้ DontSellHeros
-        //            return;
-        //        }
-        //        this.WeightedClick(array2[num], 1.0, 1.0, 1, 0, "left");                                    // คลิกการ์ดตัวแรก array2[]
-        //        SevenKnightsCore.Sleep(this.AIProfiles.ST_Delay);
-        //        this.CaptureFrame();
-        //        scene = this.SceneSearch();
-        //        if (scene != null && scene.SceneType != SceneType.HERO_JOIN && scene.SceneType != SceneType.HERO_REMOVE)
-        //        {
-        //            this.DoneSellHeroes(-1);
-        //            return;
-        //        }
-        //        if (this.IsHeroLevel30() && this.MatchMapping(HeroJoinPM.KeyLockButton, 2) && this.MatchMapping(HeroJoinPM.SellButton, 2))             //ถ้า Hero เวล 30 และ อยู่ในหน้ามีปุ่มกดขาย และไม่ล๊อก
-        //        {
-        //            this.WeightedClick(HeroJoinPM.SellButton, 1.0, 1.0, 1, 0, "left");                  // กดที่ปุ่มขาย
-        //            SevenKnightsCore.Sleep(500);
-        //            this.WeightedClick(SellHeroConfirmPopupPM.SellLobbyButton, 1.0, 1.0, 1, 0, "left"); // กดปุ่มขายแถบยาวหน้าขายหลายตัว
-        //            SevenKnightsCore.Sleep(500);
-        //            this.CaptureFrame();                                                                // ตรวจสอบหน้า
-        //            scene = this.SceneSearch();
-        //            if (scene != null && scene.SceneType != SceneType.SELL_HERO_CONFIRM_POPUP)
-        //            {
-        //                this.Log("Stop Sell Hero.");
-        //                this.DoneSellHeroes(-1);
-        //                return;
-        //            }
-        //            //int num4 = -1;
-        //            //for (int i = 5; i >= 0; i--)
-        //            //{
-        //            //    if (this.MatchMapping(array[i], 8))
-        //            //    {
-        //            //        num4 = i + 1;
-        //            //        break;
-        //            //    }
-        //            //}
-        //            //int num5 = this.AISettings.RS_SellHeroStars;
-        //            //if (num4 == -1 || num4 > num5)
-        //            //{
-        //            //    this.WeightedClick(SellHeroConfirmPopupPM.NoButton, 1.0, 1.0, 1, 0, "left");
-        //            //    SevenKnightsCore.Sleep(500);
-        //            //    this.DoneSellHeroes(num2);
-        //            //    return;
-        //            //}
-        //            PixelMapping[][] array4 = array3;
-        //            for (int j = 0; j < array4.Length; j++)
-        //            {
-        //                PixelMapping[] array5 = array4[j];
-        //                if (this.MatchMapping(array5[0], 5) && this.MatchMapping(array5[1], 5) && this.MatchMapping(array5[2], 5))
-        //                {
-        //                    this.Log("-- Found element hero, skipping..", this.COLOR_SELL_HEROES);
-        //                    this.WeightedClick(SellHeroConfirmPopupPM.NoButton, 1.0, 1.0, 1, 0, "left");
-        //                    SevenKnightsCore.Sleep(300);
-        //                    this.Escape();
-        //                    SevenKnightsCore.Sleep(500);
-        //                }
-        //            }
-        //            num2++;
-        //            this.Log(string.Format("-- Hero sold ({0})", num2), this.COLOR_SELL_HEROES);
-        //            this.WeightedClick(SellHeroConfirmPopupPM.SellButton, 1.0, 1.0, 1, 0, "left");
-        //            SevenKnightsCore.Sleep(1500);
-        //            this.WeightedClick(SellHeroConfirmPopupPM.SoldOKButton, 1.0, 1.0, 1, 0, "left");
-        //            SevenKnightsCore.Sleep(1000);
-        //            this.WeightedClick(SellHeroConfirmPopupPM.BackSellLobby, 1.0, 1.0, 1, 0, "left");
-        //            this.LongSleep(2000, 1000);
-        //        }
-        //        else
-        //        {
-        //            this.Escape();
-        //            SevenKnightsCore.Sleep(500);
-        //            num++;
-        //            if (!flag)
-        //            {
-        //                num %= 4;
-        //            }
-        //            if (num == 0)
-        //            {
-        //                this.ScrollHeroCards(true);
-        //                SevenKnightsCore.Sleep(800);
-        //            }
-        //            if (flag && num >= array2.Length)
-        //            {
-        //                this.DoneSellHeroes(num2);
-        //                return;
-        //            }
-        //        }
-        //        num3++;
-        //    }
-        //    return;
-        //}
 
         private void SellHeroes()
         {
@@ -7246,6 +7103,7 @@ namespace SevenKnightsAI.Classes
             }
         }
 
+        /*
         private void HeroLVUPCount()
         {
             int curCount = 0;
@@ -7298,6 +7156,78 @@ namespace SevenKnightsAI.Classes
                             if (curCount <= 100)
                             {
                                 this.Log(string.Format("Max Heroes  level up per day : {0}/100", curCount),Color.BlueViolet);
+                            }
+                            if (curCount == 100 && array[1].Equals("100"))
+                            {
+                                this.MaxHeroUpCount = true;
+                            }
+                            else
+                            {
+                                this.MaxHeroUpCount = false;
+                            }
+                        }
+                        //if (array.Length >= 2)
+                        //{
+                        //    maxCount = array[1].Substring(0, 3);
+                        //}
+                    }
+                }
+            }
+        } 
+*/
+
+        private void HeroLVUPCount()
+        {
+            int curCount = 0;
+            //string maxCount="";
+            Rectangle rect = Level30DialogPM.R_HeroLvlUpCount;          // กำหนดตำแหน่งที่จะหาค่า*
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect).ScaleByPercent(200)) //Crop รูปภาพตามที่เรากำหนดและให้ค่าไปเก็บไว้ที่ Bitmap
+            {
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))    //ตรวจสอบไฟล์ Bitmap เพื่อจะแปลงค่า
+                {
+                    string text = page.GetText().ToLower().Replace("o", "0").Replace(" ", "").Replace("i", "/").Replace("=", "").Replace(":", "").Replace("l", "1").Replace("[", "").Replace("(", "").Trim(); //แปลงและแทนค่าค่างๆ และเก็บค่าไว้ใน text
+                    Console.WriteLine("FirstText =" + "'" + text + "'");  // ทดสอบค่าออกมา
+                    Utility.FilterAscii(text);   // Filter แบบ Text
+#if DEBUG
+                    bitmap.Save("HeroCount.png");
+                    Console.WriteLine("firstbreak");
+                    Console.WriteLine("firsText=" + "'" + text + "'");
+                    string test1 = Regex.Replace(text, @"\D", "");
+                    Console.WriteLine("Rextext=" + "'" + test1 + "'");
+                    Console.WriteLine("RextextLength=" + "'" + test1.Length + "'");
+                    if (test1.Length == 6 && !test1.Equals("100100"))
+                    {
+                        Console.WriteLine("not100");
+                        test1 = test1.Substring(1, 2);
+                    }
+                    else if (test1.Length == 5)
+                    {
+                        test1 = test1.Substring(0, 2);
+                    }
+                    else if (test1.Length == 4)
+                    {
+                        test1 = test1.Substring(0, 1);
+                    }
+                    Console.WriteLine("Finaltext =" + "'" + test1 + "'");
+#endif
+                    if (text.Length != 0)
+                    {
+                        Console.WriteLine("FilterText =" + "'" + text + "'");
+                        Console.WriteLine("Break1");
+                        string[] array = text.Split(new char[]
+                            {
+                                '/'
+                            });
+                        if (array[0].Length >= 1)
+                        {
+                            Console.WriteLine("array[0] =" + array[0]);
+                            array[0] = Regex.Replace(array[0], @"\D", "");
+                            Console.WriteLine("array[0] process =" + array[0]);
+                            Console.WriteLine("Break2");
+                            int.TryParse(array[0], out curCount);
+                            if (curCount <= 100)
+                            {
+                                this.Log(string.Format("Max Heroes  level up per day : {0}/100", curCount), Color.BlueViolet);
                             }
                             if (curCount == 100 && array[1].Equals("100"))
                             {
