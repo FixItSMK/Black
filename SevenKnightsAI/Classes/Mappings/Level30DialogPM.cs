@@ -7,9 +7,13 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly Rectangle R_HeroLvlUpCount = new Rectangle
         {
+            //X = 513,
+            //Y = 485,
+            //Width = 32,
+            //Height = 20
             X = 510,
             Y = 485,
-            Width = 80,
+            Width = 35,
             Height = 20
         };
 

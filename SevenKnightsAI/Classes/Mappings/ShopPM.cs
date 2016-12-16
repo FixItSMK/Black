@@ -77,14 +77,17 @@ namespace SevenKnightsAI.Classes.Mappings
         };
 
 
-        public static readonly int GOLD_OFFSET_X = 268;
+        public static readonly int GOLD_OFFSET_X = 155;
         public static readonly int GOLD_OFFSET_Y = 0;
         public static readonly int HONOR_OFFSET_X = 269;
         public static readonly int HONOR_OFFSET_Y = 0;
-        public static readonly int KEY_OFFSET_X = 266;
+        public static readonly int KEY_OFFSET_X = 150;
         public static readonly int KEY_OFFSET_Y = 0;
-        public static readonly int RUBY_OFFSET_X = 269;
+        public static readonly int RUBY_OFFSET_X = 160;
         public static readonly int RUBY_OFFSET_Y = 0;
+        public static readonly int TOPAZ_OFFSET_X = 158;
+        public static readonly int TOPAZ_OFFSET_Y = 0;
+
 
         public static readonly PixelMapping Key1Honor10 = new PixelMapping
         {

@@ -123,6 +123,7 @@ namespace SevenKnightsAI.Classes
         RANK_UP,
         SELL_HERO_FINISH,
         YEAR_END_AWAKE,
-        YEAR_END_AWAKE_POPUP
+        YEAR_END_AWAKE_POPUP,
+        HELPED_FRIEND
     }
 }

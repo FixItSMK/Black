@@ -6,7 +6,7 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         #region Public Fields
 
-        public static readonly int HONOR_OFFSET_X = 218;
+        public static readonly int HONOR_OFFSET_X = 227;
 
         public static readonly int HONOR_OFFSET_Y = 0;
 
@@ -34,7 +34,7 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
-        public static readonly int RUBY_OFFSET_X = 215;
+        public static readonly int RUBY_OFFSET_X = 223;
 
         public static readonly int RUBY_OFFSET_Y = 0;
 

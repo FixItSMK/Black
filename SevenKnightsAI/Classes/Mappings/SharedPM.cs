@@ -634,6 +634,10 @@ namespace SevenKnightsAI.Classes.Mappings
             Y = 19,
             Width = 60,
             Height = 21
+            //X = 66,
+            //Y = 19,
+            //Width = 63,
+            //Height = 21
         };
 
         public static readonly Rectangle R_KeyOnTopTimeBase = new Rectangle
@@ -642,6 +646,10 @@ namespace SevenKnightsAI.Classes.Mappings
             Y = 10,
             Width = 60,
             Height = 21
+            //X = 66,
+            //Y = 10,
+            //Width = 63,
+            //Height = 21
         };
 
         public static readonly Rectangle R_RubyBase = new Rectangle
@@ -716,7 +724,29 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.BUTTON
         };
 
+        public static readonly PixelMapping HelpFriendOK = new PixelMapping
+        {
+            X = 480,
+            Y = 420,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
 
+        public static readonly PixelMapping HelpFriendTik = new PixelMapping
+        {
+            X = 420,
+            Y = 422,
+            Color = 0xffb517,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping HelpFriendBorder = new PixelMapping
+        {
+            X = 189,
+            Y = 368,
+            Color = 0x8b673a,
+            Type = MappingType.ANCHOR
+        };
         #endregion Public Fields
     }
 }

@@ -165,13 +165,14 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle R_Time = new Rectangle
         {
-            X = 517,
+            //X = 517,
+            X = 513,
             Y = 19,
-            Width = 48,
+            Width = 50,
             Height = 20
         };
 
-        public static readonly int RUBY_OFFSET_X = 224;
+        public static readonly int RUBY_OFFSET_X = 223;
 
         public static readonly int RUBY_OFFSET_Y = 0;
 

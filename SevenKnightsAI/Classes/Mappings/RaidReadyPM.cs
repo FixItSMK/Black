@@ -13,6 +13,10 @@ namespace SevenKnightsAI.Classes.Mappings
             Y = 297,
             Height = 24,
             Width = 53
+            //X = 645,
+            //Y = 18,
+            //Height = 24,
+            //Width = 35
         };
 
         public static readonly PixelMapping MemberListBackground = new PixelMapping
