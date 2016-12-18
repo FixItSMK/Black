@@ -9,10 +9,11 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly PixelMapping Star1Loca1 = new PixelMapping
         {
-            //X = 402,
-            //Y = 254,
-            //Color = 6834996,
-            X = 405,
+            //X = 405,
+            //Y = 253,
+            //Color = 7295547,
+            //Type = MappingType.ANCHOR
+            X = 403,
             Y = 253,
             Color = 7295547,
             Type = MappingType.ANCHOR
@@ -20,10 +21,11 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Star1Loca2 = new PixelMapping
         {
-            //X = 552,
-            //Y = 254,
-            //Color = 6834996,
-            X = 555,
+            //X = 555,
+            //Y = 253,
+            //Color = 7295547,
+            //Type = MappingType.ANCHOR
+            X = 553,
             Y = 253,
             Color = 7295547,
             Type = MappingType.ANCHOR
@@ -31,10 +33,11 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Star1Loca3 = new PixelMapping
         {
-            //X = 702,
-            //Y = 254,
-            //Color = 6834996,
-            X = 705,
+            //X = 705,
+            //Y = 253,
+            //Color = 7295547,
+            //Type = MappingType.ANCHOR
+            X = 703,
             Y = 253,
             Color = 7295547,
             Type = MappingType.ANCHOR
@@ -42,10 +45,11 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Star1Loca4 = new PixelMapping
         {
-            //X = 852,
-            //Y = 254,
-            //Color = 6834996,
-            X = 855,
+            //X = 855,
+            //Y = 253,
+            //Color = 7295547,
+            //Type = MappingType.ANCHOR
+            X = 853,
             Y = 253,
             Color = 7295547,
             Type = MappingType.ANCHOR
@@ -54,7 +58,11 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly PixelMapping Star1Loca1R1 = new PixelMapping
         {
 
-            X = 405,
+            //X = 405,
+            //Y = 253,
+            //Color = 7229754,
+            //Type = MappingType.ANCHOR
+            X = 403,
             Y = 253,
             Color = 7229754,
             Type = MappingType.ANCHOR
@@ -62,7 +70,11 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Star1Loca2R1 = new PixelMapping
         {
-            X = 555,
+            //X = 555,
+            //Y = 253,
+            //Color = 7229754,
+            //Type = MappingType.ANCHOR
+            X = 553,
             Y = 253,
             Color = 7229754,
             Type = MappingType.ANCHOR
@@ -70,7 +82,11 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Star1Loca3R1 = new PixelMapping
         {
-            X = 705,
+            //X = 705,
+            //Y = 253,
+            //Color = 7229754,
+            //Type = MappingType.ANCHOR
+            X = 703,
             Y = 253,
             Color = 7229754,
             Type = MappingType.ANCHOR
@@ -78,7 +94,11 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Star1Loca4R1 = new PixelMapping
         {
-            X = 855,
+            //X = 855,
+            //Y = 253,
+            //Color = 7229754,
+            //Type = MappingType.ANCHOR
+            X = 853,
             Y = 253,
             Color = 7229754,
             Type = MappingType.ANCHOR
@@ -87,7 +107,11 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly PixelMapping Star1Loca1R2 = new PixelMapping
         {
 
-            X = 405,
+            //X = 405,
+            //Y = 253,
+            //Color = 7163961,
+            //Type = MappingType.ANCHOR
+            X = 403,
             Y = 253,
             Color = 7163961,
             Type = MappingType.ANCHOR
@@ -95,7 +119,11 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Star1Loca2R2 = new PixelMapping
         {
-            X = 555,
+            //X = 555,
+            //Y = 253,
+            //Color = 7163961,
+            //Type = MappingType.ANCHOR
+            X = 553,
             Y = 253,
             Color = 7163961,
             Type = MappingType.ANCHOR
@@ -103,7 +131,11 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Star1Loca3R2 = new PixelMapping
         {
-            X = 705,
+            //X = 705,
+            //Y = 253,
+            //Color = 7163961,
+            //Type = MappingType.ANCHOR
+            X = 703,
             Y = 253,
             Color = 7163961,
             Type = MappingType.ANCHOR
@@ -111,7 +143,11 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Star1Loca4R2 = new PixelMapping
         {
-            X = 855,
+            //X = 855,
+            //Y = 253,
+            //Color = 7163961,
+            //Type = MappingType.ANCHOR
+            X = 853,
             Y = 253,
             Color = 7163961,
             Type = MappingType.ANCHOR
@@ -119,6 +155,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Star2Loca1 = new PixelMapping
         {
+
             X = 412,
             Y = 254,
             Color = 7032633,

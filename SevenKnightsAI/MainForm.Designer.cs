@@ -259,14 +259,6 @@
             this.RS_giftsGroupBox = new System.Windows.Forms.GroupBox();
             this.RS_luckyBoxCheckBox = new System.Windows.Forms.CheckBox();
             this.RS_luckyChestCheckBox = new System.Windows.Forms.CheckBox();
-            this.logTab = new System.Windows.Forms.TabPage();
-            this.LG_SaveScreen = new System.Windows.Forms.Button();
-            this.LG_LogPixel = new System.Windows.Forms.Button();
-            this.LG_scrollCheckBox = new System.Windows.Forms.CheckBox();
-            this.LG_exportButton = new System.Windows.Forms.Button();
-            this.LG_clearButton = new System.Windows.Forms.Button();
-            this.LG_logPanel = new System.Windows.Forms.Panel();
-            this.LG_logTextBox = new System.Windows.Forms.RichTextBox();
             this.settingsTab = new System.Windows.Forms.TabPage();
             this.ST_blueStacksGroupBox = new System.Windows.Forms.GroupBox();
             this.ST_forceActiveCheckBox = new System.Windows.Forms.CheckBox();
@@ -292,10 +284,17 @@
             this.ST_delayValueLabel = new System.Windows.Forms.Label();
             this.ST_delayLabel = new System.Windows.Forms.Label();
             this.ST_delayTrackBar = new System.Windows.Forms.TrackBar();
+            this.logTab = new System.Windows.Forms.TabPage();
+            this.LG_SaveScreen = new System.Windows.Forms.Button();
+            this.LG_LogPixel = new System.Windows.Forms.Button();
+            this.LG_scrollCheckBox = new System.Windows.Forms.CheckBox();
+            this.LG_exportButton = new System.Windows.Forms.Button();
+            this.LG_clearButton = new System.Windows.Forms.Button();
+            this.LG_logPanel = new System.Windows.Forms.Panel();
+            this.LG_logTextBox = new System.Windows.Forms.RichTextBox();
             this.Info = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel9 = new System.Windows.Forms.LinkLabel();
             this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
@@ -331,7 +330,6 @@
             this.arenaCountLabel = new System.Windows.Forms.Label();
             this.adventureCountLabel = new System.Windows.Forms.Label();
             this.saveSettingsButton = new System.Windows.Forms.Button();
-            this.contactUsLinkLabel = new System.Windows.Forms.LinkLabel();
             this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Details = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -394,8 +392,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RS_itemAmountNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RS_heroAmountNumericBox)).BeginInit();
             this.RS_giftsGroupBox.SuspendLayout();
-            this.logTab.SuspendLayout();
-            this.LG_logPanel.SuspendLayout();
             this.settingsTab.SuspendLayout();
             this.ST_blueStacksGroupBox.SuspendLayout();
             this.ST_profileGroupBox.SuspendLayout();
@@ -404,6 +400,8 @@
             this.ST_pushbulletGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ST_pushbulletPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ST_delayTrackBar)).BeginInit();
+            this.logTab.SuspendLayout();
+            this.LG_logPanel.SuspendLayout();
             this.Info.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.summaryGroupBox.SuspendLayout();
@@ -430,8 +428,8 @@
             this.tabControl.Controls.Add(this.arenaTab);
             this.tabControl.Controls.Add(this.raidTab);
             this.tabControl.Controls.Add(this.resourcesTab);
-            this.tabControl.Controls.Add(this.logTab);
             this.tabControl.Controls.Add(this.settingsTab);
+            this.tabControl.Controls.Add(this.logTab);
             this.tabControl.Controls.Add(this.Info);
             this.tabControl.Location = new System.Drawing.Point(4, 86);
             this.tabControl.Name = "tabControl";
@@ -3398,102 +3396,6 @@
             this.RS_luckyChestCheckBox.UseVisualStyleBackColor = true;
             this.RS_luckyChestCheckBox.CheckedChanged += new System.EventHandler(this.RS_collectGiftCheckBox_CheckedChanged);
             // 
-            // logTab
-            // 
-            this.logTab.BackColor = System.Drawing.Color.Transparent;
-            this.logTab.Controls.Add(this.LG_SaveScreen);
-            this.logTab.Controls.Add(this.LG_LogPixel);
-            this.logTab.Controls.Add(this.LG_scrollCheckBox);
-            this.logTab.Controls.Add(this.LG_exportButton);
-            this.logTab.Controls.Add(this.LG_clearButton);
-            this.logTab.Controls.Add(this.LG_logPanel);
-            this.logTab.Location = new System.Drawing.Point(4, 22);
-            this.logTab.Name = "logTab";
-            this.logTab.Size = new System.Drawing.Size(488, 309);
-            this.logTab.TabIndex = 7;
-            this.logTab.Text = "Logs";
-            // 
-            // LG_SaveScreen
-            // 
-            this.LG_SaveScreen.Enabled = false;
-            this.LG_SaveScreen.Location = new System.Drawing.Point(225, 280);
-            this.LG_SaveScreen.Name = "LG_SaveScreen";
-            this.LG_SaveScreen.Size = new System.Drawing.Size(87, 22);
-            this.LG_SaveScreen.TabIndex = 4;
-            this.LG_SaveScreen.Text = "Save Screen";
-            this.toolTip.SetToolTip(this.LG_SaveScreen, "Requries bot to be running or paused\r\n\r\nMouse over pixel to Log while keeping the" +
-        " bot focused\r\nPress Alt+L");
-            this.LG_SaveScreen.UseVisualStyleBackColor = true;
-            this.LG_SaveScreen.Click += new System.EventHandler(this.LG_SaveScreen_Click);
-            // 
-            // LG_LogPixel
-            // 
-            this.LG_LogPixel.Enabled = false;
-            this.LG_LogPixel.Location = new System.Drawing.Point(144, 280);
-            this.LG_LogPixel.Name = "LG_LogPixel";
-            this.LG_LogPixel.Size = new System.Drawing.Size(75, 22);
-            this.LG_LogPixel.TabIndex = 3;
-            this.LG_LogPixel.Text = "&Log Pixel";
-            this.toolTip.SetToolTip(this.LG_LogPixel, "Requries bot to be running or paused\r\n\r\nMouse over pixel to Log while keeping the" +
-        " bot focused\r\nPress Alt+L");
-            this.LG_LogPixel.UseVisualStyleBackColor = true;
-            this.LG_LogPixel.Click += new System.EventHandler(this.LG_LogPixel_Click);
-            // 
-            // LG_scrollCheckBox
-            // 
-            this.LG_scrollCheckBox.AutoSize = true;
-            this.LG_scrollCheckBox.Checked = true;
-            this.LG_scrollCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.LG_scrollCheckBox.Location = new System.Drawing.Point(391, 283);
-            this.LG_scrollCheckBox.Name = "LG_scrollCheckBox";
-            this.LG_scrollCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LG_scrollCheckBox.Size = new System.Drawing.Size(91, 17);
-            this.LG_scrollCheckBox.TabIndex = 2;
-            this.LG_scrollCheckBox.Text = "Auto Scrolling";
-            this.LG_scrollCheckBox.UseVisualStyleBackColor = true;
-            this.LG_scrollCheckBox.CheckedChanged += new System.EventHandler(this.LG_scrollCheckBox_CheckedChanged);
-            // 
-            // LG_exportButton
-            // 
-            this.LG_exportButton.Location = new System.Drawing.Point(74, 279);
-            this.LG_exportButton.Name = "LG_exportButton";
-            this.LG_exportButton.Size = new System.Drawing.Size(64, 23);
-            this.LG_exportButton.TabIndex = 2;
-            this.LG_exportButton.Text = "Export";
-            this.LG_exportButton.UseVisualStyleBackColor = true;
-            this.LG_exportButton.Click += new System.EventHandler(this.LG_exportButton_Click);
-            // 
-            // LG_clearButton
-            // 
-            this.LG_clearButton.Location = new System.Drawing.Point(4, 279);
-            this.LG_clearButton.Name = "LG_clearButton";
-            this.LG_clearButton.Size = new System.Drawing.Size(64, 23);
-            this.LG_clearButton.TabIndex = 1;
-            this.LG_clearButton.Text = "Clear";
-            this.LG_clearButton.UseVisualStyleBackColor = true;
-            this.LG_clearButton.Click += new System.EventHandler(this.LG_clearButton_Click);
-            // 
-            // LG_logPanel
-            // 
-            this.LG_logPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.LG_logPanel.Controls.Add(this.LG_logTextBox);
-            this.LG_logPanel.Location = new System.Drawing.Point(3, 4);
-            this.LG_logPanel.Name = "LG_logPanel";
-            this.LG_logPanel.Size = new System.Drawing.Size(480, 270);
-            this.LG_logPanel.TabIndex = 0;
-            // 
-            // LG_logTextBox
-            // 
-            this.LG_logTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LG_logTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LG_logTextBox.Location = new System.Drawing.Point(0, 0);
-            this.LG_logTextBox.Name = "LG_logTextBox";
-            this.LG_logTextBox.ReadOnly = true;
-            this.LG_logTextBox.Size = new System.Drawing.Size(478, 268);
-            this.LG_logTextBox.TabIndex = 1;
-            this.LG_logTextBox.Text = "";
-            this.LG_logTextBox.TextChanged += new System.EventHandler(this.LG_logTextBox_TextChanged);
-            // 
             // settingsTab
             // 
             this.settingsTab.BackColor = System.Drawing.Color.Transparent;
@@ -3775,12 +3677,107 @@
             this.ST_delayTrackBar.Value = 1500;
             this.ST_delayTrackBar.ValueChanged += new System.EventHandler(this.ST_delayTrackBar_ValueChanged);
             // 
+            // logTab
+            // 
+            this.logTab.BackColor = System.Drawing.Color.Transparent;
+            this.logTab.Controls.Add(this.LG_SaveScreen);
+            this.logTab.Controls.Add(this.LG_LogPixel);
+            this.logTab.Controls.Add(this.LG_scrollCheckBox);
+            this.logTab.Controls.Add(this.LG_exportButton);
+            this.logTab.Controls.Add(this.LG_clearButton);
+            this.logTab.Controls.Add(this.LG_logPanel);
+            this.logTab.Location = new System.Drawing.Point(4, 22);
+            this.logTab.Name = "logTab";
+            this.logTab.Size = new System.Drawing.Size(488, 309);
+            this.logTab.TabIndex = 7;
+            this.logTab.Text = "Logs";
+            // 
+            // LG_SaveScreen
+            // 
+            this.LG_SaveScreen.Enabled = false;
+            this.LG_SaveScreen.Location = new System.Drawing.Point(225, 280);
+            this.LG_SaveScreen.Name = "LG_SaveScreen";
+            this.LG_SaveScreen.Size = new System.Drawing.Size(87, 22);
+            this.LG_SaveScreen.TabIndex = 4;
+            this.LG_SaveScreen.Text = "Save Screen";
+            this.toolTip.SetToolTip(this.LG_SaveScreen, "Requries bot to be running or paused\r\n\r\nMouse over pixel to Log while keeping the" +
+        " bot focused\r\nPress Alt+L");
+            this.LG_SaveScreen.UseVisualStyleBackColor = true;
+            this.LG_SaveScreen.Click += new System.EventHandler(this.LG_SaveScreen_Click);
+            // 
+            // LG_LogPixel
+            // 
+            this.LG_LogPixel.Enabled = false;
+            this.LG_LogPixel.Location = new System.Drawing.Point(144, 280);
+            this.LG_LogPixel.Name = "LG_LogPixel";
+            this.LG_LogPixel.Size = new System.Drawing.Size(75, 22);
+            this.LG_LogPixel.TabIndex = 3;
+            this.LG_LogPixel.Text = "&Log Pixel";
+            this.toolTip.SetToolTip(this.LG_LogPixel, "Requries bot to be running or paused\r\n\r\nMouse over pixel to Log while keeping the" +
+        " bot focused\r\nPress Alt+L");
+            this.LG_LogPixel.UseVisualStyleBackColor = true;
+            this.LG_LogPixel.Click += new System.EventHandler(this.LG_LogPixel_Click);
+            // 
+            // LG_scrollCheckBox
+            // 
+            this.LG_scrollCheckBox.AutoSize = true;
+            this.LG_scrollCheckBox.Checked = true;
+            this.LG_scrollCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.LG_scrollCheckBox.Location = new System.Drawing.Point(391, 283);
+            this.LG_scrollCheckBox.Name = "LG_scrollCheckBox";
+            this.LG_scrollCheckBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.LG_scrollCheckBox.Size = new System.Drawing.Size(91, 17);
+            this.LG_scrollCheckBox.TabIndex = 2;
+            this.LG_scrollCheckBox.Text = "Auto Scrolling";
+            this.LG_scrollCheckBox.UseVisualStyleBackColor = true;
+            this.LG_scrollCheckBox.CheckedChanged += new System.EventHandler(this.LG_scrollCheckBox_CheckedChanged);
+            // 
+            // LG_exportButton
+            // 
+            this.LG_exportButton.Location = new System.Drawing.Point(74, 279);
+            this.LG_exportButton.Name = "LG_exportButton";
+            this.LG_exportButton.Size = new System.Drawing.Size(64, 23);
+            this.LG_exportButton.TabIndex = 2;
+            this.LG_exportButton.Text = "Export";
+            this.LG_exportButton.UseVisualStyleBackColor = true;
+            this.LG_exportButton.Click += new System.EventHandler(this.LG_exportButton_Click);
+            // 
+            // LG_clearButton
+            // 
+            this.LG_clearButton.Location = new System.Drawing.Point(4, 279);
+            this.LG_clearButton.Name = "LG_clearButton";
+            this.LG_clearButton.Size = new System.Drawing.Size(64, 23);
+            this.LG_clearButton.TabIndex = 1;
+            this.LG_clearButton.Text = "Clear";
+            this.LG_clearButton.UseVisualStyleBackColor = true;
+            this.LG_clearButton.Click += new System.EventHandler(this.LG_clearButton_Click);
+            // 
+            // LG_logPanel
+            // 
+            this.LG_logPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.LG_logPanel.Controls.Add(this.LG_logTextBox);
+            this.LG_logPanel.Location = new System.Drawing.Point(3, 4);
+            this.LG_logPanel.Name = "LG_logPanel";
+            this.LG_logPanel.Size = new System.Drawing.Size(480, 270);
+            this.LG_logPanel.TabIndex = 0;
+            // 
+            // LG_logTextBox
+            // 
+            this.LG_logTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.LG_logTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LG_logTextBox.Location = new System.Drawing.Point(0, 0);
+            this.LG_logTextBox.Name = "LG_logTextBox";
+            this.LG_logTextBox.ReadOnly = true;
+            this.LG_logTextBox.Size = new System.Drawing.Size(478, 268);
+            this.LG_logTextBox.TabIndex = 1;
+            this.LG_logTextBox.Text = "";
+            this.LG_logTextBox.TextChanged += new System.EventHandler(this.LG_logTextBox_TextChanged);
+            // 
             // Info
             // 
             this.Info.BackColor = System.Drawing.Color.Transparent;
             this.Info.Controls.Add(this.label3);
             this.Info.Controls.Add(this.linkLabel10);
-            this.Info.Controls.Add(this.linkLabel9);
             this.Info.Controls.Add(this.linkLabel8);
             this.Info.Controls.Add(this.linkLabel5);
             this.Info.Controls.Add(this.linkLabel4);
@@ -3799,42 +3796,29 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(31, 12);
+            this.label3.Location = new System.Drawing.Point(28, 12);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(109, 17);
+            this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 6;
-            this.label3.Text = "Special Thanks.";
+            this.label3.Text = "Thanks you.";
             // 
             // linkLabel10
             // 
             this.linkLabel10.AutoSize = true;
             this.linkLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.linkLabel10.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel10.Location = new System.Drawing.Point(90, 243);
+            this.linkLabel10.Location = new System.Drawing.Point(91, 256);
             this.linkLabel10.Name = "linkLabel10";
-            this.linkLabel10.Size = new System.Drawing.Size(289, 24);
+            this.linkLabel10.Size = new System.Drawing.Size(284, 24);
             this.linkLabel10.TabIndex = 5;
             this.linkLabel10.TabStop = true;
-            this.linkLabel10.Text = "Seven Knight AI Black Facebook.";
+            this.linkLabel10.Text = "Seven Knight AI Black Facebook";
             this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel10_LinkClicked);
-            // 
-            // linkLabel9
-            // 
-            this.linkLabel9.AutoSize = true;
-            this.linkLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.linkLabel9.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel9.Location = new System.Drawing.Point(96, 272);
-            this.linkLabel9.Name = "linkLabel9";
-            this.linkLabel9.Size = new System.Drawing.Size(275, 24);
-            this.linkLabel9.TabIndex = 4;
-            this.linkLabel9.TabStop = true;
-            this.linkLabel9.Text = "Seven Knight AI Black Youtube.";
-            this.linkLabel9.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel9_LinkClicked);
             // 
             // linkLabel8
             // 
             this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Location = new System.Drawing.Point(31, 38);
+            this.linkLabel8.Location = new System.Drawing.Point(52, 42);
             this.linkLabel8.Name = "linkLabel8";
             this.linkLabel8.Size = new System.Drawing.Size(224, 13);
             this.linkLabel8.TabIndex = 3;
@@ -3845,7 +3829,7 @@
             // linkLabel5
             // 
             this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(31, 110);
+            this.linkLabel5.Location = new System.Drawing.Point(52, 114);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Size = new System.Drawing.Size(110, 13);
             this.linkLabel5.TabIndex = 2;
@@ -3856,7 +3840,7 @@
             // linkLabel4
             // 
             this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(31, 158);
+            this.linkLabel4.Location = new System.Drawing.Point(52, 162);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(170, 13);
             this.linkLabel4.TabIndex = 2;
@@ -3867,7 +3851,7 @@
             // linkLabel3
             // 
             this.linkLabel3.AutoSize = true;
-            this.linkLabel3.Location = new System.Drawing.Point(31, 135);
+            this.linkLabel3.Location = new System.Drawing.Point(52, 139);
             this.linkLabel3.Name = "linkLabel3";
             this.linkLabel3.Size = new System.Drawing.Size(210, 13);
             this.linkLabel3.TabIndex = 2;
@@ -3878,7 +3862,7 @@
             // linkLabel7
             // 
             this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(31, 61);
+            this.linkLabel7.Location = new System.Drawing.Point(52, 65);
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.Size = new System.Drawing.Size(230, 13);
             this.linkLabel7.TabIndex = 1;
@@ -3889,7 +3873,7 @@
             // linkLabel6
             // 
             this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(31, 184);
+            this.linkLabel6.Location = new System.Drawing.Point(52, 188);
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.Size = new System.Drawing.Size(204, 13);
             this.linkLabel6.TabIndex = 1;
@@ -3900,7 +3884,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(31, 86);
+            this.linkLabel1.Location = new System.Drawing.Point(52, 90);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(247, 13);
             this.linkLabel1.TabIndex = 0;
@@ -4203,20 +4187,6 @@
             this.saveSettingsButton.UseVisualStyleBackColor = true;
             this.saveSettingsButton.Click += new System.EventHandler(this.saveSettingsButton_Click);
             // 
-            // contactUsLinkLabel
-            // 
-            this.contactUsLinkLabel.AutoSize = true;
-            this.contactUsLinkLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.contactUsLinkLabel.LinkColor = System.Drawing.Color.White;
-            this.contactUsLinkLabel.Location = new System.Drawing.Point(388, 67);
-            this.contactUsLinkLabel.Name = "contactUsLinkLabel";
-            this.contactUsLinkLabel.Size = new System.Drawing.Size(119, 13);
-            this.contactUsLinkLabel.TabIndex = 6;
-            this.contactUsLinkLabel.TabStop = true;
-            this.contactUsLinkLabel.Text = "Seven Knights AI Black";
-            this.contactUsLinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.contactUsLinkLabel_LinkClicked);
-            this.contactUsLinkLabel.TextChanged += new System.EventHandler(this.contactUsLinkLabel_TextChanged);
-            // 
             // Event
             // 
             this.Event.Name = "Event";
@@ -4376,7 +4346,6 @@
             this.ClientSize = new System.Drawing.Size(504, 561);
             this.Controls.Add(this.aiPause);
             this.Controls.Add(this.resourcesTableLayoutPanel);
-            this.Controls.Add(this.contactUsLinkLabel);
             this.Controls.Add(this.saveSettingsButton);
             this.Controls.Add(this.summaryGroupBox);
             this.Controls.Add(this.aiButton);
@@ -4460,9 +4429,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RS_heroAmountNumericBox)).EndInit();
             this.RS_giftsGroupBox.ResumeLayout(false);
             this.RS_giftsGroupBox.PerformLayout();
-            this.logTab.ResumeLayout(false);
-            this.logTab.PerformLayout();
-            this.LG_logPanel.ResumeLayout(false);
             this.settingsTab.ResumeLayout(false);
             this.settingsTab.PerformLayout();
             this.ST_blueStacksGroupBox.ResumeLayout(false);
@@ -4475,6 +4441,9 @@
             this.ST_pushbulletGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ST_pushbulletPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ST_delayTrackBar)).EndInit();
+            this.logTab.ResumeLayout(false);
+            this.logTab.PerformLayout();
+            this.LG_logPanel.ResumeLayout(false);
             this.Info.ResumeLayout(false);
             this.Info.PerformLayout();
             this.statusStrip.ResumeLayout(false);
@@ -4784,8 +4753,6 @@
 		
 		private global::System.ComponentModel.IContainer components;
 
-		
-		private global::System.Windows.Forms.LinkLabel contactUsLinkLabel;
 
 		
 		private global::System.Windows.Forms.DataGridViewTextBoxColumn Details;
@@ -5380,7 +5347,6 @@
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel8;
         private System.Windows.Forms.LinkLabel linkLabel10;
-        private System.Windows.Forms.LinkLabel linkLabel9;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox RD_Hp50Up_CheckBox;
         private System.Windows.Forms.CheckBox RD_OwnerDragon;

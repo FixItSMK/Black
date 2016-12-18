@@ -629,11 +629,6 @@ namespace SevenKnightsAI
             }
         }
 
-        private void contactUsLinkLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://www.facebook.com/SevenKnightsAIBlack");
-        }
-
         private void contactUsLinkLabel_TextChanged(object sender, EventArgs e)
         {
             LinkLabel linkLabel = sender as LinkLabel;
@@ -1157,8 +1152,8 @@ namespace SevenKnightsAI
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            this.contactUsLinkLabel.Parent = this.topheaderPictureBox;
-            this.contactUsLinkLabel.BackColor = Color.Transparent;
+            //this.contactUsLinkLabel.Parent = this.topheaderPictureBox;
+            //this.contactUsLinkLabel.BackColor = Color.Transparent;
             ContextMenu contextMenu = new ContextMenu();
             MenuItem menuItem = new MenuItem("Pause");
             contextMenu.MenuItems.Add(menuItem);
@@ -1995,11 +1990,6 @@ namespace SevenKnightsAI
         private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("https://www.facebook.com/groups/heartcold");
-        }
-
-        private void linkLabel9_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://www.youtube.com/channel/UCdVDcUYSMnfGY57ECqeGOkA");
         }
 
         private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -97,15 +97,15 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping InboxAvailable = new PixelMapping
         {
-            X = 772,
+            X = 744,
             Y = 8,
-            Color = 13051905,
+            Color = 12986369,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping InboxButton = new PixelMapping
         {
-            X = 797,
+            X = 768,
             Y = 28,
             Color = 0,
             Type = MappingType.BUTTON

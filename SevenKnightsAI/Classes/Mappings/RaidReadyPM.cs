@@ -9,14 +9,10 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle EnteredCount = new Rectangle
         {
-            X = 729,
-            Y = 297,
+            X = 635,
+            Y = 17,
             Height = 24,
-            Width = 53
-            //X = 645,
-            //Y = 18,
-            //Height = 24,
-            //Width = 35
+            Width = 55
         };
 
         public static readonly PixelMapping MemberListBackground = new PixelMapping
