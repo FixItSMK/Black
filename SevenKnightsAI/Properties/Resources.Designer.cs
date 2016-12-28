@@ -132,6 +132,16 @@ namespace SevenKnightsAI.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icon_hero_356 {
+            get {
+                object obj = ResourceManager.GetObject("icon_hero_356", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icon_honor {
             get {
                 object obj = ResourceManager.GetObject("icon_honor", resourceCulture);
@@ -220,22 +230,22 @@ namespace SevenKnightsAI.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Ntitle {
-            get {
-                object obj = ResourceManager.GetObject("Ntitle", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] tessdata {
             get {
                 object obj = ResourceManager.GetObject("tessdata", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TitleSeason2 {
+            get {
+                object obj = ResourceManager.GetObject("TitleSeason2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

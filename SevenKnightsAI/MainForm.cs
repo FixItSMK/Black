@@ -60,7 +60,7 @@ namespace SevenKnightsAI
             }
         };
 
-        private readonly List<Button>[] _skillButtons = new List<Button>[7];
+        private readonly List<Button>[] _skillButtons = new List<Button>[10];
 
         private readonly Color COLOR_SEQUENCE_ERROR = Color.FromArgb(255, 127, 123);
 
@@ -464,17 +464,20 @@ namespace SevenKnightsAI
                         {
                             int num = (int)dictionary["winCount"];
                             int num2 = (int)dictionary["loseCount"];
-                            this.arenaCountLabel.Text = string.Format("{0} (Win/Lose): {1}/{2}", arg, num, num2);
+                            //this.arenaCountLabel.Text = string.Format(":{1}/{2}", num, num2);
+                            this.arenaCountLabel.Text = string.Format("{0}/{1}", num, num2);
                             return;
                         }
 
                         int num3 = (int)dictionary["count"];
-                        string text = string.Format("{0}: {1}", arg, num3);
+                        //string text = string.Format("{0}: {1}", arg, num3);
+                        string text = string.Format("x" + num3);
                         if (objective == Objective.HERO_MANAGEMENT)
                         {
                             string t1 = "" + dictionary["hc"];
                             string t2 = "" + dictionary["hm"];
-                            text = string.Format("H : {0} / {1}", t1, t2);
+                            //text = string.Format("H:{0}/{1}", t1, t2);
+                            text = string.Format("{0}/{1}", t1, t2);
                         }
                         switch (objective)
                         {
@@ -657,6 +660,9 @@ namespace SevenKnightsAI
                     this.AISettings.RD_Enable = @checked;
                     return;
 
+                case 4:
+                    this.AISettings.SP_Enable = @checked;
+                    return;
 
                 default:
                     return;
@@ -926,6 +932,70 @@ namespace SevenKnightsAI
                 this.AISettings.RD_Team2Skills
             };
             this.LoadWaveSkills(wavePanels, waveSkill, 5);
+        }
+
+        private void InitSPdungeonTab()
+        {
+            for (int i = 7; i < 10; i++)
+            {
+                this._skillButtons[i] = new List<Button>();
+            }
+            this.SP_enableCheckBox.Checked = this.AISettings.SP_Enable;
+            this.SP_wave1LoopCheckBox.Checked = this.AISettings.SP_Wave1Loop;
+            this.SP_wave2LoopCheckBox.Checked = this.AISettings.SP_Wave2Loop;
+            this.SP_wave3LoopCheckBox.Checked = this.AISettings.SP_Wave3Loop;
+            this.SP_dailyNomalRadioButton.Checked = this.AISettings.SP_DailyNormal;
+            this.SP_dailyHardRadioButton.Checked = this.AISettings.SP_DailyHard;
+            this.SP_dailyHellRadioButton.Checked = this.AISettings.SP_DailyHell;
+            this.SP_cakeEasyRadioButton.Checked = this.AISettings.SP_CakeEasy;
+            this.SP_cakeNormalRadioButton.Checked = this.AISettings.SP_CakeNormal;
+            this.SP_cakeHardRadioButton.Checked = this.AISettings.SP_CakeHard;
+            this.SP_crystalEasyRadioButton.Checked = this.AISettings.SP_CrystalEasy;
+            this.SP_crystalNorRadioButton.Checked = this.AISettings.SP_CrystalNormal;
+            this.SP_crystalHardRadioButton.Checked = this.AISettings.SP_CrystalHard;
+            this.SP_evanNorRadioButton.Checked = this.AISettings.SP_EvanNormal;
+            this.SP_evanHardRadioButton.Checked = this.AISettings.SP_EvanHard;
+            this.SP_evanHellRadioButton.Checked = this.AISettings.SP_EvanHell;
+            this.SP_karinNorRadioButton.Checked = this.AISettings.SP_karinNormal;
+            this.SP_karinHardRadioButton.Checked = this.AISettings.SP_karinHard;
+            this.SP_karinHellRadioButton.Checked = this.AISettings.SP_karinHell;
+            this.SP_dailyLimitNumericBox.Value = this.AISettings.SP_DailyLimit;
+            this.SP_cakeLimitNumericBox.Value = this.AISettings.SP_CakeLimit;
+            this.SP_crystalLimitNumericBox.Value = this.AISettings.SP_CrystalLimit;
+            this.SP_evanLimitNumericBox.Value = this.AISettings.SP_EvanLimit;
+            this.SP_karinLimitNumericBox.Value = this.AISettings.SP_KarinLimit;
+            this.SP_dailyCheckBox.Checked = this.AISettings.SP_DailyEnable;
+            this.SP_cakeCheckBox.Checked = this.AISettings.SP_CakeEnable;
+            this.SP_crystalCheckBox.Checked = this.AISettings.SP_CrystalEnable;
+            this.SP_evanCheckBox.Checked = this.AISettings.SP_EvanEnable;
+            this.SP_karinCheckBox.Checked = this.AISettings.SP_KarinEnable;
+            switch (this.AISettings.SP_SkillType)
+            {
+                case SkillType.Auto:
+                    this.SP_autoSkillRadio.Checked = true;
+                    break;
+
+                case SkillType.Manual:
+                    this.SP_manualSkillRadio.Checked = true;
+                    break;
+
+                case SkillType.Both:
+                    this.SP_bothSkillRadio.Checked = true;
+                    break;
+            }
+            Panel[] wavePanels = new Panel[]
+            {
+                this.SP_wave1Panel,
+                this.SP_wave2Panel,
+                this.SP_wave3Panel
+            };
+            int[][] waveSkill = new int[][]
+            {
+                this.AISettings.SP_Wave1Skills,
+                this.AISettings.SP_Wave2Skills,
+                this.AISettings.SP_Wave3Skills
+            };
+            this.LoadWaveSkills(wavePanels, waveSkill, 7);
         }
 
         private void InitResourcesTab()
@@ -1222,6 +1292,7 @@ namespace SevenKnightsAI
             this.InitAdventureTab();
             this.InitGlobalProfile();
             this.InitGoldChamberTab();
+            this.InitSPdungeonTab();
             this.InitArenaTab();
             this.InitRaidTab();
             this.InitResourcesTab();
@@ -1505,6 +1576,10 @@ namespace SevenKnightsAI
                     this.AISettings.RD_SkillType = skillType;
                     return;
 
+                case 3:
+                    this.AISettings.SP_SkillType = skillType;
+                    return;
+
                 default:
                     return;
             }
@@ -1590,6 +1665,18 @@ namespace SevenKnightsAI
                     this.AISettings.RD_Team2Skills = array;
                     return;
 
+                case 7:
+                    this.AISettings.SP_Wave1Skills = array;
+                    return;
+
+                case 8:
+                    this.AISettings.SP_Wave2Skills = array;
+                    return;
+
+                case 9:
+                    this.AISettings.SP_Wave3Skills = array;
+                    return;
+
                 default:
                     return;
             }
@@ -1658,6 +1745,18 @@ namespace SevenKnightsAI
 
                 case 6:
                     this.AISettings.RD_Team2Loop = @checked;
+                    return;
+
+                case 7:
+                    this.AISettings.SP_Wave1Loop = @checked;
+                    return;
+
+                case 8:
+                    this.AISettings.SP_Wave2Loop = @checked;
+                    return;
+
+                case 9:
+                    this.AISettings.SP_Wave3Loop = @checked;
                     return;
 
                 default:
@@ -1998,5 +2097,193 @@ namespace SevenKnightsAI
         }
 
         #endregion Private Methods 
+
+        private void AD_teamComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ComboBox comboBox = sender as ComboBox;
+            if (comboBox == null)
+            {
+                return;
+            }
+            short num = Convert.ToInt16(comboBox.Tag);
+            Team selectedIndex = (Team)comboBox.SelectedIndex;
+            this.AISettings.AD2_Team = selectedIndex;
+            return;
+        }
+
+        private void spEnableCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            short num = Convert.ToInt16(checkBox.Tag);
+            bool @checked = checkBox.Checked;
+            switch (num)
+            {
+                case 0:
+                    this.AISettings.SP_DailyEnable = @checked;
+                    return;
+
+                case 1:
+                    this.AISettings.SP_CakeEnable = @checked;
+                    return;
+
+                case 2:
+                    this.AISettings.SP_CrystalEnable = @checked;
+                    return;
+
+                case 3:
+                    this.AISettings.SP_EvanEnable = @checked;
+                    return;
+
+                case 4:
+                    this.AISettings.SP_KarinEnable = @checked;
+                    return;
+
+                default:
+                    return;
+            }
+        }
+
+        private void SP_dailyRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            short num = Convert.ToInt16(radioButton.Tag);
+            bool @checked = radioButton.Checked;
+            if (num == 0)
+            {
+                this.AISettings.SP_DailyNormal = @checked;
+                return;
+            }
+            if (num == 1)
+            {
+                this.AISettings.SP_DailyHard = @checked;
+                return;
+            }
+            if (num == 2)
+            {
+                this.AISettings.SP_DailyHell = @checked;
+                return;
+            }
+        }
+
+        private void SP_cakeRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            short num = Convert.ToInt16(radioButton.Tag);
+            bool @checked = radioButton.Checked;
+            if (num == 0)
+            {
+                this.AISettings.SP_CakeEasy = @checked;
+                return;
+            }
+            if (num == 1)
+            {
+                this.AISettings.SP_CakeNormal = @checked;
+                return;
+            }
+            if (num == 2)
+            {
+                this.AISettings.SP_CakeHard = @checked;
+                return;
+            }
+        }
+
+        private void SP_crystalRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            short num = Convert.ToInt16(radioButton.Tag);
+            bool @checked = radioButton.Checked;
+            if (num == 0)
+            {
+                this.AISettings.SP_CrystalEasy = @checked;
+                return;
+            }
+            if (num == 1)
+            {
+                this.AISettings.SP_CrystalNormal = @checked;
+                return;
+            }
+            if (num == 2)
+            {
+                this.AISettings.SP_CrystalHard = @checked;
+                return;
+            }
+        }
+
+        private void SP_evanRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            short num = Convert.ToInt16(radioButton.Tag);
+            bool @checked = radioButton.Checked;
+            if (num == 0)
+            {
+                this.AISettings.SP_EvanNormal = @checked;
+                return;
+            }
+            if (num == 1)
+            {
+                this.AISettings.SP_EvanHard = @checked;
+                return;
+            }
+            if (num == 2)
+            {
+                this.AISettings.SP_EvanHell = @checked;
+                return;
+            }
+        }
+
+        private void SP_karinRadioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton radioButton = sender as RadioButton;
+            short num = Convert.ToInt16(radioButton.Tag);
+            bool @checked = radioButton.Checked;
+            if (num == 0)
+            {
+                this.AISettings.SP_karinNormal = @checked;
+                return;
+            }
+            if (num == 1)
+            {
+                this.AISettings.SP_karinHard = @checked;
+                return;
+            }
+            if (num == 2)
+            {
+                this.AISettings.SP_karinHell = @checked;
+                return;
+            }
+
+        }
+
+        private void splimitNumericBox_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            short num = Convert.ToInt16(numericUpDown.Tag);
+            int num2 = Convert.ToInt32(numericUpDown.Value);
+            switch (num)
+            {
+                case 0:
+                    this.AISettings.SP_DailyLimit = num2;
+                    return;
+
+                case 1:
+                    this.AISettings.SP_CakeLimit = num2;
+                    return;
+
+                case 2:
+                    this.AISettings.SP_CrystalLimit = num2;
+                    return;
+
+                case 3:
+                    this.AISettings.SP_EvanLimit = num2;
+                    return;
+
+                case 4:
+                    this.AISettings.SP_KarinLimit = num2;
+                    return;
+
+                default:
+                    return;
+            }
+        }
     }
 }

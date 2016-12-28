@@ -75,6 +75,9 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "AD_Team")]
         public Team AD_Team;
 
+        [XmlElement(ElementName = "AD2_Team")]
+        public Team AD2_Team;
+
         [XmlElement(ElementName = "AD_Wave1Loop")]
         public bool AD_Wave1Loop;
 
@@ -309,6 +312,105 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "RS_SpecialQuestsWeekly")]
         public bool RS_SpecialQuestsWeekly;
 
+        [XmlElement(ElementName = "SP_Enable")]
+        public bool SP_Enable;
+
+        [XmlElement(ElementName = "SP_SkillType")]
+        public SkillType SP_SkillType;
+
+        [XmlElement(ElementName = "SP_Wave1Skills")]
+        public int[] SP_Wave1Skills;
+
+        [XmlElement(ElementName = "SP_Wave2Skills")]
+        public int[] SP_Wave2Skills;
+
+        [XmlElement(ElementName = "SP_Wave3Skills")]
+        public int[] SP_Wave3Skills;
+
+        [XmlElement(ElementName = "SP_Wave1Loop")]
+        public bool SP_Wave1Loop;
+
+        [XmlElement(ElementName = "SP_Wave2Loop")]
+        public bool SP_Wave2Loop;
+
+        [XmlElement(ElementName = "SP_Wave3Loop")]
+        public bool SP_Wave3Loop;
+
+        [XmlElement(ElementName = "SP_DailyNormal")]
+        public bool SP_DailyNormal;
+
+        [XmlElement(ElementName = "SP_DailyHard")]
+        public bool SP_DailyHard;
+
+        [XmlElement(ElementName = "SP_DailyHell")]
+        public bool SP_DailyHell;
+
+        [XmlElement(ElementName = "SP_CakeEasy")]
+        public bool SP_CakeEasy;
+
+        [XmlElement(ElementName = "SP_CakeNormal")]
+        public bool SP_CakeNormal;
+
+        [XmlElement(ElementName = "SP_CakeHard")]
+        public bool SP_CakeHard;
+
+        [XmlElement(ElementName = "SP_CrystalEasy")]
+        public bool SP_CrystalEasy;
+
+        [XmlElement(ElementName = "SP_CrystalNormal")]
+        public bool SP_CrystalNormal;
+
+        [XmlElement(ElementName = "SP_CrystalHard")]
+        public bool SP_CrystalHard;
+
+        [XmlElement(ElementName = "SP_EvanNormal")]
+        public bool SP_EvanNormal;
+
+        [XmlElement(ElementName = "SP_EvanHard")]
+        public bool SP_EvanHard;
+
+        [XmlElement(ElementName = "SP_EvanHell")]
+        public bool SP_EvanHell;
+
+        [XmlElement(ElementName = "SP_karinNormal")]
+        public bool SP_karinNormal;
+
+        [XmlElement(ElementName = "SP_karinHard")]
+        public bool SP_karinHard;
+
+        [XmlElement(ElementName = "SP_karinHell")]
+        public bool SP_karinHell;
+
+        [XmlElement(ElementName = "SP_DailyEnable")]
+        public bool SP_DailyEnable;
+
+        [XmlElement(ElementName = "SP_CakeEnable")]
+        public bool SP_CakeEnable;
+
+        [XmlElement(ElementName = "SP_CrystalEnable")]
+        public bool SP_CrystalEnable;
+
+        [XmlElement(ElementName = "SP_EvanEnable")]
+        public bool SP_EvanEnable;
+
+        [XmlElement(ElementName = "SP_KarinEnable")]
+        public bool SP_KarinEnable;
+
+        [XmlElement(ElementName = "SP_DailyLimit")]
+        public int SP_DailyLimit;
+
+        [XmlElement(ElementName = "SP_CakeLimit")]
+        public int SP_CakeLimit;
+
+        [XmlElement(ElementName = "SP_CrystalLimit")]
+        public int SP_CrystalLimit;
+
+        [XmlElement(ElementName = "SP_EvanLimit")]
+        public int SP_EvanLimit;
+
+        [XmlElement(ElementName = "SP_KarinLimit")]
+        public int SP_KarinLimit;
+
         public string Version = Application.ProductVersion;
 
         #endregion Public Fields
@@ -394,6 +496,26 @@ namespace SevenKnightsAI.Classes
             this.RS_BuyKeyRubies = false;
             this.RS_BuyKeyRubiesType = BuyKeyRubiesType.Key5Ruby10;
             this.RS_BuyKeyRubiesAmount = 0;
+            this.SP_Enable = false;
+            this.SP_DailyEnable = false;
+            this.SP_CakeEnable = false;
+            this.SP_CrystalEnable = false;
+            this.SP_EvanEnable = false;
+            this.SP_KarinEnable = false;
+            this.SP_DailyLimit = 0;
+            this.SP_CakeLimit = 0;
+            this.SP_CrystalLimit = 0;
+            this.SP_EvanLimit = 0;
+            this.SP_KarinLimit = 0;
+            this.SP_SkillType = SkillType.Both;
+            this.SP_Wave1Loop = false;
+            this.SP_Wave2Loop = false;
+            this.SP_Wave3Loop = false;
+            this.SP_DailyNormal = true;
+            this.SP_CakeEasy = true;
+            this.SP_CrystalEasy = true;
+            this.SP_EvanNormal = true;
+            this.SP_karinNormal = true;
         }
 
         #endregion Public Constructors
@@ -482,6 +604,12 @@ namespace SevenKnightsAI.Classes
                 try
                 {
                     aISettings.AD_Team = (Team)Convert.ToInt32(dictionary["AD_Team"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.AD2_Team = (Team)Convert.ToInt32(dictionary["AD2_Team"]);
                 }
                 catch (Exception)
                 { }
@@ -1001,6 +1129,204 @@ namespace SevenKnightsAI.Classes
                 }
                 catch (Exception)
                 { }
+                try
+                {
+                    aISettings.SP_Enable = (bool)dictionary["SP_Enable"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_Wave1Loop = (bool)dictionary["SP_Wave1Loop"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_Wave2Loop = (bool)dictionary["SP_Wave2Loop"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_Wave3Loop = (bool)dictionary["SP_Wave3Loop"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_SkillType = (SkillType)Convert.ToInt32(dictionary["SP_SkillType"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_Wave1Skills = ((dictionary["SP_Wave1Skills"] == null) ? null : ((JArray)dictionary["SP_Wave1Skills"]).ToObject<int[]>());
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_Wave2Skills = ((dictionary["SP_Wave2Skills"] == null) ? null : ((JArray)dictionary["SP_Wave2Skills"]).ToObject<int[]>());
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_Wave3Skills = ((dictionary["SP_Wave3Skills"] == null) ? null : ((JArray)dictionary["SP_Wave3Skills"]).ToObject<int[]>());
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_DailyNormal = (bool)dictionary["SP_DailyNormal"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_DailyHard = (bool)dictionary["SP_DailyHard"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_DailyHell = (bool)dictionary["SP_DailyHell"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_CakeEasy = (bool)dictionary["SP_CakeEasy"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_CakeNormal = (bool)dictionary["SP_CakeNormal"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_CakeHard = (bool)dictionary["SP_CakeHard"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_CrystalEasy = (bool)dictionary["SP_CrystalEasy"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_CrystalNormal = (bool)dictionary["SP_CrystalNormal"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_CrystalHard = (bool)dictionary["SP_CrystalHard"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_EvanNormal = (bool)dictionary["SP_EvanNormal"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_EvanHard = (bool)dictionary["SP_EvanHard"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_EvanHell = (bool)dictionary["SP_EvanHell"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_karinNormal = (bool)dictionary["SP_karinNormal"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_karinHard = (bool)dictionary["SP_karinHard"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_karinHell = (bool)dictionary["SP_karinHell"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_DailyEnable = (bool)dictionary["SP_DailyEnable"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_CakeEnable = (bool)dictionary["SP_CakeEnable"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_CrystalEnable = (bool)dictionary["SP_CrystalEnable"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_EvanEnable = (bool)dictionary["SP_EvanEnable"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_KarinEnable = (bool)dictionary["SP_KarinEnable"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_DailyLimit = Convert.ToInt32(dictionary["SP_DailyLimit"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_CakeLimit = Convert.ToInt32(dictionary["SP_CakeLimit"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_CrystalLimit = Convert.ToInt32(dictionary["SP_CrystalLimit"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_EvanLimit = Convert.ToInt32(dictionary["SP_EvanLimit"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_KarinLimit = Convert.ToInt32(dictionary["SP_KarinLimit"]);
+                }
+                catch (Exception)
+                { }
                 return aISettings;
             }
             throw new AISettingsException("Settings file not found", -1);
@@ -1057,6 +1383,10 @@ namespace SevenKnightsAI.Classes
                 {
                     "AD_Team",
                     this.AD_Team
+                },
+                {
+                    "AD2_Team",
+                    this.AD2_Team
                 },
                 {
                     "AD_Formation",
@@ -1405,6 +1735,138 @@ namespace SevenKnightsAI.Classes
                 {
                     "GC_UseFriend",
                     this.GC_UseFriend
+                },
+                {
+                    "SP_Enable",
+                    this.SP_Enable
+                },
+                {
+                    "SP_Wave1Loop",
+                    this.SP_Wave1Loop
+                },
+                {
+                    "SP_Wave2Loop",
+                    this.SP_Wave2Loop
+                },
+                {
+                    "SP_Wave3Loop",
+                    this.SP_Wave3Loop
+                },
+                {
+                    "SP_SkillType",
+                    this.SP_SkillType
+                },
+                {
+                    "SP_Wave1Skills",
+                    this.SP_Wave1Skills
+                },
+                {
+                    "SP_Wave2Skills",
+                    this.SP_Wave2Skills
+                },
+                {
+                    "SP_Wave3Skills",
+                    this.SP_Wave3Skills
+                },
+                {
+                    "SP_DailyNormal",
+                    this.SP_DailyNormal
+                },
+                {
+                    "SP_DailyHard",
+                    this.SP_DailyHard
+                },
+                {
+                    "SP_DailyHell",
+                    this.SP_DailyHell
+                },
+                {
+                    "SP_CakeEasy",
+                    this.SP_CakeEasy
+                },
+                {
+                    "SP_CakeNormal",
+                    this.SP_CakeNormal
+                },
+                {
+                    "SP_CakeHard",
+                    this.SP_CakeHard
+                },
+                {
+                    "SP_CrystalEasy",
+                    this.SP_CrystalEasy
+                },
+                {
+                    "SP_CrystalNormal",
+                    this.SP_CrystalNormal
+                },
+                {
+                    "SP_CrystalHard",
+                    this.SP_CrystalHard
+                },
+                {
+                    "SP_EvanNormal",
+                    this.SP_EvanNormal
+                },
+                {
+                    "SP_EvanHard",
+                    this.SP_EvanHard
+                },
+                {
+                    "SP_EvanHell",
+                    this.SP_EvanHell
+                },
+                {
+                    "SP_karinNormal",
+                    this.SP_karinNormal
+                },
+                {
+                    "SP_karinHard",
+                    this.SP_karinHard
+                },
+                {
+                    "SP_karinHell",
+                    this.SP_karinHell
+                },
+                {
+                    "SP_DailyEnable",
+                    this.SP_DailyEnable
+                },
+                {
+                    "SP_CakeEnable",
+                    this.SP_CakeEnable
+                },
+                {
+                    "SP_CrystalEnable",
+                    this.SP_CrystalEnable
+                },
+                {
+                    "SP_EvanEnable",
+                    this.SP_EvanEnable
+                },
+                {
+                    "SP_KarinEnable",
+                    this.SP_KarinEnable
+                },
+                {
+                    "SP_DailyLimit",
+                    this.SP_DailyLimit
+                },
+                {
+                    "SP_CakeLimit",
+                    this.SP_CakeLimit
+                },
+                {
+                    "SP_CrystalLimit",
+                    this.SP_CrystalLimit
+                },
+                {
+                    "SP_EvanLimit",
+                    this.SP_EvanLimit
+                },
+                {
+                    "SP_KarinLimit",
+                    this.SP_KarinLimit
                 }
             };
             string data = JsonConvert.SerializeObject(value);

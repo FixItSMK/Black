@@ -469,9 +469,9 @@ namespace SevenKnightsAI.Classes.Mappings
         };
 
         //--------------------------------------- จุดสำหรับ Scoll หน้าจอ-----------------
-        public static readonly PixelMapping ScrollAreaDown = new PixelMapping
+        public static readonly PixelMapping ScrollAreaDown = new PixelMapping       
         {
-            X = 450,
+            X = 450,                        
             Y = 430,
             Color = 0,
             Type = MappingType.BUTTON

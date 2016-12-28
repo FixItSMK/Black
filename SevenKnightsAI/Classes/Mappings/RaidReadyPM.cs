@@ -9,10 +9,14 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle EnteredCount = new Rectangle
         {
-            X = 635,
+            //X = 660,
+            //Y = 17,
+            //Height = 24,
+            //Width = 22
+            X = 602,
             Y = 17,
             Height = 24,
-            Width = 55
+            Width = 88
         };
 
         public static readonly PixelMapping MemberListBackground = new PixelMapping
@@ -49,16 +53,11 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping AwakenBlueIcon = new PixelMapping
         {
-            //X = 591,
-            //Y = 15,
-            //Color = 703981,
             X = 601,
             Y = 27,
             Color = 4227735,
             Type = MappingType.ANCHOR
         };
-
-
 
         // Awaken หน้ากดเริ่มตีเข้าสู Flight
         public static readonly PixelMapping AwakenDragonImg = new PixelMapping

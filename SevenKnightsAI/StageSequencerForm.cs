@@ -100,15 +100,23 @@ namespace SevenKnightsAI
         private void dataGridView_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             DataGridView dataGridView = sender as DataGridView;
-            int stageCount = 10;
+            int stageCount = 10;                                                            // ด่านโดยปกติมี 10 ด่าน
             string value = dataGridView.Rows[this.editingRow].Cells["World"].Value.ToString();
-            if (Array.IndexOf<string>(this.worldConverter, value) == 7)
+            if (Array.IndexOf<string>(this.worldConverter, value) == 7)                     // แมพ8
             {
                 stageCount = 20;
             }
-            else if (Array.IndexOf<string>(this.worldConverter, value) == 8)
+            else if (Array.IndexOf<string>(this.worldConverter, value) == 8)                // แมพ9
             {
                 stageCount = 15;
+            }
+            else if (Array.IndexOf<string>(this.worldConverter, value) == 9)                // แมพ10 ไม่ใส่ก็ได้เนื่องจากมี 10 ด่าน
+            {
+                stageCount = 10;
+            }
+            else if (Array.IndexOf<string>(this.worldConverter, value) == 10)               // แมพ11 ไม่ใส่ก็ได้เนื่องจากมี 10 ด่าน
+            {
+                stageCount = 10;
             }
             if (this.editingColumn == 3 && stageCount < 20)
             {
@@ -289,7 +297,9 @@ namespace SevenKnightsAI
             "6 - Frozen Land",
             "7 - Revenger's Hell",
             "8 - Moonlit Isle",
-            "9 - Western Emperors Land"
+            "9 - Western Empire",
+            "10 - Eastern Empire",
+            "11 - Dark Sanctuary"
         };
     }
 }

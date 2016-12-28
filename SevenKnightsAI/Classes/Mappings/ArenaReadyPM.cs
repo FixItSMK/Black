@@ -34,6 +34,14 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping RubyPlus = new PixelMapping
+        {
+            X = 712,
+            Y = 28,
+            Color = 0xc1a55d,
+            Type = MappingType.ANCHOR
+        };
+
         public static readonly int RUBY_OFFSET_X = 223;
 
         public static readonly int RUBY_OFFSET_Y = 0;

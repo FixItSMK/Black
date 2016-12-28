@@ -38,10 +38,10 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.BUTTON
         };
 
-        public static readonly PixelMapping DailyDungeonButton = new PixelMapping
+        public static readonly PixelMapping SpecialDungeonButton = new PixelMapping
         {
-            X = 254,
-            Y = 460,
+            X = 252,
+            Y = 426,
             Color = 0,
             Type = MappingType.BUTTON
         };

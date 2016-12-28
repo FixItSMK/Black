@@ -124,6 +124,13 @@ namespace SevenKnightsAI.Classes
         SELL_HERO_FINISH,
         YEAR_END_AWAKE,
         YEAR_END_AWAKE_POPUP,
-        HELPED_FRIEND
+        HELPED_FRIEND,
+        SPECIAL_DUN_READY,
+        SPECIAL_DUN_START,
+        SPECIAL_DUN_FIGHT,
+        SPECIAL_DUN_LOOT,
+        SP_OUT_OF_KEYS,
+        SPECIAL_DUN_LOST,
+        SPECIAL_DUN_MAX
     }
 }

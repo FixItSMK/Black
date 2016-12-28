@@ -31,6 +31,7 @@
             this.AD_StopOnFullHeroes_Checkbox = new System.Windows.Forms.CheckBox();
             this.AD_limitCheckBox = new System.Windows.Forms.CheckBox();
             this.AD_mainPanel = new System.Windows.Forms.Panel();
+            this.AD_teamComboBox2 = new System.Windows.Forms.ComboBox();
             this.AD_difficultyComboBox2nd = new System.Windows.Forms.ComboBox();
             this.AD_sequenceButton = new System.Windows.Forms.Button();
             this.AD_manageHeroHelpLabel = new System.Windows.Forms.Label();
@@ -147,6 +148,86 @@
             this.GC_formationLabel = new System.Windows.Forms.Label();
             this.GC_teamLabel = new System.Windows.Forms.Label();
             this.GC_enableCheckBox = new System.Windows.Forms.CheckBox();
+            this.specialDungeonTab = new System.Windows.Forms.TabPage();
+            this.karinGroupBox = new System.Windows.Forms.GroupBox();
+            this.SP_karinCheckBox = new System.Windows.Forms.CheckBox();
+            this.SP_karinHellRadioButton = new System.Windows.Forms.RadioButton();
+            this.SP_karinLimitNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.SP_karinHardRadioButton = new System.Windows.Forms.RadioButton();
+            this.label12 = new System.Windows.Forms.Label();
+            this.SP_karinNorRadioButton = new System.Windows.Forms.RadioButton();
+            this.evanGroupBox = new System.Windows.Forms.GroupBox();
+            this.SP_evanCheckBox = new System.Windows.Forms.CheckBox();
+            this.SP_evanHellRadioButton = new System.Windows.Forms.RadioButton();
+            this.SP_evanLimitNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.SP_evanHardRadioButton = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.SP_evanNorRadioButton = new System.Windows.Forms.RadioButton();
+            this.crystalGroupBox = new System.Windows.Forms.GroupBox();
+            this.SP_crystalCheckBox = new System.Windows.Forms.CheckBox();
+            this.SP_crystalHardRadioButton = new System.Windows.Forms.RadioButton();
+            this.SP_crystalLimitNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.SP_crystalNorRadioButton = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
+            this.SP_crystalEasyRadioButton = new System.Windows.Forms.RadioButton();
+            this.cakeGroupBox = new System.Windows.Forms.GroupBox();
+            this.SP_cakeCheckBox = new System.Windows.Forms.CheckBox();
+            this.SP_cakeHardRadioButton = new System.Windows.Forms.RadioButton();
+            this.SP_cakeLimitNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.SP_cakeNormalRadioButton = new System.Windows.Forms.RadioButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.SP_cakeEasyRadioButton = new System.Windows.Forms.RadioButton();
+            this.dailyGroupBox = new System.Windows.Forms.GroupBox();
+            this.SP_dailyCheckBox = new System.Windows.Forms.CheckBox();
+            this.SP_dailyHellRadioButton = new System.Windows.Forms.RadioButton();
+            this.SP_dailyLimitNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.SP_dailyHardRadioButton = new System.Windows.Forms.RadioButton();
+            this.SP_dailyNomalRadioButton = new System.Windows.Forms.RadioButton();
+            this.SP_skillGroupBox = new System.Windows.Forms.GroupBox();
+            this.SP_wave3Panel = new System.Windows.Forms.Panel();
+            this.SP_wave3LoopCheckBox = new System.Windows.Forms.CheckBox();
+            this.SP_w3Skill10Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill09Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill08Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill07Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill06Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill05Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill04Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill03Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill02Button = new System.Windows.Forms.Button();
+            this.SP_wave3Label = new System.Windows.Forms.Label();
+            this.SP_w3Skill01Button = new System.Windows.Forms.Button();
+            this.SP_bothSkillRadio = new System.Windows.Forms.RadioButton();
+            this.SP_wave2Panel = new System.Windows.Forms.Panel();
+            this.SP_wave2LoopCheckBox = new System.Windows.Forms.CheckBox();
+            this.SP_w2Skill10Button = new System.Windows.Forms.Button();
+            this.SP_w2Skill09Button = new System.Windows.Forms.Button();
+            this.SP_w2Skill08Button = new System.Windows.Forms.Button();
+            this.SP_w2Skill07Button = new System.Windows.Forms.Button();
+            this.SP_w2Skill06Button = new System.Windows.Forms.Button();
+            this.SP_w2Skill05Button = new System.Windows.Forms.Button();
+            this.SP_w2Skill04Button = new System.Windows.Forms.Button();
+            this.SP_w2Skill03Button = new System.Windows.Forms.Button();
+            this.SP_w2Skill02Button = new System.Windows.Forms.Button();
+            this.SP_wave2Label = new System.Windows.Forms.Label();
+            this.SP_w2Skill01Button = new System.Windows.Forms.Button();
+            this.SP_manualSkillRadio = new System.Windows.Forms.RadioButton();
+            this.SP_autoSkillRadio = new System.Windows.Forms.RadioButton();
+            this.SP_wave1Panel = new System.Windows.Forms.Panel();
+            this.SP_wave1LoopCheckBox = new System.Windows.Forms.CheckBox();
+            this.SP_w1Skill10Button = new System.Windows.Forms.Button();
+            this.SP_w1Skill09Button = new System.Windows.Forms.Button();
+            this.SP_w1Skill08Button = new System.Windows.Forms.Button();
+            this.SP_w1Skill07Button = new System.Windows.Forms.Button();
+            this.SP_w1Skill06Button = new System.Windows.Forms.Button();
+            this.SP_w1Skill05Button = new System.Windows.Forms.Button();
+            this.SP_w1Skill04Button = new System.Windows.Forms.Button();
+            this.SP_w1Skill03Button = new System.Windows.Forms.Button();
+            this.SP_w1Skill02Button = new System.Windows.Forms.Button();
+            this.SP_wave1Label = new System.Windows.Forms.Label();
+            this.SP_w1Skill01Button = new System.Windows.Forms.Button();
+            this.SP_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.arenaTab = new System.Windows.Forms.TabPage();
             this.AR_limitLabel = new System.Windows.Forms.Label();
             this.AR_useRubyLabel = new System.Windows.Forms.Label();
@@ -312,15 +393,9 @@
             this.tsslBuildInfo = new System.Windows.Forms.ToolStripStatusLabel();
             this.aiButton = new System.Windows.Forms.Button();
             this.summaryGroupBox = new System.Windows.Forms.GroupBox();
-            this.HeroCountLabel = new System.Windows.Forms.Label();
-            this.keysTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-            this.arenaKeysLabel = new System.Windows.Forms.Label();
-            this.adventureKeyPictureBox = new System.Windows.Forms.PictureBox();
-            this.arenaKeyPictureBox = new System.Windows.Forms.PictureBox();
-            this.towerKeysLabel = new System.Windows.Forms.Label();
-            this.towerKeyPictureBox = new System.Windows.Forms.PictureBox();
-            this.adventureKeysLabel = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GB_WaitForKeys = new System.Windows.Forms.CheckBox();
+            this.HeroCountLabel = new System.Windows.Forms.Label();
             this.raidPictureBox = new System.Windows.Forms.PictureBox();
             this.goldChamberPictureBox = new System.Windows.Forms.PictureBox();
             this.arenaPictureBox = new System.Windows.Forms.PictureBox();
@@ -329,6 +404,12 @@
             this.goldChamberCountLabel = new System.Windows.Forms.Label();
             this.arenaCountLabel = new System.Windows.Forms.Label();
             this.adventureCountLabel = new System.Windows.Forms.Label();
+            this.arenaKeysLabel = new System.Windows.Forms.Label();
+            this.adventureKeyPictureBox = new System.Windows.Forms.PictureBox();
+            this.arenaKeyPictureBox = new System.Windows.Forms.PictureBox();
+            this.towerKeysLabel = new System.Windows.Forms.Label();
+            this.towerKeyPictureBox = new System.Windows.Forms.PictureBox();
+            this.adventureKeysLabel = new System.Windows.Forms.Label();
             this.saveSettingsButton = new System.Windows.Forms.Button();
             this.Event = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -345,6 +426,12 @@
             this.goldLabel = new System.Windows.Forms.Label();
             this.resourcesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.aiPause = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.adventureTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AD_limitNumericBox)).BeginInit();
@@ -361,6 +448,21 @@
             this.GC_wave2Panel.SuspendLayout();
             this.GC_wave1Panel.SuspendLayout();
             this.GC_formationPanel.SuspendLayout();
+            this.specialDungeonTab.SuspendLayout();
+            this.karinGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_karinLimitNumericBox)).BeginInit();
+            this.evanGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_evanLimitNumericBox)).BeginInit();
+            this.crystalGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_crystalLimitNumericBox)).BeginInit();
+            this.cakeGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_cakeLimitNumericBox)).BeginInit();
+            this.dailyGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_dailyLimitNumericBox)).BeginInit();
+            this.SP_skillGroupBox.SuspendLayout();
+            this.SP_wave3Panel.SuspendLayout();
+            this.SP_wave2Panel.SuspendLayout();
+            this.SP_wave1Panel.SuspendLayout();
             this.arenaTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AR_limitNumericBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AR_useRubyNumericBox)).BeginInit();
@@ -405,26 +507,28 @@
             this.Info.SuspendLayout();
             this.statusStrip.SuspendLayout();
             this.summaryGroupBox.SuspendLayout();
-            this.keysTableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adventureKeyPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arenaKeyPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.towerKeyPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.raidPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goldChamberPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arenaPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.adventurePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adventureKeyPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arenaKeyPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.towerKeyPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topheaderPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.topazPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.honorPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rubyPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.goldPictureBox)).BeginInit();
             this.resourcesTableLayoutPanel.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
             // 
             this.tabControl.Controls.Add(this.adventureTab);
             this.tabControl.Controls.Add(this.goldChamberTab);
+            this.tabControl.Controls.Add(this.specialDungeonTab);
             this.tabControl.Controls.Add(this.arenaTab);
             this.tabControl.Controls.Add(this.raidTab);
             this.tabControl.Controls.Add(this.resourcesTab);
@@ -568,6 +672,7 @@
             // 
             // AD_mainPanel
             // 
+            this.AD_mainPanel.Controls.Add(this.AD_teamComboBox2);
             this.AD_mainPanel.Controls.Add(this.AD_difficultyComboBox2nd);
             this.AD_mainPanel.Controls.Add(this.AD_sequenceButton);
             this.AD_mainPanel.Controls.Add(this.AD_manageHeroHelpLabel);
@@ -588,6 +693,24 @@
             this.AD_mainPanel.Name = "AD_mainPanel";
             this.AD_mainPanel.Size = new System.Drawing.Size(487, 237);
             this.AD_mainPanel.TabIndex = 13;
+            // 
+            // AD_teamComboBox2
+            // 
+            this.AD_teamComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AD_teamComboBox2.Enabled = false;
+            this.AD_teamComboBox2.FormattingEnabled = true;
+            this.AD_teamComboBox2.Items.AddRange(new object[] {
+            "--",
+            "A",
+            "B",
+            "C"});
+            this.AD_teamComboBox2.Location = new System.Drawing.Point(159, 93);
+            this.AD_teamComboBox2.Name = "AD_teamComboBox2";
+            this.AD_teamComboBox2.Size = new System.Drawing.Size(60, 21);
+            this.AD_teamComboBox2.TabIndex = 28;
+            this.AD_teamComboBox2.Tag = "0";
+            this.AD_teamComboBox2.Visible = false;
+            this.AD_teamComboBox2.SelectedIndexChanged += new System.EventHandler(this.AD_teamComboBox2_SelectedIndexChanged);
             // 
             // AD_difficultyComboBox2nd
             // 
@@ -2002,6 +2125,988 @@
             this.GC_enableCheckBox.UseVisualStyleBackColor = true;
             this.GC_enableCheckBox.CheckedChanged += new System.EventHandler(this.enableCheckBox_CheckedChanged);
             // 
+            // specialDungeonTab
+            // 
+            this.specialDungeonTab.BackColor = System.Drawing.SystemColors.Control;
+            this.specialDungeonTab.Controls.Add(this.karinGroupBox);
+            this.specialDungeonTab.Controls.Add(this.evanGroupBox);
+            this.specialDungeonTab.Controls.Add(this.crystalGroupBox);
+            this.specialDungeonTab.Controls.Add(this.cakeGroupBox);
+            this.specialDungeonTab.Controls.Add(this.dailyGroupBox);
+            this.specialDungeonTab.Controls.Add(this.SP_skillGroupBox);
+            this.specialDungeonTab.Controls.Add(this.SP_enableCheckBox);
+            this.specialDungeonTab.Location = new System.Drawing.Point(4, 22);
+            this.specialDungeonTab.Name = "specialDungeonTab";
+            this.specialDungeonTab.Size = new System.Drawing.Size(488, 309);
+            this.specialDungeonTab.TabIndex = 9;
+            this.specialDungeonTab.Text = "SpDun";
+            // 
+            // karinGroupBox
+            // 
+            this.karinGroupBox.Controls.Add(this.label16);
+            this.karinGroupBox.Controls.Add(this.SP_karinCheckBox);
+            this.karinGroupBox.Controls.Add(this.SP_karinHellRadioButton);
+            this.karinGroupBox.Controls.Add(this.SP_karinLimitNumericBox);
+            this.karinGroupBox.Controls.Add(this.SP_karinHardRadioButton);
+            this.karinGroupBox.Controls.Add(this.label12);
+            this.karinGroupBox.Controls.Add(this.SP_karinNorRadioButton);
+            this.karinGroupBox.Location = new System.Drawing.Point(9, 262);
+            this.karinGroupBox.Name = "karinGroupBox";
+            this.karinGroupBox.Size = new System.Drawing.Size(213, 44);
+            this.karinGroupBox.TabIndex = 38;
+            this.karinGroupBox.TabStop = false;
+            this.karinGroupBox.Text = "Event Tab";
+            // 
+            // SP_karinCheckBox
+            // 
+            this.SP_karinCheckBox.AutoSize = true;
+            this.SP_karinCheckBox.Location = new System.Drawing.Point(7, 1);
+            this.SP_karinCheckBox.Name = "SP_karinCheckBox";
+            this.SP_karinCheckBox.Size = new System.Drawing.Size(88, 17);
+            this.SP_karinCheckBox.TabIndex = 33;
+            this.SP_karinCheckBox.Tag = "4";
+            this.SP_karinCheckBox.Text = "Event Row 4";
+            this.SP_karinCheckBox.UseVisualStyleBackColor = true;
+            this.SP_karinCheckBox.CheckedChanged += new System.EventHandler(this.spEnableCheckBox_CheckedChanged);
+            // 
+            // SP_karinHellRadioButton
+            // 
+            this.SP_karinHellRadioButton.AutoSize = true;
+            this.SP_karinHellRadioButton.Location = new System.Drawing.Point(170, 23);
+            this.SP_karinHellRadioButton.Name = "SP_karinHellRadioButton";
+            this.SP_karinHellRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_karinHellRadioButton.TabIndex = 1;
+            this.SP_karinHellRadioButton.Tag = "2";
+            this.SP_karinHellRadioButton.Text = "R3";
+            this.SP_karinHellRadioButton.UseVisualStyleBackColor = true;
+            this.SP_karinHellRadioButton.CheckedChanged += new System.EventHandler(this.SP_karinRadioButton_CheckedChanged);
+            // 
+            // SP_karinLimitNumericBox
+            // 
+            this.SP_karinLimitNumericBox.Location = new System.Drawing.Point(131, 1);
+            this.SP_karinLimitNumericBox.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.SP_karinLimitNumericBox.Name = "SP_karinLimitNumericBox";
+            this.SP_karinLimitNumericBox.Size = new System.Drawing.Size(41, 20);
+            this.SP_karinLimitNumericBox.TabIndex = 35;
+            this.SP_karinLimitNumericBox.Tag = "4";
+            this.SP_karinLimitNumericBox.ValueChanged += new System.EventHandler(this.splimitNumericBox_ValueChanged);
+            // 
+            // SP_karinHardRadioButton
+            // 
+            this.SP_karinHardRadioButton.AutoSize = true;
+            this.SP_karinHardRadioButton.Location = new System.Drawing.Point(123, 23);
+            this.SP_karinHardRadioButton.Name = "SP_karinHardRadioButton";
+            this.SP_karinHardRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_karinHardRadioButton.TabIndex = 1;
+            this.SP_karinHardRadioButton.Tag = "1";
+            this.SP_karinHardRadioButton.Text = "R2";
+            this.SP_karinHardRadioButton.UseVisualStyleBackColor = true;
+            this.SP_karinHardRadioButton.CheckedChanged += new System.EventHandler(this.SP_karinRadioButton_CheckedChanged);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(173, 4);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(31, 13);
+            this.label12.TabIndex = 36;
+            this.label12.Text = "times";
+            // 
+            // SP_karinNorRadioButton
+            // 
+            this.SP_karinNorRadioButton.AutoSize = true;
+            this.SP_karinNorRadioButton.Checked = true;
+            this.SP_karinNorRadioButton.Location = new System.Drawing.Point(78, 23);
+            this.SP_karinNorRadioButton.Name = "SP_karinNorRadioButton";
+            this.SP_karinNorRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_karinNorRadioButton.TabIndex = 2;
+            this.SP_karinNorRadioButton.TabStop = true;
+            this.SP_karinNorRadioButton.Tag = "0";
+            this.SP_karinNorRadioButton.Text = "R1";
+            this.SP_karinNorRadioButton.UseVisualStyleBackColor = true;
+            this.SP_karinNorRadioButton.CheckedChanged += new System.EventHandler(this.SP_karinRadioButton_CheckedChanged);
+            // 
+            // evanGroupBox
+            // 
+            this.evanGroupBox.Controls.Add(this.label15);
+            this.evanGroupBox.Controls.Add(this.SP_evanCheckBox);
+            this.evanGroupBox.Controls.Add(this.SP_evanHellRadioButton);
+            this.evanGroupBox.Controls.Add(this.SP_evanLimitNumericBox);
+            this.evanGroupBox.Controls.Add(this.SP_evanHardRadioButton);
+            this.evanGroupBox.Controls.Add(this.label11);
+            this.evanGroupBox.Controls.Add(this.SP_evanNorRadioButton);
+            this.evanGroupBox.Location = new System.Drawing.Point(9, 210);
+            this.evanGroupBox.Name = "evanGroupBox";
+            this.evanGroupBox.Size = new System.Drawing.Size(213, 44);
+            this.evanGroupBox.TabIndex = 38;
+            this.evanGroupBox.TabStop = false;
+            this.evanGroupBox.Text = "Event Tab";
+            // 
+            // SP_evanCheckBox
+            // 
+            this.SP_evanCheckBox.AutoSize = true;
+            this.SP_evanCheckBox.Location = new System.Drawing.Point(7, 0);
+            this.SP_evanCheckBox.Name = "SP_evanCheckBox";
+            this.SP_evanCheckBox.Size = new System.Drawing.Size(88, 17);
+            this.SP_evanCheckBox.TabIndex = 33;
+            this.SP_evanCheckBox.Tag = "3";
+            this.SP_evanCheckBox.Text = "Event Row 3";
+            this.SP_evanCheckBox.UseVisualStyleBackColor = true;
+            this.SP_evanCheckBox.CheckedChanged += new System.EventHandler(this.spEnableCheckBox_CheckedChanged);
+            // 
+            // SP_evanHellRadioButton
+            // 
+            this.SP_evanHellRadioButton.AutoSize = true;
+            this.SP_evanHellRadioButton.Location = new System.Drawing.Point(170, 23);
+            this.SP_evanHellRadioButton.Name = "SP_evanHellRadioButton";
+            this.SP_evanHellRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_evanHellRadioButton.TabIndex = 1;
+            this.SP_evanHellRadioButton.Tag = "2";
+            this.SP_evanHellRadioButton.Text = "R3";
+            this.SP_evanHellRadioButton.UseVisualStyleBackColor = true;
+            this.SP_evanHellRadioButton.CheckedChanged += new System.EventHandler(this.SP_evanRadioButton_CheckedChanged);
+            // 
+            // SP_evanLimitNumericBox
+            // 
+            this.SP_evanLimitNumericBox.Location = new System.Drawing.Point(131, 0);
+            this.SP_evanLimitNumericBox.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.SP_evanLimitNumericBox.Name = "SP_evanLimitNumericBox";
+            this.SP_evanLimitNumericBox.Size = new System.Drawing.Size(41, 20);
+            this.SP_evanLimitNumericBox.TabIndex = 35;
+            this.SP_evanLimitNumericBox.Tag = "3";
+            this.SP_evanLimitNumericBox.ValueChanged += new System.EventHandler(this.splimitNumericBox_ValueChanged);
+            // 
+            // SP_evanHardRadioButton
+            // 
+            this.SP_evanHardRadioButton.AutoSize = true;
+            this.SP_evanHardRadioButton.Location = new System.Drawing.Point(123, 23);
+            this.SP_evanHardRadioButton.Name = "SP_evanHardRadioButton";
+            this.SP_evanHardRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_evanHardRadioButton.TabIndex = 1;
+            this.SP_evanHardRadioButton.Tag = "1";
+            this.SP_evanHardRadioButton.Text = "R2";
+            this.SP_evanHardRadioButton.UseVisualStyleBackColor = true;
+            this.SP_evanHardRadioButton.CheckedChanged += new System.EventHandler(this.SP_evanRadioButton_CheckedChanged);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(173, 3);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(31, 13);
+            this.label11.TabIndex = 36;
+            this.label11.Text = "times";
+            // 
+            // SP_evanNorRadioButton
+            // 
+            this.SP_evanNorRadioButton.AutoSize = true;
+            this.SP_evanNorRadioButton.Checked = true;
+            this.SP_evanNorRadioButton.Location = new System.Drawing.Point(78, 23);
+            this.SP_evanNorRadioButton.Name = "SP_evanNorRadioButton";
+            this.SP_evanNorRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_evanNorRadioButton.TabIndex = 2;
+            this.SP_evanNorRadioButton.TabStop = true;
+            this.SP_evanNorRadioButton.Tag = "0";
+            this.SP_evanNorRadioButton.Text = "R1";
+            this.SP_evanNorRadioButton.UseVisualStyleBackColor = true;
+            this.SP_evanNorRadioButton.CheckedChanged += new System.EventHandler(this.SP_evanRadioButton_CheckedChanged);
+            // 
+            // crystalGroupBox
+            // 
+            this.crystalGroupBox.Controls.Add(this.label14);
+            this.crystalGroupBox.Controls.Add(this.SP_crystalCheckBox);
+            this.crystalGroupBox.Controls.Add(this.SP_crystalHardRadioButton);
+            this.crystalGroupBox.Controls.Add(this.SP_crystalLimitNumericBox);
+            this.crystalGroupBox.Controls.Add(this.SP_crystalNorRadioButton);
+            this.crystalGroupBox.Controls.Add(this.label10);
+            this.crystalGroupBox.Controls.Add(this.SP_crystalEasyRadioButton);
+            this.crystalGroupBox.Location = new System.Drawing.Point(9, 157);
+            this.crystalGroupBox.Name = "crystalGroupBox";
+            this.crystalGroupBox.Size = new System.Drawing.Size(213, 44);
+            this.crystalGroupBox.TabIndex = 38;
+            this.crystalGroupBox.TabStop = false;
+            this.crystalGroupBox.Text = "Event Tab";
+            // 
+            // SP_crystalCheckBox
+            // 
+            this.SP_crystalCheckBox.AutoSize = true;
+            this.SP_crystalCheckBox.Location = new System.Drawing.Point(7, 0);
+            this.SP_crystalCheckBox.Name = "SP_crystalCheckBox";
+            this.SP_crystalCheckBox.Size = new System.Drawing.Size(88, 17);
+            this.SP_crystalCheckBox.TabIndex = 33;
+            this.SP_crystalCheckBox.Tag = "2";
+            this.SP_crystalCheckBox.Text = "Event Row 2";
+            this.SP_crystalCheckBox.UseVisualStyleBackColor = true;
+            this.SP_crystalCheckBox.CheckedChanged += new System.EventHandler(this.spEnableCheckBox_CheckedChanged);
+            // 
+            // SP_crystalHardRadioButton
+            // 
+            this.SP_crystalHardRadioButton.AutoSize = true;
+            this.SP_crystalHardRadioButton.Location = new System.Drawing.Point(170, 23);
+            this.SP_crystalHardRadioButton.Name = "SP_crystalHardRadioButton";
+            this.SP_crystalHardRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_crystalHardRadioButton.TabIndex = 1;
+            this.SP_crystalHardRadioButton.Tag = "2";
+            this.SP_crystalHardRadioButton.Text = "R3";
+            this.SP_crystalHardRadioButton.UseVisualStyleBackColor = true;
+            this.SP_crystalHardRadioButton.CheckedChanged += new System.EventHandler(this.SP_crystalRadioButton_CheckedChanged);
+            // 
+            // SP_crystalLimitNumericBox
+            // 
+            this.SP_crystalLimitNumericBox.Location = new System.Drawing.Point(131, 0);
+            this.SP_crystalLimitNumericBox.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.SP_crystalLimitNumericBox.Name = "SP_crystalLimitNumericBox";
+            this.SP_crystalLimitNumericBox.Size = new System.Drawing.Size(41, 20);
+            this.SP_crystalLimitNumericBox.TabIndex = 35;
+            this.SP_crystalLimitNumericBox.Tag = "2";
+            this.SP_crystalLimitNumericBox.ValueChanged += new System.EventHandler(this.splimitNumericBox_ValueChanged);
+            // 
+            // SP_crystalNorRadioButton
+            // 
+            this.SP_crystalNorRadioButton.AutoSize = true;
+            this.SP_crystalNorRadioButton.Location = new System.Drawing.Point(123, 23);
+            this.SP_crystalNorRadioButton.Name = "SP_crystalNorRadioButton";
+            this.SP_crystalNorRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_crystalNorRadioButton.TabIndex = 1;
+            this.SP_crystalNorRadioButton.Tag = "1";
+            this.SP_crystalNorRadioButton.Text = "R2";
+            this.SP_crystalNorRadioButton.UseVisualStyleBackColor = true;
+            this.SP_crystalNorRadioButton.CheckedChanged += new System.EventHandler(this.SP_crystalRadioButton_CheckedChanged);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(173, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 13);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "times";
+            // 
+            // SP_crystalEasyRadioButton
+            // 
+            this.SP_crystalEasyRadioButton.AutoSize = true;
+            this.SP_crystalEasyRadioButton.Checked = true;
+            this.SP_crystalEasyRadioButton.Location = new System.Drawing.Point(78, 23);
+            this.SP_crystalEasyRadioButton.Name = "SP_crystalEasyRadioButton";
+            this.SP_crystalEasyRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_crystalEasyRadioButton.TabIndex = 2;
+            this.SP_crystalEasyRadioButton.TabStop = true;
+            this.SP_crystalEasyRadioButton.Tag = "0";
+            this.SP_crystalEasyRadioButton.Text = "R1";
+            this.SP_crystalEasyRadioButton.UseVisualStyleBackColor = true;
+            this.SP_crystalEasyRadioButton.CheckedChanged += new System.EventHandler(this.SP_crystalRadioButton_CheckedChanged);
+            // 
+            // cakeGroupBox
+            // 
+            this.cakeGroupBox.Controls.Add(this.label13);
+            this.cakeGroupBox.Controls.Add(this.SP_cakeCheckBox);
+            this.cakeGroupBox.Controls.Add(this.SP_cakeHardRadioButton);
+            this.cakeGroupBox.Controls.Add(this.SP_cakeLimitNumericBox);
+            this.cakeGroupBox.Controls.Add(this.SP_cakeNormalRadioButton);
+            this.cakeGroupBox.Controls.Add(this.label8);
+            this.cakeGroupBox.Controls.Add(this.SP_cakeEasyRadioButton);
+            this.cakeGroupBox.Location = new System.Drawing.Point(9, 104);
+            this.cakeGroupBox.Name = "cakeGroupBox";
+            this.cakeGroupBox.Size = new System.Drawing.Size(213, 44);
+            this.cakeGroupBox.TabIndex = 38;
+            this.cakeGroupBox.TabStop = false;
+            this.cakeGroupBox.Text = "Event Tab";
+            // 
+            // SP_cakeCheckBox
+            // 
+            this.SP_cakeCheckBox.AutoSize = true;
+            this.SP_cakeCheckBox.Location = new System.Drawing.Point(7, 0);
+            this.SP_cakeCheckBox.Name = "SP_cakeCheckBox";
+            this.SP_cakeCheckBox.Size = new System.Drawing.Size(88, 17);
+            this.SP_cakeCheckBox.TabIndex = 33;
+            this.SP_cakeCheckBox.Tag = "1";
+            this.SP_cakeCheckBox.Text = "Event Row 1";
+            this.SP_cakeCheckBox.UseVisualStyleBackColor = true;
+            this.SP_cakeCheckBox.CheckedChanged += new System.EventHandler(this.spEnableCheckBox_CheckedChanged);
+            // 
+            // SP_cakeHardRadioButton
+            // 
+            this.SP_cakeHardRadioButton.AutoSize = true;
+            this.SP_cakeHardRadioButton.Location = new System.Drawing.Point(170, 23);
+            this.SP_cakeHardRadioButton.Name = "SP_cakeHardRadioButton";
+            this.SP_cakeHardRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_cakeHardRadioButton.TabIndex = 1;
+            this.SP_cakeHardRadioButton.Tag = "2";
+            this.SP_cakeHardRadioButton.Text = "R3";
+            this.SP_cakeHardRadioButton.UseVisualStyleBackColor = true;
+            this.SP_cakeHardRadioButton.CheckedChanged += new System.EventHandler(this.SP_cakeRadioButton_CheckedChanged);
+            // 
+            // SP_cakeLimitNumericBox
+            // 
+            this.SP_cakeLimitNumericBox.Location = new System.Drawing.Point(131, 0);
+            this.SP_cakeLimitNumericBox.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.SP_cakeLimitNumericBox.Name = "SP_cakeLimitNumericBox";
+            this.SP_cakeLimitNumericBox.Size = new System.Drawing.Size(41, 20);
+            this.SP_cakeLimitNumericBox.TabIndex = 35;
+            this.SP_cakeLimitNumericBox.Tag = "1";
+            this.SP_cakeLimitNumericBox.ValueChanged += new System.EventHandler(this.splimitNumericBox_ValueChanged);
+            // 
+            // SP_cakeNormalRadioButton
+            // 
+            this.SP_cakeNormalRadioButton.AutoSize = true;
+            this.SP_cakeNormalRadioButton.Location = new System.Drawing.Point(123, 23);
+            this.SP_cakeNormalRadioButton.Name = "SP_cakeNormalRadioButton";
+            this.SP_cakeNormalRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_cakeNormalRadioButton.TabIndex = 1;
+            this.SP_cakeNormalRadioButton.Tag = "1";
+            this.SP_cakeNormalRadioButton.Text = "R2";
+            this.SP_cakeNormalRadioButton.UseVisualStyleBackColor = true;
+            this.SP_cakeNormalRadioButton.CheckedChanged += new System.EventHandler(this.SP_cakeRadioButton_CheckedChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(173, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(31, 13);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "times";
+            // 
+            // SP_cakeEasyRadioButton
+            // 
+            this.SP_cakeEasyRadioButton.AutoSize = true;
+            this.SP_cakeEasyRadioButton.Checked = true;
+            this.SP_cakeEasyRadioButton.Location = new System.Drawing.Point(78, 23);
+            this.SP_cakeEasyRadioButton.Name = "SP_cakeEasyRadioButton";
+            this.SP_cakeEasyRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_cakeEasyRadioButton.TabIndex = 2;
+            this.SP_cakeEasyRadioButton.TabStop = true;
+            this.SP_cakeEasyRadioButton.Tag = "0";
+            this.SP_cakeEasyRadioButton.Text = "R1";
+            this.SP_cakeEasyRadioButton.UseVisualStyleBackColor = true;
+            this.SP_cakeEasyRadioButton.CheckedChanged += new System.EventHandler(this.SP_cakeRadioButton_CheckedChanged);
+            // 
+            // dailyGroupBox
+            // 
+            this.dailyGroupBox.Controls.Add(this.label9);
+            this.dailyGroupBox.Controls.Add(this.SP_dailyCheckBox);
+            this.dailyGroupBox.Controls.Add(this.SP_dailyHellRadioButton);
+            this.dailyGroupBox.Controls.Add(this.SP_dailyLimitNumericBox);
+            this.dailyGroupBox.Controls.Add(this.label7);
+            this.dailyGroupBox.Controls.Add(this.SP_dailyHardRadioButton);
+            this.dailyGroupBox.Controls.Add(this.SP_dailyNomalRadioButton);
+            this.dailyGroupBox.Location = new System.Drawing.Point(9, 30);
+            this.dailyGroupBox.Name = "dailyGroupBox";
+            this.dailyGroupBox.Size = new System.Drawing.Size(213, 50);
+            this.dailyGroupBox.TabIndex = 37;
+            this.dailyGroupBox.TabStop = false;
+            this.dailyGroupBox.Text = "Daily";
+            // 
+            // SP_dailyCheckBox
+            // 
+            this.SP_dailyCheckBox.AutoSize = true;
+            this.SP_dailyCheckBox.Location = new System.Drawing.Point(6, 0);
+            this.SP_dailyCheckBox.Name = "SP_dailyCheckBox";
+            this.SP_dailyCheckBox.Size = new System.Drawing.Size(96, 17);
+            this.SP_dailyCheckBox.TabIndex = 34;
+            this.SP_dailyCheckBox.Tag = "0";
+            this.SP_dailyCheckBox.Text = "Daily Dungeon";
+            this.SP_dailyCheckBox.UseVisualStyleBackColor = true;
+            this.SP_dailyCheckBox.CheckedChanged += new System.EventHandler(this.spEnableCheckBox_CheckedChanged);
+            // 
+            // SP_dailyHellRadioButton
+            // 
+            this.SP_dailyHellRadioButton.AutoSize = true;
+            this.SP_dailyHellRadioButton.Location = new System.Drawing.Point(170, 27);
+            this.SP_dailyHellRadioButton.Name = "SP_dailyHellRadioButton";
+            this.SP_dailyHellRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_dailyHellRadioButton.TabIndex = 1;
+            this.SP_dailyHellRadioButton.Tag = "2";
+            this.SP_dailyHellRadioButton.Text = "R3";
+            this.SP_dailyHellRadioButton.UseVisualStyleBackColor = true;
+            this.SP_dailyHellRadioButton.CheckedChanged += new System.EventHandler(this.SP_dailyRadioButton_CheckedChanged);
+            // 
+            // SP_dailyLimitNumericBox
+            // 
+            this.SP_dailyLimitNumericBox.Location = new System.Drawing.Point(130, 1);
+            this.SP_dailyLimitNumericBox.Maximum = new decimal(new int[] {
+            999,
+            0,
+            0,
+            0});
+            this.SP_dailyLimitNumericBox.Name = "SP_dailyLimitNumericBox";
+            this.SP_dailyLimitNumericBox.Size = new System.Drawing.Size(41, 20);
+            this.SP_dailyLimitNumericBox.TabIndex = 35;
+            this.SP_dailyLimitNumericBox.Tag = "0";
+            this.SP_dailyLimitNumericBox.ValueChanged += new System.EventHandler(this.splimitNumericBox_ValueChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(172, 4);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "times";
+            // 
+            // SP_dailyHardRadioButton
+            // 
+            this.SP_dailyHardRadioButton.AutoSize = true;
+            this.SP_dailyHardRadioButton.Location = new System.Drawing.Point(126, 27);
+            this.SP_dailyHardRadioButton.Name = "SP_dailyHardRadioButton";
+            this.SP_dailyHardRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_dailyHardRadioButton.TabIndex = 1;
+            this.SP_dailyHardRadioButton.Tag = "1";
+            this.SP_dailyHardRadioButton.Text = "R2";
+            this.SP_dailyHardRadioButton.UseVisualStyleBackColor = true;
+            this.SP_dailyHardRadioButton.CheckedChanged += new System.EventHandler(this.SP_dailyRadioButton_CheckedChanged);
+            // 
+            // SP_dailyNomalRadioButton
+            // 
+            this.SP_dailyNomalRadioButton.AutoSize = true;
+            this.SP_dailyNomalRadioButton.Checked = true;
+            this.SP_dailyNomalRadioButton.Location = new System.Drawing.Point(78, 27);
+            this.SP_dailyNomalRadioButton.Name = "SP_dailyNomalRadioButton";
+            this.SP_dailyNomalRadioButton.Size = new System.Drawing.Size(39, 17);
+            this.SP_dailyNomalRadioButton.TabIndex = 2;
+            this.SP_dailyNomalRadioButton.TabStop = true;
+            this.SP_dailyNomalRadioButton.Tag = "0";
+            this.SP_dailyNomalRadioButton.Text = "R1";
+            this.SP_dailyNomalRadioButton.UseVisualStyleBackColor = true;
+            this.SP_dailyNomalRadioButton.CheckedChanged += new System.EventHandler(this.SP_dailyRadioButton_CheckedChanged);
+            // 
+            // SP_skillGroupBox
+            // 
+            this.SP_skillGroupBox.Controls.Add(this.SP_wave3Panel);
+            this.SP_skillGroupBox.Controls.Add(this.SP_bothSkillRadio);
+            this.SP_skillGroupBox.Controls.Add(this.SP_wave2Panel);
+            this.SP_skillGroupBox.Controls.Add(this.SP_manualSkillRadio);
+            this.SP_skillGroupBox.Controls.Add(this.SP_autoSkillRadio);
+            this.SP_skillGroupBox.Controls.Add(this.SP_wave1Panel);
+            this.SP_skillGroupBox.Location = new System.Drawing.Point(228, 30);
+            this.SP_skillGroupBox.Name = "SP_skillGroupBox";
+            this.SP_skillGroupBox.Size = new System.Drawing.Size(254, 228);
+            this.SP_skillGroupBox.TabIndex = 29;
+            this.SP_skillGroupBox.TabStop = false;
+            this.SP_skillGroupBox.Tag = "3";
+            this.SP_skillGroupBox.Text = "Skill Management";
+            // 
+            // SP_wave3Panel
+            // 
+            this.SP_wave3Panel.Controls.Add(this.SP_wave3LoopCheckBox);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill10Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill09Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill08Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill07Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill06Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill05Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill04Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill03Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill02Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_wave3Label);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill01Button);
+            this.SP_wave3Panel.Location = new System.Drawing.Point(5, 166);
+            this.SP_wave3Panel.Name = "SP_wave3Panel";
+            this.SP_wave3Panel.Size = new System.Drawing.Size(241, 51);
+            this.SP_wave3Panel.TabIndex = 13;
+            this.SP_wave3Panel.Tag = "9";
+            // 
+            // SP_wave3LoopCheckBox
+            // 
+            this.SP_wave3LoopCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.SP_wave3LoopCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_wave3LoopCheckBox.Location = new System.Drawing.Point(8, 23);
+            this.SP_wave3LoopCheckBox.Name = "SP_wave3LoopCheckBox";
+            this.SP_wave3LoopCheckBox.Size = new System.Drawing.Size(40, 20);
+            this.SP_wave3LoopCheckBox.TabIndex = 24;
+            this.SP_wave3LoopCheckBox.Text = "Loop";
+            this.SP_wave3LoopCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SP_wave3LoopCheckBox.UseVisualStyleBackColor = true;
+            this.SP_wave3LoopCheckBox.CheckedChanged += new System.EventHandler(this.skillLoopCheckBox_CheckedChanged);
+            // 
+            // SP_w3Skill10Button
+            // 
+            this.SP_w3Skill10Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill10Button.Location = new System.Drawing.Point(205, 26);
+            this.SP_w3Skill10Button.Name = "SP_w3Skill10Button";
+            this.SP_w3Skill10Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill10Button.TabIndex = 10;
+            this.SP_w3Skill10Button.Tag = "9";
+            this.SP_w3Skill10Button.UseVisualStyleBackColor = true;
+            this.SP_w3Skill10Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill09Button
+            // 
+            this.SP_w3Skill09Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill09Button.Location = new System.Drawing.Point(173, 26);
+            this.SP_w3Skill09Button.Name = "SP_w3Skill09Button";
+            this.SP_w3Skill09Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill09Button.TabIndex = 9;
+            this.SP_w3Skill09Button.Tag = "8";
+            this.SP_w3Skill09Button.UseVisualStyleBackColor = true;
+            this.SP_w3Skill09Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill08Button
+            // 
+            this.SP_w3Skill08Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill08Button.Location = new System.Drawing.Point(141, 26);
+            this.SP_w3Skill08Button.Name = "SP_w3Skill08Button";
+            this.SP_w3Skill08Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill08Button.TabIndex = 8;
+            this.SP_w3Skill08Button.Tag = "7";
+            this.SP_w3Skill08Button.UseVisualStyleBackColor = true;
+            this.SP_w3Skill08Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill07Button
+            // 
+            this.SP_w3Skill07Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill07Button.Location = new System.Drawing.Point(109, 26);
+            this.SP_w3Skill07Button.Name = "SP_w3Skill07Button";
+            this.SP_w3Skill07Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill07Button.TabIndex = 7;
+            this.SP_w3Skill07Button.Tag = "6";
+            this.SP_w3Skill07Button.UseVisualStyleBackColor = true;
+            this.SP_w3Skill07Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill06Button
+            // 
+            this.SP_w3Skill06Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill06Button.Location = new System.Drawing.Point(77, 26);
+            this.SP_w3Skill06Button.Name = "SP_w3Skill06Button";
+            this.SP_w3Skill06Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill06Button.TabIndex = 6;
+            this.SP_w3Skill06Button.Tag = "5";
+            this.SP_w3Skill06Button.UseVisualStyleBackColor = true;
+            this.SP_w3Skill06Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill05Button
+            // 
+            this.SP_w3Skill05Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill05Button.Location = new System.Drawing.Point(205, 2);
+            this.SP_w3Skill05Button.Name = "SP_w3Skill05Button";
+            this.SP_w3Skill05Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill05Button.TabIndex = 5;
+            this.SP_w3Skill05Button.Tag = "4";
+            this.SP_w3Skill05Button.UseVisualStyleBackColor = true;
+            this.SP_w3Skill05Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill04Button
+            // 
+            this.SP_w3Skill04Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill04Button.Location = new System.Drawing.Point(173, 2);
+            this.SP_w3Skill04Button.Name = "SP_w3Skill04Button";
+            this.SP_w3Skill04Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill04Button.TabIndex = 4;
+            this.SP_w3Skill04Button.Tag = "3";
+            this.SP_w3Skill04Button.UseVisualStyleBackColor = true;
+            this.SP_w3Skill04Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill03Button
+            // 
+            this.SP_w3Skill03Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill03Button.Location = new System.Drawing.Point(141, 2);
+            this.SP_w3Skill03Button.Name = "SP_w3Skill03Button";
+            this.SP_w3Skill03Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill03Button.TabIndex = 3;
+            this.SP_w3Skill03Button.Tag = "2";
+            this.SP_w3Skill03Button.UseVisualStyleBackColor = true;
+            this.SP_w3Skill03Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill02Button
+            // 
+            this.SP_w3Skill02Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill02Button.Location = new System.Drawing.Point(109, 2);
+            this.SP_w3Skill02Button.Name = "SP_w3Skill02Button";
+            this.SP_w3Skill02Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill02Button.TabIndex = 2;
+            this.SP_w3Skill02Button.Tag = "1";
+            this.SP_w3Skill02Button.UseVisualStyleBackColor = true;
+            this.SP_w3Skill02Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_wave3Label
+            // 
+            this.SP_wave3Label.Location = new System.Drawing.Point(6, 7);
+            this.SP_wave3Label.Name = "SP_wave3Label";
+            this.SP_wave3Label.Size = new System.Drawing.Size(60, 13);
+            this.SP_wave3Label.TabIndex = 0;
+            this.SP_wave3Label.Text = "Wave 3";
+            // 
+            // SP_w3Skill01Button
+            // 
+            this.SP_w3Skill01Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill01Button.Location = new System.Drawing.Point(77, 2);
+            this.SP_w3Skill01Button.Name = "SP_w3Skill01Button";
+            this.SP_w3Skill01Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill01Button.TabIndex = 1;
+            this.SP_w3Skill01Button.Tag = "0";
+            this.SP_w3Skill01Button.UseVisualStyleBackColor = true;
+            this.SP_w3Skill01Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_bothSkillRadio
+            // 
+            this.SP_bothSkillRadio.AutoSize = true;
+            this.SP_bothSkillRadio.Location = new System.Drawing.Point(186, 24);
+            this.SP_bothSkillRadio.Name = "SP_bothSkillRadio";
+            this.SP_bothSkillRadio.Size = new System.Drawing.Size(47, 17);
+            this.SP_bothSkillRadio.TabIndex = 7;
+            this.SP_bothSkillRadio.Tag = "2";
+            this.SP_bothSkillRadio.Text = "Both";
+            this.SP_bothSkillRadio.UseVisualStyleBackColor = true;
+            this.SP_bothSkillRadio.CheckedChanged += new System.EventHandler(this.skillTypeRadio_CheckedChanged);
+            // 
+            // SP_wave2Panel
+            // 
+            this.SP_wave2Panel.Controls.Add(this.SP_wave2LoopCheckBox);
+            this.SP_wave2Panel.Controls.Add(this.SP_w2Skill10Button);
+            this.SP_wave2Panel.Controls.Add(this.SP_w2Skill09Button);
+            this.SP_wave2Panel.Controls.Add(this.SP_w2Skill08Button);
+            this.SP_wave2Panel.Controls.Add(this.SP_w2Skill07Button);
+            this.SP_wave2Panel.Controls.Add(this.SP_w2Skill06Button);
+            this.SP_wave2Panel.Controls.Add(this.SP_w2Skill05Button);
+            this.SP_wave2Panel.Controls.Add(this.SP_w2Skill04Button);
+            this.SP_wave2Panel.Controls.Add(this.SP_w2Skill03Button);
+            this.SP_wave2Panel.Controls.Add(this.SP_w2Skill02Button);
+            this.SP_wave2Panel.Controls.Add(this.SP_wave2Label);
+            this.SP_wave2Panel.Controls.Add(this.SP_w2Skill01Button);
+            this.SP_wave2Panel.Location = new System.Drawing.Point(6, 109);
+            this.SP_wave2Panel.Name = "SP_wave2Panel";
+            this.SP_wave2Panel.Size = new System.Drawing.Size(241, 51);
+            this.SP_wave2Panel.TabIndex = 9;
+            this.SP_wave2Panel.Tag = "8";
+            // 
+            // SP_wave2LoopCheckBox
+            // 
+            this.SP_wave2LoopCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.SP_wave2LoopCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_wave2LoopCheckBox.Location = new System.Drawing.Point(8, 23);
+            this.SP_wave2LoopCheckBox.Name = "SP_wave2LoopCheckBox";
+            this.SP_wave2LoopCheckBox.Size = new System.Drawing.Size(40, 20);
+            this.SP_wave2LoopCheckBox.TabIndex = 12;
+            this.SP_wave2LoopCheckBox.Text = "Loop";
+            this.SP_wave2LoopCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SP_wave2LoopCheckBox.UseVisualStyleBackColor = true;
+            this.SP_wave2LoopCheckBox.CheckedChanged += new System.EventHandler(this.skillLoopCheckBox_CheckedChanged);
+            // 
+            // SP_w2Skill10Button
+            // 
+            this.SP_w2Skill10Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w2Skill10Button.Location = new System.Drawing.Point(205, 26);
+            this.SP_w2Skill10Button.Name = "SP_w2Skill10Button";
+            this.SP_w2Skill10Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w2Skill10Button.TabIndex = 10;
+            this.SP_w2Skill10Button.Tag = "9";
+            this.SP_w2Skill10Button.UseVisualStyleBackColor = true;
+            this.SP_w2Skill10Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w2Skill09Button
+            // 
+            this.SP_w2Skill09Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w2Skill09Button.Location = new System.Drawing.Point(173, 26);
+            this.SP_w2Skill09Button.Name = "SP_w2Skill09Button";
+            this.SP_w2Skill09Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w2Skill09Button.TabIndex = 9;
+            this.SP_w2Skill09Button.Tag = "8";
+            this.SP_w2Skill09Button.UseVisualStyleBackColor = true;
+            this.SP_w2Skill09Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w2Skill08Button
+            // 
+            this.SP_w2Skill08Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w2Skill08Button.Location = new System.Drawing.Point(141, 26);
+            this.SP_w2Skill08Button.Name = "SP_w2Skill08Button";
+            this.SP_w2Skill08Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w2Skill08Button.TabIndex = 8;
+            this.SP_w2Skill08Button.Tag = "7";
+            this.SP_w2Skill08Button.UseVisualStyleBackColor = true;
+            this.SP_w2Skill08Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w2Skill07Button
+            // 
+            this.SP_w2Skill07Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w2Skill07Button.Location = new System.Drawing.Point(109, 26);
+            this.SP_w2Skill07Button.Name = "SP_w2Skill07Button";
+            this.SP_w2Skill07Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w2Skill07Button.TabIndex = 7;
+            this.SP_w2Skill07Button.Tag = "6";
+            this.SP_w2Skill07Button.UseVisualStyleBackColor = true;
+            this.SP_w2Skill07Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w2Skill06Button
+            // 
+            this.SP_w2Skill06Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w2Skill06Button.Location = new System.Drawing.Point(77, 26);
+            this.SP_w2Skill06Button.Name = "SP_w2Skill06Button";
+            this.SP_w2Skill06Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w2Skill06Button.TabIndex = 6;
+            this.SP_w2Skill06Button.Tag = "5";
+            this.SP_w2Skill06Button.UseVisualStyleBackColor = true;
+            this.SP_w2Skill06Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w2Skill05Button
+            // 
+            this.SP_w2Skill05Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w2Skill05Button.Location = new System.Drawing.Point(205, 2);
+            this.SP_w2Skill05Button.Name = "SP_w2Skill05Button";
+            this.SP_w2Skill05Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w2Skill05Button.TabIndex = 5;
+            this.SP_w2Skill05Button.Tag = "4";
+            this.SP_w2Skill05Button.UseVisualStyleBackColor = true;
+            this.SP_w2Skill05Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w2Skill04Button
+            // 
+            this.SP_w2Skill04Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w2Skill04Button.Location = new System.Drawing.Point(173, 2);
+            this.SP_w2Skill04Button.Name = "SP_w2Skill04Button";
+            this.SP_w2Skill04Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w2Skill04Button.TabIndex = 4;
+            this.SP_w2Skill04Button.Tag = "3";
+            this.SP_w2Skill04Button.UseVisualStyleBackColor = true;
+            this.SP_w2Skill04Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w2Skill03Button
+            // 
+            this.SP_w2Skill03Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w2Skill03Button.Location = new System.Drawing.Point(141, 2);
+            this.SP_w2Skill03Button.Name = "SP_w2Skill03Button";
+            this.SP_w2Skill03Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w2Skill03Button.TabIndex = 3;
+            this.SP_w2Skill03Button.Tag = "2";
+            this.SP_w2Skill03Button.UseVisualStyleBackColor = true;
+            this.SP_w2Skill03Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w2Skill02Button
+            // 
+            this.SP_w2Skill02Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w2Skill02Button.Location = new System.Drawing.Point(109, 2);
+            this.SP_w2Skill02Button.Name = "SP_w2Skill02Button";
+            this.SP_w2Skill02Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w2Skill02Button.TabIndex = 2;
+            this.SP_w2Skill02Button.Tag = "1";
+            this.SP_w2Skill02Button.UseVisualStyleBackColor = true;
+            this.SP_w2Skill02Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_wave2Label
+            // 
+            this.SP_wave2Label.Location = new System.Drawing.Point(6, 7);
+            this.SP_wave2Label.Name = "SP_wave2Label";
+            this.SP_wave2Label.Size = new System.Drawing.Size(60, 13);
+            this.SP_wave2Label.TabIndex = 0;
+            this.SP_wave2Label.Text = "Wave 2";
+            // 
+            // SP_w2Skill01Button
+            // 
+            this.SP_w2Skill01Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w2Skill01Button.Location = new System.Drawing.Point(77, 2);
+            this.SP_w2Skill01Button.Name = "SP_w2Skill01Button";
+            this.SP_w2Skill01Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w2Skill01Button.TabIndex = 1;
+            this.SP_w2Skill01Button.Tag = "0";
+            this.SP_w2Skill01Button.UseVisualStyleBackColor = true;
+            this.SP_w2Skill01Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_manualSkillRadio
+            // 
+            this.SP_manualSkillRadio.AutoSize = true;
+            this.SP_manualSkillRadio.Location = new System.Drawing.Point(94, 24);
+            this.SP_manualSkillRadio.Name = "SP_manualSkillRadio";
+            this.SP_manualSkillRadio.Size = new System.Drawing.Size(82, 17);
+            this.SP_manualSkillRadio.TabIndex = 6;
+            this.SP_manualSkillRadio.Tag = "1";
+            this.SP_manualSkillRadio.Text = "Manual Skill";
+            this.SP_manualSkillRadio.UseVisualStyleBackColor = true;
+            this.SP_manualSkillRadio.CheckedChanged += new System.EventHandler(this.skillTypeRadio_CheckedChanged);
+            // 
+            // SP_autoSkillRadio
+            // 
+            this.SP_autoSkillRadio.AutoSize = true;
+            this.SP_autoSkillRadio.Checked = true;
+            this.SP_autoSkillRadio.Location = new System.Drawing.Point(15, 24);
+            this.SP_autoSkillRadio.Name = "SP_autoSkillRadio";
+            this.SP_autoSkillRadio.Size = new System.Drawing.Size(69, 17);
+            this.SP_autoSkillRadio.TabIndex = 5;
+            this.SP_autoSkillRadio.TabStop = true;
+            this.SP_autoSkillRadio.Tag = "0";
+            this.SP_autoSkillRadio.Text = "Auto Skill";
+            this.SP_autoSkillRadio.UseVisualStyleBackColor = true;
+            this.SP_autoSkillRadio.CheckedChanged += new System.EventHandler(this.skillTypeRadio_CheckedChanged);
+            // 
+            // SP_wave1Panel
+            // 
+            this.SP_wave1Panel.Controls.Add(this.SP_wave1LoopCheckBox);
+            this.SP_wave1Panel.Controls.Add(this.SP_w1Skill10Button);
+            this.SP_wave1Panel.Controls.Add(this.SP_w1Skill09Button);
+            this.SP_wave1Panel.Controls.Add(this.SP_w1Skill08Button);
+            this.SP_wave1Panel.Controls.Add(this.SP_w1Skill07Button);
+            this.SP_wave1Panel.Controls.Add(this.SP_w1Skill06Button);
+            this.SP_wave1Panel.Controls.Add(this.SP_w1Skill05Button);
+            this.SP_wave1Panel.Controls.Add(this.SP_w1Skill04Button);
+            this.SP_wave1Panel.Controls.Add(this.SP_w1Skill03Button);
+            this.SP_wave1Panel.Controls.Add(this.SP_w1Skill02Button);
+            this.SP_wave1Panel.Controls.Add(this.SP_wave1Label);
+            this.SP_wave1Panel.Controls.Add(this.SP_w1Skill01Button);
+            this.SP_wave1Panel.Location = new System.Drawing.Point(6, 52);
+            this.SP_wave1Panel.Name = "SP_wave1Panel";
+            this.SP_wave1Panel.Size = new System.Drawing.Size(241, 51);
+            this.SP_wave1Panel.TabIndex = 8;
+            this.SP_wave1Panel.Tag = "7";
+            // 
+            // SP_wave1LoopCheckBox
+            // 
+            this.SP_wave1LoopCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
+            this.SP_wave1LoopCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_wave1LoopCheckBox.Location = new System.Drawing.Point(8, 23);
+            this.SP_wave1LoopCheckBox.Name = "SP_wave1LoopCheckBox";
+            this.SP_wave1LoopCheckBox.Size = new System.Drawing.Size(40, 20);
+            this.SP_wave1LoopCheckBox.TabIndex = 12;
+            this.SP_wave1LoopCheckBox.Text = "Loop";
+            this.SP_wave1LoopCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SP_wave1LoopCheckBox.UseVisualStyleBackColor = true;
+            this.SP_wave1LoopCheckBox.CheckedChanged += new System.EventHandler(this.skillLoopCheckBox_CheckedChanged);
+            // 
+            // SP_w1Skill10Button
+            // 
+            this.SP_w1Skill10Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w1Skill10Button.Location = new System.Drawing.Point(205, 26);
+            this.SP_w1Skill10Button.Name = "SP_w1Skill10Button";
+            this.SP_w1Skill10Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w1Skill10Button.TabIndex = 10;
+            this.SP_w1Skill10Button.Tag = "9";
+            this.SP_w1Skill10Button.UseVisualStyleBackColor = true;
+            this.SP_w1Skill10Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w1Skill09Button
+            // 
+            this.SP_w1Skill09Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w1Skill09Button.Location = new System.Drawing.Point(173, 26);
+            this.SP_w1Skill09Button.Name = "SP_w1Skill09Button";
+            this.SP_w1Skill09Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w1Skill09Button.TabIndex = 9;
+            this.SP_w1Skill09Button.Tag = "8";
+            this.SP_w1Skill09Button.UseVisualStyleBackColor = true;
+            this.SP_w1Skill09Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w1Skill08Button
+            // 
+            this.SP_w1Skill08Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w1Skill08Button.Location = new System.Drawing.Point(141, 26);
+            this.SP_w1Skill08Button.Name = "SP_w1Skill08Button";
+            this.SP_w1Skill08Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w1Skill08Button.TabIndex = 8;
+            this.SP_w1Skill08Button.Tag = "7";
+            this.SP_w1Skill08Button.UseVisualStyleBackColor = true;
+            this.SP_w1Skill08Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w1Skill07Button
+            // 
+            this.SP_w1Skill07Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w1Skill07Button.Location = new System.Drawing.Point(109, 26);
+            this.SP_w1Skill07Button.Name = "SP_w1Skill07Button";
+            this.SP_w1Skill07Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w1Skill07Button.TabIndex = 7;
+            this.SP_w1Skill07Button.Tag = "6";
+            this.SP_w1Skill07Button.UseVisualStyleBackColor = true;
+            this.SP_w1Skill07Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w1Skill06Button
+            // 
+            this.SP_w1Skill06Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w1Skill06Button.Location = new System.Drawing.Point(77, 26);
+            this.SP_w1Skill06Button.Name = "SP_w1Skill06Button";
+            this.SP_w1Skill06Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w1Skill06Button.TabIndex = 6;
+            this.SP_w1Skill06Button.Tag = "5";
+            this.SP_w1Skill06Button.UseVisualStyleBackColor = true;
+            this.SP_w1Skill06Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w1Skill05Button
+            // 
+            this.SP_w1Skill05Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w1Skill05Button.Location = new System.Drawing.Point(205, 2);
+            this.SP_w1Skill05Button.Name = "SP_w1Skill05Button";
+            this.SP_w1Skill05Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w1Skill05Button.TabIndex = 5;
+            this.SP_w1Skill05Button.Tag = "4";
+            this.SP_w1Skill05Button.UseVisualStyleBackColor = true;
+            this.SP_w1Skill05Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w1Skill04Button
+            // 
+            this.SP_w1Skill04Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w1Skill04Button.Location = new System.Drawing.Point(173, 2);
+            this.SP_w1Skill04Button.Name = "SP_w1Skill04Button";
+            this.SP_w1Skill04Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w1Skill04Button.TabIndex = 4;
+            this.SP_w1Skill04Button.Tag = "3";
+            this.SP_w1Skill04Button.UseVisualStyleBackColor = true;
+            this.SP_w1Skill04Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w1Skill03Button
+            // 
+            this.SP_w1Skill03Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w1Skill03Button.Location = new System.Drawing.Point(141, 2);
+            this.SP_w1Skill03Button.Name = "SP_w1Skill03Button";
+            this.SP_w1Skill03Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w1Skill03Button.TabIndex = 3;
+            this.SP_w1Skill03Button.Tag = "2";
+            this.SP_w1Skill03Button.UseVisualStyleBackColor = true;
+            this.SP_w1Skill03Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w1Skill02Button
+            // 
+            this.SP_w1Skill02Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w1Skill02Button.Location = new System.Drawing.Point(109, 2);
+            this.SP_w1Skill02Button.Name = "SP_w1Skill02Button";
+            this.SP_w1Skill02Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w1Skill02Button.TabIndex = 2;
+            this.SP_w1Skill02Button.Tag = "1";
+            this.SP_w1Skill02Button.UseVisualStyleBackColor = true;
+            this.SP_w1Skill02Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_wave1Label
+            // 
+            this.SP_wave1Label.Location = new System.Drawing.Point(6, 7);
+            this.SP_wave1Label.Name = "SP_wave1Label";
+            this.SP_wave1Label.Size = new System.Drawing.Size(60, 13);
+            this.SP_wave1Label.TabIndex = 0;
+            this.SP_wave1Label.Text = "Wave 1";
+            // 
+            // SP_w1Skill01Button
+            // 
+            this.SP_w1Skill01Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w1Skill01Button.Location = new System.Drawing.Point(77, 2);
+            this.SP_w1Skill01Button.Name = "SP_w1Skill01Button";
+            this.SP_w1Skill01Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w1Skill01Button.TabIndex = 1;
+            this.SP_w1Skill01Button.Tag = "0";
+            this.SP_w1Skill01Button.UseVisualStyleBackColor = true;
+            this.SP_w1Skill01Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_enableCheckBox
+            // 
+            this.SP_enableCheckBox.AutoSize = true;
+            this.SP_enableCheckBox.Checked = true;
+            this.SP_enableCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.SP_enableCheckBox.Location = new System.Drawing.Point(9, 7);
+            this.SP_enableCheckBox.Name = "SP_enableCheckBox";
+            this.SP_enableCheckBox.Size = new System.Drawing.Size(144, 17);
+            this.SP_enableCheckBox.TabIndex = 25;
+            this.SP_enableCheckBox.Tag = "4";
+            this.SP_enableCheckBox.Text = "Enable Special Dungeon";
+            this.SP_enableCheckBox.UseVisualStyleBackColor = true;
+            this.SP_enableCheckBox.CheckedChanged += new System.EventHandler(this.enableCheckBox_CheckedChanged);
+            // 
             // arenaTab
             // 
             this.arenaTab.BackColor = System.Drawing.Color.Transparent;
@@ -2159,6 +3264,7 @@
             this.RD_RoundNumericUpDown.Name = "RD_RoundNumericUpDown";
             this.RD_RoundNumericUpDown.Size = new System.Drawing.Size(38, 20);
             this.RD_RoundNumericUpDown.TabIndex = 36;
+            this.RD_RoundNumericUpDown.Tag = "6";
             this.RD_RoundNumericUpDown.Value = new decimal(new int[] {
             1,
             0,
@@ -2410,7 +3516,7 @@
             this.RD_limitNumericBox.Name = "RD_limitNumericBox";
             this.RD_limitNumericBox.Size = new System.Drawing.Size(37, 20);
             this.RD_limitNumericBox.TabIndex = 24;
-            this.RD_limitNumericBox.Tag = "2";
+            this.RD_limitNumericBox.Tag = "3";
             this.RD_limitNumericBox.Visible = false;
             this.RD_limitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
             // 
@@ -2443,7 +3549,7 @@
             this.RD_limitCheckBox.Name = "RD_limitCheckBox";
             this.RD_limitCheckBox.Size = new System.Drawing.Size(47, 17);
             this.RD_limitCheckBox.TabIndex = 23;
-            this.RD_limitCheckBox.Tag = "2";
+            this.RD_limitCheckBox.Tag = "3";
             this.RD_limitCheckBox.Text = "Limit";
             this.RD_limitCheckBox.UseVisualStyleBackColor = true;
             this.RD_limitCheckBox.Visible = false;
@@ -3953,9 +5059,9 @@
             // 
             // aiButton
             // 
-            this.aiButton.Location = new System.Drawing.Point(384, 451);
+            this.aiButton.Location = new System.Drawing.Point(396, 451);
             this.aiButton.Name = "aiButton";
-            this.aiButton.Size = new System.Drawing.Size(114, 34);
+            this.aiButton.Size = new System.Drawing.Size(102, 34);
             this.aiButton.TabIndex = 3;
             this.aiButton.Text = "Start AI";
             this.aiButton.UseVisualStyleBackColor = true;
@@ -3963,8 +5069,9 @@
             // 
             // summaryGroupBox
             // 
+            this.summaryGroupBox.Controls.Add(this.pictureBox1);
+            this.summaryGroupBox.Controls.Add(this.GB_WaitForKeys);
             this.summaryGroupBox.Controls.Add(this.HeroCountLabel);
-            this.summaryGroupBox.Controls.Add(this.keysTableLayoutPanel);
             this.summaryGroupBox.Controls.Add(this.raidPictureBox);
             this.summaryGroupBox.Controls.Add(this.goldChamberPictureBox);
             this.summaryGroupBox.Controls.Add(this.arenaPictureBox);
@@ -3973,53 +5080,137 @@
             this.summaryGroupBox.Controls.Add(this.goldChamberCountLabel);
             this.summaryGroupBox.Controls.Add(this.arenaCountLabel);
             this.summaryGroupBox.Controls.Add(this.adventureCountLabel);
-            this.summaryGroupBox.Location = new System.Drawing.Point(4, 446);
+            this.summaryGroupBox.Location = new System.Drawing.Point(109, 445);
             this.summaryGroupBox.Name = "summaryGroupBox";
-            this.summaryGroupBox.Size = new System.Drawing.Size(375, 87);
+            this.summaryGroupBox.Size = new System.Drawing.Size(281, 90);
             this.summaryGroupBox.TabIndex = 4;
             this.summaryGroupBox.TabStop = false;
             this.summaryGroupBox.Text = "Summary";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SevenKnightsAI.Properties.Resources.icon_hero_356;
+            this.pictureBox1.Location = new System.Drawing.Point(183, 22);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(25, 24);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 16;
+            this.pictureBox1.TabStop = false;
+            this.toolTip.SetToolTip(this.pictureBox1, "Hero Count");
+            // 
+            // GB_WaitForKeys
+            // 
+            this.GB_WaitForKeys.AutoSize = true;
+            this.GB_WaitForKeys.ForeColor = System.Drawing.Color.Blue;
+            this.GB_WaitForKeys.Location = new System.Drawing.Point(188, 62);
+            this.GB_WaitForKeys.Name = "GB_WaitForKeys";
+            this.GB_WaitForKeys.Size = new System.Drawing.Size(72, 17);
+            this.GB_WaitForKeys.TabIndex = 11;
+            this.GB_WaitForKeys.Text = "Wait on 0";
+            this.toolTip.SetToolTip(this.GB_WaitForKeys, "Wait Key");
+            this.GB_WaitForKeys.UseVisualStyleBackColor = true;
+            this.GB_WaitForKeys.CheckedChanged += new System.EventHandler(this.GB_WaitForKeys_CheckedChanged);
             // 
             // HeroCountLabel
             // 
             this.HeroCountLabel.AutoSize = true;
             this.HeroCountLabel.ForeColor = System.Drawing.Color.Blue;
-            this.HeroCountLabel.Location = new System.Drawing.Point(282, 65);
+            this.HeroCountLabel.Location = new System.Drawing.Point(212, 27);
             this.HeroCountLabel.Name = "HeroCountLabel";
-            this.HeroCountLabel.Size = new System.Drawing.Size(24, 13);
+            this.HeroCountLabel.Size = new System.Drawing.Size(10, 13);
             this.HeroCountLabel.TabIndex = 14;
-            this.HeroCountLabel.Text = "H: -";
+            this.HeroCountLabel.Text = "-";
             // 
-            // keysTableLayoutPanel
+            // raidPictureBox
             // 
-            this.keysTableLayoutPanel.ColumnCount = 7;
-            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.keysTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 94F));
-            this.keysTableLayoutPanel.Controls.Add(this.arenaKeysLabel, 5, 0);
-            this.keysTableLayoutPanel.Controls.Add(this.adventureKeyPictureBox, 0, 0);
-            this.keysTableLayoutPanel.Controls.Add(this.arenaKeyPictureBox, 4, 0);
-            this.keysTableLayoutPanel.Controls.Add(this.towerKeysLabel, 3, 0);
-            this.keysTableLayoutPanel.Controls.Add(this.towerKeyPictureBox, 2, 0);
-            this.keysTableLayoutPanel.Controls.Add(this.adventureKeysLabel, 1, 0);
-            this.keysTableLayoutPanel.Controls.Add(this.GB_WaitForKeys, 6, 0);
-            this.keysTableLayoutPanel.Location = new System.Drawing.Point(4, 15);
-            this.keysTableLayoutPanel.Name = "keysTableLayoutPanel";
-            this.keysTableLayoutPanel.RowCount = 1;
-            this.keysTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.keysTableLayoutPanel.Size = new System.Drawing.Size(370, 24);
-            this.keysTableLayoutPanel.TabIndex = 13;
+            this.raidPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_raid;
+            this.raidPictureBox.Location = new System.Drawing.Point(98, 57);
+            this.raidPictureBox.Name = "raidPictureBox";
+            this.raidPictureBox.Size = new System.Drawing.Size(25, 24);
+            this.raidPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.raidPictureBox.TabIndex = 11;
+            this.raidPictureBox.TabStop = false;
+            this.toolTip.SetToolTip(this.raidPictureBox, "Raid");
+            // 
+            // goldChamberPictureBox
+            // 
+            this.goldChamberPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_gold_chamber;
+            this.goldChamberPictureBox.Location = new System.Drawing.Point(98, 22);
+            this.goldChamberPictureBox.Name = "goldChamberPictureBox";
+            this.goldChamberPictureBox.Size = new System.Drawing.Size(25, 24);
+            this.goldChamberPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.goldChamberPictureBox.TabIndex = 10;
+            this.goldChamberPictureBox.TabStop = false;
+            this.toolTip.SetToolTip(this.goldChamberPictureBox, "Gold Chamber");
+            // 
+            // arenaPictureBox
+            // 
+            this.arenaPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_arena;
+            this.arenaPictureBox.Location = new System.Drawing.Point(15, 57);
+            this.arenaPictureBox.Name = "arenaPictureBox";
+            this.arenaPictureBox.Size = new System.Drawing.Size(25, 24);
+            this.arenaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.arenaPictureBox.TabIndex = 9;
+            this.arenaPictureBox.TabStop = false;
+            this.toolTip.SetToolTip(this.arenaPictureBox, "Arena");
+            // 
+            // adventurePictureBox
+            // 
+            this.adventurePictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_adventure;
+            this.adventurePictureBox.Location = new System.Drawing.Point(15, 23);
+            this.adventurePictureBox.Name = "adventurePictureBox";
+            this.adventurePictureBox.Size = new System.Drawing.Size(25, 24);
+            this.adventurePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.adventurePictureBox.TabIndex = 8;
+            this.adventurePictureBox.TabStop = false;
+            this.toolTip.SetToolTip(this.adventurePictureBox, "Adventure");
+            // 
+            // raidCountLabel
+            // 
+            this.raidCountLabel.AutoSize = true;
+            this.raidCountLabel.ForeColor = System.Drawing.Color.Blue;
+            this.raidCountLabel.Location = new System.Drawing.Point(127, 62);
+            this.raidCountLabel.Name = "raidCountLabel";
+            this.raidCountLabel.Size = new System.Drawing.Size(10, 13);
+            this.raidCountLabel.TabIndex = 4;
+            this.raidCountLabel.Text = "-";
+            // 
+            // goldChamberCountLabel
+            // 
+            this.goldChamberCountLabel.AutoSize = true;
+            this.goldChamberCountLabel.ForeColor = System.Drawing.Color.Blue;
+            this.goldChamberCountLabel.Location = new System.Drawing.Point(127, 27);
+            this.goldChamberCountLabel.Name = "goldChamberCountLabel";
+            this.goldChamberCountLabel.Size = new System.Drawing.Size(10, 13);
+            this.goldChamberCountLabel.TabIndex = 3;
+            this.goldChamberCountLabel.Text = "-";
+            // 
+            // arenaCountLabel
+            // 
+            this.arenaCountLabel.AutoSize = true;
+            this.arenaCountLabel.ForeColor = System.Drawing.Color.Blue;
+            this.arenaCountLabel.Location = new System.Drawing.Point(44, 62);
+            this.arenaCountLabel.Name = "arenaCountLabel";
+            this.arenaCountLabel.Size = new System.Drawing.Size(10, 13);
+            this.arenaCountLabel.TabIndex = 2;
+            this.arenaCountLabel.Text = "-";
+            // 
+            // adventureCountLabel
+            // 
+            this.adventureCountLabel.AutoSize = true;
+            this.adventureCountLabel.ForeColor = System.Drawing.Color.Blue;
+            this.adventureCountLabel.Location = new System.Drawing.Point(44, 28);
+            this.adventureCountLabel.Name = "adventureCountLabel";
+            this.adventureCountLabel.Size = new System.Drawing.Size(10, 13);
+            this.adventureCountLabel.TabIndex = 1;
+            this.adventureCountLabel.Text = "-";
             // 
             // arenaKeysLabel
             // 
             this.arenaKeysLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.arenaKeysLabel.AutoSize = true;
             this.arenaKeysLabel.ForeColor = System.Drawing.Color.Blue;
-            this.arenaKeysLabel.Location = new System.Drawing.Point(212, 5);
+            this.arenaKeysLabel.Location = new System.Drawing.Point(36, 69);
             this.arenaKeysLabel.Name = "arenaKeysLabel";
             this.arenaKeysLabel.Size = new System.Drawing.Size(10, 13);
             this.arenaKeysLabel.TabIndex = 10;
@@ -4028,7 +5219,7 @@
             // adventureKeyPictureBox
             // 
             this.adventureKeyPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_key_adventure;
-            this.adventureKeyPictureBox.Location = new System.Drawing.Point(3, 3);
+            this.adventureKeyPictureBox.Location = new System.Drawing.Point(11, 15);
             this.adventureKeyPictureBox.Name = "adventureKeyPictureBox";
             this.adventureKeyPictureBox.Size = new System.Drawing.Size(19, 18);
             this.adventureKeyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4039,7 +5230,7 @@
             // arenaKeyPictureBox
             // 
             this.arenaKeyPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_key_arena;
-            this.arenaKeyPictureBox.Location = new System.Drawing.Point(187, 3);
+            this.arenaKeyPictureBox.Location = new System.Drawing.Point(11, 66);
             this.arenaKeyPictureBox.Name = "arenaKeyPictureBox";
             this.arenaKeyPictureBox.Size = new System.Drawing.Size(19, 18);
             this.arenaKeyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4052,7 +5243,7 @@
             this.towerKeysLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.towerKeysLabel.AutoSize = true;
             this.towerKeysLabel.ForeColor = System.Drawing.Color.Blue;
-            this.towerKeysLabel.Location = new System.Drawing.Point(120, 5);
+            this.towerKeysLabel.Location = new System.Drawing.Point(36, 43);
             this.towerKeysLabel.Name = "towerKeysLabel";
             this.towerKeysLabel.Size = new System.Drawing.Size(10, 13);
             this.towerKeysLabel.TabIndex = 9;
@@ -4061,7 +5252,7 @@
             // towerKeyPictureBox
             // 
             this.towerKeyPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_key_tower;
-            this.towerKeyPictureBox.Location = new System.Drawing.Point(95, 3);
+            this.towerKeyPictureBox.Location = new System.Drawing.Point(11, 40);
             this.towerKeyPictureBox.Name = "towerKeyPictureBox";
             this.towerKeyPictureBox.Size = new System.Drawing.Size(19, 18);
             this.towerKeyPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -4074,114 +5265,17 @@
             this.adventureKeysLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.adventureKeysLabel.AutoSize = true;
             this.adventureKeysLabel.ForeColor = System.Drawing.Color.Blue;
-            this.adventureKeysLabel.Location = new System.Drawing.Point(28, 5);
+            this.adventureKeysLabel.Location = new System.Drawing.Point(36, 18);
             this.adventureKeysLabel.Name = "adventureKeysLabel";
             this.adventureKeysLabel.Size = new System.Drawing.Size(10, 13);
             this.adventureKeysLabel.TabIndex = 8;
             this.adventureKeysLabel.Text = "-";
             // 
-            // GB_WaitForKeys
-            // 
-            this.GB_WaitForKeys.AutoSize = true;
-            this.GB_WaitForKeys.ForeColor = System.Drawing.Color.Blue;
-            this.GB_WaitForKeys.Location = new System.Drawing.Point(279, 3);
-            this.GB_WaitForKeys.Name = "GB_WaitForKeys";
-            this.GB_WaitForKeys.Size = new System.Drawing.Size(72, 17);
-            this.GB_WaitForKeys.TabIndex = 11;
-            this.GB_WaitForKeys.Text = "Wait on 0";
-            this.toolTip.SetToolTip(this.GB_WaitForKeys, "BETA");
-            this.GB_WaitForKeys.UseVisualStyleBackColor = true;
-            this.GB_WaitForKeys.CheckedChanged += new System.EventHandler(this.GB_WaitForKeys_CheckedChanged);
-            // 
-            // raidPictureBox
-            // 
-            this.raidPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_raid;
-            this.raidPictureBox.Location = new System.Drawing.Point(150, 63);
-            this.raidPictureBox.Name = "raidPictureBox";
-            this.raidPictureBox.Size = new System.Drawing.Size(19, 18);
-            this.raidPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.raidPictureBox.TabIndex = 11;
-            this.raidPictureBox.TabStop = false;
-            this.toolTip.SetToolTip(this.raidPictureBox, "Raid");
-            // 
-            // goldChamberPictureBox
-            // 
-            this.goldChamberPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_gold_chamber;
-            this.goldChamberPictureBox.Location = new System.Drawing.Point(150, 43);
-            this.goldChamberPictureBox.Name = "goldChamberPictureBox";
-            this.goldChamberPictureBox.Size = new System.Drawing.Size(19, 18);
-            this.goldChamberPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.goldChamberPictureBox.TabIndex = 10;
-            this.goldChamberPictureBox.TabStop = false;
-            this.toolTip.SetToolTip(this.goldChamberPictureBox, "Gold Chamber");
-            // 
-            // arenaPictureBox
-            // 
-            this.arenaPictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_arena;
-            this.arenaPictureBox.Location = new System.Drawing.Point(8, 63);
-            this.arenaPictureBox.Name = "arenaPictureBox";
-            this.arenaPictureBox.Size = new System.Drawing.Size(19, 18);
-            this.arenaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.arenaPictureBox.TabIndex = 9;
-            this.arenaPictureBox.TabStop = false;
-            this.toolTip.SetToolTip(this.arenaPictureBox, "Arena");
-            // 
-            // adventurePictureBox
-            // 
-            this.adventurePictureBox.Image = global::SevenKnightsAI.Properties.Resources.icon_adventure;
-            this.adventurePictureBox.Location = new System.Drawing.Point(8, 43);
-            this.adventurePictureBox.Name = "adventurePictureBox";
-            this.adventurePictureBox.Size = new System.Drawing.Size(19, 18);
-            this.adventurePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.adventurePictureBox.TabIndex = 8;
-            this.adventurePictureBox.TabStop = false;
-            this.toolTip.SetToolTip(this.adventurePictureBox, "Adventure");
-            // 
-            // raidCountLabel
-            // 
-            this.raidCountLabel.AutoSize = true;
-            this.raidCountLabel.ForeColor = System.Drawing.Color.Blue;
-            this.raidCountLabel.Location = new System.Drawing.Point(175, 65);
-            this.raidCountLabel.Name = "raidCountLabel";
-            this.raidCountLabel.Size = new System.Drawing.Size(24, 13);
-            this.raidCountLabel.TabIndex = 4;
-            this.raidCountLabel.Text = "R: -";
-            // 
-            // goldChamberCountLabel
-            // 
-            this.goldChamberCountLabel.AutoSize = true;
-            this.goldChamberCountLabel.ForeColor = System.Drawing.Color.Blue;
-            this.goldChamberCountLabel.Location = new System.Drawing.Point(175, 45);
-            this.goldChamberCountLabel.Name = "goldChamberCountLabel";
-            this.goldChamberCountLabel.Size = new System.Drawing.Size(31, 13);
-            this.goldChamberCountLabel.TabIndex = 3;
-            this.goldChamberCountLabel.Text = "GC: -";
-            // 
-            // arenaCountLabel
-            // 
-            this.arenaCountLabel.AutoSize = true;
-            this.arenaCountLabel.ForeColor = System.Drawing.Color.Blue;
-            this.arenaCountLabel.Location = new System.Drawing.Point(28, 65);
-            this.arenaCountLabel.Name = "arenaCountLabel";
-            this.arenaCountLabel.Size = new System.Drawing.Size(75, 13);
-            this.arenaCountLabel.TabIndex = 2;
-            this.arenaCountLabel.Text = "Arena (W/L): -";
-            // 
-            // adventureCountLabel
-            // 
-            this.adventureCountLabel.AutoSize = true;
-            this.adventureCountLabel.ForeColor = System.Drawing.Color.Blue;
-            this.adventureCountLabel.Location = new System.Drawing.Point(28, 45);
-            this.adventureCountLabel.Name = "adventureCountLabel";
-            this.adventureCountLabel.Size = new System.Drawing.Size(35, 13);
-            this.adventureCountLabel.TabIndex = 1;
-            this.adventureCountLabel.Text = "Adv: -";
-            // 
             // saveSettingsButton
             // 
-            this.saveSettingsButton.Location = new System.Drawing.Point(384, 506);
+            this.saveSettingsButton.Location = new System.Drawing.Point(396, 506);
             this.saveSettingsButton.Name = "saveSettingsButton";
-            this.saveSettingsButton.Size = new System.Drawing.Size(114, 27);
+            this.saveSettingsButton.Size = new System.Drawing.Size(102, 27);
             this.saveSettingsButton.TabIndex = 5;
             this.saveSettingsButton.Text = "Save Settings";
             this.saveSettingsButton.UseVisualStyleBackColor = true;
@@ -4202,7 +5296,7 @@
             // topheaderPictureBox
             // 
             this.topheaderPictureBox.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.topheaderPictureBox.Image = global::SevenKnightsAI.Properties.Resources.Ntitle;
+            this.topheaderPictureBox.Image = global::SevenKnightsAI.Properties.Resources.TitleSeason2;
             this.topheaderPictureBox.Location = new System.Drawing.Point(0, 0);
             this.topheaderPictureBox.Name = "topheaderPictureBox";
             this.topheaderPictureBox.Size = new System.Drawing.Size(504, 80);
@@ -4329,13 +5423,68 @@
             // aiPause
             // 
             this.aiPause.Enabled = false;
-            this.aiPause.Location = new System.Drawing.Point(384, 485);
+            this.aiPause.Location = new System.Drawing.Point(396, 485);
             this.aiPause.Name = "aiPause";
-            this.aiPause.Size = new System.Drawing.Size(114, 21);
+            this.aiPause.Size = new System.Drawing.Size(102, 21);
             this.aiPause.TabIndex = 8;
             this.aiPause.Text = "&Pause";
             this.aiPause.UseVisualStyleBackColor = true;
             this.aiPause.Click += new System.EventHandler(this.aiPause_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.adventureKeyPictureBox);
+            this.groupBox2.Controls.Add(this.adventureKeysLabel);
+            this.groupBox2.Controls.Add(this.towerKeyPictureBox);
+            this.groupBox2.Controls.Add(this.towerKeysLabel);
+            this.groupBox2.Controls.Add(this.arenaKeyPictureBox);
+            this.groupBox2.Controls.Add(this.arenaKeysLabel);
+            this.groupBox2.Location = new System.Drawing.Point(6, 445);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(100, 90);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Key";
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(18, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(54, 13);
+            this.label9.TabIndex = 37;
+            this.label9.Text = "Difficulty";
+            // 
+            // label13
+            // 
+            this.label13.Location = new System.Drawing.Point(21, 24);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(54, 13);
+            this.label13.TabIndex = 37;
+            this.label13.Text = "Difficulty";
+            // 
+            // label14
+            // 
+            this.label14.Location = new System.Drawing.Point(21, 24);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(54, 13);
+            this.label14.TabIndex = 37;
+            this.label14.Text = "Difficulty";
+            // 
+            // label15
+            // 
+            this.label15.Location = new System.Drawing.Point(21, 24);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(54, 13);
+            this.label15.TabIndex = 37;
+            this.label15.Text = "Difficulty";
+            // 
+            // label16
+            // 
+            this.label16.Location = new System.Drawing.Point(21, 24);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(54, 13);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "Difficulty";
             // 
             // MainForm
             // 
@@ -4344,6 +5493,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(504, 561);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.aiPause);
             this.Controls.Add(this.resourcesTableLayoutPanel);
             this.Controls.Add(this.saveSettingsButton);
@@ -4384,6 +5534,28 @@
             this.GC_wave1Panel.ResumeLayout(false);
             this.GC_formationPanel.ResumeLayout(false);
             this.GC_formationPanel.PerformLayout();
+            this.specialDungeonTab.ResumeLayout(false);
+            this.specialDungeonTab.PerformLayout();
+            this.karinGroupBox.ResumeLayout(false);
+            this.karinGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_karinLimitNumericBox)).EndInit();
+            this.evanGroupBox.ResumeLayout(false);
+            this.evanGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_evanLimitNumericBox)).EndInit();
+            this.crystalGroupBox.ResumeLayout(false);
+            this.crystalGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_crystalLimitNumericBox)).EndInit();
+            this.cakeGroupBox.ResumeLayout(false);
+            this.cakeGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_cakeLimitNumericBox)).EndInit();
+            this.dailyGroupBox.ResumeLayout(false);
+            this.dailyGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_dailyLimitNumericBox)).EndInit();
+            this.SP_skillGroupBox.ResumeLayout(false);
+            this.SP_skillGroupBox.PerformLayout();
+            this.SP_wave3Panel.ResumeLayout(false);
+            this.SP_wave2Panel.ResumeLayout(false);
+            this.SP_wave1Panel.ResumeLayout(false);
             this.arenaTab.ResumeLayout(false);
             this.arenaTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AR_limitNumericBox)).EndInit();
@@ -4450,15 +5622,14 @@
             this.statusStrip.PerformLayout();
             this.summaryGroupBox.ResumeLayout(false);
             this.summaryGroupBox.PerformLayout();
-            this.keysTableLayoutPanel.ResumeLayout(false);
-            this.keysTableLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.adventureKeyPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.arenaKeyPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.towerKeyPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.raidPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.goldChamberPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arenaPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.adventurePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.adventureKeyPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.arenaKeyPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.towerKeyPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topheaderPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.topazPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.honorPictureBox)).EndInit();
@@ -4466,6 +5637,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.goldPictureBox)).EndInit();
             this.resourcesTableLayoutPanel.ResumeLayout(false);
             this.resourcesTableLayoutPanel.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -4922,8 +6095,6 @@
 		
 		private global::System.Windows.Forms.PictureBox honorPictureBox;
 
-		
-		private global::System.Windows.Forms.TableLayoutPanel keysTableLayoutPanel;
 
 		
 		private global::System.Windows.Forms.Button LG_clearButton;
@@ -5361,5 +6532,93 @@
         private System.Windows.Forms.NumericUpDown RD_DragonHPLimit;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox AD_teamComboBox2;
+        private System.Windows.Forms.TabPage specialDungeonTab;
+        private System.Windows.Forms.GroupBox SP_skillGroupBox;
+        private System.Windows.Forms.RadioButton SP_bothSkillRadio;
+        private System.Windows.Forms.Panel SP_wave2Panel;
+        private System.Windows.Forms.CheckBox SP_wave2LoopCheckBox;
+        private System.Windows.Forms.Button SP_w2Skill10Button;
+        private System.Windows.Forms.Button SP_w2Skill09Button;
+        private System.Windows.Forms.Button SP_w2Skill08Button;
+        private System.Windows.Forms.Button SP_w2Skill07Button;
+        private System.Windows.Forms.Button SP_w2Skill06Button;
+        private System.Windows.Forms.Button SP_w2Skill05Button;
+        private System.Windows.Forms.Button SP_w2Skill04Button;
+        private System.Windows.Forms.Button SP_w2Skill03Button;
+        private System.Windows.Forms.Button SP_w2Skill02Button;
+        private System.Windows.Forms.Label SP_wave2Label;
+        private System.Windows.Forms.Button SP_w2Skill01Button;
+        private System.Windows.Forms.RadioButton SP_manualSkillRadio;
+        private System.Windows.Forms.RadioButton SP_autoSkillRadio;
+        private System.Windows.Forms.Panel SP_wave1Panel;
+        private System.Windows.Forms.CheckBox SP_wave1LoopCheckBox;
+        private System.Windows.Forms.Button SP_w1Skill10Button;
+        private System.Windows.Forms.Button SP_w1Skill09Button;
+        private System.Windows.Forms.Button SP_w1Skill08Button;
+        private System.Windows.Forms.Button SP_w1Skill07Button;
+        private System.Windows.Forms.Button SP_w1Skill06Button;
+        private System.Windows.Forms.Button SP_w1Skill05Button;
+        private System.Windows.Forms.Button SP_w1Skill04Button;
+        private System.Windows.Forms.Button SP_w1Skill03Button;
+        private System.Windows.Forms.Button SP_w1Skill02Button;
+        private System.Windows.Forms.Label SP_wave1Label;
+        private System.Windows.Forms.Button SP_w1Skill01Button;
+        private System.Windows.Forms.CheckBox SP_enableCheckBox;
+        private System.Windows.Forms.RadioButton SP_dailyHardRadioButton;
+        private System.Windows.Forms.RadioButton SP_dailyNomalRadioButton;
+        private System.Windows.Forms.Panel SP_wave3Panel;
+        private System.Windows.Forms.CheckBox SP_wave3LoopCheckBox;
+        private System.Windows.Forms.Button SP_w3Skill10Button;
+        private System.Windows.Forms.Button SP_w3Skill09Button;
+        private System.Windows.Forms.Button SP_w3Skill08Button;
+        private System.Windows.Forms.Button SP_w3Skill07Button;
+        private System.Windows.Forms.Button SP_w3Skill06Button;
+        private System.Windows.Forms.Button SP_w3Skill05Button;
+        private System.Windows.Forms.Button SP_w3Skill04Button;
+        private System.Windows.Forms.Button SP_w3Skill03Button;
+        private System.Windows.Forms.Button SP_w3Skill02Button;
+        private System.Windows.Forms.Label SP_wave3Label;
+        private System.Windows.Forms.Button SP_w3Skill01Button;
+        private System.Windows.Forms.RadioButton SP_dailyHellRadioButton;
+        private System.Windows.Forms.GroupBox cakeGroupBox;
+        private System.Windows.Forms.CheckBox SP_cakeCheckBox;
+        private System.Windows.Forms.NumericUpDown SP_cakeLimitNumericBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox dailyGroupBox;
+        private System.Windows.Forms.CheckBox SP_dailyCheckBox;
+        private System.Windows.Forms.NumericUpDown SP_dailyLimitNumericBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox karinGroupBox;
+        private System.Windows.Forms.CheckBox SP_karinCheckBox;
+        private System.Windows.Forms.RadioButton SP_karinHellRadioButton;
+        private System.Windows.Forms.NumericUpDown SP_karinLimitNumericBox;
+        private System.Windows.Forms.RadioButton SP_karinHardRadioButton;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.RadioButton SP_karinNorRadioButton;
+        private System.Windows.Forms.GroupBox evanGroupBox;
+        private System.Windows.Forms.CheckBox SP_evanCheckBox;
+        private System.Windows.Forms.RadioButton SP_evanHellRadioButton;
+        private System.Windows.Forms.NumericUpDown SP_evanLimitNumericBox;
+        private System.Windows.Forms.RadioButton SP_evanHardRadioButton;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.RadioButton SP_evanNorRadioButton;
+        private System.Windows.Forms.GroupBox crystalGroupBox;
+        private System.Windows.Forms.CheckBox SP_crystalCheckBox;
+        private System.Windows.Forms.RadioButton SP_crystalHardRadioButton;
+        private System.Windows.Forms.NumericUpDown SP_crystalLimitNumericBox;
+        private System.Windows.Forms.RadioButton SP_crystalNorRadioButton;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RadioButton SP_crystalEasyRadioButton;
+        private System.Windows.Forms.RadioButton SP_cakeHardRadioButton;
+        private System.Windows.Forms.RadioButton SP_cakeNormalRadioButton;
+        private System.Windows.Forms.RadioButton SP_cakeEasyRadioButton;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
     }
 }

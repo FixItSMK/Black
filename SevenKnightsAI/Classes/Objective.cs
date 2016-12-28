@@ -10,6 +10,8 @@ namespace SevenKnightsAI.Classes
 
         GOLD_CHAMBER,
 
+        SPECIAL_DUNGEON,
+
         ARENA,
 
         RAID,
