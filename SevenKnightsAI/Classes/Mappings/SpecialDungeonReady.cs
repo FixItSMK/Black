@@ -15,6 +15,14 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping KeyPlus = new PixelMapping
+        {
+            X = 706,
+            Y = 28,
+            Color = 12690781,
+            Type = MappingType.ANCHOR
+        };
+
         public static readonly PixelMapping BackButton = new PixelMapping
         {
             X = 58,
@@ -33,34 +41,42 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping AllTab = new PixelMapping
         {
-            X = 103,
-            Y = 71,
-            Color = 0,
-            Type = MappingType.BUTTON
+            X = 88,
+            Y = 68,
+            Color = 2757895,
+            Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping DailyTab = new PixelMapping
         {
-            X = 216,
-            Y = 69,
-            Color = 0,
-            Type = MappingType.BUTTON
+            X = 180,
+            Y = 66,
+            Color = 2823432,
+            Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping AdventTab = new PixelMapping
         {
-            X = 335,
+            X = 275,
             Y = 69,
-            Color = 0,
-            Type = MappingType.BUTTON
+            Color = 2757639,
+            Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping EventTab = new PixelMapping
         {
-            X = 456,
-            Y = 69,
-            Color = 0,
-            Type = MappingType.BUTTON
+            X = 373,
+            Y = 67,
+            Color = 2823432,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping AwakenTab = new PixelMapping
+        {
+            X = 468,
+            Y = 68,
+            Color = 2757895,
+            Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping Row1Select = new PixelMapping
@@ -161,25 +177,25 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping MaxKeyPlusBG = new PixelMapping
         {
-            X = 702,
-            Y = 25,
-            Color = 0x453b27,
+            X = 706,
+            Y = 28,
+            Color = 3748123,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping MaxCardPlusBG = new PixelMapping
         {
-            X = 842,
+            X = 843,
             Y = 28,
-            Color = 0x39311b,
+            Color = 3748123,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping MaxYellowTik = new PixelMapping
         {
-            X = 417,
+            X = 418,
             Y = 399,
-            Color = 0xffb81a,
+            Color = 16758810,
             Type = MappingType.BOTH
         };
 
@@ -198,5 +214,8 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 0,
             Type = MappingType.BUTTON
         };
+        public static readonly int KEY_OFFSET_X = 550;
+
+        public static readonly int KEY_OFFSET_Y = 0;
     }
 }

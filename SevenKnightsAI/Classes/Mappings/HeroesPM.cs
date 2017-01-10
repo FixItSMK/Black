@@ -9,9 +9,12 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping BlockingChatCloseButton = new PixelMapping
         {
-            X = 907,
-            Y = 81,
-            Color = 13843721,
+            //X = 907,
+            //Y = 81,
+            //Color = 13843721,
+            X = 900,
+            Y = 26,
+            Color = 0xc73d0b,
             Type = MappingType.BOTH
         };
 

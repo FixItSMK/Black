@@ -1297,17 +1297,23 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping World11_1Anchor_1 = new PixelMapping
         {
-            X = 95,
-            Y = 137,
-            Color = 13531685,
+            //X = 95,
+            //Y = 137,
+            //Color = 13531685,
+            X = 480,
+            Y = 132,
+            Color = 14381106,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping World11_1Anchor_2 = new PixelMapping
         {
-            X = 645,
-            Y = 250,
-            Color = 9848873,
+            //X = 645,
+            //Y = 250,
+            //Color = 9848873,
+            X = 557,
+            Y = 440,
+            Color = 15843178,
             Type = MappingType.ANCHOR
         };
 

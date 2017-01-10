@@ -2285,5 +2285,39 @@ namespace SevenKnightsAI
                     return;
             }
         }
+
+        private void label17_MouseClick(object sender, MouseEventArgs e)
+        {
+            DateTime myval = DateTime.Now;
+            testdayofweek.Text = myval.DayOfWeek.ToString();
+            if (testdayofweek.Text == "Monday")
+            {
+                MessageBox.Show("Monday");
+            }
+            else if(testdayofweek.Text == "Tuesday")
+            {
+                MessageBox.Show("Tuesday");
+            }
+            else if (testdayofweek.Text == "Wednesday")
+            {
+                MessageBox.Show("Wednesday");
+            }
+            else if (testdayofweek.Text == "Thursday")
+            {
+                MessageBox.Show("Thursday");
+            }
+            else if (testdayofweek.Text == "Friday")
+            {
+                MessageBox.Show("Friday");
+            }
+            else if (testdayofweek.Text == "Saturday")
+            {
+                MessageBox.Show("Saturday");
+            }
+            else if (testdayofweek.Text == "Sunday")
+            {
+                MessageBox.Show("Sunday");
+            }
+        }
     }
 }

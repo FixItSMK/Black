@@ -7,6 +7,14 @@ namespace SevenKnightsAI.Classes.Mappings
 {
     class SpecialDungeonFightPM
     {
+        public static readonly PixelMapping SWaveCheck = new PixelMapping
+        {
+            X = 395,
+            Y = 22,
+            Color = 0xd6c8b6,
+            Type = MappingType.ANCHOR
+        };
+
         public static readonly PixelMapping Turn1Of2 = new PixelMapping
         {
             X = 478,

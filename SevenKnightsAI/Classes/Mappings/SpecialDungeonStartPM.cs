@@ -54,5 +54,21 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 5120782,
             Type = MappingType.BUTTON
         };
+
+        public static readonly PixelMapping KeyPlusBG = new PixelMapping
+        {
+            X = 705,
+            Y = 28,
+            Color = 3748123,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping CardEnterButton = new PixelMapping
+        {
+            X = 511,
+            Y = 392,
+            Color = 11770259,
+            Type = MappingType.BOTH
+        };
     }
 }
