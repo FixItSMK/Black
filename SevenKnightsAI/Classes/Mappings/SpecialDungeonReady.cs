@@ -41,31 +41,31 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping AllTab = new PixelMapping
         {
-            X = 88,
-            Y = 68,
-            Color = 2757895,
+            X = 99,
+            Y = 69,
+            Color = 2692103,
             Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping DailyTab = new PixelMapping
         {
-            X = 180,
-            Y = 66,
+            X = 218,
+            Y = 67,
             Color = 2823432,
             Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping AdventTab = new PixelMapping
         {
-            X = 275,
-            Y = 69,
-            Color = 2757639,
+            X = 335,
+            Y = 67,
+            Color = 2823432,
             Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping EventTab = new PixelMapping
         {
-            X = 373,
+            X = 455,
             Y = 67,
             Color = 2823432,
             Type = MappingType.BOTH

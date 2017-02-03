@@ -9,17 +9,17 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly PixelMapping SPrachelNo = new PixelMapping
         {
-            X = 282,
-            Y = 456,
-            Color = 13253386,
+            X = 287,
+            Y = 453,
+            Color = 14302729,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping SPrachelBuy = new PixelMapping
         {
-            X = 578,
-            Y = 454,
-            Color = 14788355,
+            X = 553,
+            Y = 456,
+            Color = 16761637,
             Type = MappingType.ANCHOR
         };
 
@@ -33,8 +33,8 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping SPrachel = new PixelMapping
         {
-            X = 243,
-            Y = 160,
+            X = 241,
+            Y = 154,
             Color = 16767426,
             Type = MappingType.ANCHOR
         };
@@ -267,7 +267,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 181,
             Y = 197,
-            Color = 15720432,
+            Color = 11575718,
             Type = MappingType.ANCHOR
         };
 
@@ -295,13 +295,22 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping EventPackColor = new PixelMapping
+        public static readonly PixelMapping EventPackColor1 = new PixelMapping
         {
-            X = 220,
-            Y = 448,
-            Color = 12589851,
+            X = 170,
+            Y = 430,
+            Color = 8848364,
             Type = MappingType.ANCHOR
         };
+
+        public static readonly PixelMapping EventPackColor2 = new PixelMapping
+        {
+            X = 160,
+            Y = 463,
+            Color = 5834137,
+            Type = MappingType.ANCHOR
+        };
+
 
         public static readonly PixelMapping EventPackColorbg = new PixelMapping
         {
@@ -341,6 +350,22 @@ namespace SevenKnightsAI.Classes.Mappings
             Y = 435,
             Color = 2556995,
             Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ExitNo = new PixelMapping
+        {
+            X = 367,
+            Y = 394,
+            Color = 5251854,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping ExitYes = new PixelMapping
+        {
+            X = 568,
+            Y = 392,
+            Color = 4595982,
+            Type = MappingType.BOTH
         };
     }
 }

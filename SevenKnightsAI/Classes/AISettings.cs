@@ -162,20 +162,11 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "GC_UseFriend")]
         public bool GC_UseFriend;
 
-        [XmlElement(ElementName = "RD_DragonLimit")]
-        public int RD_DragonLimit;
-
         [XmlElement(ElementName = "RD_Enable")]
         public bool RD_Enable;
 
         [XmlElement(ElementName = "RD_EnableDragonLimit")]
         public bool RD_EnableDragonLimit;
-
-        [XmlElement(ElementName = "RD_EnableLimit")]
-        public bool RD_EnableLimit;
-
-        [XmlElement(ElementName = "RD_Limit")]
-        public int RD_Limit;
 
         [XmlElement(ElementName = "RD_Mastery")]
         public Mastery RD_Mastery;
@@ -191,9 +182,6 @@ namespace SevenKnightsAI.Classes
 
         [XmlElement(ElementName = "RD_Team2Loop")]
         public bool RD_Team2Loop;
-
-        [XmlElement(ElementName = "RD_Hp50Up")]
-        public bool RD_Hp50Up;
 
         [XmlElement(ElementName = "ARD_Enable")]
         public bool ARD_Enable;
@@ -411,6 +399,12 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "SP_KarinLimit")]
         public int SP_KarinLimit;
 
+        [XmlElement(ElementName = "SP_EnableLimit")]
+        public bool SP_EnableLimit;
+
+        [XmlElement(ElementName = "SP_Limit")]
+        public int SP_Limit;
+
         public string Version = Application.ProductVersion;
 
         #endregion Public Fields
@@ -450,14 +444,10 @@ namespace SevenKnightsAI.Classes
             this.AR_UseRuby = false;
             this.AR_UseRubyAmount = 0;
             this.RD_Enable = true;
-            this.RD_EnableLimit = false;
             this.RD_EnableDragonLimit = true;
-            this.RD_DragonLimit = 1;
-            this.RD_Limit = 0;
             this.RD_SkillType = SkillType.Both;
             this.RD_Team1Loop = false;
             this.RD_Team2Loop = false;
-            this.RD_Hp50Up = false;
             this.RD_OwnerDragon = true;
             this.RD_LevelCheckBox = true;
             this.RD_DragonLV = 1;
@@ -516,6 +506,8 @@ namespace SevenKnightsAI.Classes
             this.SP_CrystalEasy = true;
             this.SP_EvanNormal = true;
             this.SP_karinNormal = true;
+            this.SP_EnableLimit = false;
+            this.SP_Limit = 0;
         }
 
         #endregion Public Constructors
@@ -837,18 +829,6 @@ namespace SevenKnightsAI.Classes
                 { }
                 try
                 {
-                    aISettings.RD_EnableLimit = (bool)dictionary["RD_EnableLimit"];
-                }
-                catch (Exception)
-                { }
-                try
-                {
-                    aISettings.RD_Limit = Convert.ToInt32(dictionary["RD_Limit"]);
-                }
-                catch (Exception)
-                { }
-                try
-                {
                     aISettings.RD_Mastery = (Mastery)Convert.ToInt32(dictionary["RD_Mastery"]);
                 }
                 catch (Exception)
@@ -856,12 +836,6 @@ namespace SevenKnightsAI.Classes
                 try
                 {
                     aISettings.RD_EnableDragonLimit = (bool)dictionary["RD_EnableDragonLimit"];
-                }
-                catch (Exception)
-                { }
-                try
-                {
-                    aISettings.RD_DragonLimit = (int)dictionary["RD_DragonLimit"];
                 }
                 catch (Exception)
                 { }
@@ -892,12 +866,6 @@ namespace SevenKnightsAI.Classes
                 try
                 {
                     aISettings.RD_Team2Loop = (bool)dictionary["RD_Team2Loop"];
-                }
-                catch (Exception)
-                { }
-                try
-                {
-                    aISettings.RD_Hp50Up = (bool)dictionary["RD_Hp50Up"];
                 }
                 catch (Exception)
                 { }
@@ -1327,6 +1295,18 @@ namespace SevenKnightsAI.Classes
                 }
                 catch (Exception)
                 { }
+                try
+                {
+                    aISettings.SP_EnableLimit = (bool)dictionary["SP_EnableLimit"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_Limit = Convert.ToInt32(dictionary["SP_Limit"]);
+                }
+                catch (Exception)
+                { }
                 return aISettings;
             }
             throw new AISettingsException("Settings file not found", -1);
@@ -1529,24 +1509,12 @@ namespace SevenKnightsAI.Classes
                     this.RD_Enable
                 },
                 {
-                    "RD_EnableLimit",
-                    this.RD_EnableLimit
-                },
-                {
-                    "RD_Limit",
-                    this.RD_Limit
-                },
-                {
                     "RD_Mastery",
                     this.RD_Mastery
                 },
                 {
                     "RD_EnableDragonLimit",
                     this.RD_EnableDragonLimit
-                },
-                {
-                    "RD_DragonLimit",
-                    this.RD_DragonLimit
                 },
                 {
                     "RD_SkillType",
@@ -1567,10 +1535,6 @@ namespace SevenKnightsAI.Classes
                 {
                     "RD_Team2Loop",
                     this.RD_Team2Loop
-                },
-                {
-                    "RD_Hp50Up",
-                    this.RD_Hp50Up
                 },
                 {
                     "RD_OwnerDragon",
@@ -1867,6 +1831,14 @@ namespace SevenKnightsAI.Classes
                 {
                     "SP_KarinLimit",
                     this.SP_KarinLimit
+                },
+                {
+                    "SP_EnableLimit",
+                    this.SP_EnableLimit
+                },
+                {
+                    "SP_Limit",
+                    this.SP_Limit
                 }
             };
             string data = JsonConvert.SerializeObject(value);

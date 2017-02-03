@@ -134,6 +134,30 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping Fight_AweakButton = new PixelMapping
+        {
+            X = 804,
+            Y = 80,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping Fight_AweakOff = new PixelMapping
+        {
+            X = 802,
+            Y = 78,
+            Color = 5454884,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Fight_AweakOn = new PixelMapping
+        {
+            X = 802,
+            Y = 78,
+            Color = 6830618,
+            Type = MappingType.ANCHOR
+        };
+
         #endregion Public Fields
     }
 }

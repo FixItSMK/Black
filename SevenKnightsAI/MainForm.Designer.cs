@@ -154,6 +154,9 @@
             this.GC_teamLabel = new System.Windows.Forms.Label();
             this.GC_enableCheckBox = new System.Windows.Forms.CheckBox();
             this.specialDungeonTab = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.SP_limitNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.SP_limitCheckBox = new System.Windows.Forms.CheckBox();
             this.karinGroupBox = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
             this.SP_karinCheckBox = new System.Windows.Forms.CheckBox();
@@ -196,6 +199,11 @@
             this.SP_dailyNomalRadioButton = new System.Windows.Forms.RadioButton();
             this.SP_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.SP_wave3Panel = new System.Windows.Forms.Panel();
+            this.SP_w3Skill11Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill12Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill13Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill14Button = new System.Windows.Forms.Button();
+            this.SP_w3Skill15Button = new System.Windows.Forms.Button();
             this.SP_wave3LoopCheckBox = new System.Windows.Forms.CheckBox();
             this.SP_w3Skill10Button = new System.Windows.Forms.Button();
             this.SP_w3Skill09Button = new System.Windows.Forms.Button();
@@ -263,15 +271,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.RD_DragonLV = new System.Windows.Forms.NumericUpDown();
             this.RD_DragonHP = new System.Windows.Forms.NumericUpDown();
-            this.RD_DragonLimitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.RD_OwnerDragon = new System.Windows.Forms.CheckBox();
             this.RD_masteryComboBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.RD_Hp50Up_CheckBox = new System.Windows.Forms.CheckBox();
-            this.RD_limitNumericBox = new System.Windows.Forms.NumericUpDown();
             this.ARD_enableCheckBox = new System.Windows.Forms.CheckBox();
-            this.RD_limitLabel = new System.Windows.Forms.Label();
-            this.RD_limitCheckBox = new System.Windows.Forms.CheckBox();
             this.RD_StopOnDragonFound_Checkbox = new System.Windows.Forms.CheckBox();
             this.RD_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.RD_bothSkillRadio = new System.Windows.Forms.RadioButton();
@@ -455,6 +458,7 @@
             this.GC_wave1Panel.SuspendLayout();
             this.GC_formationPanel.SuspendLayout();
             this.specialDungeonTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_limitNumericBox)).BeginInit();
             this.karinGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SP_karinLimitNumericBox)).BeginInit();
             this.evanGroupBox.SuspendLayout();
@@ -482,8 +486,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RD_DragonHPLimit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RD_DragonHP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLimitNumericBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RD_limitNumericBox)).BeginInit();
             this.RD_skillGroupBox.SuspendLayout();
             this.RD_team2Panel.SuspendLayout();
             this.RD_team1Panel.SuspendLayout();
@@ -573,7 +575,7 @@
             // AD_UseFriendCheckBox
             // 
             this.AD_UseFriendCheckBox.AutoSize = true;
-            this.AD_UseFriendCheckBox.Location = new System.Drawing.Point(362, 31);
+            this.AD_UseFriendCheckBox.Location = new System.Drawing.Point(229, 29);
             this.AD_UseFriendCheckBox.Name = "AD_UseFriendCheckBox";
             this.AD_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
             this.AD_UseFriendCheckBox.TabIndex = 28;
@@ -615,7 +617,7 @@
             // AD_continuousCheckBox
             // 
             this.AD_continuousCheckBox.AutoSize = true;
-            this.AD_continuousCheckBox.Location = new System.Drawing.Point(362, 52);
+            this.AD_continuousCheckBox.Location = new System.Drawing.Point(351, 52);
             this.AD_continuousCheckBox.Name = "AD_continuousCheckBox";
             this.AD_continuousCheckBox.Size = new System.Drawing.Size(128, 17);
             this.AD_continuousCheckBox.TabIndex = 5;
@@ -626,12 +628,14 @@
             // AD_CheckingHeroes_Checkbox
             // 
             this.AD_CheckingHeroes_Checkbox.AutoSize = true;
-            this.AD_CheckingHeroes_Checkbox.Location = new System.Drawing.Point(229, 31);
+            this.AD_CheckingHeroes_Checkbox.Enabled = false;
+            this.AD_CheckingHeroes_Checkbox.Location = new System.Drawing.Point(148, 8);
             this.AD_CheckingHeroes_Checkbox.Name = "AD_CheckingHeroes_Checkbox";
             this.AD_CheckingHeroes_Checkbox.Size = new System.Drawing.Size(134, 17);
             this.AD_CheckingHeroes_Checkbox.TabIndex = 26;
             this.AD_CheckingHeroes_Checkbox.Text = "Check Max Heroes Lvl";
             this.AD_CheckingHeroes_Checkbox.UseVisualStyleBackColor = true;
+            this.AD_CheckingHeroes_Checkbox.Visible = false;
             this.AD_CheckingHeroes_Checkbox.CheckedChanged += new System.EventHandler(this.AD_CheckingHeroes_Checkbox_CheckedChanged);
             // 
             // AD_StopOnFullItems_Checkbox
@@ -1039,67 +1043,62 @@
             // 
             // AD_w3Skill11Button
             // 
-            this.AD_w3Skill11Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AD_w3Skill11Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AD_w3Skill11Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.AD_w3Skill11Button.Location = new System.Drawing.Point(77, 9);
+            this.AD_w3Skill11Button.Location = new System.Drawing.Point(77, 6);
             this.AD_w3Skill11Button.Name = "AD_w3Skill11Button";
             this.AD_w3Skill11Button.Size = new System.Drawing.Size(23, 23);
-            this.AD_w3Skill11Button.TabIndex = 25;
+            this.AD_w3Skill11Button.TabIndex = 11;
             this.AD_w3Skill11Button.Tag = "10";
-            this.toolTip.SetToolTip(this.AD_w3Skill11Button, "For Test Only");
             this.AD_w3Skill11Button.UseVisualStyleBackColor = true;
             this.AD_w3Skill11Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
             // AD_w3Skill12Button
             // 
-            this.AD_w3Skill12Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AD_w3Skill12Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AD_w3Skill12Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.AD_w3Skill12Button.Location = new System.Drawing.Point(109, 9);
+            this.AD_w3Skill12Button.Location = new System.Drawing.Point(109, 6);
             this.AD_w3Skill12Button.Name = "AD_w3Skill12Button";
             this.AD_w3Skill12Button.Size = new System.Drawing.Size(23, 23);
-            this.AD_w3Skill12Button.TabIndex = 25;
+            this.AD_w3Skill12Button.TabIndex = 12;
             this.AD_w3Skill12Button.Tag = "11";
-            this.toolTip.SetToolTip(this.AD_w3Skill12Button, "For Test Only");
             this.AD_w3Skill12Button.UseVisualStyleBackColor = true;
             this.AD_w3Skill12Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
             // AD_w3Skill13Button
             // 
-            this.AD_w3Skill13Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AD_w3Skill13Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AD_w3Skill13Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.AD_w3Skill13Button.Location = new System.Drawing.Point(141, 9);
+            this.AD_w3Skill13Button.Location = new System.Drawing.Point(141, 6);
             this.AD_w3Skill13Button.Name = "AD_w3Skill13Button";
             this.AD_w3Skill13Button.Size = new System.Drawing.Size(23, 23);
-            this.AD_w3Skill13Button.TabIndex = 25;
+            this.AD_w3Skill13Button.TabIndex = 13;
             this.AD_w3Skill13Button.Tag = "12";
-            this.toolTip.SetToolTip(this.AD_w3Skill13Button, "For Test Only");
             this.AD_w3Skill13Button.UseVisualStyleBackColor = true;
             this.AD_w3Skill13Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
             // AD_w3Skill14Button
             // 
-            this.AD_w3Skill14Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AD_w3Skill14Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AD_w3Skill14Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.AD_w3Skill14Button.Location = new System.Drawing.Point(173, 9);
+            this.AD_w3Skill14Button.Location = new System.Drawing.Point(173, 6);
             this.AD_w3Skill14Button.Name = "AD_w3Skill14Button";
             this.AD_w3Skill14Button.Size = new System.Drawing.Size(23, 23);
-            this.AD_w3Skill14Button.TabIndex = 25;
+            this.AD_w3Skill14Button.TabIndex = 14;
             this.AD_w3Skill14Button.Tag = "13";
-            this.toolTip.SetToolTip(this.AD_w3Skill14Button, "For Test Only");
             this.AD_w3Skill14Button.UseVisualStyleBackColor = true;
             this.AD_w3Skill14Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
             // AD_w3Skill15Button
             // 
             this.AD_w3Skill15Button.BackColor = System.Drawing.Color.Transparent;
-            this.AD_w3Skill15Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AD_w3Skill15Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AD_w3Skill15Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.AD_w3Skill15Button.Location = new System.Drawing.Point(205, 9);
+            this.AD_w3Skill15Button.Location = new System.Drawing.Point(205, 6);
             this.AD_w3Skill15Button.Name = "AD_w3Skill15Button";
             this.AD_w3Skill15Button.Size = new System.Drawing.Size(23, 23);
-            this.AD_w3Skill15Button.TabIndex = 25;
+            this.AD_w3Skill15Button.TabIndex = 15;
             this.AD_w3Skill15Button.Tag = "14";
-            this.toolTip.SetToolTip(this.AD_w3Skill15Button, "For Test Only");
             this.AD_w3Skill15Button.UseVisualStyleBackColor = true;
             this.AD_w3Skill15Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
@@ -2205,6 +2204,9 @@
             // specialDungeonTab
             // 
             this.specialDungeonTab.BackColor = System.Drawing.SystemColors.Control;
+            this.specialDungeonTab.Controls.Add(this.label17);
+            this.specialDungeonTab.Controls.Add(this.SP_limitNumericBox);
+            this.specialDungeonTab.Controls.Add(this.SP_limitCheckBox);
             this.specialDungeonTab.Controls.Add(this.karinGroupBox);
             this.specialDungeonTab.Controls.Add(this.evanGroupBox);
             this.specialDungeonTab.Controls.Add(this.crystalGroupBox);
@@ -2216,7 +2218,36 @@
             this.specialDungeonTab.Name = "specialDungeonTab";
             this.specialDungeonTab.Size = new System.Drawing.Size(488, 309);
             this.specialDungeonTab.TabIndex = 9;
-            this.specialDungeonTab.Text = "SpDun";
+            this.specialDungeonTab.Text = "SpDungeon";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(407, 8);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(70, 13);
+            this.label17.TabIndex = 41;
+            this.label17.Text = "times per visit";
+            // 
+            // SP_limitNumericBox
+            // 
+            this.SP_limitNumericBox.Location = new System.Drawing.Point(365, 5);
+            this.SP_limitNumericBox.Name = "SP_limitNumericBox";
+            this.SP_limitNumericBox.Size = new System.Drawing.Size(37, 20);
+            this.SP_limitNumericBox.TabIndex = 40;
+            this.SP_limitNumericBox.Tag = "5";
+            this.SP_limitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
+            // 
+            // SP_limitCheckBox
+            // 
+            this.SP_limitCheckBox.Location = new System.Drawing.Point(315, 7);
+            this.SP_limitCheckBox.Name = "SP_limitCheckBox";
+            this.SP_limitCheckBox.Size = new System.Drawing.Size(47, 17);
+            this.SP_limitCheckBox.TabIndex = 39;
+            this.SP_limitCheckBox.Tag = "5";
+            this.SP_limitCheckBox.Text = "Limit";
+            this.SP_limitCheckBox.UseVisualStyleBackColor = true;
+            this.SP_limitCheckBox.CheckedChanged += new System.EventHandler(this.limitCheckBox_CheckedChanged);
             // 
             // karinGroupBox
             // 
@@ -2227,7 +2258,7 @@
             this.karinGroupBox.Controls.Add(this.SP_karinHardRadioButton);
             this.karinGroupBox.Controls.Add(this.label12);
             this.karinGroupBox.Controls.Add(this.SP_karinNorRadioButton);
-            this.karinGroupBox.Location = new System.Drawing.Point(9, 259);
+            this.karinGroupBox.Location = new System.Drawing.Point(9, 246);
             this.karinGroupBox.Name = "karinGroupBox";
             this.karinGroupBox.Size = new System.Drawing.Size(213, 44);
             this.karinGroupBox.TabIndex = 38;
@@ -2250,7 +2281,7 @@
             this.SP_karinCheckBox.Size = new System.Drawing.Size(88, 17);
             this.SP_karinCheckBox.TabIndex = 33;
             this.SP_karinCheckBox.Tag = "4";
-            this.SP_karinCheckBox.Text = "Event Row 1";
+            this.SP_karinCheckBox.Text = "Event Row 4";
             this.SP_karinCheckBox.UseVisualStyleBackColor = true;
             this.SP_karinCheckBox.CheckedChanged += new System.EventHandler(this.spEnableCheckBox_CheckedChanged);
             // 
@@ -2344,10 +2375,10 @@
             this.SP_evanCheckBox.AutoSize = true;
             this.SP_evanCheckBox.Location = new System.Drawing.Point(7, 0);
             this.SP_evanCheckBox.Name = "SP_evanCheckBox";
-            this.SP_evanCheckBox.Size = new System.Drawing.Size(99, 17);
+            this.SP_evanCheckBox.Size = new System.Drawing.Size(88, 17);
             this.SP_evanCheckBox.TabIndex = 33;
             this.SP_evanCheckBox.Tag = "3";
-            this.SP_evanCheckBox.Text = "Awaken Row 3";
+            this.SP_evanCheckBox.Text = "Event Row 3";
             this.SP_evanCheckBox.UseVisualStyleBackColor = true;
             this.SP_evanCheckBox.CheckedChanged += new System.EventHandler(this.spEnableCheckBox_CheckedChanged);
             // 
@@ -2421,7 +2452,7 @@
             this.crystalGroupBox.Controls.Add(this.SP_crystalNorRadioButton);
             this.crystalGroupBox.Controls.Add(this.label10);
             this.crystalGroupBox.Controls.Add(this.SP_crystalEasyRadioButton);
-            this.crystalGroupBox.Location = new System.Drawing.Point(9, 145);
+            this.crystalGroupBox.Location = new System.Drawing.Point(9, 148);
             this.crystalGroupBox.Name = "crystalGroupBox";
             this.crystalGroupBox.Size = new System.Drawing.Size(213, 44);
             this.crystalGroupBox.TabIndex = 38;
@@ -2441,10 +2472,10 @@
             this.SP_crystalCheckBox.AutoSize = true;
             this.SP_crystalCheckBox.Location = new System.Drawing.Point(7, 0);
             this.SP_crystalCheckBox.Name = "SP_crystalCheckBox";
-            this.SP_crystalCheckBox.Size = new System.Drawing.Size(99, 17);
+            this.SP_crystalCheckBox.Size = new System.Drawing.Size(88, 17);
             this.SP_crystalCheckBox.TabIndex = 33;
             this.SP_crystalCheckBox.Tag = "2";
-            this.SP_crystalCheckBox.Text = "Awaken Row 2";
+            this.SP_crystalCheckBox.Text = "Event Row 2";
             this.SP_crystalCheckBox.UseVisualStyleBackColor = true;
             this.SP_crystalCheckBox.CheckedChanged += new System.EventHandler(this.spEnableCheckBox_CheckedChanged);
             // 
@@ -2518,7 +2549,7 @@
             this.cakeGroupBox.Controls.Add(this.SP_cakeNormalRadioButton);
             this.cakeGroupBox.Controls.Add(this.label8);
             this.cakeGroupBox.Controls.Add(this.SP_cakeEasyRadioButton);
-            this.cakeGroupBox.Location = new System.Drawing.Point(9, 92);
+            this.cakeGroupBox.Location = new System.Drawing.Point(9, 98);
             this.cakeGroupBox.Name = "cakeGroupBox";
             this.cakeGroupBox.Size = new System.Drawing.Size(213, 44);
             this.cakeGroupBox.TabIndex = 38;
@@ -2538,10 +2569,10 @@
             this.SP_cakeCheckBox.AutoSize = true;
             this.SP_cakeCheckBox.Location = new System.Drawing.Point(7, 0);
             this.SP_cakeCheckBox.Name = "SP_cakeCheckBox";
-            this.SP_cakeCheckBox.Size = new System.Drawing.Size(99, 17);
+            this.SP_cakeCheckBox.Size = new System.Drawing.Size(88, 17);
             this.SP_cakeCheckBox.TabIndex = 33;
             this.SP_cakeCheckBox.Tag = "1";
-            this.SP_cakeCheckBox.Text = "Awaken Row 1";
+            this.SP_cakeCheckBox.Text = "Event Row 1";
             this.SP_cakeCheckBox.UseVisualStyleBackColor = true;
             this.SP_cakeCheckBox.CheckedChanged += new System.EventHandler(this.spEnableCheckBox_CheckedChanged);
             // 
@@ -2615,7 +2646,7 @@
             this.dailyGroupBox.Controls.Add(this.label7);
             this.dailyGroupBox.Controls.Add(this.SP_dailyHardRadioButton);
             this.dailyGroupBox.Controls.Add(this.SP_dailyNomalRadioButton);
-            this.dailyGroupBox.Location = new System.Drawing.Point(9, 30);
+            this.dailyGroupBox.Location = new System.Drawing.Point(9, 36);
             this.dailyGroupBox.Name = "dailyGroupBox";
             this.dailyGroupBox.Size = new System.Drawing.Size(213, 50);
             this.dailyGroupBox.TabIndex = 37;
@@ -2711,9 +2742,9 @@
             this.SP_skillGroupBox.Controls.Add(this.SP_manualSkillRadio);
             this.SP_skillGroupBox.Controls.Add(this.SP_autoSkillRadio);
             this.SP_skillGroupBox.Controls.Add(this.SP_wave1Panel);
-            this.SP_skillGroupBox.Location = new System.Drawing.Point(228, 30);
+            this.SP_skillGroupBox.Location = new System.Drawing.Point(228, 36);
             this.SP_skillGroupBox.Name = "SP_skillGroupBox";
-            this.SP_skillGroupBox.Size = new System.Drawing.Size(254, 228);
+            this.SP_skillGroupBox.Size = new System.Drawing.Size(254, 254);
             this.SP_skillGroupBox.TabIndex = 29;
             this.SP_skillGroupBox.TabStop = false;
             this.SP_skillGroupBox.Tag = "3";
@@ -2721,6 +2752,11 @@
             // 
             // SP_wave3Panel
             // 
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill11Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill12Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill13Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill14Button);
+            this.SP_wave3Panel.Controls.Add(this.SP_w3Skill15Button);
             this.SP_wave3Panel.Controls.Add(this.SP_wave3LoopCheckBox);
             this.SP_wave3Panel.Controls.Add(this.SP_w3Skill10Button);
             this.SP_wave3Panel.Controls.Add(this.SP_w3Skill09Button);
@@ -2735,9 +2771,74 @@
             this.SP_wave3Panel.Controls.Add(this.SP_w3Skill01Button);
             this.SP_wave3Panel.Location = new System.Drawing.Point(5, 166);
             this.SP_wave3Panel.Name = "SP_wave3Panel";
-            this.SP_wave3Panel.Size = new System.Drawing.Size(241, 51);
+            this.SP_wave3Panel.Size = new System.Drawing.Size(241, 82);
             this.SP_wave3Panel.TabIndex = 13;
             this.SP_wave3Panel.Tag = "9";
+            // 
+            // SP_w3Skill11Button
+            // 
+            this.SP_w3Skill11Button.BackColor = System.Drawing.Color.Transparent;
+            this.SP_w3Skill11Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SP_w3Skill11Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill11Button.Location = new System.Drawing.Point(78, 4);
+            this.SP_w3Skill11Button.Name = "SP_w3Skill11Button";
+            this.SP_w3Skill11Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill11Button.TabIndex = 26;
+            this.SP_w3Skill11Button.Tag = "10";
+            this.SP_w3Skill11Button.UseVisualStyleBackColor = false;
+            this.SP_w3Skill11Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill12Button
+            // 
+            this.SP_w3Skill12Button.BackColor = System.Drawing.Color.Transparent;
+            this.SP_w3Skill12Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SP_w3Skill12Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill12Button.Location = new System.Drawing.Point(110, 4);
+            this.SP_w3Skill12Button.Name = "SP_w3Skill12Button";
+            this.SP_w3Skill12Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill12Button.TabIndex = 27;
+            this.SP_w3Skill12Button.Tag = "11";
+            this.SP_w3Skill12Button.UseVisualStyleBackColor = false;
+            this.SP_w3Skill12Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill13Button
+            // 
+            this.SP_w3Skill13Button.BackColor = System.Drawing.Color.Transparent;
+            this.SP_w3Skill13Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SP_w3Skill13Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill13Button.Location = new System.Drawing.Point(142, 4);
+            this.SP_w3Skill13Button.Name = "SP_w3Skill13Button";
+            this.SP_w3Skill13Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill13Button.TabIndex = 28;
+            this.SP_w3Skill13Button.Tag = "12";
+            this.SP_w3Skill13Button.UseVisualStyleBackColor = false;
+            this.SP_w3Skill13Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill14Button
+            // 
+            this.SP_w3Skill14Button.BackColor = System.Drawing.Color.Transparent;
+            this.SP_w3Skill14Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SP_w3Skill14Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill14Button.Location = new System.Drawing.Point(174, 4);
+            this.SP_w3Skill14Button.Name = "SP_w3Skill14Button";
+            this.SP_w3Skill14Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill14Button.TabIndex = 29;
+            this.SP_w3Skill14Button.Tag = "13";
+            this.SP_w3Skill14Button.UseVisualStyleBackColor = false;
+            this.SP_w3Skill14Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3Skill15Button
+            // 
+            this.SP_w3Skill15Button.BackColor = System.Drawing.Color.Transparent;
+            this.SP_w3Skill15Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.SP_w3Skill15Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.SP_w3Skill15Button.Location = new System.Drawing.Point(206, 4);
+            this.SP_w3Skill15Button.Name = "SP_w3Skill15Button";
+            this.SP_w3Skill15Button.Size = new System.Drawing.Size(23, 23);
+            this.SP_w3Skill15Button.TabIndex = 30;
+            this.SP_w3Skill15Button.Tag = "14";
+            this.SP_w3Skill15Button.UseVisualStyleBackColor = false;
+            this.SP_w3Skill15Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
             // SP_wave3LoopCheckBox
             // 
@@ -2755,7 +2856,7 @@
             // SP_w3Skill10Button
             // 
             this.SP_w3Skill10Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SP_w3Skill10Button.Location = new System.Drawing.Point(205, 26);
+            this.SP_w3Skill10Button.Location = new System.Drawing.Point(206, 56);
             this.SP_w3Skill10Button.Name = "SP_w3Skill10Button";
             this.SP_w3Skill10Button.Size = new System.Drawing.Size(23, 23);
             this.SP_w3Skill10Button.TabIndex = 10;
@@ -2766,7 +2867,7 @@
             // SP_w3Skill09Button
             // 
             this.SP_w3Skill09Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SP_w3Skill09Button.Location = new System.Drawing.Point(173, 26);
+            this.SP_w3Skill09Button.Location = new System.Drawing.Point(174, 56);
             this.SP_w3Skill09Button.Name = "SP_w3Skill09Button";
             this.SP_w3Skill09Button.Size = new System.Drawing.Size(23, 23);
             this.SP_w3Skill09Button.TabIndex = 9;
@@ -2777,7 +2878,7 @@
             // SP_w3Skill08Button
             // 
             this.SP_w3Skill08Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SP_w3Skill08Button.Location = new System.Drawing.Point(141, 26);
+            this.SP_w3Skill08Button.Location = new System.Drawing.Point(142, 56);
             this.SP_w3Skill08Button.Name = "SP_w3Skill08Button";
             this.SP_w3Skill08Button.Size = new System.Drawing.Size(23, 23);
             this.SP_w3Skill08Button.TabIndex = 8;
@@ -2788,7 +2889,7 @@
             // SP_w3Skill07Button
             // 
             this.SP_w3Skill07Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SP_w3Skill07Button.Location = new System.Drawing.Point(109, 26);
+            this.SP_w3Skill07Button.Location = new System.Drawing.Point(110, 56);
             this.SP_w3Skill07Button.Name = "SP_w3Skill07Button";
             this.SP_w3Skill07Button.Size = new System.Drawing.Size(23, 23);
             this.SP_w3Skill07Button.TabIndex = 7;
@@ -2799,7 +2900,7 @@
             // SP_w3Skill06Button
             // 
             this.SP_w3Skill06Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SP_w3Skill06Button.Location = new System.Drawing.Point(77, 26);
+            this.SP_w3Skill06Button.Location = new System.Drawing.Point(78, 56);
             this.SP_w3Skill06Button.Name = "SP_w3Skill06Button";
             this.SP_w3Skill06Button.Size = new System.Drawing.Size(23, 23);
             this.SP_w3Skill06Button.TabIndex = 6;
@@ -2810,7 +2911,7 @@
             // SP_w3Skill05Button
             // 
             this.SP_w3Skill05Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SP_w3Skill05Button.Location = new System.Drawing.Point(205, 2);
+            this.SP_w3Skill05Button.Location = new System.Drawing.Point(206, 32);
             this.SP_w3Skill05Button.Name = "SP_w3Skill05Button";
             this.SP_w3Skill05Button.Size = new System.Drawing.Size(23, 23);
             this.SP_w3Skill05Button.TabIndex = 5;
@@ -2821,7 +2922,7 @@
             // SP_w3Skill04Button
             // 
             this.SP_w3Skill04Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SP_w3Skill04Button.Location = new System.Drawing.Point(173, 2);
+            this.SP_w3Skill04Button.Location = new System.Drawing.Point(174, 32);
             this.SP_w3Skill04Button.Name = "SP_w3Skill04Button";
             this.SP_w3Skill04Button.Size = new System.Drawing.Size(23, 23);
             this.SP_w3Skill04Button.TabIndex = 4;
@@ -2832,7 +2933,7 @@
             // SP_w3Skill03Button
             // 
             this.SP_w3Skill03Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SP_w3Skill03Button.Location = new System.Drawing.Point(141, 2);
+            this.SP_w3Skill03Button.Location = new System.Drawing.Point(142, 32);
             this.SP_w3Skill03Button.Name = "SP_w3Skill03Button";
             this.SP_w3Skill03Button.Size = new System.Drawing.Size(23, 23);
             this.SP_w3Skill03Button.TabIndex = 3;
@@ -2843,7 +2944,7 @@
             // SP_w3Skill02Button
             // 
             this.SP_w3Skill02Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SP_w3Skill02Button.Location = new System.Drawing.Point(109, 2);
+            this.SP_w3Skill02Button.Location = new System.Drawing.Point(110, 32);
             this.SP_w3Skill02Button.Name = "SP_w3Skill02Button";
             this.SP_w3Skill02Button.Size = new System.Drawing.Size(23, 23);
             this.SP_w3Skill02Button.TabIndex = 2;
@@ -2862,7 +2963,7 @@
             // SP_w3Skill01Button
             // 
             this.SP_w3Skill01Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.SP_w3Skill01Button.Location = new System.Drawing.Point(77, 2);
+            this.SP_w3Skill01Button.Location = new System.Drawing.Point(78, 32);
             this.SP_w3Skill01Button.Name = "SP_w3Skill01Button";
             this.SP_w3Skill01Button.Size = new System.Drawing.Size(23, 23);
             this.SP_w3Skill01Button.TabIndex = 1;
@@ -3401,15 +3502,10 @@
             // RD_mainPanel
             // 
             this.RD_mainPanel.Controls.Add(this.groupBox1);
-            this.RD_mainPanel.Controls.Add(this.RD_DragonLimitNumericBox);
             this.RD_mainPanel.Controls.Add(this.RD_OwnerDragon);
             this.RD_mainPanel.Controls.Add(this.RD_masteryComboBox);
             this.RD_mainPanel.Controls.Add(this.label2);
-            this.RD_mainPanel.Controls.Add(this.RD_Hp50Up_CheckBox);
-            this.RD_mainPanel.Controls.Add(this.RD_limitNumericBox);
             this.RD_mainPanel.Controls.Add(this.ARD_enableCheckBox);
-            this.RD_mainPanel.Controls.Add(this.RD_limitLabel);
-            this.RD_mainPanel.Controls.Add(this.RD_limitCheckBox);
             this.RD_mainPanel.Controls.Add(this.RD_StopOnDragonFound_Checkbox);
             this.RD_mainPanel.Controls.Add(this.RD_skillGroupBox);
             this.RD_mainPanel.Location = new System.Drawing.Point(0, 31);
@@ -3556,22 +3652,6 @@
             0});
             this.RD_DragonHP.ValueChanged += new System.EventHandler(this.RD_DragonHP_ValueChanged);
             // 
-            // RD_DragonLimitNumericBox
-            // 
-            this.RD_DragonLimitNumericBox.Enabled = false;
-            this.RD_DragonLimitNumericBox.Location = new System.Drawing.Point(86, 183);
-            this.RD_DragonLimitNumericBox.Name = "RD_DragonLimitNumericBox";
-            this.RD_DragonLimitNumericBox.Size = new System.Drawing.Size(37, 20);
-            this.RD_DragonLimitNumericBox.TabIndex = 27;
-            this.RD_DragonLimitNumericBox.Tag = "4";
-            this.RD_DragonLimitNumericBox.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.RD_DragonLimitNumericBox.Visible = false;
-            this.RD_DragonLimitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
-            // 
             // RD_OwnerDragon
             // 
             this.RD_OwnerDragon.AutoSize = true;
@@ -3612,31 +3692,6 @@
             this.label2.Text = "Mastery";
             this.label2.Visible = false;
             // 
-            // RD_Hp50Up_CheckBox
-            // 
-            this.RD_Hp50Up_CheckBox.AutoSize = true;
-            this.RD_Hp50Up_CheckBox.Enabled = false;
-            this.RD_Hp50Up_CheckBox.Location = new System.Drawing.Point(204, 211);
-            this.RD_Hp50Up_CheckBox.Name = "RD_Hp50Up_CheckBox";
-            this.RD_Hp50Up_CheckBox.Size = new System.Drawing.Size(130, 17);
-            this.RD_Hp50Up_CheckBox.TabIndex = 32;
-            this.RD_Hp50Up_CheckBox.Text = "Only Raid HP 50% Up";
-            this.toolTip.SetToolTip(this.RD_Hp50Up_CheckBox, "BETA Function");
-            this.RD_Hp50Up_CheckBox.UseVisualStyleBackColor = true;
-            this.RD_Hp50Up_CheckBox.Visible = false;
-            this.RD_Hp50Up_CheckBox.CheckedChanged += new System.EventHandler(this.RD_Hp50Up_CheckBox_CheckedChanged);
-            // 
-            // RD_limitNumericBox
-            // 
-            this.RD_limitNumericBox.Enabled = false;
-            this.RD_limitNumericBox.Location = new System.Drawing.Point(86, 209);
-            this.RD_limitNumericBox.Name = "RD_limitNumericBox";
-            this.RD_limitNumericBox.Size = new System.Drawing.Size(37, 20);
-            this.RD_limitNumericBox.TabIndex = 24;
-            this.RD_limitNumericBox.Tag = "3";
-            this.RD_limitNumericBox.Visible = false;
-            this.RD_limitNumericBox.ValueChanged += new System.EventHandler(this.limitNumericBox_ValueChanged);
-            // 
             // ARD_enableCheckBox
             // 
             this.ARD_enableCheckBox.AutoSize = true;
@@ -3647,30 +3702,6 @@
             this.ARD_enableCheckBox.Text = "Enable Raid Awake";
             this.ARD_enableCheckBox.UseVisualStyleBackColor = true;
             this.ARD_enableCheckBox.CheckedChanged += new System.EventHandler(this.ARD_enableCheckBox_CheckedChanged);
-            // 
-            // RD_limitLabel
-            // 
-            this.RD_limitLabel.AutoSize = true;
-            this.RD_limitLabel.Enabled = false;
-            this.RD_limitLabel.Location = new System.Drawing.Point(125, 211);
-            this.RD_limitLabel.Name = "RD_limitLabel";
-            this.RD_limitLabel.Size = new System.Drawing.Size(70, 13);
-            this.RD_limitLabel.TabIndex = 25;
-            this.RD_limitLabel.Text = "times per visit";
-            this.RD_limitLabel.Visible = false;
-            // 
-            // RD_limitCheckBox
-            // 
-            this.RD_limitCheckBox.Enabled = false;
-            this.RD_limitCheckBox.Location = new System.Drawing.Point(33, 210);
-            this.RD_limitCheckBox.Name = "RD_limitCheckBox";
-            this.RD_limitCheckBox.Size = new System.Drawing.Size(47, 17);
-            this.RD_limitCheckBox.TabIndex = 23;
-            this.RD_limitCheckBox.Tag = "3";
-            this.RD_limitCheckBox.Text = "Limit";
-            this.RD_limitCheckBox.UseVisualStyleBackColor = true;
-            this.RD_limitCheckBox.Visible = false;
-            this.RD_limitCheckBox.CheckedChanged += new System.EventHandler(this.limitCheckBox_CheckedChanged);
             // 
             // RD_StopOnDragonFound_Checkbox
             // 
@@ -5627,6 +5658,7 @@
             this.GC_formationPanel.PerformLayout();
             this.specialDungeonTab.ResumeLayout(false);
             this.specialDungeonTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.SP_limitNumericBox)).EndInit();
             this.karinGroupBox.ResumeLayout(false);
             this.karinGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.SP_karinLimitNumericBox)).EndInit();
@@ -5665,8 +5697,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RD_DragonHPLimit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RD_DragonHP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RD_DragonLimitNumericBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RD_limitNumericBox)).EndInit();
             this.RD_skillGroupBox.ResumeLayout(false);
             this.RD_skillGroupBox.PerformLayout();
             this.RD_team2Panel.ResumeLayout(false);
@@ -6226,14 +6256,8 @@
 		
 		private global::System.Windows.Forms.CheckBox RD_enableCheckBox;
 
-		
-		private global::System.Windows.Forms.CheckBox RD_limitCheckBox;
 
-		
-		private global::System.Windows.Forms.Label RD_limitLabel;
 
-		
-		private global::System.Windows.Forms.NumericUpDown RD_limitNumericBox;
 
 		
 		private global::System.Windows.Forms.Panel RD_mainPanel;
@@ -6610,12 +6634,10 @@
         private System.Windows.Forms.LinkLabel linkLabel8;
         private System.Windows.Forms.LinkLabel linkLabel10;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.CheckBox RD_Hp50Up_CheckBox;
         private System.Windows.Forms.CheckBox RD_OwnerDragon;
         private System.Windows.Forms.NumericUpDown RD_DragonLV;
         private System.Windows.Forms.CheckBox RD_LevelCheckBox;
         private System.Windows.Forms.NumericUpDown RD_RoundNumericUpDown;
-        private System.Windows.Forms.NumericUpDown RD_DragonLimitNumericBox;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown RD_DragonHP;
@@ -6717,5 +6739,13 @@
         private System.Windows.Forms.Button AD_w3Skill12Button;
         private System.Windows.Forms.Button AD_w3Skill13Button;
         private System.Windows.Forms.Button AD_w3Skill14Button;
+        private System.Windows.Forms.Button SP_w3Skill11Button;
+        private System.Windows.Forms.Button SP_w3Skill12Button;
+        private System.Windows.Forms.Button SP_w3Skill13Button;
+        private System.Windows.Forms.Button SP_w3Skill14Button;
+        private System.Windows.Forms.Button SP_w3Skill15Button;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.NumericUpDown SP_limitNumericBox;
+        private System.Windows.Forms.CheckBox SP_limitCheckBox;
     }
 }

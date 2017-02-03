@@ -131,6 +131,7 @@ namespace SevenKnightsAI.Classes
         SPECIAL_DUN_LOOT,
         SP_OUT_OF_KEYS,
         SPECIAL_DUN_LOST,
-        SPECIAL_DUN_MAX
+        SPECIAL_DUN_MAX,
+        EXIT_POPUP
     }
 }

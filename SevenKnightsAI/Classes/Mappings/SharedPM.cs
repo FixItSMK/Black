@@ -83,7 +83,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 593,
             Y = 399,
-            Color = 16770446,   
+            Color = 16770446,
             Type = MappingType.ANCHOR
         };
 
@@ -107,7 +107,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 679,
             Y = 399,
-            Color = 16770962,   
+            Color = 16770962,
             Type = MappingType.ANCHOR
         };
 
@@ -115,7 +115,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 679,
             Y = 406,
-            Color = 15650947, 
+            Color = 15650947,
             Type = MappingType.ANCHOR
         };
 
@@ -131,7 +131,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 764,
             Y = 399,
-            Color = 16770446,  
+            Color = 16770446,
             Type = MappingType.ANCHOR
         };
 
@@ -139,7 +139,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 764,
             Y = 406,
-            Color = 15584893,  
+            Color = 15584893,
             Type = MappingType.ANCHOR
         };
 
@@ -155,7 +155,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 850,
             Y = 399,
-            Color = 16770962,    
+            Color = 16770962,
             Type = MappingType.ANCHOR
         };
 
@@ -163,7 +163,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 850,
             Y = 406,
-            Color = 15651203,  
+            Color = 15651203,
             Type = MappingType.ANCHOR
         };
 
@@ -179,7 +179,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 935,
             Y = 399,
-            Color = 16770446,  
+            Color = 16770446,
             Type = MappingType.ANCHOR
         };
 
@@ -187,7 +187,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 935,
             Y = 406,
-            Color = 15584893,  
+            Color = 15584893,
             Type = MappingType.ANCHOR
         };
 
@@ -203,7 +203,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 594,
             Y = 472,
-            Color = 16772254,  
+            Color = 16772254,
             Type = MappingType.ANCHOR
         };
 
@@ -227,7 +227,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 679,
             Y = 472,
-            Color = 16772254,  
+            Color = 16772254,
             Type = MappingType.ANCHOR
         };
 
@@ -235,7 +235,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 679,
             Y = 480,
-            Color = 15453052,  
+            Color = 15453052,
             Type = MappingType.ANCHOR
         };
 
@@ -251,7 +251,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 765,
             Y = 472,
-            Color = 16772254,  
+            Color = 16772254,
             Type = MappingType.ANCHOR
         };
 
@@ -259,7 +259,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 764,
             Y = 480,
-            Color = 15387516,  
+            Color = 15387516,
             Type = MappingType.ANCHOR
         };
 
@@ -275,7 +275,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 851,
             Y = 472,
-            Color = 16772254, 
+            Color = 16772254,
             Type = MappingType.ANCHOR
         };
 
@@ -299,7 +299,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 936,
             Y = 472,
-            Color = 16772254,  
+            Color = 16772254,
             Type = MappingType.ANCHOR
         };
 
@@ -307,21 +307,21 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 935,
             Y = 480,
-            Color = 15387516,  
+            Color = 15387516,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Fight_Skill11 = new PixelMapping
         {
             X = 576,
-            Y = 355,
+            Y = 326,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping Fight_Skill11_Q1_1 = new PixelMapping
         {
-            X = 594,
+            X = 593,
             Y = 325,
             Color = 16772254,
             Type = MappingType.ANCHOR
@@ -338,7 +338,7 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly PixelMapping Fight_Skill12 = new PixelMapping
         {
             X = 662,
-            Y = 355,
+            Y = 326,
             Color = 0,
             Type = MappingType.BUTTON
         };
@@ -347,7 +347,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 679,
             Y = 325,
-            Color = 16777146,
+            Color = 16772254,
             Type = MappingType.ANCHOR
         };
 
@@ -355,21 +355,21 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 679,
             Y = 333,
-            Color = 16112266,
+            Color = 15453309,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Fight_Skill13 = new PixelMapping
         {
             X = 747,
-            Y = 355,
+            Y = 326,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping Fight_Skill13_Q1_1 = new PixelMapping
         {
-            X = 765,
+            X = 764,
             Y = 325,
             Color = 16772254,
             Type = MappingType.ANCHOR
@@ -377,16 +377,16 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Fight_Skill13_Q1_2 = new PixelMapping
         {
-            X = 765,
+            X = 764,
             Y = 333,
-            Color = 14991466,
+            Color = 15387516,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Fight_Skill14 = new PixelMapping
         {
             X = 832,
-            Y = 355,
+            Y = 326,
             Color = 0,
             Type = MappingType.BUTTON
         };
@@ -402,22 +402,22 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly PixelMapping Fight_Skill14_Q1_2 = new PixelMapping
         {
             X = 850,
-            Y = 355,
-            Color = 13740374,
+            Y = 333,
+            Color = 15453309,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Fight_Skill15 = new PixelMapping
         {
             X = 920,
-            Y = 355,
+            Y = 326,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping Fight_Skill15_Q1_1 = new PixelMapping
         {
-            X = 936,
+            X = 935,
             Y = 325,
             Color = 16772254,
             Type = MappingType.ANCHOR
@@ -425,9 +425,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Fight_Skill15_Q1_2 = new PixelMapping
         {
-            X = 936,
+            X = 935,
             Y = 333,
-            Color = 14991723,
+            Color = 15387516,
             Type = MappingType.ANCHOR
         };
 

@@ -890,15 +890,11 @@ namespace SevenKnightsAI
                 this._skillButtons[i] = new List<Button>();
             }
             this.RD_enableCheckBox.Checked = this.AISettings.RD_Enable;
-            this.RD_limitCheckBox.Checked = this.AISettings.RD_EnableLimit;
-            this.RD_limitNumericBox.Value = this.AISettings.RD_Limit;
             this.ARD_enableCheckBox.Checked = this.AISettings.ARD_Enable;
             this.RD_DragonLimitCheckBox.Checked = this.AISettings.RD_EnableDragonLimit;
-            this.RD_DragonLimitNumericBox.Value = this.AISettings.RD_DragonLimit;
             this.RD_masteryComboBox.SelectedIndex = (int)this.AISettings.RD_Mastery;
             this.RD_team1LoopCheckBox.Checked = this.AISettings.RD_Team1Loop;
             this.RD_team2LoopCheckBox.Checked = this.AISettings.RD_Team2Loop;
-            this.RD_Hp50Up_CheckBox.Checked = this.AISettings.RD_Hp50Up;
             this.RD_OwnerDragon.Checked = this.AISettings.RD_OwnerDragon;
             this.RD_LevelCheckBox.Checked = this.AISettings.RD_LevelCheckBox;
             this.RD_DragonLV.Value = this.AISettings.RD_DragonLV;
@@ -969,6 +965,8 @@ namespace SevenKnightsAI
             this.SP_crystalCheckBox.Checked = this.AISettings.SP_CrystalEnable;
             this.SP_evanCheckBox.Checked = this.AISettings.SP_EvanEnable;
             this.SP_karinCheckBox.Checked = this.AISettings.SP_KarinEnable;
+            this.SP_limitCheckBox.Checked = this.AISettings.SP_EnableLimit;
+            this.SP_limitNumericBox.Value = this.AISettings.SP_Limit;
             switch (this.AISettings.SP_SkillType)
             {
                 case SkillType.Auto:
@@ -1140,11 +1138,15 @@ namespace SevenKnightsAI
                     return;
 
                 case 3:
-                    this.AISettings.RD_EnableLimit = @checked;
+                    //this.AISettings.RD_EnableLimit = @checked;
                     return;
 
                 case 4:
                     this.AISettings.RD_EnableDragonLimit = @checked;
+                    return;
+
+                case 5:
+                    this.AISettings.SP_EnableLimit = @checked;
                     return;
 
                 default:
@@ -1172,11 +1174,15 @@ namespace SevenKnightsAI
                     return;
 
                 case 3:
-                    this.AISettings.RD_Limit = num2;
+                    //this.AISettings.RD_Limit = num2;
                     return;
 
                 case 4:
-                    this.AISettings.RD_DragonLimit = num2;
+                    //this.AISettings.RD_DragonLimit = num2;
+                    return;
+
+                case 5:
+                    this.AISettings.SP_Limit = num2;
                     return;
 
                 default:
@@ -2002,11 +2008,6 @@ namespace SevenKnightsAI
         {
             CheckBox checkBox = sender as CheckBox;
             this.AISettings.GC_UseFriend = checkBox.Checked;
-        }
-        private void RD_Hp50Up_CheckBox_CheckedChanged(object sender, EventArgs e)
-        {
-            CheckBox checkBox = sender as CheckBox;
-            this.AISettings.RD_Hp50Up = checkBox.Checked;
         }
         private void RD_OwnerDragon_CheckedChanged(object sender, EventArgs e)
         {
