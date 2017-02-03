@@ -5510,7 +5510,7 @@ namespace SevenKnightsAI.Classes
             }
             else if (sceneType == SceneType.ADVENTURE_FIGHT)
             {
-                if (this.MatchMapping(AdventureFightPM.Fight_AweakOff, 2))
+                if (this.MatchMapping(AdventureFightPM.Fight_AweakOn, 2))
                 {
                     this.WeightedClick(AdventureFightPM.Fight_AweakButton, 1.0, 1.0, 1, 0, "left");
                 }
