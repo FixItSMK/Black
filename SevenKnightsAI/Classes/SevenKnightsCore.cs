@@ -500,6 +500,10 @@ namespace SevenKnightsAI.Classes
                 {
                     string text = page.GetText().ToLower().Replace("o", "0");
                     Utility.FilterAscii(text);
+#if DEBUG
+                    Console.WriteLine("MapNumber = " + text.Trim());
+                    bitmap.Save("MapNumber.png");
+#endif
                     if (text.Length >= 2)
                     {
                         int num3 = -1;
@@ -2898,7 +2902,7 @@ namespace SevenKnightsAI.Classes
                                         case SceneType.ADVENTURE_START:
                                             this.UpdateAdventureKeys(scene.SceneType);
                                             this.UpdateGold(scene.SceneType);
-                                            SevenKnightsCore.Sleep(400);
+                                            
                                             if (this.CurrentObjective == Objective.ADVENTURE)
                                             {
                                                 World world2 = this.AISettings.AD_World;
@@ -2915,6 +2919,7 @@ namespace SevenKnightsAI.Classes
                                                     world2 = worldStageFromSequencer2.Item1;
                                                     stage2 = worldStageFromSequencer2.Item2;
                                                 }
+                                                SevenKnightsCore.Sleep(400);
                                                 if (this.AISettings.AD_Continuous || this.CheckMapNumber(world2, stage2) || this.MapCheckCount >= 3)
                                                 {
                                                     if (!this.CheckMastery(scene.SceneType))
@@ -3262,35 +3267,17 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.LEVEL_30_DIALOG:
-                                            /*this.Log("Hero Level 30", this.COLOR_LEVEL_30);
-                                            if (this.AISettings.AD_StopOnLV30)
-                                            {
-                                                this.Escape();
-                                                this.AIProfiles.TMP_Paused = true;
-                                                break;
-                                            }
+                                        case SceneType.LEVEL_30_MAX_DIALOG:
+                                            this.Log("Hero Level 30", this.COLOR_LEVEL_30);
                                             this.HeroLVUPCount();
-                                            // เพิ่มเข้ามาตรวจสอบตอนเปลี่ยนโหมด แล้วเวล 30 พอดี
-                                            if (this.AISettings.AD_Formation != Formation.None && this.AISettings.AD_HeroManagePositions != null && this.AISettings.AD_HeroManagePositions.Length > 0)
+                                            if (this.AISettings.AD_StopOnLV30)
                                             {
                                                 this.CooldownHero = 900000;
-                                                this.ChangeObjective(Objective.HERO_MANAGEMENT);
-                                            }
-                                            //  สุดตรงนี้
-                                            this.WeightedClick(Level30DialogPM.OkButton, 1.0, 1.0, 1, 0, "left");
-                                            SevenKnightsCore.Sleep(300);
-                                            break; */
-
-                                        case SceneType.LEVEL_30_MAX_DIALOG:
-                                            if (this.AISettings.AD_StopOnLV30)
-                                            {
                                                 this.Alert("Hero Level 30");
                                                 this.Escape();
                                                 this.AIProfiles.TMP_Paused = true;
                                                 break;
                                             }
-                                            this.Log("Hero Level 30", this.COLOR_LEVEL_30);
-                                            this.HeroLVUPCount();
                                             if (this.AISettings.AD_Formation != Formation.None && this.AISettings.AD_HeroManagePositions != null && this.AISettings.AD_HeroManagePositions.Length > 0)
                                             {
                                                 this.CooldownHero = 900000;
@@ -4264,7 +4251,7 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.SPECIAL_DUN_READY:
-                                            this.UpdateAdventureKeys(scene.SceneType);
+                                            //this.UpdateAdventureKeys(scene.SceneType);
                                             if (this.CurrentObjective == Objective.SPECIAL_DUNGEON && this.AISettings.SP_Enable)
                                             {
                                                 if(this.AISettings.SP_DailyEnable && this.sp_dailycount < this.AISettings.SP_DailyLimit)
@@ -6497,8 +6484,6 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.YEAR_END_AWAKE_POPUP);
                     return result;
                 }
-                //if ((this.MatchMapping(SpecialDungeonReady.AllTab, 2) || this.MatchMapping(SpecialDungeonReady.DailyTab, 2) || this.MatchMapping(SpecialDungeonReady.AdventTab, 2) || this.MatchMapping(SpecialDungeonReady.EventTab, 2) || this.MatchMapping(SpecialDungeonReady.AwakenTab, 2)) 
-                //    && this.MatchMapping(SpecialDungeonReady.KeyPlusButton, 2))
                 if ((this.MatchMapping(SpecialDungeonReady.AllTab, 2) || this.MatchMapping(SpecialDungeonReady.DailyTab, 2) || this.MatchMapping(SpecialDungeonReady.AdventTab, 2) || this.MatchMapping(SpecialDungeonReady.EventTab, 2))
                     && this.MatchMapping(SpecialDungeonReady.KeyPlusButton, 2))
                 {

@@ -169,33 +169,33 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping EvenBoderRight = new PixelMapping
         {
-            X = 760,
-            Y = 487,
-            Color = 16753314,
+            X = 740,
+            Y = 444,
+            Color = 8786145,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Exclucsive = new PixelMapping
         {
-            X = 134,
-            Y = 12,
-            Color = 16738665,
+            X = 170,
+            Y = 10,
+            Color = 44472,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping EvenBoderRightBG = new PixelMapping
         {
-            X = 760,
-            Y = 487,
-            Color = 4927536,
+            X = 740,
+            Y = 444,
+            Color = 2556995,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping ExclucsiveBG = new PixelMapping
         {
-            X = 134,
-            Y = 12,
-            Color = 4923167,
+            X = 170,
+            Y = 10,
+            Color = 13110,
             Type = MappingType.ANCHOR
         };
 
@@ -297,17 +297,17 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping EventPackColor1 = new PixelMapping
         {
-            X = 170,
-            Y = 430,
-            Color = 8848364,
+            X = 150,
+            Y = 475,
+            Color = 8850660,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping EventPackColor2 = new PixelMapping
         {
-            X = 160,
-            Y = 463,
-            Color = 5834137,
+            X = 220,
+            Y = 495,
+            Color = 7149231,
             Type = MappingType.ANCHOR
         };
 
@@ -315,16 +315,16 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly PixelMapping EventPackColorbg = new PixelMapping
         {
             X = 220,
-            Y = 448,
-            Color = 3672072,
+            Y = 495,
+            Color = 2098740,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping EventPackOKBtn = new PixelMapping
         {
-            X = 570,
-            Y = 420,
-            Color = 5448462,
+            X = 529,
+            Y = 423,
+            Color = 16757782,
             Type = MappingType.BOTH
         };
 

@@ -39,9 +39,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle R_MapNumber = new Rectangle
         {
-            X = 355,
+            X = 392,
             Y = 12,
-            Width = 88,
+            Width = 108,
             Height = 33
         };
 

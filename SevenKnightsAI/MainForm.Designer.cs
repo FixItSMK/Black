@@ -4925,7 +4925,7 @@
             this.ST_delayTrackBar.Minimum = 500;
             this.ST_delayTrackBar.Name = "ST_delayTrackBar";
             this.ST_delayTrackBar.Size = new System.Drawing.Size(162, 27);
-            this.ST_delayTrackBar.SmallChange = 10;
+            this.ST_delayTrackBar.SmallChange = 100;
             this.ST_delayTrackBar.TabIndex = 0;
             this.ST_delayTrackBar.TickFrequency = 100;
             this.ST_delayTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
