@@ -2853,7 +2853,7 @@ namespace SevenKnightsAI.Classes
                                                 {
                                                     this.ChangeObjective(Objective.SELL_ITEMS);
                                                 }
-                                                this.WeightedClick(SharedPM.Full_SellButton, 1.0, 1.0, 1, 0, "left");
+                                                this.WeightedClick(SharedPM.Full_NoButton, 1.0, 1.0, 1, 0, "left");
                                             }
                                             else
                                             {
@@ -7082,7 +7082,7 @@ namespace SevenKnightsAI.Classes
                 SevenKnightsCore.Sleep(800);
             }
             this.WeightedClick(HeroesPM.SortByRank, 1.0, 1.0, 1, 0, "left");                                // คลิกที่ปุ่ม Sort by Rank
-            SevenKnightsCore.Sleep(300);
+            SevenKnightsCore.Sleep(800);
             if (!this.MatchMapping(HeroesPM.SortButtonAscending, 2))                                         // ถ้าไม่ใช่ปุ่มลูกศรขึ้น
             {
                 this.WeightedClick(HeroesPM.SortButton, 1.0, 1.0, 1, 0, "left");                            // คลิกปุ่มให้เป็นปุ่มลูกศรขึ้น
