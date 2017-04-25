@@ -426,6 +426,9 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "SP_Limit")]
         public int SP_Limit;
 
+        [XmlElement(ElementName = "ST_Stop100")]
+        public bool ST_Stop100;
+
         public string Version = Application.ProductVersion;
 
         #endregion Public Fields
@@ -536,6 +539,7 @@ namespace SevenKnightsAI.Classes
             this.SP_karinNormal = true;
             this.SP_EnableLimit = false;
             this.SP_Limit = 0;
+            this.ST_Stop100 = true;
         }
 
         #endregion Public Constructors
@@ -1377,6 +1381,12 @@ namespace SevenKnightsAI.Classes
                 }
                 catch (Exception)
                 { }
+                try
+                {
+                    aISettings.ST_Stop100 = (bool)dictionary["ST_Stop100"];
+                }
+                catch (Exception)
+                { }
                 return aISettings;
             }
             throw new AISettingsException("Settings file not found", -1);
@@ -1937,6 +1947,10 @@ namespace SevenKnightsAI.Classes
                 {
                     "SP_Limit",
                     this.SP_Limit
+                },
+                {
+                    "ST_Stop100",
+                    this.ST_Stop100
                 }
             };
             string data = JsonConvert.SerializeObject(value);

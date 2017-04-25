@@ -226,8 +226,11 @@
             this.SP_dailyNomalRadioButton = new System.Windows.Forms.RadioButton();
             this.SP_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.SP_wave3Panel = new System.Windows.Forms.Panel();
+            this.SP_w3bothSkillRadio = new System.Windows.Forms.RadioButton();
             this.SP_w3Skill11Button = new System.Windows.Forms.Button();
+            this.SP_w3manualSkillRadio = new System.Windows.Forms.RadioButton();
             this.SP_w3Skill12Button = new System.Windows.Forms.Button();
+            this.SP_w3autoSkillRadio = new System.Windows.Forms.RadioButton();
             this.SP_w3Skill13Button = new System.Windows.Forms.Button();
             this.SP_w3Skill14Button = new System.Windows.Forms.Button();
             this.SP_w3Skill15Button = new System.Windows.Forms.Button();
@@ -245,6 +248,9 @@
             this.SP_w3Skill01Button = new System.Windows.Forms.Button();
             this.SP_bothSkillRadio = new System.Windows.Forms.RadioButton();
             this.SP_wave2Panel = new System.Windows.Forms.Panel();
+            this.SP_w2bothSkillRadio = new System.Windows.Forms.RadioButton();
+            this.SP_w2manualSkillRadio = new System.Windows.Forms.RadioButton();
+            this.SP_w2autoSkillRadio = new System.Windows.Forms.RadioButton();
             this.SP_w2Skill11Button = new System.Windows.Forms.Button();
             this.SP_wave2LoopCheckBox = new System.Windows.Forms.CheckBox();
             this.SP_w2Skill12Button = new System.Windows.Forms.Button();
@@ -490,12 +496,6 @@
             this.resourcesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.aiPause = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.SP_w2autoSkillRadio = new System.Windows.Forms.RadioButton();
-            this.SP_w2manualSkillRadio = new System.Windows.Forms.RadioButton();
-            this.SP_w2bothSkillRadio = new System.Windows.Forms.RadioButton();
-            this.SP_w3autoSkillRadio = new System.Windows.Forms.RadioButton();
-            this.SP_w3manualSkillRadio = new System.Windows.Forms.RadioButton();
-            this.SP_w3bothSkillRadio = new System.Windows.Forms.RadioButton();
             this.tabControl.SuspendLayout();
             this.adventureTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AD_limitNumericBox)).BeginInit();
@@ -689,9 +689,9 @@
             this.AD_bootmodeCheckBox.AutoSize = true;
             this.AD_bootmodeCheckBox.Location = new System.Drawing.Point(9, 66);
             this.AD_bootmodeCheckBox.Name = "AD_bootmodeCheckBox";
-            this.AD_bootmodeCheckBox.Size = new System.Drawing.Size(78, 17);
+            this.AD_bootmodeCheckBox.Size = new System.Drawing.Size(83, 17);
             this.AD_bootmodeCheckBox.TabIndex = 28;
-            this.AD_bootmodeCheckBox.Text = "Boot Mode";
+            this.AD_bootmodeCheckBox.Text = "Boost Mode";
             this.AD_bootmodeCheckBox.UseVisualStyleBackColor = true;
             this.AD_bootmodeCheckBox.CheckedChanged += new System.EventHandler(this.AD_bootmodeCheckBox_CheckedChanged);
             // 
@@ -3184,6 +3184,17 @@
             this.SP_wave3Panel.TabIndex = 13;
             this.SP_wave3Panel.Tag = "9";
             // 
+            // SP_w3bothSkillRadio
+            // 
+            this.SP_w3bothSkillRadio.AutoSize = true;
+            this.SP_w3bothSkillRadio.Location = new System.Drawing.Point(192, 3);
+            this.SP_w3bothSkillRadio.Name = "SP_w3bothSkillRadio";
+            this.SP_w3bothSkillRadio.Size = new System.Drawing.Size(47, 17);
+            this.SP_w3bothSkillRadio.TabIndex = 31;
+            this.SP_w3bothSkillRadio.Text = "Both";
+            this.SP_w3bothSkillRadio.UseVisualStyleBackColor = true;
+            this.SP_w3bothSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w3bothSkillRadio_CheckedChanged);
+            // 
             // SP_w3Skill11Button
             // 
             this.SP_w3Skill11Button.BackColor = System.Drawing.Color.Transparent;
@@ -3197,6 +3208,17 @@
             this.SP_w3Skill11Button.UseVisualStyleBackColor = false;
             this.SP_w3Skill11Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
+            // SP_w3manualSkillRadio
+            // 
+            this.SP_w3manualSkillRadio.AutoSize = true;
+            this.SP_w3manualSkillRadio.Location = new System.Drawing.Point(129, 3);
+            this.SP_w3manualSkillRadio.Name = "SP_w3manualSkillRadio";
+            this.SP_w3manualSkillRadio.Size = new System.Drawing.Size(60, 17);
+            this.SP_w3manualSkillRadio.TabIndex = 31;
+            this.SP_w3manualSkillRadio.Text = "Manual";
+            this.SP_w3manualSkillRadio.UseVisualStyleBackColor = true;
+            this.SP_w3manualSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w3manualSkillRadio_CheckedChanged);
+            // 
             // SP_w3Skill12Button
             // 
             this.SP_w3Skill12Button.BackColor = System.Drawing.Color.Transparent;
@@ -3209,6 +3231,19 @@
             this.SP_w3Skill12Button.Tag = "11";
             this.SP_w3Skill12Button.UseVisualStyleBackColor = false;
             this.SP_w3Skill12Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // SP_w3autoSkillRadio
+            // 
+            this.SP_w3autoSkillRadio.AutoSize = true;
+            this.SP_w3autoSkillRadio.Checked = true;
+            this.SP_w3autoSkillRadio.Location = new System.Drawing.Point(78, 3);
+            this.SP_w3autoSkillRadio.Name = "SP_w3autoSkillRadio";
+            this.SP_w3autoSkillRadio.Size = new System.Drawing.Size(47, 17);
+            this.SP_w3autoSkillRadio.TabIndex = 31;
+            this.SP_w3autoSkillRadio.TabStop = true;
+            this.SP_w3autoSkillRadio.Text = "Auto";
+            this.SP_w3autoSkillRadio.UseVisualStyleBackColor = true;
+            this.SP_w3autoSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w3autoSkillRadio_CheckedChanged);
             // 
             // SP_w3Skill13Button
             // 
@@ -3419,6 +3454,41 @@
             this.SP_wave2Panel.Size = new System.Drawing.Size(241, 102);
             this.SP_wave2Panel.TabIndex = 9;
             this.SP_wave2Panel.Tag = "8";
+            // 
+            // SP_w2bothSkillRadio
+            // 
+            this.SP_w2bothSkillRadio.AutoSize = true;
+            this.SP_w2bothSkillRadio.Location = new System.Drawing.Point(192, 3);
+            this.SP_w2bothSkillRadio.Name = "SP_w2bothSkillRadio";
+            this.SP_w2bothSkillRadio.Size = new System.Drawing.Size(47, 17);
+            this.SP_w2bothSkillRadio.TabIndex = 31;
+            this.SP_w2bothSkillRadio.Text = "Both";
+            this.SP_w2bothSkillRadio.UseVisualStyleBackColor = true;
+            this.SP_w2bothSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w2bothSkillRadio_CheckedChanged);
+            // 
+            // SP_w2manualSkillRadio
+            // 
+            this.SP_w2manualSkillRadio.AutoSize = true;
+            this.SP_w2manualSkillRadio.Location = new System.Drawing.Point(129, 3);
+            this.SP_w2manualSkillRadio.Name = "SP_w2manualSkillRadio";
+            this.SP_w2manualSkillRadio.Size = new System.Drawing.Size(60, 17);
+            this.SP_w2manualSkillRadio.TabIndex = 31;
+            this.SP_w2manualSkillRadio.Text = "Manual";
+            this.SP_w2manualSkillRadio.UseVisualStyleBackColor = true;
+            this.SP_w2manualSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w2manualSkillRadio_CheckedChanged);
+            // 
+            // SP_w2autoSkillRadio
+            // 
+            this.SP_w2autoSkillRadio.AutoSize = true;
+            this.SP_w2autoSkillRadio.Checked = true;
+            this.SP_w2autoSkillRadio.Location = new System.Drawing.Point(78, 3);
+            this.SP_w2autoSkillRadio.Name = "SP_w2autoSkillRadio";
+            this.SP_w2autoSkillRadio.Size = new System.Drawing.Size(47, 17);
+            this.SP_w2autoSkillRadio.TabIndex = 31;
+            this.SP_w2autoSkillRadio.TabStop = true;
+            this.SP_w2autoSkillRadio.Text = "Auto";
+            this.SP_w2autoSkillRadio.UseVisualStyleBackColor = true;
+            this.SP_w2autoSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w2autoSkillRadio_CheckedChanged);
             // 
             // SP_w2Skill11Button
             // 
@@ -4331,7 +4401,7 @@
             // RD_bothSkillRadio
             // 
             this.RD_bothSkillRadio.AutoSize = true;
-            this.RD_bothSkillRadio.Location = new System.Drawing.Point(200, 15);
+            this.RD_bothSkillRadio.Location = new System.Drawing.Point(200, 14);
             this.RD_bothSkillRadio.Name = "RD_bothSkillRadio";
             this.RD_bothSkillRadio.Size = new System.Drawing.Size(47, 17);
             this.RD_bothSkillRadio.TabIndex = 7;
@@ -4359,7 +4429,7 @@
             this.RD_team2Panel.Controls.Add(this.RD_t2Skill02Button);
             this.RD_team2Panel.Controls.Add(this.RD_team2Label);
             this.RD_team2Panel.Controls.Add(this.RD_t2Skill01Button);
-            this.RD_team2Panel.Location = new System.Drawing.Point(9, 125);
+            this.RD_team2Panel.Location = new System.Drawing.Point(9, 123);
             this.RD_team2Panel.Name = "RD_team2Panel";
             this.RD_team2Panel.Size = new System.Drawing.Size(241, 82);
             this.RD_team2Panel.TabIndex = 9;
@@ -4564,7 +4634,7 @@
             // RD_manualSkillRadio
             // 
             this.RD_manualSkillRadio.AutoSize = true;
-            this.RD_manualSkillRadio.Location = new System.Drawing.Point(138, 15);
+            this.RD_manualSkillRadio.Location = new System.Drawing.Point(138, 14);
             this.RD_manualSkillRadio.Name = "RD_manualSkillRadio";
             this.RD_manualSkillRadio.Size = new System.Drawing.Size(60, 17);
             this.RD_manualSkillRadio.TabIndex = 6;
@@ -4577,7 +4647,7 @@
             // 
             this.RD_autoSkillRadio.AutoSize = true;
             this.RD_autoSkillRadio.Checked = true;
-            this.RD_autoSkillRadio.Location = new System.Drawing.Point(86, 15);
+            this.RD_autoSkillRadio.Location = new System.Drawing.Point(86, 14);
             this.RD_autoSkillRadio.Name = "RD_autoSkillRadio";
             this.RD_autoSkillRadio.Size = new System.Drawing.Size(47, 17);
             this.RD_autoSkillRadio.TabIndex = 5;
@@ -4606,7 +4676,7 @@
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill02Button);
             this.RD_team1Panel.Controls.Add(this.RD_team1Label);
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill01Button);
-            this.RD_team1Panel.Location = new System.Drawing.Point(9, 39);
+            this.RD_team1Panel.Location = new System.Drawing.Point(9, 34);
             this.RD_team1Panel.Name = "RD_team1Panel";
             this.RD_team1Panel.Size = new System.Drawing.Size(241, 82);
             this.RD_team1Panel.TabIndex = 8;
@@ -4791,7 +4861,7 @@
             // 
             // RD_team1Label
             // 
-            this.RD_team1Label.Location = new System.Drawing.Point(6, 7);
+            this.RD_team1Label.Location = new System.Drawing.Point(6, 6);
             this.RD_team1Label.Name = "RD_team1Label";
             this.RD_team1Label.Size = new System.Drawing.Size(60, 13);
             this.RD_team1Label.TabIndex = 0;
@@ -5413,7 +5483,7 @@
             // 
             this.ST_blueStacksGroupBox.Controls.Add(this.ST_forceActiveCheckBox);
             this.ST_blueStacksGroupBox.Controls.Add(this.ST_toggleBlueStacksButton);
-            this.ST_blueStacksGroupBox.Location = new System.Drawing.Point(313, 127);
+            this.ST_blueStacksGroupBox.Location = new System.Drawing.Point(313, 129);
             this.ST_blueStacksGroupBox.Name = "ST_blueStacksGroupBox";
             this.ST_blueStacksGroupBox.Size = new System.Drawing.Size(165, 78);
             this.ST_blueStacksGroupBox.TabIndex = 7;
@@ -5452,7 +5522,7 @@
             this.ST_profileGroupBox.Controls.Add(this.ST_currentProfileLabel);
             this.ST_profileGroupBox.Location = new System.Drawing.Point(8, 105);
             this.ST_profileGroupBox.Name = "ST_profileGroupBox";
-            this.ST_profileGroupBox.Size = new System.Drawing.Size(299, 100);
+            this.ST_profileGroupBox.Size = new System.Drawing.Size(299, 102);
             this.ST_profileGroupBox.TabIndex = 6;
             this.ST_profileGroupBox.TabStop = false;
             this.ST_profileGroupBox.Text = "Profile";
@@ -6335,76 +6405,6 @@
             this.groupBox2.TabIndex = 17;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Key";
-            // 
-            // SP_w2autoSkillRadio
-            // 
-            this.SP_w2autoSkillRadio.AutoSize = true;
-            this.SP_w2autoSkillRadio.Checked = true;
-            this.SP_w2autoSkillRadio.Location = new System.Drawing.Point(78, 3);
-            this.SP_w2autoSkillRadio.Name = "SP_w2autoSkillRadio";
-            this.SP_w2autoSkillRadio.Size = new System.Drawing.Size(47, 17);
-            this.SP_w2autoSkillRadio.TabIndex = 31;
-            this.SP_w2autoSkillRadio.TabStop = true;
-            this.SP_w2autoSkillRadio.Text = "Auto";
-            this.SP_w2autoSkillRadio.UseVisualStyleBackColor = true;
-            this.SP_w2autoSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w2autoSkillRadio_CheckedChanged);
-            // 
-            // SP_w2manualSkillRadio
-            // 
-            this.SP_w2manualSkillRadio.AutoSize = true;
-            this.SP_w2manualSkillRadio.Location = new System.Drawing.Point(129, 3);
-            this.SP_w2manualSkillRadio.Name = "SP_w2manualSkillRadio";
-            this.SP_w2manualSkillRadio.Size = new System.Drawing.Size(60, 17);
-            this.SP_w2manualSkillRadio.TabIndex = 31;
-            this.SP_w2manualSkillRadio.Text = "Manual";
-            this.SP_w2manualSkillRadio.UseVisualStyleBackColor = true;
-            this.SP_w2manualSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w2manualSkillRadio_CheckedChanged);
-            // 
-            // SP_w2bothSkillRadio
-            // 
-            this.SP_w2bothSkillRadio.AutoSize = true;
-            this.SP_w2bothSkillRadio.Location = new System.Drawing.Point(192, 3);
-            this.SP_w2bothSkillRadio.Name = "SP_w2bothSkillRadio";
-            this.SP_w2bothSkillRadio.Size = new System.Drawing.Size(47, 17);
-            this.SP_w2bothSkillRadio.TabIndex = 31;
-            this.SP_w2bothSkillRadio.Text = "Both";
-            this.SP_w2bothSkillRadio.UseVisualStyleBackColor = true;
-            this.SP_w2bothSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w2bothSkillRadio_CheckedChanged);
-            // 
-            // SP_w3autoSkillRadio
-            // 
-            this.SP_w3autoSkillRadio.AutoSize = true;
-            this.SP_w3autoSkillRadio.Checked = true;
-            this.SP_w3autoSkillRadio.Location = new System.Drawing.Point(78, 3);
-            this.SP_w3autoSkillRadio.Name = "SP_w3autoSkillRadio";
-            this.SP_w3autoSkillRadio.Size = new System.Drawing.Size(47, 17);
-            this.SP_w3autoSkillRadio.TabIndex = 31;
-            this.SP_w3autoSkillRadio.TabStop = true;
-            this.SP_w3autoSkillRadio.Text = "Auto";
-            this.SP_w3autoSkillRadio.UseVisualStyleBackColor = true;
-            this.SP_w3autoSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w3autoSkillRadio_CheckedChanged);
-            // 
-            // SP_w3manualSkillRadio
-            // 
-            this.SP_w3manualSkillRadio.AutoSize = true;
-            this.SP_w3manualSkillRadio.Location = new System.Drawing.Point(129, 3);
-            this.SP_w3manualSkillRadio.Name = "SP_w3manualSkillRadio";
-            this.SP_w3manualSkillRadio.Size = new System.Drawing.Size(60, 17);
-            this.SP_w3manualSkillRadio.TabIndex = 31;
-            this.SP_w3manualSkillRadio.Text = "Manual";
-            this.SP_w3manualSkillRadio.UseVisualStyleBackColor = true;
-            this.SP_w3manualSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w3manualSkillRadio_CheckedChanged);
-            // 
-            // SP_w3bothSkillRadio
-            // 
-            this.SP_w3bothSkillRadio.AutoSize = true;
-            this.SP_w3bothSkillRadio.Location = new System.Drawing.Point(192, 3);
-            this.SP_w3bothSkillRadio.Name = "SP_w3bothSkillRadio";
-            this.SP_w3bothSkillRadio.Size = new System.Drawing.Size(47, 17);
-            this.SP_w3bothSkillRadio.TabIndex = 31;
-            this.SP_w3bothSkillRadio.Text = "Both";
-            this.SP_w3bothSkillRadio.UseVisualStyleBackColor = true;
-            this.SP_w3bothSkillRadio.CheckedChanged += new System.EventHandler(this.SP_w3bothSkillRadio_CheckedChanged);
             // 
             // MainForm
             // 

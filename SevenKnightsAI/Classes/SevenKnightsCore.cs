@@ -75,7 +75,6 @@ namespace SevenKnightsAI.Classes
         private int CollectQuestsCount;
         private int CollectQuestsTotal;
         private int CooldownInbox;
-        private int CooldownHero;
         private int CooldownQuests;
         private int CooldownSellHeroes;
         private int CooldownSellItems;
@@ -126,7 +125,6 @@ namespace SevenKnightsAI.Classes
         private bool Hottimeloop;
         private string PlayerName = "";
         private bool CheckPlayaName;
-        private bool SendHornorflag;
         private bool DragonFound;
         private int Sp_LimitCount;
         private int sp_dailycount;
@@ -1619,7 +1617,11 @@ namespace SevenKnightsAI.Classes
         private void DoneRaid()
         {
             this.EnableRaidRewards = false;
-            if (this.CurrentObjective == Objective.RAID)
+            if (this.CurrentObjective == Objective.RAID && (this.PreviousObjective == Objective.ADVENTURE || this.PreviousObjective == Objective.GOLD_CHAMBER))
+            {
+                this.ChangeObjective(Objective.HERO_MANAGEMENT);
+            }
+            else
             {
                 this.NextPossibleObjective();
             }
@@ -2146,7 +2148,7 @@ namespace SevenKnightsAI.Classes
             this.IdleCounter = 0;
             this.MapSelectCounter = 0;
             this.CooldownInbox = 0;
-            this.CooldownHero = 900000;
+            //this.CooldownHero = 900000;
             this.CooldownQuests = 0;
             this.CooldownSendHonors = 0;
             this.CooldownSellHeroes = 0;
@@ -2403,7 +2405,6 @@ namespace SevenKnightsAI.Classes
             this.sp_row3flag = false;
             this.sp_row4flag = false;
             this.CheckPlayaName = true;
-            this.SendHornorflag = true;
             this.Log("Initializing AI...");
             this.BlueStacks = new BlueStacks();
             string errorMessage;
@@ -2458,7 +2459,7 @@ namespace SevenKnightsAI.Classes
                             this.HangCounter += sT_Delay;
                             this.MapSelectCounter += sT_Delay;
                             this.CooldownInbox -= sT_Delay;
-                            this.CooldownHero -= sT_Delay;
+                            //this.CooldownHero -= sT_Delay;
                             this.CooldownQuests -= sT_Delay;
                             this.CooldownSendHonors -= sT_Delay;
                             this.CooldownSellHeroes -= sT_Delay;
@@ -2649,9 +2650,8 @@ namespace SevenKnightsAI.Classes
                                                 this.Hottimeloop = false;
                                                 SevenKnightsCore.Sleep(800);
                                             }
-                                            if (this.AISettings.AD_Enable && (this.AISettings.AD_CheckingHeroes || this.CooldownHero <= 0))
+                                            if (this.AISettings.AD_Enable && this.AISettings.AD_CheckingHeroes)
                                             {
-                                                this.CooldownHero = 900000;
                                                 this.ChangeObjective(Objective.HERO_MANAGEMENT);
                                                 this.SelectTeamHero();
                                                 this.AISettings.AD_CheckingHeroes = false;
@@ -2679,7 +2679,6 @@ namespace SevenKnightsAI.Classes
                                                     if (this.IsSendHonorsEnabled() && this.CurrentObjective != Objective.COLLECT_QUESTS && this.CurrentObjective != Objective.COLLECT_INBOX && this.CurrentObjective != Objective.SEND_HONORS && this.CurrentObjective != Objective.BUY_KEYS && this.CurrentObjective != Objective.HERO_MANAGEMENT)
                                                     {
                                                         this.ChangeObjective(Objective.SEND_HONORS);
-                                                        this.SendHornorflag = false;
                                                     }
                                                 }
                                                 else if (this.MatchMapping(LobbyPM.QuestAvailable, 3) && this.IsAnyQuestsEnabled() && this.CooldownQuests <= 0)
@@ -3319,7 +3318,7 @@ namespace SevenKnightsAI.Classes
                                             this.HeroLVUPCount();
                                             if (this.AISettings.AD_StopOnLV30)
                                             {
-                                                this.CooldownHero = 900000;
+                                                //this.CooldownHero = 900000;
                                                 this.Alert("Hero Level 30");
                                                 this.Escape();
                                                 this.AIProfiles.TMP_Paused = true;
@@ -3327,7 +3326,7 @@ namespace SevenKnightsAI.Classes
                                             }
                                             if (this.AISettings.AD_Formation != Formation.None && this.AISettings.AD_HeroManagePositions != null && this.AISettings.AD_HeroManagePositions.Length > 0)
                                             {
-                                                this.CooldownHero = 900000;
+                                                //this.CooldownHero = 900000;
                                                 this.ChangeObjective(Objective.HERO_MANAGEMENT);
                                             }
                                             this.WeightedClick(Level30DialogPM.OkButton, 1.0, 1.0, 1, 0, "left");
@@ -5726,7 +5725,8 @@ namespace SevenKnightsAI.Classes
                 {
                     this.Log("Limit reached [Raid]", this.COLOR_LIMIT);
                     this.RaidLimitCount = 0;
-                    this.NextPossibleObjective();
+                    this.DoneRaid();
+                    //this.NextPossibleObjective();
                 }
             }
         }
@@ -7659,14 +7659,11 @@ namespace SevenKnightsAI.Classes
                         {
                             this.Log(string.Format("Max Heroes level up per day : {0}/100", curCount), Color.BlueViolet);
                         }
-                        if (curCount == 100 )
+                        else if (curCount == 100 )
                         {
                             this.Log(string.Format("Max Heroes level up per day : {0}/100", curCount), Color.BlueViolet);
                             this.MaxHeroUpCount = true;
-                        }
-                        else
-                        {
-                            this.MaxHeroUpCount = false;
+                            this.NextPossibleObjective();
                         }
                     }
                 }

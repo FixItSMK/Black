@@ -2112,6 +2112,10 @@ namespace SevenKnightsAI
             int num = Convert.ToInt32(numericUpDown.Value);
             this.AISettings.RD_DragonHPLimit = num;
         }
+        private void ST_stop100CheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
 
         // Link Thank.
 
