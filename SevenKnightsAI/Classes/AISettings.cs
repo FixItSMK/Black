@@ -120,6 +120,12 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "AR_UseRuby")]
         public bool AR_UseRuby;
 
+        [XmlElement(ElementName = "AR_LimitArena")]
+        public bool AR_LimitArena;
+
+        [XmlElement(ElementName = "AR_LimitScore")]
+        public int AR_LimitScore;
+
         [XmlElement(ElementName = "AR_UseRubyAmount")]
         public int AR_UseRubyAmount;
 
@@ -442,6 +448,8 @@ namespace SevenKnightsAI.Classes
             this.AR_EnableLimit = false;
             this.AR_Limit = 0;
             this.AR_UseRuby = false;
+            this.AR_LimitArena = false;
+            this.AR_LimitScore = 4300;
             this.AR_UseRubyAmount = 0;
             this.RD_Enable = true;
             this.RD_EnableDragonLimit = true;
@@ -818,6 +826,18 @@ namespace SevenKnightsAI.Classes
                 try
                 {
                     aISettings.AR_Mastery = (Mastery)Convert.ToInt32(dictionary["AR_Mastery"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.AR_LimitArena = (bool)dictionary["AR_LimitArena"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.AR_LimitScore = Convert.ToInt32(dictionary["AR_LimitScore"]);
                 }
                 catch (Exception)
                 { }
@@ -1499,6 +1519,14 @@ namespace SevenKnightsAI.Classes
                 {
                     "AR_Mastery",
                     this.AR_Mastery
+                },
+                {
+                    "AR_LimitArena",
+                    this.AR_LimitArena
+                },
+                {
+                    "AR_LimitScore",
+                    this.AR_LimitScore
                 },
                 {
                     "RD_StopOnDragonFound",

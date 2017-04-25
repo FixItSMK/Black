@@ -823,6 +823,8 @@ namespace SevenKnightsAI
             this.AR_useRubyCheckBox.Checked = this.AISettings.AR_UseRuby;
             this.AR_useRubyNumericBox.Value = this.AISettings.AR_UseRubyAmount;
             this.AR_masteryComboBox.SelectedIndex = (int)this.AISettings.AR_Mastery;
+            this.AR_stopArenaCheckBox.Checked = this.AISettings.AR_LimitArena;
+            this.AR_stopArenaNumericBox.Value = this.AISettings.AR_LimitScore;
         }
 
         private void InitGlobalProfile()
@@ -2087,11 +2089,6 @@ namespace SevenKnightsAI
             Process.Start("https://github.com/dreammed/SevenKnightsAI");
         }
 
-        private void linkLabel8_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Process.Start("https://www.facebook.com/groups/heartcold");
-        }
-
         private void linkLabel10_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start("https://www.facebook.com/SevenKnightsAIBlack");
@@ -2319,6 +2316,19 @@ namespace SevenKnightsAI
             {
                 MessageBox.Show("Sunday");
             }
+        }
+
+        private void AR_stopArenaCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AR_LimitArena = checkBox.Checked;
+        }
+
+        private void AR_stopArenaNumericBox_ValueChanged(object sender, EventArgs e)
+        {
+            NumericUpDown numericUpDown = sender as NumericUpDown;
+            int num = Convert.ToInt32(numericUpDown.Value);
+            this.AISettings.AR_LimitScore = num;
         }
     }
 }

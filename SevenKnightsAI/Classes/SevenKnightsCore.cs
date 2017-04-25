@@ -495,7 +495,7 @@ namespace SevenKnightsAI.Classes
             }
             int num = world - World.Sequencer;
             int num2 = stage + 1;
-            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, AdventureStartPM.R_MapNumber))
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, AdventureStartPM.R_MapNumber).ScaleByPercent(128))
             {
                 using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
                 {
@@ -1154,7 +1154,69 @@ namespace SevenKnightsAI.Classes
 #endif
                 return PlayerName;
             }
+        }
 
+        private void CheckArenaScore()
+        {
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, ArenaEndPM.ArenaScore))
+            {
+                int arenaScore = 0;
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText().ToLower().Replace("l", "1").Replace(".", "").Replace(" ", "").Replace("s", "5")
+                        .Replace("o", "0").Replace("i", "1").Replace("z", "2").Replace(")", "").Replace("j", "").Replace("_", "")
+                        .Replace("‘", "").Replace("'", "").Replace(":", "").Replace("f", "").Replace("[", "").Replace("]", "")
+                        .Replace("#", "").Replace("$", "5").Replace("e", "").Replace("q", "2").Replace("§", "3");
+#if DEBUG
+                    bitmap.Save("ArenaScore2.png");
+#endif
+                    string test1 = Regex.Replace(text, @"\D", ""); // เอา String ออกจาก Number
+                    Utility.FilterAscii(test1);
+                    int.TryParse(test1, out arenaScore);
+                    this.Log(string.Format("Arena Score = {0}", arenaScore), this.COLOR_ARENA);
+                    if (this.AISettings.AR_LimitArena)
+                    {
+                        if (arenaScore >= this.AISettings.AR_LimitScore)
+                        {
+                            SevenKnightsCore.Sleep(800);
+                            this.NextPossibleObjective();
+                            this.Log(string.Format("Arena Score Limit"), Color.BlueViolet);
+                        }
+                    }
+                }
+            }
+        }
+
+        private void CheckArenaScoreReady()
+        {
+            using (Bitmap bitmap = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, ArenaReadyPM.ArenaScore))
+            {
+                int arenaScore = 0;
+                using (Page page = this.Tesseractor.Engine.Process(bitmap, null))
+                {
+                    string text = page.GetText().ToLower().Replace("l", "1").Replace(".", "").Replace(" ", "").Replace("s", "5")
+                        .Replace("o", "0").Replace("i", "1").Replace("z", "2").Replace(")", "").Replace("j", "").Replace("_", "")
+                        .Replace("‘", "").Replace("'", "").Replace(":", "").Replace("f", "").Replace("[", "").Replace("]", "")
+                        .Replace("#", "").Replace("$", "5").Replace("e", "").Replace("q", "2").Replace("§", "3");
+#if DEBUG
+                    bitmap.Save("ArenaScore1.png");
+#endif
+                    string test1 = Regex.Replace(text, @"\D", ""); // เอา String ออกจาก Number
+                    Utility.FilterAscii(test1);
+                    int.TryParse(test1, out arenaScore);
+                    this.Log(string.Format("Arena Score = {0}", arenaScore), this.COLOR_ARENA);
+                    if(this.AISettings.AR_LimitArena)
+                    {
+                        if (arenaScore >= this.AISettings.AR_LimitScore)
+                        {
+                            SevenKnightsCore.Sleep(800);
+                            this.NextPossibleObjective();
+                            this.Log(string.Format("Arena Score Limit"), Color.BlueViolet);
+                        }
+                    }
+                    
+                }
+            }
         }
 
         private string CheckDragonNameUpToDown(int location) //หามังกรหลายตำแหน่งจาก บน ลง ล่าง
@@ -2595,6 +2657,7 @@ namespace SevenKnightsAI.Classes
                                                 this.CaptureFrame();
                                                 this.CheckOwnername();
                                                 this.Escape();
+                                                SevenKnightsCore.Sleep(800);
                                                 this.CheckPlayaName = false;
                                             }
                                             if (this.AISettings.AD_HottimeEnable && this.Hottimeloop == true)
@@ -3132,9 +3195,6 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.BATTLE_MODES:
-                                            //this.UpdateGold(scene.SceneType);
-                                            //this.UpdateRuby(scene.SceneType);
-                                            //this.UpdateHonor(scene.SceneType);
                                             if (this.CurrentObjective == Objective.ARENA)
                                             {
                                                 this.WeightedClick(BattleModesPM.ArenaButton, 1.0, 1.0, 1, 0, "left");
@@ -3149,6 +3209,7 @@ namespace SevenKnightsAI.Classes
                                             this.UpdateArenaKeys();
                                             this.UpdateRuby(scene.SceneType);
                                             this.UpdateHonor(scene.SceneType);
+                                            this.CheckArenaScoreReady();
                                             if (this.CurrentObjective == Objective.ARENA)
                                             {
                                                 if (this.ArenaKeys > 0 || this.ArenaUseRuby())
@@ -3208,6 +3269,7 @@ namespace SevenKnightsAI.Classes
                                                 this.Log("Arena Victory", this.COLOR_ARENA);
                                                 this.ArenaAfterFight(true);
                                             }
+                                            this.CheckArenaScore();
                                             if (this.CurrentObjective == Objective.ARENA)
                                             {
                                                 this.WeightedClick(ArenaEndPM.QuickStartButton, 1.0, 1.0, 1, 0, "left");
@@ -3394,6 +3456,10 @@ namespace SevenKnightsAI.Classes
                                                             if (this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 4))  //ตรวจสอบ ถ้า ยึดบน ทำอันนี้ ตรวจสอบหน้าที่ 1 หรือหน้าที่ 2
                                                             {
                                                                 int NameLocation = 0;
+                                                                string ckname0 = "Siangsawan1";
+                                                                string ckname1 = "Siangsawan2";
+                                                                string ckname2 = "Siangsawan3";
+                                                                string ckname3 = "Siangsawan4";
                                                                 string Name0 = CheckDragonNameUpToDown(NameLocation);
                                                                 string Name1 = CheckDragonNameUpToDown(NameLocation + 1);
                                                                 string Name2 = CheckDragonNameUpToDown(NameLocation + 2);
@@ -3439,6 +3505,14 @@ namespace SevenKnightsAI.Classes
                                                                     i = 0;
                                                                     break;
                                                                 }
+                                                                // ตรวจมีมังกรแค่ 4 ตัว
+                                                                else if ((ckname0 == Name0) || (ckname1 == Name1) || (ckname2 == Name2) || (ckname3 == Name3))
+                                                                {
+                                                                    this.Log("Not Found Owner Dragon", Color.PaleVioletRed);
+                                                                    i = 0;
+                                                                    this.DoneRaid();
+                                                                    break;
+                                                                }
                                                                 // ถ้าตรวจสอบแล้ว มังกรหมด ให้จบ
                                                                 else if (!this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn0, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn1, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn2, 2) || !this.MatchMapping(RaidLobbyPM.RaidUpToDownBtn3, 2))
                                                                 {
@@ -3449,6 +3523,10 @@ namespace SevenKnightsAI.Classes
                                                                 }
                                                                 else // เลื่อนหน้าจอ
                                                                 {
+                                                                    ckname0 = Name0;
+                                                                    ckname1 = Name1;
+                                                                    ckname2 = Name2;
+                                                                    ckname3 = Name3;
                                                                     this.ScrollRaidPage(true);
                                                                     this.Log("Find Next..", this.COLOR_RAID);
                                                                     SevenKnightsCore.Sleep(1000);
@@ -3898,6 +3976,18 @@ namespace SevenKnightsAI.Classes
                                             }
                                             break;
 
+                                        case SceneType.RAID_AWAKENED_START:
+                                            if (this.CurrentObjective == Objective.RAID)
+                                            {
+                                                this.WeightedClick(RaidStartPM.StartButton, 1.0, 1.0, 1, 0, "left");
+                                                SevenKnightsCore.Sleep(300);
+                                            }
+                                            else
+                                            {
+                                                this.Escape();
+                                            }
+                                            break;
+
                                         case SceneType.ENTER_RAID_AGAIN_POPUP:
                                             this.DoneRaid();
                                             break;
@@ -3945,11 +4035,7 @@ namespace SevenKnightsAI.Classes
                                             break;
 
                                         case SceneType.SHOP:
-                                            this.UpdateAdventureKeys(scene.SceneType);
-                                            this.UpdateGold(scene.SceneType);
-                                            this.UpdateRuby(scene.SceneType);
                                             this.UpdateTopaz(scene.SceneType);
-                                            //this.UpdateHonor(scene.SceneType);
                                             if (this.CurrentObjective == Objective.BUY_KEYS)
                                             {
                                                 this.BuyKeys();
@@ -4478,6 +4564,10 @@ namespace SevenKnightsAI.Classes
                                                 this.Escape();
                                             }
                                             break;
+
+                                        case SceneType.CLOSE_POPUP:
+                                            this.WeightedClick(Popup3PM.ClosePopupOKButton, 1.0, 1.0, 1, 0, "left");
+                                            break;
                                     }
                                 }
                             }
@@ -4666,7 +4756,6 @@ namespace SevenKnightsAI.Classes
                 {
                     return;
                 }
-                
                 if (this.IsHeroLevel30())
                 {
                     this.Log(string.Format("- Got position: {0}", current + 1), this.COLOR_HEROES_MANAGEMENT);
@@ -4677,8 +4766,8 @@ namespace SevenKnightsAI.Classes
                     return;
                 }
                 this.Escape();
-                SevenKnightsCore.Sleep(500);
-                if (!this.ExpectingScene(SceneType.HEROES, 5, 500))
+                SevenKnightsCore.Sleep(800);
+                if (!this.ExpectingScene(SceneType.HEROES, 8, 800))
                 {
                     return;
                 }
@@ -4691,7 +4780,7 @@ namespace SevenKnightsAI.Classes
             }
             else
             {
-                if (!this.ExpectingScene(SceneType.HEROES, 5, 500))
+                if (!this.ExpectingScene(SceneType.HEROES, 8, 800))
                 {
                     return;
                 }
@@ -4705,9 +4794,10 @@ namespace SevenKnightsAI.Classes
                 while (num4 < 100 && !this.Worker.CancellationPending)
                 {
                     bool flag2 = false;
+                    SevenKnightsCore.Sleep(1000);
                     this.CaptureFrame();
                     Scene scene = this.SceneSearch();
-                    if (!this.ExpectingScene(SceneType.HEROES, 3, 300))
+                    if (!this.ExpectingScene(SceneType.HEROES, 8, 800))
                     {
                         return;
                     }
@@ -4729,7 +4819,7 @@ namespace SevenKnightsAI.Classes
                         {
                             r_HeroCard_Base.Y += HeroesPM.CARD_Y_DELTA + HeroesPM.CARD_LAST_Y_DELTA;
                         }
-                        SevenKnightsCore.Sleep(1000);
+                        SevenKnightsCore.Sleep(800);
                         ulong num6 = 0uL;
                         using (this.CaptureFrame())
                         {
@@ -4762,6 +4852,7 @@ namespace SevenKnightsAI.Classes
                         {
                             return;
                         }
+                        SevenKnightsCore.Sleep(1000);
                         this.CaptureFrame();
                         scene = this.SceneSearch();
                         if (scene.SceneType == SceneType.HERO_JOIN)
@@ -4789,7 +4880,7 @@ namespace SevenKnightsAI.Classes
                                     break;
                                 }
                             }
-                            else
+                            else if (this.ExpectingScene(SceneType.HERO_JOIN, 8, 800))
                             {
                                 this.WeightedClick(HeroJoinPM.JoinButton, 1.0, 1.0, 1, 0, "left");
                                 SevenKnightsCore.Sleep(1000);
@@ -4803,7 +4894,6 @@ namespace SevenKnightsAI.Classes
                                 int num9 = 0;
                                 while (num9 < 5 && !this.Worker.CancellationPending)
                                 {
-                                    SevenKnightsCore.Sleep(100);
                                     this.CaptureFrame();
                                     for (int i = 0; i < array6.Length; i++)
                                     {
@@ -4825,7 +4915,7 @@ namespace SevenKnightsAI.Classes
                                     {
                                         break;
                                     }
-                                    SevenKnightsCore.Sleep(100);
+                                    SevenKnightsCore.Sleep(300);
                                     num9++;
                                 }
                                 int num10;
@@ -4856,10 +4946,11 @@ namespace SevenKnightsAI.Classes
                                 {
                                     SceneType.HEROES_SAME_TEAM_POPUP,
                                     SceneType.HEROES
-                                }, 8, 800))
+                                }, 5, 500))
                                 {
                                     return;
                                 }
+                                SevenKnightsCore.Sleep(1000);
                                 this.CaptureFrame();
                                 scene = this.SceneSearch();
                                 if (scene.SceneType == SceneType.HEROES_SAME_TEAM_POPUP)
@@ -4890,7 +4981,7 @@ namespace SevenKnightsAI.Classes
                             if (scene.SceneType == SceneType.HERO_REMOVE)
                             {
                                 this.Escape();
-                                SevenKnightsCore.Sleep(800);
+                                SevenKnightsCore.Sleep(500);
                                 goto IL_B14;
                             }
                             return;
@@ -5248,7 +5339,7 @@ namespace SevenKnightsAI.Classes
                 rect = SharedPM.R_TimeBase;
                 rect.X += offsetX;
                 rect.Y += offsetY;
-                using (Bitmap bitmap2 = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect).ScaleByPercent(200))
+                using (Bitmap bitmap2 = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect).ScaleByPercent(128))
                 {
 #if DEBUG
                     bitmap2.Save("r_timebase.png");
@@ -5284,7 +5375,7 @@ namespace SevenKnightsAI.Classes
             rect = SharedPM.R_KeyNormalBase;
             rect.X += offsetX;
             rect.Y += offsetY;
-            using (Bitmap bitmap3 = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect))
+            using (Bitmap bitmap3 = this.CropFrame(this.BlueStacks.MainWindowAS.CurrentFrame, rect).ScaleByPercent(128))
             {
 #if DEBUG
                 bitmap3.Save("r_normalbase.png");
@@ -5459,7 +5550,8 @@ namespace SevenKnightsAI.Classes
                 bool flag2 = this.AISettings.SP_SkillType == SkillType.Both;
                 bool shouldAssign = !flag || flag2;
                 this.ToggleAutoSkill(flag);
-                if (this.MatchMapping(AdventureFightPM.AtTurn1Of1, 5) || (this.MatchMapping(AdventureFightPM.AtTurn1Of2, 5) && this.MatchMapping(AdventureFightPM.Turn2Of2, 5)) || (this.MatchMapping(AdventureFightPM.AtTurn1Of3_1, 5) && this.MatchMapping(AdventureFightPM.AtTurn1Of3_2, 5) && this.MatchMapping(AdventureFightPM.Turn2Of3, 5)))
+                if ((this.MatchMapping(AdventureFightPM.AtTurn1Of1, 5) || (this.MatchMapping(AdventureFightPM.AtTurn1Of2, 5) && this.MatchMapping(AdventureFightPM.Turn2Of2, 5)) || (this.MatchMapping(AdventureFightPM.AtTurn1Of3_1, 5) && this.MatchMapping(AdventureFightPM.AtTurn1Of3_2, 5) && this.MatchMapping(AdventureFightPM.Turn2Of3, 5)))
+                    || this.MatchMapping(SpecialDungeonFightPM.Turn1Of1, 5))
                 {
                     int num3 = 1;
                     this.LoopSkill = this.AISettings.SP_Wave1Loop;
@@ -6104,6 +6196,11 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.RAID_AWAKENED_READY);
                     return result;
                 }
+                if (this.MatchMapping(RaidAwakStartPM.ManageParty1Border, 2) && this.MatchMapping(RaidAwakStartPM.ManageParty2Border, 2) && this.MatchMapping(RaidAwakStartPM.AwakenDragonImg, 2))
+                {
+                    Scene result = new Scene(SceneType.RAID_AWAKENED_START);
+                    return result;
+                }
                 if (this.MatchMapping(RaidDragonPM.TopRight, 5) && this.MatchMapping(RaidDragonPM.Clouds, 8))
                 {
                     Scene result = new Scene(SceneType.RAID_DRAGON);
@@ -6164,9 +6261,7 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.DISCONNECTED_POPUP);
                     return result;
                 }
-                if (this.MatchMapping(AdventureModesPM.BorderTopLeft, 7) &&
-                    this.MatchMapping(AdventureModesPM.BorderBottomRight, 4) &&
-                    this.MatchMapping(AdventureModesPM.GoldPlusIcon, 4))
+                if (this.MatchMapping(AdventureModesPM.BorderTopLeft, 3) && this.MatchMapping(AdventureModesPM.BorderBottomRight, 3))
                 {
                     Scene result = new Scene(SceneType.ADVENTURE_MODES);
                     return result;
@@ -6503,8 +6598,7 @@ namespace SevenKnightsAI.Classes
                     Scene result = new Scene(SceneType.SPECIAL_DUN_START);
                     return result;
                 }
-                if (this.MatchMapping(SpecialDungeonFightPM.ChatBT, 2) && this.MatchMapping(SpecialDungeonFightPM.SWaveCheck, 2))
-
+                if (this.MatchMapping(SpecialDungeonFightPM.ChatBT, 2) && (this.MatchMapping(SpecialDungeonFightPM.SWaveCheck, 2) || this.MatchMapping(SpecialDungeonFightPM.S1WaveCheck, 2)))
                 {
                     Scene result = new Scene(SceneType.SPECIAL_DUN_FIGHT);
                     return result;
@@ -6544,6 +6638,11 @@ namespace SevenKnightsAI.Classes
                 if (this.MatchMapping(Popup3PM.ExitNo, 2) && this.MatchMapping(Popup3PM.ExitYes, 2))
                 {
                     Scene result = new Scene(SceneType.EXIT_POPUP);
+                    return result;
+                }
+                if (this.MatchMapping(Popup3PM.Bolder, 2) && this.MatchMapping(Popup3PM.ClosePopupCancle, 2) && this.MatchMapping(Popup3PM.ClosePopupOK, 2))
+                {
+                    Scene result = new Scene(SceneType.CLOSE_POPUP);
                     return result;
                 }
             }
@@ -7445,10 +7544,7 @@ namespace SevenKnightsAI.Classes
                     this.WeightedClick(FriendsPM.SendAllButton, 1.0, 1.0, 1, 0, "left");  // กดปุ่ม ส่งทั้งหมด
                     SevenKnightsCore.Sleep(1000);
                     this.CaptureFrame();
-                    //scene = this.SceneSearch();
-                    if (this.MatchMapping(SendHonorConfirmPopupPM.RedCross, 2)
-                        && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2)
-                        && this.MatchMapping(SendHonorConfirmPopupPM.GoldPlusBG, 2))
+                    if (this.MatchMapping(SendHonorConfirmPopupPM.RedCross, 2) && this.MatchMapping(SendHonorConfirmPopupPM.YellowTick, 2) && this.MatchMapping(SendHonorConfirmPopupPM.GoldPlusBG, 2))
                     {
                         this.WeightedClick(SendHonorConfirmPopupPM.HonorsGiftButton, 1.0, 1.0, 1, 0, "left");
                         SevenKnightsCore.Sleep(1000);
@@ -7464,7 +7560,7 @@ namespace SevenKnightsAI.Classes
                         if (scene == null || scene.SceneType != SceneType.SEND_HONOR_FAILED_POPUP || scene.SceneType != SceneType.SEND_HONOR_FULL_POPUP || scene.SceneType != SceneType.SEND_HONOR_CONFIRM_POPUP)
                         {
                             SevenKnightsCore.Sleep(1000);
-                            this.Escape();
+                            //this.Escape();
                         }
                         else
                         {

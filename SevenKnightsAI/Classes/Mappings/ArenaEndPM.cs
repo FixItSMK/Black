@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 
 namespace SevenKnightsAI.Classes.Mappings
 {
@@ -66,6 +67,14 @@ namespace SevenKnightsAI.Classes.Mappings
             Y = 398,
             Color = 16758553,
             Type = MappingType.BOTH
+        };
+
+        public static readonly Rectangle ArenaScore = new Rectangle
+        {
+            X = 206,
+            Y = 465,
+            Width = 158,
+            Height = 55
         };
     }
 }

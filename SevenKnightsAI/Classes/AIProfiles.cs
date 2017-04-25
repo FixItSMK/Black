@@ -59,7 +59,7 @@ namespace SevenKnightsAI.Classes
         {
             this.Settings = new Dictionary<string, AISettings>();
             this.CurrentKey = null;
-            this.ST_Delay = 1500;
+            this.ST_Delay = 1800;
             this.ST_ReconnectInterruptEnable = true;
             this.ST_ReconnectInterruptInterval = 10;
             this.ST_EnableHotTimeProfile = false;

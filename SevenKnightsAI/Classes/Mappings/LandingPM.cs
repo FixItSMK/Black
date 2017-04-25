@@ -30,9 +30,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping LeftCheck = new PixelMapping
         {
-            X = 179,
-            Y = 507,
-            Color = 0xe5cf90,
+            X = 173,
+            Y = 510,
+            Color = 6904124,
             Type = MappingType.ANCHOR
         };
     }

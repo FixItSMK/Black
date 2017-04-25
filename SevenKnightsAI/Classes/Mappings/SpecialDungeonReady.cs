@@ -35,7 +35,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 705,
             Y = 28,
-            Color = 12492637,
+            Color = 12690781,
             Type = MappingType.BOTH
         };
 

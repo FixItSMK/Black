@@ -11,7 +11,16 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 395,
             Y = 22,
-            Color = 0xd6c8b6,
+            //Color = 0xd6c8b6,
+            Color = 14076086,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping S1WaveCheck = new PixelMapping
+        {
+            X = 395,
+            Y = 22,
+            Color = 15920870,
             Type = MappingType.ANCHOR
         };
 
@@ -43,7 +52,8 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 928,
             Y = 28,
-            Color = 0xd4c27c,
+            //Color = 0xd4c27c,
+            Color = 13943420,
             Type = MappingType.ANCHOR
         };
 
@@ -68,6 +78,14 @@ namespace SevenKnightsAI.Classes.Mappings
             X = 560,
             Y = 21,
             Color = 0x74708c,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Turn1Of1 = new PixelMapping
+        {
+            X = 516,
+            Y = 21,
+            Color = 5393757,
             Type = MappingType.ANCHOR
         };
     }

@@ -51,5 +51,21 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 0,
             Type = MappingType.BUTTON
         };
+
+        public static readonly PixelMapping LocationCheck1 = new PixelMapping
+        {
+            X = 538,
+            Y = 389,
+            Color = 16775001,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping LocationCheck2 = new PixelMapping
+        {
+            X = 586,
+            Y = 397,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
     }
 }

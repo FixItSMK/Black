@@ -368,5 +368,37 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping ClosePopupCancle = new PixelMapping
+        {
+            X = 315,
+            Y = 418,
+            Color = 14040329,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ClosePopupOK = new PixelMapping
+        {
+            X = 529,
+            Y = 425,
+            Color = 16755726,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping ClosePopupOKButton = new PixelMapping
+        {
+            X = 590,
+            Y = 420,
+            Color = 0,
+            Type = MappingType.BUTTON
+        };
+
+        public static readonly PixelMapping Bolder = new PixelMapping
+        {
+            X = 699,
+            Y = 202,
+            Color = 16047520,
+            Type = MappingType.ANCHOR
+        };
+
     }
 }

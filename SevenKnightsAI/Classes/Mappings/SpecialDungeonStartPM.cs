@@ -27,7 +27,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 706,
             Y = 28,
-            Color = 12756580,
+            Color = 12690781,
             Type = MappingType.BOTH
         };
 
@@ -35,7 +35,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 830,
             Y = 29,
-            Color = 11899727,
+            Color = 11573327,
             Type = MappingType.BOTH
         };
 
@@ -65,9 +65,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping CardEnterButton = new PixelMapping
         {
-            X = 511,
-            Y = 392,
-            Color = 11770259,
+            X = 392,
+            Y = 389,
+            Color = 12757364,
             Type = MappingType.BOTH
         };
     }

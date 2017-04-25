@@ -164,6 +164,7 @@
     <Compile Include="Classes\Mappings\QuestRewardsPopupPM.cs" />
     <Compile Include="Classes\Mappings\QuestSelectPM.cs" />
     <Compile Include="Classes\Mappings\RaidAlreadyEndedPopupPM.cs" />
+    <Compile Include="Classes\Mappings\RaidAwakStartPM.cs" />
     <Compile Include="Classes\Mappings\RaidDragonPM.cs" />
     <Compile Include="Classes\Mappings\RaidEndPM.cs" />
     <Compile Include="Classes\Mappings\RaidFightPM.cs" />

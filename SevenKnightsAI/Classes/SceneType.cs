@@ -104,6 +104,7 @@ namespace SevenKnightsAI.Classes
         BLUESTACK_HOME,
         RAID_AWAKENED_LOBBY,
         RAID_AWAKENED_READY,
+        RAID_AWAKENED_START,
         STATUS_BOARD,
         HOTTIME_CONFIRM_POPUP,
         RACHEL_SPECIAL_PACK_POPUP,
@@ -134,6 +135,7 @@ namespace SevenKnightsAI.Classes
         SPECIAL_DUN_MAX,
         EXIT_POPUP,
         MAY_CALENDAR_POPUP,
-        LOADING
+        LOADING,
+        CLOSE_POPUP
     }
 }

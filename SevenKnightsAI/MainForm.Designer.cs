@@ -400,7 +400,6 @@
             this.testdayofweek = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.linkLabel10 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel8 = new System.Windows.Forms.LinkLabel();
             this.linkLabel5 = new System.Windows.Forms.LinkLabel();
             this.linkLabel4 = new System.Windows.Forms.LinkLabel();
             this.linkLabel3 = new System.Windows.Forms.LinkLabel();
@@ -451,6 +450,9 @@
             this.resourcesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.aiPause = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.AR_stopArenaCheckBox = new System.Windows.Forms.CheckBox();
+            this.AR_stopArenaNumericBox = new System.Windows.Forms.NumericUpDown();
+            this.label18 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.adventureTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AD_limitNumericBox)).BeginInit();
@@ -540,6 +542,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.goldPictureBox)).BeginInit();
             this.resourcesTableLayoutPanel.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AR_stopArenaNumericBox)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl
@@ -1592,7 +1595,7 @@
             this.AD_elementHeroesCheckBox.Name = "AD_elementHeroesCheckBox";
             this.AD_elementHeroesCheckBox.Size = new System.Drawing.Size(86, 17);
             this.AD_elementHeroesCheckBox.TabIndex = 13;
-            this.AD_elementHeroesCheckBox.Text = "First Element";
+            this.AD_elementHeroesCheckBox.Text = "Element First";
             this.AD_elementHeroesCheckBox.UseVisualStyleBackColor = true;
             this.AD_elementHeroesCheckBox.CheckedChanged += new System.EventHandler(this.AD_elementHeroesCheckBox_CheckedChanged);
             // 
@@ -3337,10 +3340,13 @@
             // 
             this.arenaTab.BackColor = System.Drawing.Color.Transparent;
             this.arenaTab.Controls.Add(this.AR_limitLabel);
+            this.arenaTab.Controls.Add(this.label18);
             this.arenaTab.Controls.Add(this.AR_useRubyLabel);
             this.arenaTab.Controls.Add(this.AR_limitNumericBox);
+            this.arenaTab.Controls.Add(this.AR_stopArenaNumericBox);
             this.arenaTab.Controls.Add(this.AR_useRubyNumericBox);
             this.arenaTab.Controls.Add(this.AR_limitCheckBox);
+            this.arenaTab.Controls.Add(this.AR_stopArenaCheckBox);
             this.arenaTab.Controls.Add(this.AR_useRubyCheckBox);
             this.arenaTab.Controls.Add(this.AR_mainPanel);
             this.arenaTab.Controls.Add(this.AR_enableCheckBox);
@@ -3411,9 +3417,9 @@
             // AR_mainPanel
             // 
             this.AR_mainPanel.Controls.Add(this.AR_skillGroupBox);
-            this.AR_mainPanel.Location = new System.Drawing.Point(0, 61);
+            this.AR_mainPanel.Location = new System.Drawing.Point(0, 138);
             this.AR_mainPanel.Name = "AR_mainPanel";
-            this.AR_mainPanel.Size = new System.Drawing.Size(487, 247);
+            this.AR_mainPanel.Size = new System.Drawing.Size(487, 170);
             this.AR_mainPanel.TabIndex = 15;
             // 
             // AR_skillGroupBox
@@ -4892,9 +4898,9 @@
             this.ST_AutoProfileCheckBox.AutoSize = true;
             this.ST_AutoProfileCheckBox.Location = new System.Drawing.Point(9, 62);
             this.ST_AutoProfileCheckBox.Name = "ST_AutoProfileCheckBox";
-            this.ST_AutoProfileCheckBox.Size = new System.Drawing.Size(142, 17);
+            this.ST_AutoProfileCheckBox.Size = new System.Drawing.Size(162, 17);
             this.ST_AutoProfileCheckBox.TabIndex = 3;
-            this.ST_AutoProfileCheckBox.Text = "Use auto change profile ";
+            this.ST_AutoProfileCheckBox.Text = "Auto change profile 100/100";
             this.ST_AutoProfileCheckBox.UseVisualStyleBackColor = true;
             this.ST_AutoProfileCheckBox.CheckedChanged += new System.EventHandler(this.ST_autoProfileCheckBox_CheckedChanged);
             // 
@@ -5053,7 +5059,7 @@
             this.ST_delayValueLabel.Name = "ST_delayValueLabel";
             this.ST_delayValueLabel.Size = new System.Drawing.Size(47, 13);
             this.ST_delayValueLabel.TabIndex = 2;
-            this.ST_delayValueLabel.Text = "1500 ms";
+            this.ST_delayValueLabel.Text = "1800 ms";
             // 
             // ST_delayLabel
             // 
@@ -5077,7 +5083,7 @@
             this.ST_delayTrackBar.TabIndex = 0;
             this.ST_delayTrackBar.TickFrequency = 100;
             this.ST_delayTrackBar.TickStyle = System.Windows.Forms.TickStyle.None;
-            this.ST_delayTrackBar.Value = 1500;
+            this.ST_delayTrackBar.Value = 1800;
             this.ST_delayTrackBar.ValueChanged += new System.EventHandler(this.ST_delayTrackBar_ValueChanged);
             // 
             // logTab
@@ -5182,7 +5188,6 @@
             this.Info.Controls.Add(this.testdayofweek);
             this.Info.Controls.Add(this.label3);
             this.Info.Controls.Add(this.linkLabel10);
-            this.Info.Controls.Add(this.linkLabel8);
             this.Info.Controls.Add(this.linkLabel5);
             this.Info.Controls.Add(this.linkLabel4);
             this.Info.Controls.Add(this.linkLabel3);
@@ -5230,21 +5235,10 @@
             this.linkLabel10.Text = "Seven Knight AI Black Page";
             this.linkLabel10.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel10_LinkClicked);
             // 
-            // linkLabel8
-            // 
-            this.linkLabel8.AutoSize = true;
-            this.linkLabel8.Location = new System.Drawing.Point(52, 42);
-            this.linkLabel8.Name = "linkLabel8";
-            this.linkLabel8.Size = new System.Drawing.Size(224, 13);
-            this.linkLabel8.TabIndex = 3;
-            this.linkLabel8.TabStop = true;
-            this.linkLabel8.Text = "https://www.facebook.com/groups/heartcold";
-            this.linkLabel8.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel8_LinkClicked);
-            // 
             // linkLabel5
             // 
             this.linkLabel5.AutoSize = true;
-            this.linkLabel5.Location = new System.Drawing.Point(52, 114);
+            this.linkLabel5.Location = new System.Drawing.Point(52, 109);
             this.linkLabel5.Name = "linkLabel5";
             this.linkLabel5.Size = new System.Drawing.Size(110, 13);
             this.linkLabel5.TabIndex = 2;
@@ -5255,7 +5249,7 @@
             // linkLabel4
             // 
             this.linkLabel4.AutoSize = true;
-            this.linkLabel4.Location = new System.Drawing.Point(52, 162);
+            this.linkLabel4.Location = new System.Drawing.Point(52, 172);
             this.linkLabel4.Name = "linkLabel4";
             this.linkLabel4.Size = new System.Drawing.Size(170, 13);
             this.linkLabel4.TabIndex = 2;
@@ -5277,7 +5271,7 @@
             // linkLabel7
             // 
             this.linkLabel7.AutoSize = true;
-            this.linkLabel7.Location = new System.Drawing.Point(52, 65);
+            this.linkLabel7.Location = new System.Drawing.Point(52, 45);
             this.linkLabel7.Name = "linkLabel7";
             this.linkLabel7.Size = new System.Drawing.Size(230, 13);
             this.linkLabel7.TabIndex = 1;
@@ -5288,7 +5282,7 @@
             // linkLabel6
             // 
             this.linkLabel6.AutoSize = true;
-            this.linkLabel6.Location = new System.Drawing.Point(52, 188);
+            this.linkLabel6.Location = new System.Drawing.Point(52, 199);
             this.linkLabel6.Name = "linkLabel6";
             this.linkLabel6.Size = new System.Drawing.Size(204, 13);
             this.linkLabel6.TabIndex = 1;
@@ -5299,7 +5293,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(52, 90);
+            this.linkLabel1.Location = new System.Drawing.Point(52, 81);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(247, 13);
             this.linkLabel1.TabIndex = 0;
@@ -5755,6 +5749,50 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Key";
             // 
+            // AR_stopArenaCheckBox
+            // 
+            this.AR_stopArenaCheckBox.AutoSize = true;
+            this.AR_stopArenaCheckBox.Location = new System.Drawing.Point(14, 56);
+            this.AR_stopArenaCheckBox.Name = "AR_stopArenaCheckBox";
+            this.AR_stopArenaCheckBox.Size = new System.Drawing.Size(111, 17);
+            this.AR_stopArenaCheckBox.TabIndex = 0;
+            this.AR_stopArenaCheckBox.Text = "Stop Arena When";
+            this.AR_stopArenaCheckBox.UseVisualStyleBackColor = true;
+            this.AR_stopArenaCheckBox.CheckedChanged += new System.EventHandler(this.AR_stopArenaCheckBox_CheckedChanged);
+            // 
+            // AR_stopArenaNumericBox
+            // 
+            this.AR_stopArenaNumericBox.Location = new System.Drawing.Point(124, 54);
+            this.AR_stopArenaNumericBox.Maximum = new decimal(new int[] {
+            20000,
+            0,
+            0,
+            0});
+            this.AR_stopArenaNumericBox.Minimum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.AR_stopArenaNumericBox.Name = "AR_stopArenaNumericBox";
+            this.AR_stopArenaNumericBox.Size = new System.Drawing.Size(51, 20);
+            this.AR_stopArenaNumericBox.TabIndex = 11;
+            this.AR_stopArenaNumericBox.Value = new decimal(new int[] {
+            4300,
+            0,
+            0,
+            0});
+            this.AR_stopArenaNumericBox.ValueChanged += new System.EventHandler(this.AR_stopArenaNumericBox_ValueChanged);
+            // 
+            // label18
+            // 
+            this.label18.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(178, 58);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(21, 13);
+            this.label18.TabIndex = 12;
+            this.label18.Text = "pts";
+            // 
             // MainForm
             // 
             this.AcceptButton = this.aiButton;
@@ -5908,6 +5946,7 @@
             this.resourcesTableLayoutPanel.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AR_stopArenaNumericBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -6779,7 +6818,6 @@
         private System.Windows.Forms.LinkLabel linkLabel7;
         private System.Windows.Forms.LinkLabel linkLabel6;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.LinkLabel linkLabel8;
         private System.Windows.Forms.LinkLabel linkLabel10;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox RD_OwnerDragon;
@@ -6905,5 +6943,8 @@
         private System.Windows.Forms.Button RD_t1Skill13Button;
         private System.Windows.Forms.Button RD_t1Skill14Button;
         private System.Windows.Forms.Button RD_t1Skill15Button;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.NumericUpDown AR_stopArenaNumericBox;
+        private System.Windows.Forms.CheckBox AR_stopArenaCheckBox;
     }
 }
