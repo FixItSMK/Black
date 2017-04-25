@@ -9,39 +9,39 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Key_0 = new PixelMapping
         {
-            X = 694,
+            X = 676,
             Y = 19,
-            Color = 8349781,
+            Color = 8415574,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Key_1 = new PixelMapping
         {
-            X = 720,
-            Y = 20,
-            Color = 8679002,
-            Type = MappingType.ANCHOR
-        };
-
-        public static readonly PixelMapping Key_2 = new PixelMapping
-        {
-            X = 744,
-            Y = 20,
-            Color = 7823438,
-            Type = MappingType.ANCHOR
-        };
-
-        public static readonly PixelMapping Key_3 = new PixelMapping
-        {
-            X = 767,
+            X = 701,
             Y = 19,
             Color = 8415830,
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping Key_2 = new PixelMapping
+        {
+            X = 725,
+            Y = 19,
+            Color = 8415574,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Key_3 = new PixelMapping
+        {
+            X = 749,
+            Y = 19,
+            Color = 8481367,
+            Type = MappingType.ANCHOR
+        };
+
         public static readonly PixelMapping Key_4 = new PixelMapping
         {
-            X = 792,
+            X = 774,
             Y = 19,
             Color = 8415574,
             Type = MappingType.ANCHOR
@@ -49,17 +49,17 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping KeyBoxBorder = new PixelMapping
         {
-            X = 861,
-            Y = 37,
-            Color = 5717541,
+            X = 855,
+            Y = 35,
+            Color = 12157750,
             Type = MappingType.ANCHOR
         };
 
         public static readonly Rectangle R_Time = new Rectangle
         {
-            X = 811,
+            X = 790,
             Y = 19,
-            Width = 51,
+            Width = 50,
             Height = 20
         };
 

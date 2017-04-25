@@ -7,17 +7,17 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         #region Public Fields
 
-        public static readonly int GOLD_OFFSET_X = 514;
+        public static readonly int GOLD_OFFSET_X = 364;
         public static readonly int GOLD_OFFSET_Y = 0;
 
-        public static readonly int KEY_OFFSET_X = 509;
+        public static readonly int KEY_OFFSET_X = 363;
         public static readonly int KEY_OFFSET_Y = 0;
 
         public static readonly PixelMapping KeyPlusButton = new PixelMapping
         {
-            X = 662,
+            X = 492,
             Y = 28,
-            Color = 12690781,
+            Color = 12690273,
             Type = MappingType.ANCHOR
         };
 
@@ -39,10 +39,15 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle R_MapNumber = new Rectangle
         {
-            X = 392,
+            //X = 290,
+            //Y = 16,
+            //Width = 85,
+            //Height = 26
+            X = 275,
             Y = 12,
-            Width = 108,
+            Width = 100,
             Height = 33
+
         };
 
         public static readonly PixelMapping UseFriendOn = new PixelMapping

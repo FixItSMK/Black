@@ -6,9 +6,9 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         public static readonly PixelMapping Background = new PixelMapping
         {
-            X = 450,
-            Y = 118,
-            Color = 1708556,
+            X = 43,
+            Y = 138,
+            Color = 2364685,
             Type = MappingType.ANCHOR
         };
 
@@ -42,9 +42,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping HonorIcon = new PixelMapping
         {
-            X = 751,
-            Y = 28,
-            Color = 14265392,
+            X = 735,
+            Y = 30,
+            Color = 16491802,
             Type = MappingType.ANCHOR
         };
 

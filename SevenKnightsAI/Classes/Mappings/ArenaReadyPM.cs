@@ -6,7 +6,7 @@ namespace SevenKnightsAI.Classes.Mappings
     {
         #region Public Fields
 
-        public static readonly int HONOR_OFFSET_X = 227;
+        public static readonly int HONOR_OFFSET_X = 228;
 
         public static readonly int HONOR_OFFSET_Y = 0;
 
@@ -34,15 +34,31 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping RubyPlus = new PixelMapping
+        public static readonly PixelMapping RewardBackground = new PixelMapping
         {
-            X = 712,
-            Y = 28,
-            Color = 0xc1a55d,
+            X = 642,
+            Y = 407,
+            Color = 8465931,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly int RUBY_OFFSET_X = 223;
+        public static readonly PixelMapping CollectBorder = new PixelMapping
+        {
+            X = 917,
+            Y = 389,
+            Color = 15718040,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping RubyPlus = new PixelMapping
+        {
+            X = 694,
+            Y = 28,
+            Color = 12756580,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly int RUBY_OFFSET_X = 229;
 
         public static readonly int RUBY_OFFSET_Y = 0;
 

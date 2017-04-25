@@ -59,6 +59,14 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping GoldPlusIcon = new PixelMapping
+        {
+            X = 676,
+            Y = 20,
+            Color = 16774327,
+            Type = MappingType.ANCHOR
+        };
+
         public static readonly PixelMapping RaidButton = new PixelMapping
         {
             X = 704,

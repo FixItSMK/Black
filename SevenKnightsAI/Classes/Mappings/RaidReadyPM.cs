@@ -9,21 +9,17 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle EnteredCount = new Rectangle
         {
-            //X = 660,
-            //Y = 17,
-            //Height = 24,
-            //Width = 22
-            X = 602,
-            Y = 17,
-            Height = 24,
-            Width = 88
+            X = 490,
+            Y = 10,
+            Height = 35,
+            Width = 50
         };
 
-        public static readonly PixelMapping MemberListBackground = new PixelMapping
+        public static readonly PixelMapping DragonHead = new PixelMapping
         {
-            X = 40,
-            Y = 69,
-            Color = 1708300,
+            X = 597,
+            Y = 128,
+            Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
@@ -53,9 +49,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping AwakenBlueIcon = new PixelMapping
         {
-            X = 601,
-            Y = 27,
-            Color = 4227735,
+            X = 503,
+            Y = 40,
+            Color = 2844825,
             Type = MappingType.ANCHOR
         };
 

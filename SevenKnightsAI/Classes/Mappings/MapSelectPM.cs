@@ -50,7 +50,8 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 151,
             Y = 382,
-            Color = 3875347,
+            //Color = 3875347,
+            Color = 4269332,
             Type = MappingType.ANCHOR
         };
 
@@ -120,9 +121,12 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping World1Anchor_1 = new PixelMapping
         {
-            X = 258,
-            Y = 68,
-            Color = 13678453,
+            //X = 258,
+            //Y = 68,
+            //Color = 13678453,
+            X = 500,
+            Y = 100,
+            Color = 14733462,
             Type = MappingType.ANCHOR
         };
 

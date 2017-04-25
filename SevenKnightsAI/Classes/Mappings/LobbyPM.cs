@@ -87,17 +87,17 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 38,
             Y = 491,
-            Color = 7688520,
+            Color = 0,
             Type = MappingType.BUTTON
         };
 
-        public static readonly int HONOR_OFFSET_X = 10;
+        public static readonly int HONOR_OFFSET_X = 0;
 
         public static readonly int HONOR_OFFSET_Y = 0;
 
         public static readonly PixelMapping InboxAvailable = new PixelMapping
         {
-            X = 744,
+            X = 808,
             Y = 8,
             Color = 13051905,
             Type = MappingType.ANCHOR
@@ -105,7 +105,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping InboxButton = new PixelMapping
         {
-            X = 768,
+            X = 827,
             Y = 28,
             Color = 0,
             Type = MappingType.BUTTON
@@ -181,17 +181,17 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping MenuButtonYellowLeft = new PixelMapping
         {
-            X = 883,
+            X = 924,
             Y = 27,
-            Color = 13610070,
+            Color = 16113290,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping MenuButtonYellowRight = new PixelMapping
         {
-            X = 915,
+            X = 944,
             Y = 28,
-            Color = 10189117,
+            Color = 14270842,
             Type = MappingType.ANCHOR
         };
 
@@ -211,7 +211,8 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.BUTTON
         };
 
-        public static readonly int RUBY_OFFSET_X = 10;
+        //public static readonly int RUBY_OFFSET_X = 10;
+        public static readonly int RUBY_OFFSET_X = 0;
 
         public static readonly int RUBY_OFFSET_Y = 0;
 

@@ -33,9 +33,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping KeyPlusButton = new PixelMapping
         {
-            X = 701,
-            Y = 27,
-            Color = 13808234,
+            X = 705,
+            Y = 28,
+            Color = 12492637,
             Type = MappingType.BOTH
         };
 
@@ -179,15 +179,15 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 706,
             Y = 28,
-            Color = 3748123,
+            Color = 3748125,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping MaxCardPlusBG = new PixelMapping
         {
-            X = 843,
+            X = 832,
             Y = 28,
-            Color = 3748123,
+            Color = 3682075,
             Type = MappingType.ANCHOR
         };
 

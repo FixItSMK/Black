@@ -85,7 +85,7 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly int KEY_OFFSET_Y = 0;
         public static readonly int RUBY_OFFSET_X = 160;
         public static readonly int RUBY_OFFSET_Y = 0;
-        public static readonly int TOPAZ_OFFSET_X = 158;
+        public static readonly int TOPAZ_OFFSET_X = 784;
         public static readonly int TOPAZ_OFFSET_Y = 0;
 
 

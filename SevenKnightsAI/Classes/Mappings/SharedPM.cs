@@ -41,17 +41,23 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Fight_AutoSkillOnBottom = new PixelMapping
         {
-            X = 128,
-            Y = 525,
-            Color = 7481611,
+            //X = 128,
+            //Y = 525,
+            //Color = 7481611,
+            X = 130,
+            Y = 496,
+            Color = 7748889,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping Fight_AutoSkillOnTop = new PixelMapping
         {
-            X = 128,
-            Y = 466,
-            Color = 3547410,
+            //X = 128,
+            //Y = 466,
+            //Color = 3547410,
+            X = 120,
+            Y = 496,
+            Color = 8866079,
             Type = MappingType.ANCHOR
         };
 
@@ -481,9 +487,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Full_DimmedBG = new PixelMapping
         {
-            X = 545,
-            Y = 23,
-            Color = 854019,
+            X = 137,
+            Y = 51,
+            Color = 328706,
             Type = MappingType.ANCHOR
         };
 
@@ -734,65 +740,57 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle R_GoldBase = new Rectangle
         {
-            X = 215,
+            X = 196,
             Y = 19,
-            Width = 98,
+            Width = 103,
             Height = 22
         };
 
         public static readonly Rectangle R_HonorBase = new Rectangle
         {
-            X = 552,
+            X = 530,
             Y = 19,
-            Width = 80,
+            Width = 84,
             Height = 22
         };
 
         public static readonly Rectangle R_KeyNormalBase = new Rectangle
         {
-            X = 70,
+            X = 50,
             Y = 19,
-            Width = 60,
+            Width = 67,
             Height = 21
-            //X = 66,
-            //Y = 19,
-            //Width = 63,
-            //Height = 21
         };
 
         public static readonly Rectangle R_KeyOnTopTimeBase = new Rectangle
         {
-            X = 70,
-            Y = 10,
-            Width = 60,
-            Height = 21
-            //X = 66,
-            //Y = 10,
-            //Width = 63,
-            //Height = 21
+            X = 50,
+            Y = 9,
+            Width = 67,
+            Height = 20
         };
 
         public static readonly Rectangle R_RubyBase = new Rectangle
         {
-            X = 395,
+            X = 380,
             Y = 19,
-            Width = 72,
+            Width = 73,
             Height = 22
         };
 
         public static readonly Rectangle R_TimeBase = new Rectangle
         {
-            X = 72,
-            Y = 30,
-            Width = 54,
-            Height = 19
+            X = 68,
+            Y = 28,
+            Width = 50,
+            Height = 20
         };
 
         public static readonly Rectangle R_TopazBase = new Rectangle
         {
-            X = 687,
+            X = 1,
             Y = 19,
-            Width = 72,
+            Width = 53,
             Height = 20
         };
 

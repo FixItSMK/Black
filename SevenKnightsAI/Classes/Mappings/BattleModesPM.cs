@@ -74,6 +74,14 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping RubyPlusButton = new PixelMapping
+        {
+            X = 830,
+            Y = 29,
+            Color = 11899727,
+            Type = MappingType.ANCHOR
+        };
+
         public static readonly PixelMapping GuildWarButton = new PixelMapping
         {
             X = 260,

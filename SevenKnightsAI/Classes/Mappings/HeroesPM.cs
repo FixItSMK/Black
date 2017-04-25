@@ -9,12 +9,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping BlockingChatCloseButton = new PixelMapping
         {
-            //X = 907,
-            //Y = 81,
-            //Color = 13843721,
             X = 900,
             Y = 26,
-            Color = 0xc73d0b,
+            Color = 13057291,
             Type = MappingType.BOTH
         };
 
@@ -26,15 +23,15 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping ElementButton = new PixelMapping
         {
-            X = 666,
-            Y = 100,
-            Color = 16771586,
+            X = 661,
+            Y = 99,
+            Color = 9133319,
             Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping F1B4_1 = new PixelMapping
         {
-            X = 215,
+            X = 170,
             Y = 298,
             Color = 0,
             Type = MappingType.BUTTON
@@ -42,7 +39,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F1B4_2 = new PixelMapping
         {
-            X = 122,
+            X = 77,
             Y = 157,
             Color = 0,
             Type = MappingType.BUTTON
@@ -50,7 +47,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F1B4_3 = new PixelMapping
         {
-            X = 122,
+            X = 77,
             Y = 252,
             Color = 0,
             Type = MappingType.BUTTON
@@ -58,7 +55,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F1B4_4 = new PixelMapping
         {
-            X = 122,
+            X = 77,
             Y = 346,
             Color = 0,
             Type = MappingType.BUTTON
@@ -66,7 +63,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F1B4_5 = new PixelMapping
         {
-            X = 122,
+            X = 77,
             Y = 441,
             Color = 0,
             Type = MappingType.BUTTON
@@ -74,7 +71,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F1B4_Finger_1 = new PixelMapping
         {
-            X = 219,
+            X = 170,
             Y = 244,
             Color = 16777215,
             Type = MappingType.ANCHOR
@@ -82,7 +79,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F1B4_Finger_2 = new PixelMapping
         {
-            X = 127,
+            X = 77,
             Y = 106,
             Color = 16777215,
             Type = MappingType.ANCHOR
@@ -90,7 +87,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F1B4_Finger_3 = new PixelMapping
         {
-            X = 127,
+            X = 77,
             Y = 200,
             Color = 16777215,
             Type = MappingType.ANCHOR
@@ -98,7 +95,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F1B4_Finger_4 = new PixelMapping
         {
-            X = 127,
+            X = 77,
             Y = 294,
             Color = 16777215,
             Type = MappingType.ANCHOR
@@ -106,7 +103,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F1B4_Finger_5 = new PixelMapping
         {
-            X = 124,
+            X = 77,
             Y = 390,
             Color = 16777215,
             Type = MappingType.ANCHOR
@@ -194,7 +191,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F2B3_1 = new PixelMapping
         {
-            X = 215,
+            X = 170,
             Y = 230,
             Color = 0,
             Type = MappingType.BUTTON
@@ -202,7 +199,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F2B3_2 = new PixelMapping
         {
-            X = 288,
+            X = 170,
             Y = 373,
             Color = 0,
             Type = MappingType.BUTTON
@@ -210,7 +207,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F2B3_3 = new PixelMapping
         {
-            X = 122,
+            X = 77,
             Y = 162,
             Color = 0,
             Type = MappingType.BUTTON
@@ -218,7 +215,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F2B3_4 = new PixelMapping
         {
-            X = 122,
+            X = 77,
             Y = 301,
             Color = 0,
             Type = MappingType.BUTTON
@@ -226,7 +223,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F2B3_5 = new PixelMapping
         {
-            X = 122,
+            X = 77,
             Y = 440,
             Color = 0,
             Type = MappingType.BUTTON
@@ -234,7 +231,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F2B3_Finger_1 = new PixelMapping
         {
-            X = 219,
+            X = 170,
             Y = 178,
             Color = 16777215,
             Type = MappingType.ANCHOR
@@ -242,32 +239,32 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F2B3_Finger_2 = new PixelMapping
         {
-            X = 219,
-            Y = 320,
+            X = 170,
+            Y = 317,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping F2B3_Finger_3 = new PixelMapping
         {
-            X = 124,
-            Y = 109,
+            X = 77,
+            Y = 106,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping F2B3_Finger_4 = new PixelMapping
         {
-            X = 124,
-            Y = 248,
+            X = 77,
+            Y = 245,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping F2B3_Finger_5 = new PixelMapping
         {
-            X = 127,
-            Y = 388,
+            X = 77,
+            Y = 384,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
@@ -354,15 +351,15 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F3B2_1 = new PixelMapping
         {
-            X = 214,
-            Y = 161,
+            X = 170,
+            Y = 160,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping F3B2_2 = new PixelMapping
         {
-            X = 214,
+            X = 170,
             Y = 300,
             Color = 0,
             Type = MappingType.BUTTON
@@ -370,15 +367,15 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F3B2_3 = new PixelMapping
         {
-            X = 214,
-            Y = 440,
+            X = 170,
+            Y = 435,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping F3B2_4 = new PixelMapping
         {
-            X = 123,
+            X = 77,
             Y = 229,
             Color = 0,
             Type = MappingType.BUTTON
@@ -386,7 +383,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F3B2_5 = new PixelMapping
         {
-            X = 123,
+            X = 77,
             Y = 371,
             Color = 0,
             Type = MappingType.BUTTON
@@ -394,40 +391,40 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F3B2_Finger_1 = new PixelMapping
         {
-            X = 218,
-            Y = 108,
+            X = 170,
+            Y = 106,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping F3B2_Finger_2 = new PixelMapping
         {
-            X = 218,
-            Y = 248,
+            X = 170,
+            Y = 246,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping F3B2_Finger_3 = new PixelMapping
         {
-            X = 217,
-            Y = 387,
+            X = 170,
+            Y = 385,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping F3B2_Finger_4 = new PixelMapping
         {
-            X = 126,
-            Y = 177,
+            X = 80,
+            Y = 174,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping F3B2_Finger_5 = new PixelMapping
         {
-            X = 127,
-            Y = 318,
+            X = 80,
+            Y = 316,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
@@ -514,7 +511,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F4B1_1 = new PixelMapping
         {
-            X = 214,
+            X = 170,
             Y = 159,
             Color = 0,
             Type = MappingType.BUTTON
@@ -522,7 +519,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F4B1_2 = new PixelMapping
         {
-            X = 214,
+            X = 170,
             Y = 253,
             Color = 0,
             Type = MappingType.BUTTON
@@ -530,31 +527,31 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F4B1_3 = new PixelMapping
         {
-            X = 214,
-            Y = 347,
+            X = 170,
+            Y = 345,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping F4B1_4 = new PixelMapping
         {
-            X = 214,
-            Y = 442,
+            X = 170,
+            Y = 445,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping F4B1_5 = new PixelMapping
         {
-            X = 122,
-            Y = 301,
+            X = 80,
+            Y = 300,
             Color = 0,
             Type = MappingType.BUTTON
         };
 
         public static readonly PixelMapping F4B1_Finger_1 = new PixelMapping
         {
-            X = 217,
+            X = 171,
             Y = 106,
             Color = 16777215,
             Type = MappingType.ANCHOR
@@ -562,32 +559,32 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping F4B1_Finger_2 = new PixelMapping
         {
-            X = 217,
-            Y = 201,
+            X = 171,
+            Y = 202,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping F4B1_Finger_3 = new PixelMapping
         {
-            X = 218,
-            Y = 294,
+            X = 171,
+            Y = 295,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping F4B1_Finger_4 = new PixelMapping
         {
-            X = 218,
-            Y = 390,
+            X = 171,
+            Y = 392,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
 
         public static readonly PixelMapping F4B1_Finger_5 = new PixelMapping
         {
-            X = 125,
-            Y = 249,
+            X = 78,
+            Y = 250,
             Color = 16777215,
             Type = MappingType.ANCHOR
         };
@@ -758,7 +755,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping IconLeft = new PixelMapping
         {
-            X = 331,
+            X = 321,
             Y = 80,
             Color = 14596172,
             Type = MappingType.ANCHOR
@@ -766,7 +763,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping IconMiddle = new PixelMapping
         {
-            X = 344,
+            X = 333,
             Y = 83,
             Color = 15718767,
             Type = MappingType.ANCHOR
@@ -774,7 +771,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping IconRight = new PixelMapping
         {
-            X = 356,
+            X = 346,
             Y = 80,
             Color = 12289595,
             Type = MappingType.ANCHOR
@@ -969,10 +966,10 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle R_HeroCount = new Rectangle
         {
-            X = 480,
-            Y = 65,
-            Width = 80,
-            Height = 40
+            X = 455,
+            Y = 80,
+            Width = 60,
+            Height = 18
         };
 
         #endregion Public Fields

@@ -230,6 +230,22 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping Fight_AutoSkillOnBottom = new PixelMapping
+        {
+            X = 130,
+            Y = 496,
+            Color = 7946010,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping Fight_AutoSkillOnTop = new PixelMapping
+        {
+            X = 120,
+            Y = 496,
+            Color = 8931615,
+            Type = MappingType.ANCHOR
+        };
+
         #endregion Public Fields
     }
 }

@@ -19,23 +19,23 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 378,
             Y = 173,
-            Color = 12691801,
+            Color = 12691547,
             Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping KeyPlus = new PixelMapping
         {
-            X = 703,
-            Y = 26,
-            Color = 14662258,
+            X = 706,
+            Y = 28,
+            Color = 12756580,
             Type = MappingType.BOTH
         };
 
         public static readonly PixelMapping CardPlus = new PixelMapping
         {
-            X = 842,
+            X = 830,
             Y = 29,
-            Color = 11573327,
+            Color = 11899727,
             Type = MappingType.BOTH
         };
 

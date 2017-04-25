@@ -77,49 +77,49 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping Key_0 = new PixelMapping
         {
-            X = 400,
-            Y = 22,
-            Color = 9602427,
+            X = 385,
+            Y = 19,
+            Color = 7299671,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping Key_1 = new PixelMapping
+        public static readonly PixelMapping Key_1 = new PixelMapping    //เช็คตำแหน่ง 2
         {
-            X = 425,
-            Y = 21,
-            Color = 7365465,
+            X = 409,
+            Y = 19,
+            Color = 8154980,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping Key_2 = new PixelMapping
+        public static readonly PixelMapping Key_2 = new PixelMapping    //เช็คตำแหน่ง 3
         {
-            X = 451,
-            Y = 22,
-            Color = 7365465,
+            X = 434,
+            Y = 19,
+            Color = 7168085,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping Key_3 = new PixelMapping
+        public static readonly PixelMapping Key_3 = new PixelMapping   //เช็คตำแหน่ง 4
         {
-            X = 471,
-            Y = 22,
-            Color = 7036500,
+            X = 458,
+            Y = 19,
+            Color = 6115654,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping Key_4 = new PixelMapping
+        public static readonly PixelMapping Key_4 = new PixelMapping    //ฝั่งขวาอันที่ 5 ไม่เต็ม 4 เต็ม
         {
-            X = 497,
-            Y = 22,
-            Color = 9141876,  
+            X = 481,
+            Y = 19,
+            Color = 7825759,
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping Key_5 = new PixelMapping
+        public static readonly PixelMapping Key_5 = new PixelMapping   //ฝั่งขวาอันที่ 5 เต็ม
         {
-            X = 497,
-            Y = 22,
-            Color = 6751490,
+            X = 481,
+            Y = 19,
+            Color = 16075792,
             Type = MappingType.ANCHOR
         };
 
@@ -165,8 +165,7 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle R_Time = new Rectangle
         {
-            //X = 517,
-            X = 513,
+            X = 498,
             Y = 19,
             Width = 50,
             Height = 20
