@@ -51,6 +51,12 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "AD_SkillType")]
         public SkillType AD_SkillType;
 
+        [XmlElement(ElementName = "AD_w2SkillType")]
+        public SkillType AD_w2SkillType;
+
+        [XmlElement(ElementName = "AD_w3SkillType")]
+        public SkillType AD_w3SkillType;
+
         [XmlElement(ElementName = "AD_Stage")]
         public int AD_Stage;
 
@@ -104,6 +110,9 @@ namespace SevenKnightsAI.Classes
 
         [XmlElement(ElementName = "AD_UseFriend")]
         public bool AD_UseFriend;
+
+        [XmlElement(ElementName = "AD_BootMode")]
+        public bool AD_BootMode;
 
         [XmlElement(ElementName = "AR_Enable")]
         public bool AR_Enable;
@@ -312,6 +321,12 @@ namespace SevenKnightsAI.Classes
         [XmlElement(ElementName = "SP_SkillType")]
         public SkillType SP_SkillType;
 
+        [XmlElement(ElementName = "SP_w2SkillType")]
+        public SkillType SP_w2SkillType;
+
+        [XmlElement(ElementName = "SP_w3SkillType")]
+        public SkillType SP_w3SkillType;
+
         [XmlElement(ElementName = "SP_Wave1Skills")]
         public int[] SP_Wave1Skills;
 
@@ -427,6 +442,8 @@ namespace SevenKnightsAI.Classes
             this.AD_Continuous = false;
             this.AD_ElementHeroesOnly = false;
             this.AD_SkillType = SkillType.Both;
+            this.AD_w2SkillType = SkillType.Both;
+            this.AD_w3SkillType = SkillType.Both;
             this.AD_StopOnFullHeroes = false;
             this.AD_StopOnFullItems = true;
             this.RD_StopOnDragonFound = false;
@@ -436,6 +453,7 @@ namespace SevenKnightsAI.Classes
             this.AD_Wave2Loop = false;
             this.AD_Wave3Loop = false;
             this.AD_UseFriend = false;
+            this.AD_BootMode = false;
             this.GB_WaitForKeys = false;
             this.GC_Enable = true;
             this.GC_EnableLimit = false;
@@ -506,6 +524,8 @@ namespace SevenKnightsAI.Classes
             this.SP_EvanLimit = 0;
             this.SP_KarinLimit = 0;
             this.SP_SkillType = SkillType.Both;
+            this.SP_w2SkillType = SkillType.Both;
+            this.SP_w3SkillType = SkillType.Both;
             this.SP_Wave1Loop = false;
             this.SP_Wave2Loop = false;
             this.SP_Wave3Loop = false;
@@ -645,6 +665,18 @@ namespace SevenKnightsAI.Classes
                 { }
                 try
                 {
+                    aISettings.AD_w2SkillType = (SkillType)Convert.ToInt32(dictionary["AD_w2SkillType"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.AD_w3SkillType = (SkillType)Convert.ToInt32(dictionary["AD_w3SkillType"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
                     aISettings.AD_StopOnFullHeroes = (bool)dictionary["AD_StopOnFullHeroes"];
                 }
                 catch (Exception)
@@ -658,6 +690,12 @@ namespace SevenKnightsAI.Classes
                 try
                 {
                     aISettings.AD_UseFriend = (bool)dictionary["AD_UseFriend"];
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.AD_BootMode = (bool)dictionary["AD_BootMode"];
                 }
                 catch (Exception)
                 { }
@@ -1149,6 +1187,18 @@ namespace SevenKnightsAI.Classes
                 { }
                 try
                 {
+                    aISettings.SP_w2SkillType = (SkillType)Convert.ToInt32(dictionary["SP_w2SkillType"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
+                    aISettings.SP_w3SkillType = (SkillType)Convert.ToInt32(dictionary["SP_w3SkillType"]);
+                }
+                catch (Exception)
+                { }
+                try
+                {
                     aISettings.SP_Wave1Skills = ((dictionary["SP_Wave1Skills"] == null) ? null : ((JArray)dictionary["SP_Wave1Skills"]).ToObject<int[]>());
                 }
                 catch (Exception)
@@ -1407,6 +1457,14 @@ namespace SevenKnightsAI.Classes
                 {
                     "AD_SkillType",
                     this.AD_SkillType
+                },
+                {
+                    "AD_w2SkillType",
+                    this.AD_w2SkillType
+                },
+                {
+                    "AD_w3SkillType",
+                    this.AD_w3SkillType
                 },
                 {
                     "AD_StopOnFullHeroes",
@@ -1725,6 +1783,10 @@ namespace SevenKnightsAI.Classes
                     this.AD_UseFriend
                 },
                 {
+                    "AD_BootMode",
+                    this.AD_BootMode
+                },
+                {
                     "GC_UseFriend",
                     this.GC_UseFriend
                 },
@@ -1747,6 +1809,14 @@ namespace SevenKnightsAI.Classes
                 {
                     "SP_SkillType",
                     this.SP_SkillType
+                },
+                {
+                    "SP_w2SkillType",
+                    this.SP_w2SkillType
+                },
+                {
+                    "SP_w3SkillType",
+                    this.SP_w3SkillType
                 },
                 {
                     "SP_Wave1Skills",

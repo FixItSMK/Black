@@ -767,6 +767,7 @@ namespace SevenKnightsAI
             this.AD_wave2LoopCheckBox.Checked = this.AISettings.AD_Wave2Loop;
             this.AD_wave3LoopCheckBox.Checked = this.AISettings.AD_Wave3Loop;
             this.AD_UseFriendCheckBox.Checked = this.AISettings.AD_UseFriend;
+            this.AD_bootmodeCheckBox.Checked = this.AISettings.AD_BootMode;
             if (this.AISettings.AD_HeroManagePositions != null)
             {
                 int[] aD_HeroManagePositions = this.AISettings.AD_HeroManagePositions;
@@ -785,7 +786,6 @@ namespace SevenKnightsAI
                     checkBox.Checked = true;
                 }
             }
-
             switch (this.AISettings.AD_SkillType)
             {
                 case SkillType.Auto:
@@ -798,6 +798,34 @@ namespace SevenKnightsAI
 
                 case SkillType.Both:
                     this.AD_bothSkillRadio.Checked = true;
+                    break;
+            }
+            switch (this.AISettings.AD_w2SkillType)
+            {
+                case SkillType.Auto:
+                    this.AD_w2autoSkillRadio.Checked = true;
+                    break;
+
+                case SkillType.Manual:
+                    this.AD_w2manualSkillRadio.Checked = true;
+                    break;
+
+                case SkillType.Both:
+                    this.AD_w2bothSkillRadio.Checked = true;
+                    break;
+            }
+            switch (this.AISettings.AD_w3SkillType)
+            {
+                case SkillType.Auto:
+                    this.AD_w3autoSkillRadio.Checked = true;
+                    break;
+
+                case SkillType.Manual:
+                    this.AD_w3manualSkillRadio.Checked = true;
+                    break;
+
+                case SkillType.Both:
+                    this.AD_w3bothSkillRadio.Checked = true;
                     break;
             }
             Panel[] wavePanels = new Panel[]
@@ -981,6 +1009,34 @@ namespace SevenKnightsAI
 
                 case SkillType.Both:
                     this.SP_bothSkillRadio.Checked = true;
+                    break;
+            }
+            switch (this.AISettings.SP_w2SkillType)
+            {
+                case SkillType.Auto:
+                    this.SP_w2autoSkillRadio.Checked = true;
+                    break;
+
+                case SkillType.Manual:
+                    this.SP_w2manualSkillRadio.Checked = true;
+                    break;
+
+                case SkillType.Both:
+                    this.SP_w2bothSkillRadio.Checked = true;
+                    break;
+            }
+            switch (this.AISettings.SP_w3SkillType)
+            {
+                case SkillType.Auto:
+                    this.SP_w3autoSkillRadio.Checked = true;
+                    break;
+
+                case SkillType.Manual:
+                    this.SP_w3manualSkillRadio.Checked = true;
+                    break;
+
+                case SkillType.Both:
+                    this.SP_w3bothSkillRadio.Checked = true;
                     break;
             }
             Panel[] wavePanels = new Panel[]
@@ -2006,6 +2062,11 @@ namespace SevenKnightsAI
             CheckBox checkBox = sender as CheckBox;
             this.AISettings.AD_UseFriend = checkBox.Checked;
         }
+        private void AD_bootmodeCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AD_BootMode = checkBox.Checked;
+        }
         private void GC_UseFriendCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             CheckBox checkBox = sender as CheckBox;
@@ -2329,6 +2390,78 @@ namespace SevenKnightsAI
             NumericUpDown numericUpDown = sender as NumericUpDown;
             int num = Convert.ToInt32(numericUpDown.Value);
             this.AISettings.AR_LimitScore = num;
+        }
+
+        private void AD_w2autoSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AD_w2SkillType = SkillType.Auto;
+        }
+
+        private void AD_w2manualSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AD_w2SkillType = SkillType.Manual;
+        }
+
+        private void AD_w2bothSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AD_w2SkillType = SkillType.Both;
+        }
+
+        private void AD_w3autoSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AD_w3SkillType = SkillType.Auto;
+        }
+
+        private void AD_w3manualSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AD_w3SkillType = SkillType.Manual;
+        }
+
+        private void AD_w3bothSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.AD_w3SkillType = SkillType.Both;
+        }
+
+        private void SP_w2autoSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.SP_w2SkillType = SkillType.Auto;
+        }
+
+        private void SP_w2manualSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.SP_w2SkillType = SkillType.Manual;
+        }
+
+        private void SP_w2bothSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.SP_w2SkillType = SkillType.Both;
+        }
+
+        private void SP_w3autoSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.SP_w3SkillType = SkillType.Auto;
+        }
+
+        private void SP_w3manualSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.SP_w3SkillType = SkillType.Manual;
+        }
+
+        private void SP_w3bothSkillRadio_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBox checkBox = sender as CheckBox;
+            this.AISettings.SP_w3SkillType = SkillType.Both;
         }
     }
 }

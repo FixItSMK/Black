@@ -39,10 +39,6 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly Rectangle R_MapNumber = new Rectangle
         {
-            //X = 260,
-            //Y = 16,
-            //Width = 100,
-            //Height = 26
             X = 250,
             Y = 12,
             Width = 100,
@@ -63,6 +59,30 @@ namespace SevenKnightsAI.Classes.Mappings
             Y = 171,
             Color = 6113333,
             Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping BootmodeOn = new PixelMapping
+        {
+            X = 657,
+            Y = 438,
+            Color = 16776316,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping BootmodeOff = new PixelMapping
+        {
+            X = 657,
+            Y = 438,
+            Color = 3218706,
+            Type = MappingType.BOTH
+        };
+
+        public static readonly PixelMapping UsedBootModeButton = new PixelMapping
+        {
+            X = 660,
+            Y = 430,
+            Color = 0,
+            Type = MappingType.BUTTON
         };
 
         #endregion Public Fields
