@@ -74,9 +74,6 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping HonorsTabRedIcon = new PixelMapping
         {
-            //X = 320,
-            //Y = 103,
-            //Color = 13051905,
             X = 322,
             Y = 102,
             Color = 13051905,

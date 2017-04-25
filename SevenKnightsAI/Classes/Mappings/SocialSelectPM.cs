@@ -9,7 +9,7 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly PixelMapping FriendsAvailable = new PixelMapping
         {
             X = 360,
-            Y = 245,
+            Y = 233,
             Color = 13051905,
             Type = MappingType.ANCHOR
         };
@@ -50,7 +50,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 415,
             Y = 252,
-            Color = 15783836,
+            Color = 15783580,
             Type = MappingType.ANCHOR
         };
 

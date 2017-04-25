@@ -135,22 +135,6 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
-        public static readonly PixelMapping MayFace = new PixelMapping
-        {
-            X = 742,
-            Y = 153,
-            Color = 16511472,
-            Type = MappingType.ANCHOR
-        };
-
-        public static readonly PixelMapping MayFaceBG = new PixelMapping
-        {
-            X = 738,
-            Y = 150,
-            Color = 4802375,
-            Type = MappingType.ANCHOR
-        };
-
         public static readonly PixelMapping MayCloseCancle = new PixelMapping
         {
             X = 315,
@@ -299,7 +283,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 150,
             Y = 475,
-            Color = 8850660,
+            Color = 10228500,
             Type = MappingType.ANCHOR
         };
 
@@ -307,7 +291,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 220,
             Y = 495,
-            Color = 7149231,
+            Color = 12130842,
             Type = MappingType.ANCHOR
         };
 
@@ -316,7 +300,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 220,
             Y = 495,
-            Color = 2098740,
+            Color = 3606536,
             Type = MappingType.ANCHOR
         };
 
@@ -367,5 +351,22 @@ namespace SevenKnightsAI.Classes.Mappings
             Color = 4595982,
             Type = MappingType.BOTH
         };
+
+        public static readonly PixelMapping MayCalendarVm = new PixelMapping
+        {
+            X = 795,
+            Y = 444,
+            Color = 1334975,
+            Type = MappingType.ANCHOR
+        };
+
+        public static readonly PixelMapping MayCalendarLeft = new PixelMapping
+        {
+            X = 95,
+            Y = 408,
+            Color = 15330027,
+            Type = MappingType.ANCHOR
+        };
+
     }
 }

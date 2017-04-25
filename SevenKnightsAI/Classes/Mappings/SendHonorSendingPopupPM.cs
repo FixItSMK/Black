@@ -28,5 +28,13 @@ namespace SevenKnightsAI.Classes.Mappings
             Type = MappingType.ANCHOR
         };
 
+        public static readonly PixelMapping SocialTabBG = new PixelMapping
+        {
+            X = 373,
+            Y = 73,
+            Color = 788485,
+            Type = MappingType.ANCHOR
+        };
+
     }
 }

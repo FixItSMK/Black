@@ -8,7 +8,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 329,
             Y = 58,
-            Color = 13052161,
+            Color = 13051905,
             Type = MappingType.ANCHOR
         };
 
@@ -48,7 +48,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 863,
             Y = 197,
-            Color = 16771074,
+            Color = 16771330,
             Type = MappingType.ANCHOR
         };
 
@@ -80,7 +80,7 @@ namespace SevenKnightsAI.Classes.Mappings
         {
             X = 648,
             Y = 58,
-            Color = 12986369,
+            Color = 13051905,
             Type = MappingType.ANCHOR
         };
 
@@ -103,8 +103,8 @@ namespace SevenKnightsAI.Classes.Mappings
         public static readonly PixelMapping SocialAvailable = new PixelMapping
         {
             X = 808,
-            Y = 57,
-            Color = 13249026,
+            Y = 58,
+            Color = 13051905,
             Type = MappingType.ANCHOR
         };
 

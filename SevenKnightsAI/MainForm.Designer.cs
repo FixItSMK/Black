@@ -279,6 +279,11 @@
             this.RD_skillGroupBox = new System.Windows.Forms.GroupBox();
             this.RD_bothSkillRadio = new System.Windows.Forms.RadioButton();
             this.RD_team2Panel = new System.Windows.Forms.Panel();
+            this.RD_t2Skill11Button = new System.Windows.Forms.Button();
+            this.RD_t2Skill12Button = new System.Windows.Forms.Button();
+            this.RD_t2Skill13Button = new System.Windows.Forms.Button();
+            this.RD_t2Skill14Button = new System.Windows.Forms.Button();
+            this.RD_t2Skill15Button = new System.Windows.Forms.Button();
             this.RD_team2LoopCheckBox = new System.Windows.Forms.CheckBox();
             this.RD_t2Skill10Button = new System.Windows.Forms.Button();
             this.RD_t2Skill09Button = new System.Windows.Forms.Button();
@@ -294,10 +299,15 @@
             this.RD_manualSkillRadio = new System.Windows.Forms.RadioButton();
             this.RD_autoSkillRadio = new System.Windows.Forms.RadioButton();
             this.RD_team1Panel = new System.Windows.Forms.Panel();
+            this.RD_t1Skill11Button = new System.Windows.Forms.Button();
             this.RD_team1LoopCheckBox = new System.Windows.Forms.CheckBox();
+            this.RD_t1Skill12Button = new System.Windows.Forms.Button();
             this.RD_t1Skill10Button = new System.Windows.Forms.Button();
+            this.RD_t1Skill13Button = new System.Windows.Forms.Button();
             this.RD_t1Skill09Button = new System.Windows.Forms.Button();
+            this.RD_t1Skill14Button = new System.Windows.Forms.Button();
             this.RD_t1Skill08Button = new System.Windows.Forms.Button();
+            this.RD_t1Skill15Button = new System.Windows.Forms.Button();
             this.RD_t1Skill07Button = new System.Windows.Forms.Button();
             this.RD_t1Skill06Button = new System.Windows.Forms.Button();
             this.RD_t1Skill05Button = new System.Windows.Forms.Button();
@@ -575,7 +585,7 @@
             // AD_UseFriendCheckBox
             // 
             this.AD_UseFriendCheckBox.AutoSize = true;
-            this.AD_UseFriendCheckBox.Location = new System.Drawing.Point(229, 29);
+            this.AD_UseFriendCheckBox.Location = new System.Drawing.Point(226, 29);
             this.AD_UseFriendCheckBox.Name = "AD_UseFriendCheckBox";
             this.AD_UseFriendCheckBox.Size = new System.Drawing.Size(82, 17);
             this.AD_UseFriendCheckBox.TabIndex = 28;
@@ -606,7 +616,7 @@
             // AD_StopOnLV30_Checkbox
             // 
             this.AD_StopOnLV30_Checkbox.AutoSize = true;
-            this.AD_StopOnLV30_Checkbox.Location = new System.Drawing.Point(115, 31);
+            this.AD_StopOnLV30_Checkbox.Location = new System.Drawing.Point(112, 31);
             this.AD_StopOnLV30_Checkbox.Name = "AD_StopOnLV30_Checkbox";
             this.AD_StopOnLV30_Checkbox.Size = new System.Drawing.Size(101, 17);
             this.AD_StopOnLV30_Checkbox.TabIndex = 25;
@@ -617,7 +627,7 @@
             // AD_continuousCheckBox
             // 
             this.AD_continuousCheckBox.AutoSize = true;
-            this.AD_continuousCheckBox.Location = new System.Drawing.Point(351, 52);
+            this.AD_continuousCheckBox.Location = new System.Drawing.Point(344, 52);
             this.AD_continuousCheckBox.Name = "AD_continuousCheckBox";
             this.AD_continuousCheckBox.Size = new System.Drawing.Size(128, 17);
             this.AD_continuousCheckBox.TabIndex = 5;
@@ -628,20 +638,18 @@
             // AD_CheckingHeroes_Checkbox
             // 
             this.AD_CheckingHeroes_Checkbox.AutoSize = true;
-            this.AD_CheckingHeroes_Checkbox.Enabled = false;
-            this.AD_CheckingHeroes_Checkbox.Location = new System.Drawing.Point(148, 8);
+            this.AD_CheckingHeroes_Checkbox.Location = new System.Drawing.Point(344, 29);
             this.AD_CheckingHeroes_Checkbox.Name = "AD_CheckingHeroes_Checkbox";
             this.AD_CheckingHeroes_Checkbox.Size = new System.Drawing.Size(134, 17);
             this.AD_CheckingHeroes_Checkbox.TabIndex = 26;
-            this.AD_CheckingHeroes_Checkbox.Text = "Check Max Heroes Lvl";
+            this.AD_CheckingHeroes_Checkbox.Text = "Check Max Lvl Heroes";
             this.AD_CheckingHeroes_Checkbox.UseVisualStyleBackColor = true;
-            this.AD_CheckingHeroes_Checkbox.Visible = false;
             this.AD_CheckingHeroes_Checkbox.CheckedChanged += new System.EventHandler(this.AD_CheckingHeroes_Checkbox_CheckedChanged);
             // 
             // AD_StopOnFullItems_Checkbox
             // 
             this.AD_StopOnFullItems_Checkbox.AutoSize = true;
-            this.AD_StopOnFullItems_Checkbox.Location = new System.Drawing.Point(229, 52);
+            this.AD_StopOnFullItems_Checkbox.Location = new System.Drawing.Point(226, 52);
             this.AD_StopOnFullItems_Checkbox.Name = "AD_StopOnFullItems_Checkbox";
             this.AD_StopOnFullItems_Checkbox.Size = new System.Drawing.Size(120, 17);
             this.AD_StopOnFullItems_Checkbox.TabIndex = 25;
@@ -661,7 +669,7 @@
             // AD_StopOnFullHeroes_Checkbox
             // 
             this.AD_StopOnFullHeroes_Checkbox.AutoSize = true;
-            this.AD_StopOnFullHeroes_Checkbox.Location = new System.Drawing.Point(115, 53);
+            this.AD_StopOnFullHeroes_Checkbox.Location = new System.Drawing.Point(112, 53);
             this.AD_StopOnFullHeroes_Checkbox.Name = "AD_StopOnFullHeroes_Checkbox";
             this.AD_StopOnFullHeroes_Checkbox.Size = new System.Drawing.Size(112, 17);
             this.AD_StopOnFullHeroes_Checkbox.TabIndex = 25;
@@ -3510,7 +3518,7 @@
             this.RD_mainPanel.Controls.Add(this.RD_skillGroupBox);
             this.RD_mainPanel.Location = new System.Drawing.Point(0, 31);
             this.RD_mainPanel.Name = "RD_mainPanel";
-            this.RD_mainPanel.Size = new System.Drawing.Size(487, 255);
+            this.RD_mainPanel.Size = new System.Drawing.Size(487, 276);
             this.RD_mainPanel.TabIndex = 15;
             // 
             // groupBox1
@@ -3673,7 +3681,7 @@
             "1",
             "2",
             "3"});
-            this.RD_masteryComboBox.Location = new System.Drawing.Point(402, 211);
+            this.RD_masteryComboBox.Location = new System.Drawing.Point(72, 225);
             this.RD_masteryComboBox.Name = "RD_masteryComboBox";
             this.RD_masteryComboBox.Size = new System.Drawing.Size(46, 21);
             this.RD_masteryComboBox.TabIndex = 16;
@@ -3685,7 +3693,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Enabled = false;
-            this.label2.Location = new System.Drawing.Point(350, 215);
+            this.label2.Location = new System.Drawing.Point(20, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 15;
@@ -3723,7 +3731,7 @@
             this.RD_skillGroupBox.Controls.Add(this.RD_team1Panel);
             this.RD_skillGroupBox.Location = new System.Drawing.Point(225, 3);
             this.RD_skillGroupBox.Name = "RD_skillGroupBox";
-            this.RD_skillGroupBox.Size = new System.Drawing.Size(254, 189);
+            this.RD_skillGroupBox.Size = new System.Drawing.Size(254, 243);
             this.RD_skillGroupBox.TabIndex = 25;
             this.RD_skillGroupBox.TabStop = false;
             this.RD_skillGroupBox.Tag = "2";
@@ -3743,6 +3751,11 @@
             // 
             // RD_team2Panel
             // 
+            this.RD_team2Panel.Controls.Add(this.RD_t2Skill11Button);
+            this.RD_team2Panel.Controls.Add(this.RD_t2Skill12Button);
+            this.RD_team2Panel.Controls.Add(this.RD_t2Skill13Button);
+            this.RD_team2Panel.Controls.Add(this.RD_t2Skill14Button);
+            this.RD_team2Panel.Controls.Add(this.RD_t2Skill15Button);
             this.RD_team2Panel.Controls.Add(this.RD_team2LoopCheckBox);
             this.RD_team2Panel.Controls.Add(this.RD_t2Skill10Button);
             this.RD_team2Panel.Controls.Add(this.RD_t2Skill09Button);
@@ -3755,17 +3768,82 @@
             this.RD_team2Panel.Controls.Add(this.RD_t2Skill02Button);
             this.RD_team2Panel.Controls.Add(this.RD_team2Label);
             this.RD_team2Panel.Controls.Add(this.RD_t2Skill01Button);
-            this.RD_team2Panel.Location = new System.Drawing.Point(9, 109);
+            this.RD_team2Panel.Location = new System.Drawing.Point(9, 140);
             this.RD_team2Panel.Name = "RD_team2Panel";
-            this.RD_team2Panel.Size = new System.Drawing.Size(241, 51);
+            this.RD_team2Panel.Size = new System.Drawing.Size(241, 82);
             this.RD_team2Panel.TabIndex = 9;
             this.RD_team2Panel.Tag = "6";
+            // 
+            // RD_t2Skill11Button
+            // 
+            this.RD_t2Skill11Button.BackColor = System.Drawing.Color.Transparent;
+            this.RD_t2Skill11Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RD_t2Skill11Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.RD_t2Skill11Button.Location = new System.Drawing.Point(77, 4);
+            this.RD_t2Skill11Button.Name = "RD_t2Skill11Button";
+            this.RD_t2Skill11Button.Size = new System.Drawing.Size(23, 23);
+            this.RD_t2Skill11Button.TabIndex = 31;
+            this.RD_t2Skill11Button.Tag = "10";
+            this.RD_t2Skill11Button.UseVisualStyleBackColor = false;
+            this.RD_t2Skill11Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // RD_t2Skill12Button
+            // 
+            this.RD_t2Skill12Button.BackColor = System.Drawing.Color.Transparent;
+            this.RD_t2Skill12Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RD_t2Skill12Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.RD_t2Skill12Button.Location = new System.Drawing.Point(109, 4);
+            this.RD_t2Skill12Button.Name = "RD_t2Skill12Button";
+            this.RD_t2Skill12Button.Size = new System.Drawing.Size(23, 23);
+            this.RD_t2Skill12Button.TabIndex = 32;
+            this.RD_t2Skill12Button.Tag = "11";
+            this.RD_t2Skill12Button.UseVisualStyleBackColor = false;
+            this.RD_t2Skill12Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // RD_t2Skill13Button
+            // 
+            this.RD_t2Skill13Button.BackColor = System.Drawing.Color.Transparent;
+            this.RD_t2Skill13Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RD_t2Skill13Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.RD_t2Skill13Button.Location = new System.Drawing.Point(141, 4);
+            this.RD_t2Skill13Button.Name = "RD_t2Skill13Button";
+            this.RD_t2Skill13Button.Size = new System.Drawing.Size(23, 23);
+            this.RD_t2Skill13Button.TabIndex = 33;
+            this.RD_t2Skill13Button.Tag = "12";
+            this.RD_t2Skill13Button.UseVisualStyleBackColor = false;
+            this.RD_t2Skill13Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // RD_t2Skill14Button
+            // 
+            this.RD_t2Skill14Button.BackColor = System.Drawing.Color.Transparent;
+            this.RD_t2Skill14Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RD_t2Skill14Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.RD_t2Skill14Button.Location = new System.Drawing.Point(173, 4);
+            this.RD_t2Skill14Button.Name = "RD_t2Skill14Button";
+            this.RD_t2Skill14Button.Size = new System.Drawing.Size(23, 23);
+            this.RD_t2Skill14Button.TabIndex = 34;
+            this.RD_t2Skill14Button.Tag = "13";
+            this.RD_t2Skill14Button.UseVisualStyleBackColor = false;
+            this.RD_t2Skill14Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
+            // RD_t2Skill15Button
+            // 
+            this.RD_t2Skill15Button.BackColor = System.Drawing.Color.Transparent;
+            this.RD_t2Skill15Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RD_t2Skill15Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.RD_t2Skill15Button.Location = new System.Drawing.Point(205, 4);
+            this.RD_t2Skill15Button.Name = "RD_t2Skill15Button";
+            this.RD_t2Skill15Button.Size = new System.Drawing.Size(23, 23);
+            this.RD_t2Skill15Button.TabIndex = 35;
+            this.RD_t2Skill15Button.Tag = "14";
+            this.RD_t2Skill15Button.UseVisualStyleBackColor = false;
+            this.RD_t2Skill15Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
             // RD_team2LoopCheckBox
             // 
             this.RD_team2LoopCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
             this.RD_team2LoopCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_team2LoopCheckBox.Location = new System.Drawing.Point(8, 23);
+            this.RD_team2LoopCheckBox.Location = new System.Drawing.Point(8, 53);
             this.RD_team2LoopCheckBox.Name = "RD_team2LoopCheckBox";
             this.RD_team2LoopCheckBox.Size = new System.Drawing.Size(40, 20);
             this.RD_team2LoopCheckBox.TabIndex = 12;
@@ -3777,7 +3855,7 @@
             // RD_t2Skill10Button
             // 
             this.RD_t2Skill10Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t2Skill10Button.Location = new System.Drawing.Point(205, 26);
+            this.RD_t2Skill10Button.Location = new System.Drawing.Point(205, 56);
             this.RD_t2Skill10Button.Name = "RD_t2Skill10Button";
             this.RD_t2Skill10Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t2Skill10Button.TabIndex = 10;
@@ -3788,7 +3866,7 @@
             // RD_t2Skill09Button
             // 
             this.RD_t2Skill09Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t2Skill09Button.Location = new System.Drawing.Point(173, 26);
+            this.RD_t2Skill09Button.Location = new System.Drawing.Point(173, 56);
             this.RD_t2Skill09Button.Name = "RD_t2Skill09Button";
             this.RD_t2Skill09Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t2Skill09Button.TabIndex = 9;
@@ -3799,7 +3877,7 @@
             // RD_t2Skill08Button
             // 
             this.RD_t2Skill08Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t2Skill08Button.Location = new System.Drawing.Point(141, 26);
+            this.RD_t2Skill08Button.Location = new System.Drawing.Point(141, 56);
             this.RD_t2Skill08Button.Name = "RD_t2Skill08Button";
             this.RD_t2Skill08Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t2Skill08Button.TabIndex = 8;
@@ -3810,7 +3888,7 @@
             // RD_t2Skill07Button
             // 
             this.RD_t2Skill07Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t2Skill07Button.Location = new System.Drawing.Point(109, 26);
+            this.RD_t2Skill07Button.Location = new System.Drawing.Point(109, 56);
             this.RD_t2Skill07Button.Name = "RD_t2Skill07Button";
             this.RD_t2Skill07Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t2Skill07Button.TabIndex = 7;
@@ -3821,7 +3899,7 @@
             // RD_t2Skill06Button
             // 
             this.RD_t2Skill06Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t2Skill06Button.Location = new System.Drawing.Point(77, 26);
+            this.RD_t2Skill06Button.Location = new System.Drawing.Point(77, 56);
             this.RD_t2Skill06Button.Name = "RD_t2Skill06Button";
             this.RD_t2Skill06Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t2Skill06Button.TabIndex = 6;
@@ -3832,7 +3910,7 @@
             // RD_t2Skill05Button
             // 
             this.RD_t2Skill05Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t2Skill05Button.Location = new System.Drawing.Point(205, 2);
+            this.RD_t2Skill05Button.Location = new System.Drawing.Point(205, 32);
             this.RD_t2Skill05Button.Name = "RD_t2Skill05Button";
             this.RD_t2Skill05Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t2Skill05Button.TabIndex = 5;
@@ -3843,7 +3921,7 @@
             // RD_t2Skill04Button
             // 
             this.RD_t2Skill04Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t2Skill04Button.Location = new System.Drawing.Point(173, 2);
+            this.RD_t2Skill04Button.Location = new System.Drawing.Point(173, 32);
             this.RD_t2Skill04Button.Name = "RD_t2Skill04Button";
             this.RD_t2Skill04Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t2Skill04Button.TabIndex = 4;
@@ -3854,7 +3932,7 @@
             // RD_t2Skill03Button
             // 
             this.RD_t2Skill03Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t2Skill03Button.Location = new System.Drawing.Point(141, 2);
+            this.RD_t2Skill03Button.Location = new System.Drawing.Point(141, 32);
             this.RD_t2Skill03Button.Name = "RD_t2Skill03Button";
             this.RD_t2Skill03Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t2Skill03Button.TabIndex = 3;
@@ -3865,7 +3943,7 @@
             // RD_t2Skill02Button
             // 
             this.RD_t2Skill02Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t2Skill02Button.Location = new System.Drawing.Point(109, 2);
+            this.RD_t2Skill02Button.Location = new System.Drawing.Point(109, 32);
             this.RD_t2Skill02Button.Name = "RD_t2Skill02Button";
             this.RD_t2Skill02Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t2Skill02Button.TabIndex = 2;
@@ -3875,7 +3953,7 @@
             // 
             // RD_team2Label
             // 
-            this.RD_team2Label.Location = new System.Drawing.Point(6, 7);
+            this.RD_team2Label.Location = new System.Drawing.Point(6, 37);
             this.RD_team2Label.Name = "RD_team2Label";
             this.RD_team2Label.Size = new System.Drawing.Size(60, 13);
             this.RD_team2Label.TabIndex = 0;
@@ -3884,7 +3962,7 @@
             // RD_t2Skill01Button
             // 
             this.RD_t2Skill01Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t2Skill01Button.Location = new System.Drawing.Point(77, 2);
+            this.RD_t2Skill01Button.Location = new System.Drawing.Point(77, 32);
             this.RD_t2Skill01Button.Name = "RD_t2Skill01Button";
             this.RD_t2Skill01Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t2Skill01Button.TabIndex = 1;
@@ -3920,10 +3998,15 @@
             // 
             // RD_team1Panel
             // 
+            this.RD_team1Panel.Controls.Add(this.RD_t1Skill11Button);
             this.RD_team1Panel.Controls.Add(this.RD_team1LoopCheckBox);
+            this.RD_team1Panel.Controls.Add(this.RD_t1Skill12Button);
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill10Button);
+            this.RD_team1Panel.Controls.Add(this.RD_t1Skill13Button);
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill09Button);
+            this.RD_team1Panel.Controls.Add(this.RD_t1Skill14Button);
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill08Button);
+            this.RD_team1Panel.Controls.Add(this.RD_t1Skill15Button);
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill07Button);
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill06Button);
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill05Button);
@@ -3934,15 +4017,28 @@
             this.RD_team1Panel.Controls.Add(this.RD_t1Skill01Button);
             this.RD_team1Panel.Location = new System.Drawing.Point(9, 52);
             this.RD_team1Panel.Name = "RD_team1Panel";
-            this.RD_team1Panel.Size = new System.Drawing.Size(241, 51);
+            this.RD_team1Panel.Size = new System.Drawing.Size(241, 82);
             this.RD_team1Panel.TabIndex = 8;
             this.RD_team1Panel.Tag = "5";
+            // 
+            // RD_t1Skill11Button
+            // 
+            this.RD_t1Skill11Button.BackColor = System.Drawing.Color.Transparent;
+            this.RD_t1Skill11Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RD_t1Skill11Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.RD_t1Skill11Button.Location = new System.Drawing.Point(77, 4);
+            this.RD_t1Skill11Button.Name = "RD_t1Skill11Button";
+            this.RD_t1Skill11Button.Size = new System.Drawing.Size(23, 23);
+            this.RD_t1Skill11Button.TabIndex = 31;
+            this.RD_t1Skill11Button.Tag = "10";
+            this.RD_t1Skill11Button.UseVisualStyleBackColor = false;
+            this.RD_t1Skill11Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
             // RD_team1LoopCheckBox
             // 
             this.RD_team1LoopCheckBox.Appearance = System.Windows.Forms.Appearance.Button;
             this.RD_team1LoopCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_team1LoopCheckBox.Location = new System.Drawing.Point(8, 23);
+            this.RD_team1LoopCheckBox.Location = new System.Drawing.Point(8, 53);
             this.RD_team1LoopCheckBox.Name = "RD_team1LoopCheckBox";
             this.RD_team1LoopCheckBox.Size = new System.Drawing.Size(40, 20);
             this.RD_team1LoopCheckBox.TabIndex = 12;
@@ -3951,10 +4047,23 @@
             this.RD_team1LoopCheckBox.UseVisualStyleBackColor = true;
             this.RD_team1LoopCheckBox.CheckedChanged += new System.EventHandler(this.skillLoopCheckBox_CheckedChanged);
             // 
+            // RD_t1Skill12Button
+            // 
+            this.RD_t1Skill12Button.BackColor = System.Drawing.Color.Transparent;
+            this.RD_t1Skill12Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RD_t1Skill12Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.RD_t1Skill12Button.Location = new System.Drawing.Point(109, 4);
+            this.RD_t1Skill12Button.Name = "RD_t1Skill12Button";
+            this.RD_t1Skill12Button.Size = new System.Drawing.Size(23, 23);
+            this.RD_t1Skill12Button.TabIndex = 32;
+            this.RD_t1Skill12Button.Tag = "11";
+            this.RD_t1Skill12Button.UseVisualStyleBackColor = false;
+            this.RD_t1Skill12Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
             // RD_t1Skill10Button
             // 
             this.RD_t1Skill10Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t1Skill10Button.Location = new System.Drawing.Point(205, 26);
+            this.RD_t1Skill10Button.Location = new System.Drawing.Point(205, 56);
             this.RD_t1Skill10Button.Name = "RD_t1Skill10Button";
             this.RD_t1Skill10Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t1Skill10Button.TabIndex = 10;
@@ -3962,10 +4071,23 @@
             this.RD_t1Skill10Button.UseVisualStyleBackColor = true;
             this.RD_t1Skill10Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
+            // RD_t1Skill13Button
+            // 
+            this.RD_t1Skill13Button.BackColor = System.Drawing.Color.Transparent;
+            this.RD_t1Skill13Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RD_t1Skill13Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.RD_t1Skill13Button.Location = new System.Drawing.Point(141, 4);
+            this.RD_t1Skill13Button.Name = "RD_t1Skill13Button";
+            this.RD_t1Skill13Button.Size = new System.Drawing.Size(23, 23);
+            this.RD_t1Skill13Button.TabIndex = 33;
+            this.RD_t1Skill13Button.Tag = "12";
+            this.RD_t1Skill13Button.UseVisualStyleBackColor = false;
+            this.RD_t1Skill13Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
             // RD_t1Skill09Button
             // 
             this.RD_t1Skill09Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t1Skill09Button.Location = new System.Drawing.Point(173, 26);
+            this.RD_t1Skill09Button.Location = new System.Drawing.Point(173, 56);
             this.RD_t1Skill09Button.Name = "RD_t1Skill09Button";
             this.RD_t1Skill09Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t1Skill09Button.TabIndex = 9;
@@ -3973,10 +4095,23 @@
             this.RD_t1Skill09Button.UseVisualStyleBackColor = true;
             this.RD_t1Skill09Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
+            // RD_t1Skill14Button
+            // 
+            this.RD_t1Skill14Button.BackColor = System.Drawing.Color.Transparent;
+            this.RD_t1Skill14Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RD_t1Skill14Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.RD_t1Skill14Button.Location = new System.Drawing.Point(173, 4);
+            this.RD_t1Skill14Button.Name = "RD_t1Skill14Button";
+            this.RD_t1Skill14Button.Size = new System.Drawing.Size(23, 23);
+            this.RD_t1Skill14Button.TabIndex = 34;
+            this.RD_t1Skill14Button.Tag = "13";
+            this.RD_t1Skill14Button.UseVisualStyleBackColor = false;
+            this.RD_t1Skill14Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
             // RD_t1Skill08Button
             // 
             this.RD_t1Skill08Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t1Skill08Button.Location = new System.Drawing.Point(141, 26);
+            this.RD_t1Skill08Button.Location = new System.Drawing.Point(141, 56);
             this.RD_t1Skill08Button.Name = "RD_t1Skill08Button";
             this.RD_t1Skill08Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t1Skill08Button.TabIndex = 8;
@@ -3984,10 +4119,23 @@
             this.RD_t1Skill08Button.UseVisualStyleBackColor = true;
             this.RD_t1Skill08Button.Click += new System.EventHandler(this.skillButton_Click);
             // 
+            // RD_t1Skill15Button
+            // 
+            this.RD_t1Skill15Button.BackColor = System.Drawing.Color.Transparent;
+            this.RD_t1Skill15Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RD_t1Skill15Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
+            this.RD_t1Skill15Button.Location = new System.Drawing.Point(205, 4);
+            this.RD_t1Skill15Button.Name = "RD_t1Skill15Button";
+            this.RD_t1Skill15Button.Size = new System.Drawing.Size(23, 23);
+            this.RD_t1Skill15Button.TabIndex = 35;
+            this.RD_t1Skill15Button.Tag = "14";
+            this.RD_t1Skill15Button.UseVisualStyleBackColor = false;
+            this.RD_t1Skill15Button.Click += new System.EventHandler(this.skillButton_Click);
+            // 
             // RD_t1Skill07Button
             // 
             this.RD_t1Skill07Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t1Skill07Button.Location = new System.Drawing.Point(109, 26);
+            this.RD_t1Skill07Button.Location = new System.Drawing.Point(109, 56);
             this.RD_t1Skill07Button.Name = "RD_t1Skill07Button";
             this.RD_t1Skill07Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t1Skill07Button.TabIndex = 7;
@@ -3998,7 +4146,7 @@
             // RD_t1Skill06Button
             // 
             this.RD_t1Skill06Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t1Skill06Button.Location = new System.Drawing.Point(77, 26);
+            this.RD_t1Skill06Button.Location = new System.Drawing.Point(77, 56);
             this.RD_t1Skill06Button.Name = "RD_t1Skill06Button";
             this.RD_t1Skill06Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t1Skill06Button.TabIndex = 6;
@@ -4009,7 +4157,7 @@
             // RD_t1Skill05Button
             // 
             this.RD_t1Skill05Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t1Skill05Button.Location = new System.Drawing.Point(205, 2);
+            this.RD_t1Skill05Button.Location = new System.Drawing.Point(205, 32);
             this.RD_t1Skill05Button.Name = "RD_t1Skill05Button";
             this.RD_t1Skill05Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t1Skill05Button.TabIndex = 5;
@@ -4020,7 +4168,7 @@
             // RD_t1Skill04Button
             // 
             this.RD_t1Skill04Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t1Skill04Button.Location = new System.Drawing.Point(173, 2);
+            this.RD_t1Skill04Button.Location = new System.Drawing.Point(173, 32);
             this.RD_t1Skill04Button.Name = "RD_t1Skill04Button";
             this.RD_t1Skill04Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t1Skill04Button.TabIndex = 4;
@@ -4031,7 +4179,7 @@
             // RD_t1Skill03Button
             // 
             this.RD_t1Skill03Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t1Skill03Button.Location = new System.Drawing.Point(141, 2);
+            this.RD_t1Skill03Button.Location = new System.Drawing.Point(141, 32);
             this.RD_t1Skill03Button.Name = "RD_t1Skill03Button";
             this.RD_t1Skill03Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t1Skill03Button.TabIndex = 3;
@@ -4042,7 +4190,7 @@
             // RD_t1Skill02Button
             // 
             this.RD_t1Skill02Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t1Skill02Button.Location = new System.Drawing.Point(109, 2);
+            this.RD_t1Skill02Button.Location = new System.Drawing.Point(109, 32);
             this.RD_t1Skill02Button.Name = "RD_t1Skill02Button";
             this.RD_t1Skill02Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t1Skill02Button.TabIndex = 2;
@@ -4052,7 +4200,7 @@
             // 
             // RD_team1Label
             // 
-            this.RD_team1Label.Location = new System.Drawing.Point(6, 7);
+            this.RD_team1Label.Location = new System.Drawing.Point(6, 37);
             this.RD_team1Label.Name = "RD_team1Label";
             this.RD_team1Label.Size = new System.Drawing.Size(60, 13);
             this.RD_team1Label.TabIndex = 0;
@@ -4061,7 +4209,7 @@
             // RD_t1Skill01Button
             // 
             this.RD_t1Skill01Button.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.RD_t1Skill01Button.Location = new System.Drawing.Point(77, 2);
+            this.RD_t1Skill01Button.Location = new System.Drawing.Point(77, 32);
             this.RD_t1Skill01Button.Name = "RD_t1Skill01Button";
             this.RD_t1Skill01Button.Size = new System.Drawing.Size(23, 23);
             this.RD_t1Skill01Button.TabIndex = 1;
@@ -6747,5 +6895,15 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.NumericUpDown SP_limitNumericBox;
         private System.Windows.Forms.CheckBox SP_limitCheckBox;
+        private System.Windows.Forms.Button RD_t2Skill11Button;
+        private System.Windows.Forms.Button RD_t2Skill12Button;
+        private System.Windows.Forms.Button RD_t2Skill13Button;
+        private System.Windows.Forms.Button RD_t2Skill14Button;
+        private System.Windows.Forms.Button RD_t2Skill15Button;
+        private System.Windows.Forms.Button RD_t1Skill11Button;
+        private System.Windows.Forms.Button RD_t1Skill12Button;
+        private System.Windows.Forms.Button RD_t1Skill13Button;
+        private System.Windows.Forms.Button RD_t1Skill14Button;
+        private System.Windows.Forms.Button RD_t1Skill15Button;
     }
 }

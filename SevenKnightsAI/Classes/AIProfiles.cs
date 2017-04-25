@@ -61,7 +61,7 @@ namespace SevenKnightsAI.Classes
             this.CurrentKey = null;
             this.ST_Delay = 1500;
             this.ST_ReconnectInterruptEnable = true;
-            this.ST_ReconnectInterruptInterval = 0;
+            this.ST_ReconnectInterruptInterval = 10;
             this.ST_EnableHotTimeProfile = false;
             this.ST_EnableAutoProfile = false;
             this.ST_HotTimeProfile = null;

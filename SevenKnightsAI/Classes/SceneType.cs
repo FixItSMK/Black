@@ -132,6 +132,8 @@ namespace SevenKnightsAI.Classes
         SP_OUT_OF_KEYS,
         SPECIAL_DUN_LOST,
         SPECIAL_DUN_MAX,
-        EXIT_POPUP
+        EXIT_POPUP,
+        MAY_CALENDAR_POPUP,
+        LOADING
     }
 }

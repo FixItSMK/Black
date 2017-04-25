@@ -233,9 +233,9 @@ namespace SevenKnightsAI.Classes.Mappings
 
         public static readonly PixelMapping SocialAvailable = new PixelMapping
         {
-            X = 173,
-            Y = 451,
-            Color = 7809025,
+            X = 177,
+            Y = 450,
+            Color = 13051905,
             Type = MappingType.ANCHOR
         };
 
